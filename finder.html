@@ -4,6 +4,8 @@
 <head>
   <link rel="stylesheet" href="styles.css">
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -12,45 +14,60 @@
 </head>
 
 <style>
-  .qn2 {
+  .qn1,
+  .qn2,
+  .qn3 {
     margin: 10px;
   }
 
-  .qn2 input[type="radio"] {
+  .qn1 input[type="radio"],
+  .qn2 input[type="radio"],
+  .qn3 input[type="radio"] {
     opacity: 0;
     position: fixed;
     width: 0;
   }
 
-  .qn2 label {
+  .qn1 label,
+  .qn2 label,
+  .qn3 label {
     display: inline-block;
-    background-color: #ddd;
-    padding: 10px 20px;
+    background-color: #fff;
+    padding: 5px 10px;
     font-family: sans-serif, Arial;
     font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 28px;
+  }
+
+  .qn1 label:hover,
+  .qn2 label:hover,
+  .qn3 label:hover {
+    background-color: #06377B;
+    border-color: none;
+    color: white;
+  }
+
+  .qn1 input[type="radio"]:focus+label,
+  .qn2 input[type="radio"]:focus+label,
+  .qn3 input[type="radio"]:focus+label {
     border: 2px solid #444;
-    border-radius: 4px;
   }
 
-  .qn2 label:hover {
-    background-color: #dfd;
-  }
-
-  .qn2 input[type="radio"]:focus+label {
-    border: 2px dashed #444;
-  }
-
-  .qn2 input[type="radio"]:checked+label {
-    background-color: #bfb;
-    border-color: #4c4;
+  .qn1 input[type="radio"]:checked+label,
+  .qn2 input[type="radio"]:checked+label,
+  .qn3 input[type="radio"]:checked+label {
+    background-color: #06377B;
+    border-color: none;
+    color: white;
   }
 </style>
 
 <body>
+  <div class="container">
+    <h2> Find the perfect loan for your business </h2>
 
-  <h1> Find the perfect loan for your business </h1>
-
-  <div id="ck-button">
+    <!-- <div id="ck-button">
     <label>
       <input type="checkbox" value="red" name="checkbox"><span>red</span>
     </label>
@@ -60,58 +77,102 @@
     <label>
       <input type="checkbox" value="orange" name="checkbox"><span>orange</span>
     </label>
+  </div> -->
+    
+  <!-- First group of radio buttons -->
+    <!-- What do you need the loan for? -->
+    <h4>What do you need the loan for?</h4>
+
+    <div class="qn1">
+      <input type="radio" id="radio1_equipment" name="radioPurpose" value="equipment">
+      <label for="radio1_equipment"> Equipment</label>
+
+      <input type="radio" id="radio1_assistance" name="radioPurpose" value="assistance">
+      <label for="radio1_assistance">Relief Assistance</label>
+
+      <input type="radio" id="radio1_property" name="radioPurpose" value="property">
+      <label for="radio1_property">Property</label>
+
+      <input type="radio" id="radio1_vehicle" name="radioPurpose" value="vehicle">
+      <label for="radio1_vehicle">Vehicle</label>
+
+      <input type="radio" id="radio1_capital" name="radioPurpose" value="capital">
+      <label for="radio1_capital">Working Capital</label>
+
+      <input type="radio" id="radio1_trade" name="radioPurpose" value="trade">
+      <label for="radio1_trade">Trade</label>
+    </div>
+
+    <!-- Second group of radio buttons -->
+    <!-- How much do you need to loan? -->
+    <h4>How much do you need to loan?</h4>
+
+    <div class="qn2">
+      <input type="radio" id="radio2_1" name="radioAmount" value="amount1">
+      <label for="radio2_1"> &#60; $100,000</label>
+
+      <input type="radio" id="radio2_2" name="radioAmount" value="amount2">
+      <label for="radio2_2">$100,000 to $500,000</label>
+
+      <input type="radio" id="radio2_3" name="radioAmount" value="amount3">
+      <label for="radio2_3">$500,000 to $1,000,000</label>
+    </div>
+
+    <!-- Third group of radio buttons -->
+    <!--How long is the loan term you are looking for? -->
+    <h4>How long is the loan term you are looking for?</h4>
+    <div class="qn3">
+      <input type="radio" id="radio3_1" name="radioTerm" value="term1">
+      <label for="radio3_1"> &#60; 1 year</label>
+
+      <input type="radio" id="radio3_2" name="radioTerm" value="term2">
+      <label for="radio3_2">1 to 5 years</label>
+
+      <input type="radio" id="radio3_3" name="radioTerm" value="term3">
+      <label for="radio3_3">More than 5 years</label>
+    </div>
+
+    <button onclick="testFunction()" type="button" class="btn btn-primary">Get Results</button>
+
+    <p id="testpara"></p>
+    <h2 id="result"></h2>
   </div>
-
-  <div class="qn2">
-    <input type="radio" id="radioApple" name="radioFruit" value="apple" checked>
-    <label for="radioApple">Apple</label>
-
-    <input type="radio" id="radioBanana" name="radioFruit" value="banana">
-    <label for="radioBanana">Banana</label>
-
-    <input type="radio" id="radioOrange" name="radioFruit" value="orange">
-    <label for="radioOrange">Orange</label>
-  </div>
-
-  <button onclick="testFunction()">Test Button</button>
-  <p id="testpara"></p>
-  <h2 id="result"></h2>
-
 </body>
 
 <script>
-
+  // array to store information of loan (id, name, description, link)
+  var loan = []
 
   function testFunction() {
-    var radios = document.getElementsByName('radioFruit');
-    var checks = document.getElementsByName('checkbox');
-
-    var qn1 = []
+    var radioAmount = document.getElementsByName('radioAmount');
+    // var checks = document.getElementsByName('checkbox');
+    var qn1 = ""
     var qn2 = ""
     var checkboxes = document.querySelectorAll('input[name="checkbox"]:checked');
-    for (var checkbox of checkboxes) {
-      // console.log(checkbox.value)
-      qn1.push(checkbox)
-    }
+    // for (var checkbox of checkboxes) {
+    //   // console.log(checkbox.value)
+    //   qn1.push(checkbox)
+    // }
 
-    for (var i = 0, length = radios.length; i < length; i++) {
-      if (radios[i].checked) {
+    for (var i = 0, length = radioAmount.length; i < length; i++) {
+      if (radioAmount[i].checked) {
         // do whatever you want with the checked radio
-        qn2 = radios[i].value
+        qn2 = radioAmount[i].value
         // only one radio can be logically checked, don't check the rest
         break;
       }
 
     }
-    formulaFunction(qn1,qn2)
+    formulaFunction(qn1, qn2)
 
   }
 
-  function formulaFunction(a,b) {
+  // function to deduce the best loan for user
+  function formulaFunction(a, b) {
 
     var teststring = ""
-    for (var i = 0;  i < a.length; i++) {
-      teststring += a[i].value +" "
+    for (var i = 0; i < a.length; i++) {
+      teststring += a[i].value + " "
     }
 
 
