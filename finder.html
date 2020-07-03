@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="node_modules\jquery\dist\jquery.min.js"></script>
+  <!-- <script src="jquery.mobile-1.4.5.js"></script> -->
+
 </head>
 
 <style>
@@ -51,7 +54,7 @@
   .qn1 input[type="radio"]:focus+label,
   .qn2 input[type="radio"]:focus+label,
   .qn3 input[type="radio"]:focus+label {
-    border: 2px solid #444;
+    border: 2px solid #06377B;
   }
 
   .qn1 input[type="radio"]:checked+label,
@@ -78,8 +81,8 @@
       <input type="checkbox" value="orange" name="checkbox"><span>orange</span>
     </label>
   </div> -->
-    
-  <!-- First group of radio buttons -->
+
+    <!-- First group of radio buttons -->
     <!-- What do you need the loan for? -->
     <h4>What do you need the loan for?</h4>
 
@@ -132,67 +135,131 @@
       <label for="radio3_3">More than 5 years</label>
     </div>
 
-    <button onclick="testFunction()" type="button" class="btn btn-primary">Get Results</button>
+    <!-- <button onclick="testFunction()" type="button" class="btn btn-primary">Get Results</button> -->
 
-    <p id="testpara"></p>
     <h2 id="result"></h2>
+    <p id="description"></p>
   </div>
 </body>
 
 <script>
   // array to store information of loan (id, name, description, link)
-  var loan = []
+  var loan = [
+    { loanID: 0, name: "Equipment Vehicle Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
+    { loanID: 1, name: "SME Equipment Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
+    { loanID: 2, name: "Temporary Bridging Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
+    { loanID: 3, name: "Business Property Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" }
+  ]
 
-  function testFunction() {
+  $("input[name='radioPurpose'],input[name='radioAmount'],input[name='radioTerm']").click(function () {
+    var radioPurpose = document.getElementsByName('radioPurpose');
     var radioAmount = document.getElementsByName('radioAmount');
+    var radioTerm = document.getElementsByName('radioTerm');
+
     // var checks = document.getElementsByName('checkbox');
     var qn1 = ""
     var qn2 = ""
-    var checkboxes = document.querySelectorAll('input[name="checkbox"]:checked');
+    var qn3 = ""
+    // var checkboxes = document.querySelectorAll('input[name="checkbox"]:checked');
     // for (var checkbox of checkboxes) {
     //   // console.log(checkbox.value)
     //   qn1.push(checkbox)
     // }
-
-    for (var i = 0, length = radioAmount.length; i < length; i++) {
-      if (radioAmount[i].checked) {
-        // do whatever you want with the checked radio
-        qn2 = radioAmount[i].value
-        // only one radio can be logically checked, don't check the rest
+    for (var i = 0, length = radioPurpose.length; i < length; i++) {
+      if (radioPurpose[i].checked) {
+        qn1 = radioPurpose[i].value
         break;
       }
 
     }
-    formulaFunction(qn1, qn2)
+    for (var i = 0, length = radioAmount.length; i < length; i++) {
+      if (radioAmount[i].checked) {
+        // do whatever you want with the checked radio
+        qn2 = radioAmount[i].value
+        break;
+      }
 
-  }
+    }
+    for (var i = 0, length = radioTerm.length; i < length; i++) {
+      if (radioTerm[i].checked) {
+        // do whatever you want with the checked radio
+        qn3 = radioTerm[i].value
+        break;
+      }
+    }
+    if (qn1 != "" && qn2 != "" && qn3 != "") {
+      formulaFunction(qn1, qn2, qn3);    
+      console.log("lolo");
+
+    }
+  });
+ 
+  // function testFunction() {
+  //   var radioPurpose = document.getElementsByName('radioPurpose');
+  //   var radioAmount = document.getElementsByName('radioAmount');
+  //   var radioTerm = document.getElementsByName('radioTerm');
+
+  //   // var checks = document.getElementsByName('checkbox');
+  //   var qn1 = ""
+  //   var qn2 = ""
+  //   var qn3 = ""
+  //   // var checkboxes = document.querySelectorAll('input[name="checkbox"]:checked');
+  //   // for (var checkbox of checkboxes) {
+  //   //   // console.log(checkbox.value)
+  //   //   qn1.push(checkbox)
+  //   // }
+  //   for (var i = 0, length = radioPurpose.length; i < length; i++) {
+  //     if (radioPurpose[i].checked) {
+  //       qn1 = radioPurpose[i].value
+  //       break;
+  //     }
+
+  //   }
+  //   for (var i = 0, length = radioAmount.length; i < length; i++) {
+  //     if (radioAmount[i].checked) {
+  //       // do whatever you want with the checked radio
+  //       qn2 = radioAmount[i].value
+  //       break;
+  //     }
+
+  //   }
+  //   for (var i = 0, length = radioTerm.length; i < length; i++) {
+  //     if (radioTerm[i].checked) {
+  //       // do whatever you want with the checked radio
+  //       qn3 = radioTerm[i].value
+  //       break;
+  //     }
+  //   }
+  //   formulaFunction(qn1, qn2, qn3)
+
+  // }
 
   // function to deduce the best loan for user
-  function formulaFunction(a, b) {
+  function formulaFunction(a, b, c) {
 
-    var teststring = ""
-    for (var i = 0; i < a.length; i++) {
-      teststring += a[i].value + " "
-    }
+    // console.log(a, b, c)
+
+    // var teststring = ""
+    // for (var i = 0; i < a.length; i++) {
+    //   teststring += a[i].value + " "
+    // }
 
 
-    if (teststring == "red " && b == "apple") {
+    if (a == "equipment" && (c == "term1" || c == "term2")) {
       // console.log("1")
-      document.getElementById("result").innerHTML = "I am a red apple"
+      document.getElementById("result").innerHTML = loan[0].name;
     }
-    else if (teststring == "yellow " && b == "banana") {
+    else if (a == "equipment" && c == "term3") {
       // console.log("2")
-      document.getElementById("result").innerHTML = "I am a yellow banana"
+      document.getElementById("result").innerHTML = loan[1].name;
     }
-    else if (teststring == "orange " && b == "orange") {
-      // console.log("3")
-      document.getElementById("result").innerHTML = "I am an orange orange"
-
+    else if (a == "assistance") {
+      // console.log("2")
+      document.getElementById("result").innerHTML = loan[2].name;
     }
-    else {
-      // document.getElementById("result").innerHTML("I am an nothing")
-      document.getElementById("result").innerHTML = "I am nothing (" + teststring + " " + b + ")"
-
+    else if (a == "property") {
+      // console.log("2")
+      document.getElementById("result").innerHTML = loan[3].name;
     }
 
   }
