@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,7 +20,7 @@
   .qn1,
   .qn2,
   .qn3 {
-    margin: 10px;
+    margin: 10px 0;
   }
 
   .qn1 input[type="radio"],
@@ -64,11 +64,25 @@
     border-color: none;
     color: white;
   }
+
+  .btnFindOutMore{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #06377B;
+  }
+/* 
+  .btnFindOutMore:hover{
+    background-color: #fff;
+  } */
+
+  /* .btn-primary:active{
+    background-color: #000;
+  } */
 </style>
 
 <body>
   <div class="container">
-    <h2> Find the perfect loan for your business </h2>
+    <h4> Find the perfect loan for your business </h4>
 
     <!-- <div id="ck-button">
     <label>
@@ -134,11 +148,12 @@
       <input type="radio" id="radio3_3" name="radioTerm" value="term3">
       <label for="radio3_3">More than 5 years</label>
     </div>
-
+<hr>
     <!-- <button onclick="testFunction()" type="button" class="btn btn-primary">Get Results</button> -->
-
-    <h2 id="result"></h2>
+    <!-- result section  -->
+    <h4 id="result"></h4>
     <p id="description"></p>
+    <a class="btn btn-primary btn-block btnFindOutMore" href="#" role="button">Click to Find Out More</a>
   </div>
 </body>
 
@@ -148,7 +163,10 @@
     { loanID: 0, name: "Equipment Vehicle Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
     { loanID: 1, name: "SME Equipment Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
     { loanID: 2, name: "Temporary Bridging Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
-    { loanID: 3, name: "Business Property Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" }
+    { loanID: 3, name: "Business Property Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
+    { loanID: 4, name: "Loan Insurance Scheme", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
+    { loanID: 5, name: "Bizmoney Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
+    { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" }
   ]
 
   $("input[name='radioPurpose'],input[name='radioAmount'],input[name='radioTerm']").click(function () {
@@ -160,11 +178,7 @@
     var qn1 = ""
     var qn2 = ""
     var qn3 = ""
-    // var checkboxes = document.querySelectorAll('input[name="checkbox"]:checked');
-    // for (var checkbox of checkboxes) {
-    //   // console.log(checkbox.value)
-    //   qn1.push(checkbox)
-    // }
+
     for (var i = 0, length = radioPurpose.length; i < length; i++) {
       if (radioPurpose[i].checked) {
         qn1 = radioPurpose[i].value
@@ -174,7 +188,6 @@
     }
     for (var i = 0, length = radioAmount.length; i < length; i++) {
       if (radioAmount[i].checked) {
-        // do whatever you want with the checked radio
         qn2 = radioAmount[i].value
         break;
       }
@@ -182,57 +195,19 @@
     }
     for (var i = 0, length = radioTerm.length; i < length; i++) {
       if (radioTerm[i].checked) {
-        // do whatever you want with the checked radio
         qn3 = radioTerm[i].value
         break;
       }
     }
+    // ensure that none of the values is empty
     if (qn1 != "" && qn2 != "" && qn3 != "") {
-      formulaFunction(qn1, qn2, qn3);    
+      formulaFunction(qn1, qn2, qn3);
       console.log("lolo");
 
     }
   });
- 
-  // function testFunction() {
-  //   var radioPurpose = document.getElementsByName('radioPurpose');
-  //   var radioAmount = document.getElementsByName('radioAmount');
-  //   var radioTerm = document.getElementsByName('radioTerm');
 
-  //   // var checks = document.getElementsByName('checkbox');
-  //   var qn1 = ""
-  //   var qn2 = ""
-  //   var qn3 = ""
-  //   // var checkboxes = document.querySelectorAll('input[name="checkbox"]:checked');
-  //   // for (var checkbox of checkboxes) {
-  //   //   // console.log(checkbox.value)
-  //   //   qn1.push(checkbox)
-  //   // }
-  //   for (var i = 0, length = radioPurpose.length; i < length; i++) {
-  //     if (radioPurpose[i].checked) {
-  //       qn1 = radioPurpose[i].value
-  //       break;
-  //     }
 
-  //   }
-  //   for (var i = 0, length = radioAmount.length; i < length; i++) {
-  //     if (radioAmount[i].checked) {
-  //       // do whatever you want with the checked radio
-  //       qn2 = radioAmount[i].value
-  //       break;
-  //     }
-
-  //   }
-  //   for (var i = 0, length = radioTerm.length; i < length; i++) {
-  //     if (radioTerm[i].checked) {
-  //       // do whatever you want with the checked radio
-  //       qn3 = radioTerm[i].value
-  //       break;
-  //     }
-  //   }
-  //   formulaFunction(qn1, qn2, qn3)
-
-  // }
 
   // function to deduce the best loan for user
   function formulaFunction(a, b, c) {
@@ -243,23 +218,41 @@
     // for (var i = 0; i < a.length; i++) {
     //   teststring += a[i].value + " "
     // }
-
-
-    if (a == "equipment" && (c == "term1" || c == "term2")) {
-      // console.log("1")
+    // (c == "term1" || c == "term2")
+    // Equipment Vehicle Loan
+    if ((a == "equipment" && c != "term3") || a == "vehicle") {
       document.getElementById("result").innerHTML = loan[0].name;
+      document.getElementById("description").innerHTML = loan[0].description;
     }
+    // SME Equipment Loan
     else if (a == "equipment" && c == "term3") {
-      // console.log("2")
       document.getElementById("result").innerHTML = loan[1].name;
+      document.getElementById("description").innerHTML = loan[1].description;
     }
+    // Temporary Bridging Loan
     else if (a == "assistance") {
-      // console.log("2")
       document.getElementById("result").innerHTML = loan[2].name;
+      document.getElementById("description").innerHTML = loan[2].description;
     }
+    // Business Property Loan 
     else if (a == "property") {
-      // console.log("2")
       document.getElementById("result").innerHTML = loan[3].name;
+      document.getElementById("description").innerHTML = loan[3].description;
+    }
+    // Loan Insurance scheme
+    else if (a == "trade" && c == "term1") {
+      document.getElementById("result").innerHTML = loan[4].name;
+      document.getElementById("description").innerHTML = loan[4].description;
+    }
+    // Bizmoney Loan
+    else if ((a == "trade" && c != "term1") || (a == "capital" && b != "amount3")) {
+      document.getElementById("result").innerHTML = loan[5].name;
+      document.getElementById("description").innerHTML = loan[5].description;
+    }
+    //SME Enhanced Working Capital Loan
+    else if (a == "capital" && b == "amount3") {
+      document.getElementById("result").innerHTML = loan[6].name;
+      document.getElementById("description").innerHTML = loan[6].description;
     }
 
   }
