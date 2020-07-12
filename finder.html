@@ -65,12 +65,13 @@
     color: white;
   }
 
-  .btnFindOutMore{
+  .btnFindOutMore {
     padding: 15px;
     border-radius: 10px;
     background-color: #06377B;
   }
-/* 
+
+  /* 
   .btnFindOutMore:hover{
     background-color: #fff;
   } */
@@ -148,19 +149,69 @@
       <input type="radio" id="radio3_3" name="radioTerm" value="term3">
       <label for="radio3_3">More than 5 years</label>
     </div>
-<hr>
+    <hr>
     <!-- <button onclick="testFunction()" type="button" class="btn btn-primary">Get Results</button> -->
     <!-- result section  -->
-    <h4 id="result"></h4>
+    <h4 id="loan"></h4>
     <p id="description"></p>
-    <a class="btn btn-primary btn-block btnFindOutMore" href="#" role="button">Click to Find Out More</a>
+    <div id="divFindOutMore"></div>
+
+    <!-- Division for suggested loans -->
+    <div id="otherLoans">
+      <div class="row">
+        <!-- <div class="card col">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">
+              Some quick example text to build on the card title
+              and make up the bulk of the card's content.
+            </p>
+            <a href="#!" class="card-link">Learn More</a>
+          </div>
+        </div> -->
+
+        <!-- <div class="card col" >
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">
+              Some quick example text to build on the card title
+              and make up the bulk of the card's content.
+            </p>
+            <a href="#!" class="card-link">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card col" >
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">
+              Some quick example text to build on the card title
+              and make up the bulk of the card's content.
+            </p>
+            <a href="#!" class="card-link">Learn More</a>
+          </div>
+        </div>
+
+        <div class="card col" >
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">
+              Some quick example text to build on the card title
+              and make up the bulk of the card's content.
+            </p>
+            <a href="#!" class="card-link">Learn More</a>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
   </div>
 </body>
 
 <script>
   // array to store information of loan (id, name, description, link)
   var loan = [
-    { loanID: 0, name: "Equipment Vehicle Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
+    { loanID: 0, name: "Equipment Vehicle Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "https://www.google.com/" },
     { loanID: 1, name: "SME Equipment Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
     { loanID: 2, name: "Temporary Bridging Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
     { loanID: 3, name: "Business Property Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "" },
@@ -201,8 +252,11 @@
     }
     // ensure that none of the values is empty
     if (qn1 != "" && qn2 != "" && qn3 != "") {
+      console.log(loan)
       formulaFunction(qn1, qn2, qn3);
+      // console.log(formulaFunction(qn1, qn2, qn3));
       console.log("lolo");
+      shuffleArray(loan, formulaFunction(qn1, qn2, qn3))
 
     }
   });
@@ -221,43 +275,90 @@
     // (c == "term1" || c == "term2")
     // Equipment Vehicle Loan
     if ((a == "equipment" && c != "term3") || a == "vehicle") {
-      document.getElementById("result").innerHTML = loan[0].name;
+      document.getElementById("loan").innerHTML = loan[0].name;
       document.getElementById("description").innerHTML = loan[0].description;
+      document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-primary btn-block btnFindOutMore" href="' + loan[0].url + '" role="button">Click to Find Out More</a>';
+      return 0;
     }
     // SME Equipment Loan
     else if (a == "equipment" && c == "term3") {
-      document.getElementById("result").innerHTML = loan[1].name;
+      document.getElementById("loan").innerHTML = loan[1].name;
       document.getElementById("description").innerHTML = loan[1].description;
+      document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-primary btn-block btnFindOutMore" href="' + loan[1].url + '" role="button">Click to Find Out More</a>';
+      return 1;
     }
     // Temporary Bridging Loan
     else if (a == "assistance") {
-      document.getElementById("result").innerHTML = loan[2].name;
+      document.getElementById("loan").innerHTML = loan[2].name;
       document.getElementById("description").innerHTML = loan[2].description;
+      document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-primary btn-block btnFindOutMore" href="' + loan[2].url + '" role="button">Click to Find Out More</a>';
+      return 2;
+
     }
     // Business Property Loan 
     else if (a == "property") {
-      document.getElementById("result").innerHTML = loan[3].name;
+      document.getElementById("loan").innerHTML = loan[3].name;
       document.getElementById("description").innerHTML = loan[3].description;
+      document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-primary btn-block btnFindOutMore" href="' + loan[3].url + '" role="button">Click to Find Out More</a>';
+      return 3;
+
     }
     // Loan Insurance scheme
     else if (a == "trade" && c == "term1") {
-      document.getElementById("result").innerHTML = loan[4].name;
+      document.getElementById("loan").innerHTML = loan[4].name;
       document.getElementById("description").innerHTML = loan[4].description;
+      document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-primary btn-block btnFindOutMore" href="' + loan[4].url + '" role="button">Click to Find Out More</a>';
+      return 4;
+
     }
     // Bizmoney Loan
     else if ((a == "trade" && c != "term1") || (a == "capital" && b != "amount3")) {
-      document.getElementById("result").innerHTML = loan[5].name;
+      document.getElementById("loan").innerHTML = loan[5].name;
       document.getElementById("description").innerHTML = loan[5].description;
+      document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-primary btn-block btnFindOutMore" href="' + loan[5].url + '" role="button">Click to Find Out More</a>';
+      return 5;
+
     }
     //SME Enhanced Working Capital Loan
     else if (a == "capital" && b == "amount3") {
-      document.getElementById("result").innerHTML = loan[6].name;
+      document.getElementById("loan").innerHTML = loan[6].name;
       document.getElementById("description").innerHTML = loan[6].description;
+      document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-primary btn-block btnFindOutMore" href="' + loan[6].url + '" role="button">Click to Find Out More</a>';
+      return 6;
+
     }
 
   }
 
 
+  //function to shuffle new array to provide suggested loans
+  function shuffleArray(array, index) {
+    var tempArray = array.slice(0)
+    tempArray.splice(index, 1)
+    console.log(tempArray)
+
+    var suggestedLoans = "";
+
+    for (var i = tempArray.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      [tempArray[i], tempArray[j]] = [tempArray[j], tempArray[i]];
+    }
+
+    console.log(tempArray)
+    // console.log("after shuffle")
+    // console.log(tempArray)
+    for (var i = 0; i < 4; i++){
+      suggestedLoans = suggestedLoans +  '<div class="card col"> <div class="card-body"><h4 class="card-title">'+tempArray[i].name+'</h4><p class="card-text">'+tempArray[i].description+'</p><a href="'+tempArray[i].url+'" class="card-link">Learn More</a></div></div>'
+    }
+
+    // $.each(array, function (index, element) {
+    //   posts = posts + "<div>" + "<h3>" + array[index].fname + " " + array[index].lname + "</h3><img src=" + array[index].picture + "><p>" + array[index].postText + "</p></div>";
+
+    // })
+
+    document.getElementById("otherLoans").innerHTML = suggestedLoans;
+
+  }
 </script>
 
 </html>
