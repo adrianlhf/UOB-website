@@ -1,0 +1,159 @@
+
+
+.navigationlist{
+    padding:1px 15px;
+
+}
+
+.search-result{
+    list-style-type:none;
+
+}
+
+.search-result-name{
+    font-size: 1.5em;
+}
+
+.search-result-description{
+    font-size: large;
+    margin:0;
+    padding:0;
+    
+}
+
+#searchlabel {
+    font-size:20px;
+    font-weight:600;
+    margin-right:10px;
+    margin-left:-15px;
+}
+
+.date{
+    font-weight:100;
+    line-height:0px;
+    padding:10px 0px ;
+    
+}
+
+.space{
+    padding:16px;
+}
+
+.form-inline {
+  justify-content: center;
+}
+
+/* sidebar filter */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: absolute;;
+    z-index: 1;
+    background-color:white;
+    overflow-x: hidden;
+    transition: 0.1s;
+    padding-top: 60px;
+ 
+    
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+    
+  }
+  
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar button{
+    font-size:25px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #00205B;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+ 
+
+  .modal-sm {
+    width: 100%; /* New width for small modal */
+  }
+
+  .pagination {
+    justify-content: center;
+ }
+ 
+ hr{
+   margin-bottom:0px !important;
+   margin-top:0px !important;
+ }
+ 
+ #main {
+   padding-top:20px;
+   padding-left:0px
+ }
+
+ .suggestedsearch {
+   padding-top:20px;
+ }
+
+ .suggested-header{
+   font-size:20px;
+ }
+ .suggested-description{
+   color:#002469;
+ }
+ 
+ .suggested-result{
+   margin:0px 0px 1px 1px;
+ }
+ 
+ .filter-sort{
+  margin:auto;
+  left: 50% !important;
+  right:auto !important;
+ }
+
+
+
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) { 
+   #main{
+      padding-left:40px;
+   }
+   
+   }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {  
+  
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+
+   }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) { 
+    
+   }
+
+  

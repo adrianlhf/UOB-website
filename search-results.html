@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <header>
+
+  </header>
+
+
+
+  <!-- making the search bar -->
+
+
+  <!-- search bar -->
+
+
+
+
+  <h3>UOB Search</h3>
+  <!-- filter MAIN -->
+  <div class="container">
+    <div class="searchbar ">
+      <nav class="navbar navbar-light ">
+        <form class="form-inline">
+
+          <input class="form-control " type="text" placeholder="Search" style="display:inline"> 
+          <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search
+
+          </button>
+    </div>
+    </form>
+    </nav>
+
+    
+
+
+    
+    <div class="container btn-group justify-content-center " role="group">
+
+
+      <button type="button" class="btn btn-secondary">Our Products</button>
+      <button type="button" class="btn btn-secondary">Insights</button>
+      <button type="button" class="btn btn-secondary">Updates</button>
+      <button type="button" class="btn btn-secondary">Support</button>
+
+
+    </div>
+  </div>
+
+
+  <!-- divison line -->
+  <hr>
+  <!-- division line -->
+  <!-- filter and sort bars -->
+
+  <div class="container">
+    <div class="filter-sort row ">
+      <button type="button" class="btn col " data-toggle="modal" data-target="#filteroverlay" onclick="openNav()">☰
+        filters</button>
+
+
+      <button id="btnGroupDrop1 " type="button" class="btn dropdown-toggle col  " data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Sort By:
+      </button>
+      <!-- <div class="dropdown-menu dropdown-menu-center" aria-labelledby="btnGroupDrop1">
+      <b class="dropdown-item" href="#!">Relevancy</a>
+      <a class="dropdown-item" href="#!">Popularity</a>
+      <a class="dropdown-item" href="#!">Newest</a>
+    </div> -->
+      <div class="dropdown-menu dropdown-menu-center text-center">
+        <button class="dropdown-item" type="button" href="#!">Relevancy</button>
+        <button class="dropdown-item" type="button" href="#!">Popularity</button>
+        <button class="dropdown-item" type="button" href="#!">Newest</button>
+      </div>
+
+    </div>
+  </div>
+  <!-- divison line -->
+  <hr>
+  <!-- division line -->
+  <!-- container  -->
+  <div class="container">
+    <!-- sidebar bar / filterbar  -->
+
+
+
+    <!-- filter overlay/modal for mobile -->
+    <div class="modal fade hidden-sm-up " id="filteroverlay" tabindex="-1" role="dialog"
+      aria-labelledby="overlayfilterLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm " role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="filteroverlay">Filters</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mySidebar" class="sidebar ">
+      <div class="filter container">
+        <div>
+          <div class="dropdown">
+            <button class="navbar-toggler " type="button" id="dropdownMenu1" data-toggle="collapse"
+              data-target="#filter1" aria-haspopup="true" aria-expanded="false" aria-controls="filter1">
+              UOB Loans
+            </button>
+            <div id="filter1" class="navbar-collapse collapse">
+              <a class="dropdown-item" href="#!">Loans</a>
+              <a class="dropdown-item" href="#!">Insurance</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="dropdown">
+            <button class=" navbar-toggler" type="button" id="dropdownMenu1" data-toggle="collapse"
+              data-target="#filter2" aria-haspopup="true" aria-expanded="false" aria-controls="filter1">
+              UOB Loans
+            </button>
+            <div id="filter2" class="navbar-collapse collapse">
+              <a class="dropdown-item" href="#!">Business Loans</a>
+              <a class="dropdown-item" href="#!">SME Loans</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="dropdown">
+            <button class=" navbar-toggler" type="button" id="dropdownMenu1" data-toggle="collapse"
+              data-target="#filter3" aria-haspopup="true" aria-expanded="false" aria-controls="filter1">
+              UOB Loans
+            </button>
+            <div id="filter3" class="navbar-collapse collapse">
+              <a class="dropdown-item" href="#!">Business Loans</a>
+              <a class="dropdown-item" href="#!">SME Loans</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="dropdown">
+            <button class=" navbar-toggler" type="button" id="dropdownMenu1" data-toggle="collapse"
+              data-target="#filter4" aria-haspopup="true" aria-expanded="false" aria-controls="filter1">
+              UOB Loans
+            </button>
+            <div id="filter4" class="navbar-collapse collapse">
+              <a class="dropdown-item" href="#!">Business Loans</a>
+              <a class="dropdown-item" href="#!">SME Loans</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- result page -->
+    <div class="row">
+
+
+      <div class="col-lg-9">
+        <ul id="main">
+          <li class="search-result">
+            <h2 class="search-result-name"><b>UOB Business Loans</b></h2>
+            <!-- breadcrumb for each result -->
+            <nav aria-label="breadcrumb ">
+              <ol class="row navigationlist d-none d-sm-flex">
+                <li class="breadcrumb-item"><a href="#">Business</a></li>
+                <li class="breadcrumb-item"><a href="#">Finance</a></li>
+                <li class="breadcrumb-item"><a href="#">Credit Card and Unsecured loans</a></li>
+                <li class="breadcrumb-item"><a href="#">UOB business loans</a></li>
+              </ol>
+            </nav>
+            <p class="search-result-description">
+              We are committed to supporting you and your business during these tough times. Improve your cash flow with
+              these loan schemes announced at the Resilience and Solidarity Budget 2020.
+            </p>
+            <div class="date">- March 19 2020</div>
+          </li>
+
+          <div class="space"></div>
+          <li class="search-result ">
+            <h2 class="search-result-name"><b>UOB Business Loans</b></h2>
+            <!-- breadcrumb for each result -->
+            <nav aria-label="breadcrumb">
+              <ol class="row navigationlist d-none d-sm-flex">
+                <li class="breadcrumb-item"><a href="#">Business</a></li>
+                <li class="breadcrumb-item"><a href="#">Finance</a></li>
+                <li class="breadcrumb-item"><a href="#">Credit Card and Unsecured loans</a></li>
+                <li class="breadcrumb-item"><a href="#">UOB business loans</a></li>
+              </ol>
+            </nav>
+            <p class="search-result-description">
+              UOB Business Property Loan provides financing option for SMEs looking to purchase industry/commercial
+              property
+              or refinancing their existing industry/commercial property loans with other banks.
+            </p>
+            <div class="date">- April 19 2017</div>
+          </li>
+
+
+          <div class="space"></div>
+          <li class="search-result">
+            <h2 class="search-result-name"><b>UOB Business Loans</b></h2>
+            <!-- breadcrumb for each result -->
+            <nav aria-label="breadcrumb ">
+              <ol class="row navigationlist d-none d-sm-flex">
+                <li class="breadcrumb-item"><a href="#">Business</a></li>
+                <li class="breadcrumb-item"><a href="#">Finance</a></li>
+                <li class="breadcrumb-item"><a href="#">Credit Card and Unsecured loans</a></li>
+                <li class="breadcrumb-item"><a href="#">UOB business loans</a></li>
+              </ol>
+            </nav>
+            <p class="search-result-description">
+              We are committed to supporting you and your business during these tough times. Improve your cash flow with
+              these loan schemes announced at the Resilience and Solidarity Budget 2020.
+            </p>
+            <div class="date">- March 19 2020</div>
+          </li>
+
+          <div class="space"></div>
+          <li class="search-result ">
+            <h2 class="search-result-name"><b>UOB Business Loans</b></h2>
+            <!-- breadcrumb for each result -->
+            <nav aria-label="breadcrumb">
+              <ol class="row navigationlist d-none d-sm-flex">
+                <li class="breadcrumb-item"><a href="#">Business</a></li>
+                <li class="breadcrumb-item"><a href="#">Finance</a></li>
+                <li class="breadcrumb-item"><a href="#">Credit Card and Unsecured loans</a></li>
+                <li class="breadcrumb-item"><a href="#">UOB business loans</a></li>
+              </ol>
+            </nav>
+            <p class="search-result-description">
+              UOB Business Property Loan provides financing option for SMEs looking to purchase industry/commercial
+              property
+              or refinancing their existing industry/commercial property loans with other banks.
+            </p>
+            <div class="date">- April 19 2017</div>
+          </li>
+
+
+          <div class="space"></div>
+          <li class="search-result">
+            <h2 class="search-result-name"><b>UOB Business Loans</b></h2>
+            <!-- breadcrumb for each result -->
+            <nav aria-label="breadcrumb ">
+              <ol class="row navigationlist d-none d-sm-flex">
+                <li class="breadcrumb-item"><a href="#">Business</a></li>
+                <li class="breadcrumb-item"><a href="#">Finance</a></li>
+                <li class="breadcrumb-item"><a href="#">Credit Card and Unsecured loans</a></li>
+                <li class="breadcrumb-item"><a href="#">UOB business loans</a></li>
+              </ol>
+            </nav>
+            <p class="search-result-description">
+              We are committed to supporting you and your business during these tough times. Improve your cash flow with
+              these loan schemes announced at the Resilience and Solidarity Budget 2020.
+            </p>
+            <div class="date">- March 19 2020</div>
+          </li>
+
+          <div class="space"></div>
+          <li class="search-result ">
+            <h2 class="search-result-name"><b>UOB Business Loans</b> </h2>
+            <!-- breadcrumb for each result -->
+            <nav aria-label="breadcrumb">
+              <ol class="row navigationlist d-none d-sm-flex">
+                <li class="breadcrumb-item"><a href="#">Business</a></li>
+                <li class="breadcrumb-item"><a href="#">Finance</a></li>
+                <li class="breadcrumb-item"><a href="#">Credit Card and Unsecured loans</a></li>
+                <li class="breadcrumb-item"><a href="#">UOB business loans</a></li>
+              </ol>
+            </nav>
+            <p class="search-result-description">
+              UOB Business Property Loan provides financing option for SMEs looking to purchase industry/commercial
+              property
+              or refinancing their existing industry/commercial property loans with other banks.
+            </p>
+            <div class="date">- April 19 2017</div>
+          </li>
+
+
+          <div class="space"></div>
+        </ul>
+      </div>
+
+      <!-- suggested search -->
+      <div class="col-lg-3 suggestedsearch">
+        <!-- breadcrumb for each result -->
+
+
+        <h4 class="suggested-header">
+          Related Search Results
+        </h4>
+        <!-- each suggested search result -->
+        <p class="suggested-result">
+          <a href="index.html" class="suggested-description">
+            <span class="magnifiying-glass">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#002469"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                <path fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+              </svg>
+            </span>
+            UOB Business <b>Loans</b>
+          </a>
+
+        </p>
+        <!-- each suggested search result -->
+        <p class="suggested-result">
+          <a href="index.html" class="suggested-description">
+            <span class="magnifiying-glass">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#002469"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                <path fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+              </svg>
+            </span>
+            UOB Business <b>Loans</b>
+          </a>
+        </p>
+        <!-- each suggested search result -->
+        <p class="suggested-result">
+          <a href="index.html" class="suggested-description">
+            <span class="magnifiying-glass">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#002469"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                <path fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+              </svg>
+            </span>
+            UOB Business <b>Loans</b>
+          </a>
+
+        </p>
+
+
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <!-- pagination -->
+    <ul class="pagination mx-auto">
+      <li class="page-item disabled">
+        <a class="page-link" href="#!" tabindex="-1">
+          < </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#!">1</a></li>
+      <li class="page-item active">
+        <a class="page-link" href="#!">2 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#!">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#!">></a>
+      </li>
+    </ul>
+
+
+
+
+  </div>
+
+
+  <script>
+
+    function openNav() {
+      var e = document.getElementById("mySidebar");
+      var width = screen.width
+
+      if (width >= 768) {
+
+        if (e.style.width == '200px') {
+          e.style.width = '0px';
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("mySidebar").style.borderRight = "0";
+          document.getElementById("main").style.marginLeft = "0";
+          document.getElementById("main").style.borderLeft = "0px black solid";
+
+        }
+        else {
+          e.style.width = '200px';
+          document.getElementById("main").style.marginLeft = "200px";
+          document.getElementById("main").style.borderLeft = "1px black solid";
+
+        }
+
+      }
+
+    }
+
+
+
+    $('#filteroverlay').on('show.bs.modal', function (size) {
+      if (screen.width >= 768) {
+        return size.preventDefault();
+      }
+    })
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
