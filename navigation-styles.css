@@ -1,0 +1,40 @@
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.m-col{
+    padding: 0 ;
+}
+.mainnav li{
+    list-style-type: none;
+    font-size: 14px;
+    display: block;
+    padding: 12px 10px;
+    text-transform: uppercase;
+    border-bottom: rgb(0, 0, 0) 1px solid;
+}
+.mainnav{
+    padding: 0 ;
+    margin: 0;
+}
+
+/* top navigation styles */
+#firstrow span{
+    color: rgb(255, 255, 255) ;
+    font-size: 14px;
+}
+
+.dropdown-toggle::after{
+    color: white;
+}
+
+#level1 .logo img {
+    max-width: 67px;
+}
+
+/* second level navigation */
+#main-navbar .logo img{
+    max-width: 200px;
+}

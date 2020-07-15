@@ -1,1 +1,154 @@
-HI
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="navigation-styles.css">
+</head>
+
+<body>
+  <header class="navbar-expand-md">
+    <!-- level 1 -->
+    <div id="level1" class="navbar navbar-dark  row" style="background-color: #002469;">
+      <button type="button" title="menu" class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar"
+        aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-brand d-md-none">
+        <a href="" title="UOB" class="logo">
+          <img src="../UOB-website/images/uob-logo-mobile1.png" alt="UOB">
+        </a>
+      </div>
+      <div class="navbar-right d-md-none">
+        <button type="button" class="btn">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#ffffff"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+            <path fill-rule="evenodd"
+              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+          </svg>
+        </button>
+      </div>
+      <!--first nav row-->
+      <div class="container d-none d-md-block" id="firstrow">
+        <div class="row">
+          <!-- For the type of uob site -->
+          <div class="btn-group">
+            <button id="dropdown-personal" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span>YOU ARE IN</span>
+              <span class="font-weight-bold">BUSINESS BANKING</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-item-heading">FOR INDIVIDUALS</li>
+              <li><a href="">PERSONAL BANKING</a></li>
+              <li><a href="">WEALTH BANKING</a></li>
+              <li><a href="">PRIVILEGE BANKING</a></li>
+              <li><a href="">PRIVILEGE RESERVE</a></li>
+              <li><a href="">PRIVATE BANKING</a></li>
+            </ul>
+          </div> <!-- end of country-->
+
+          <!-- For diff country -->
+          <div class="btn-group">
+            <button id="dropdown-Language" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span class="font-weight-bold">SINGAPORE</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">UOB CHINA</a>
+              <a class="dropdown-item" href="#">UOB VIETNAM</a>
+              <a class="dropdown-item" href="#">UOB MALAYSIA</a>
+            </div>
+          </div> <!-- end of country-->
+
+          <!-- For help & support -->
+          <div class="btn-group">
+            <button id="dropdown-Language" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span class="font-weight-bold">HELP & SUPPORT</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">PHONE NUMBER</a>
+              <a class="dropdown-item" href="#">REQUEST A CALL BACK</a>
+              <a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a>
+            </div>
+          </div> <!-- end of help & support -->
+
+          <!-- For login-->
+          <div class="btn-group ml-auto">
+            <button type="button" class="btn btn-focus">
+              <span class="font-weight-bold">LOGIN</span>
+              <span class="icon icon-lock"></span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">PHONE NUMBER</a>
+              <a class="dropdown-item" href="#">REQUEST A CALL BACK</a>
+              <a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a>
+            </div>
+
+          </div> <!-- end of help & support -->
+        </div>
+      </div> <!-- End of container for first row-->
+    </div>
+
+
+    <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar row">
+        
+          <!-- Logo -->
+          <div class="navbar-brand d-none d-md-block ">
+            <!--UOB logo-->
+            <a href="" title="UOB" class="logo mr-auto">
+              <img src="../UOB-website/images/uob-logo.jpg" alt="UOB">
+            </a>
+          </div>
+          <!-- tabs -->
+          <ul role="tablist" class="mainnav navbar-nav justify-content-center col-12 col-md-auto">
+            <li role="tab">
+              <a href="#" class="text-dark">Home</a>
+            </li>
+            <li role="tab">
+              <a href="#" class="text-dark">Start</a>
+            </li>
+            <li role="tab">
+              <a href="#" class="text-dark">Run</a>
+            </li>
+            <li role="tab">
+              <a href="#" class="text-dark">Grow</a>
+            </li>
+            <li role="tab">
+              <a href="#" class="text-dark">Tools</a>
+            </li>
+            <li role="tab">
+              <a href="#" class="text-dark">Insights</a>
+            </li>
+          </ul>
+          <!-- Logo -->
+          <div  class=" d-none d-md-block ">
+            <!--UOB logo-->
+            <a href="" title="UOB" class="logo">
+              <img src="../UOB-website/images/right-by-you.png" alt="Right by you">
+            </a>
+          </div>
+        
+    </div>
+  </header>
+
+  <div>
+    <h1>This is the title</h1>
+    <p>How do we need to do this thing? It is very hard </p>
+  </div>
+
+</body>
+
+
+
+</html>
