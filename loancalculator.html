@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="node_modules\jquery\dist\jquery.min.js"></script>
+  <!-- <script src="jquery.mobile-1.4.5.js"></script> -->
+
+</head>
+<style>
+
+</style>
+<body>
+  <div class="container">
+    <h4>Find out the indicative monthly installment payment of your UOB Business Loan</h4>
+    <form>
+      <div class="form-group">
+        <label for="loanAmtInput">Loan Amount</label>
+        <p id= "loanAmtOutput"></p>
+        <input type="range" min="10000" max="1000000" step="1" class="form-control-range" id="loanAmtInput">
+      </div>
+      <div class="form-group">
+        <label for="interestRateInput">Interest Rate</label>
+        <p id= "interestRateOutput"></p>
+        <input type="range" min="0" max="20" step="0.01" class="form-control-range" id="interestRateInput">
+      </div>
+    </form>      
+    <button class = "button" onclick="testFunction()">CLICK ME</button>
+
+  </div>
+
+</body>
+
+<script>
+$( document ).ready(function() {
+  displayLoanOutput()
+  displayInterestOutput()
+});
+
+document.getElementById("loanAmtInput").oninput = function() {
+  displayLoanOutput()
+}
+
+document.getElementById("interestRateInput").oninput = function() {
+  displayInterestOutput()
+}
+
+function displayLoanOutput() {
+   var val = document.getElementById("loanAmtInput").value //gets the oninput value
+   document.getElementById("loanAmtOutput").innerHTML = "$" + val //displays this value to the html page
+}
+
+function displayInterestOutput() {
+   var val = document.getElementById("interestRateInput").value //gets the oninput value
+   document.getElementById("interestRateOutput").innerHTML =val + "%"//displays this value to the html page
+}
+
+function testFunction(){
+  var test = Math.pow(8,2) + 1
+  console.log(test)
+  console.log("i am clicked")
+}
+
+function calculateFunction(){
+  
+}
+</script>
+</html>
