@@ -102,7 +102,7 @@
     <h4>What do you need the loan for?</h4>
 
     <div class="qn1">
-      <input type="radio" id="radio1_equipment" name="radioPurpose" value="equipment">
+      <input type="radio" id="radio1_equipment" name="radioPurpose" value="equipment" checked>
       <label for="radio1_equipment"> Equipment</label>
 
       <input type="radio" id="radio1_assistance" name="radioPurpose" value="assistance">
@@ -126,7 +126,7 @@
     <h4>How much do you need to loan?</h4>
 
     <div class="qn2">
-      <input type="radio" id="radio2_1" name="radioAmount" value="amount1">
+      <input type="radio" id="radio2_1" name="radioAmount" value="amount1" checked>
       <label for="radio2_1"> &#60; $100,000</label>
 
       <input type="radio" id="radio2_2" name="radioAmount" value="amount2">
@@ -140,7 +140,7 @@
     <!--How long is the loan term you are looking for? -->
     <h4>How long is the loan term you are looking for?</h4>
     <div class="qn3">
-      <input type="radio" id="radio3_1" name="radioTerm" value="term1">
+      <input type="radio" id="radio3_1" name="radioTerm" value="term1" checked>
       <label for="radio3_1"> &#60; 1 year</label>
 
       <input type="radio" id="radio3_2" name="radioTerm" value="term2">
@@ -209,6 +209,49 @@
 </body>
 
 <script>
+
+// remember to delete 
+$( document ).ready(function() {
+  var radioPurpose = document.getElementsByName('radioPurpose');
+    var radioAmount = document.getElementsByName('radioAmount');
+    var radioTerm = document.getElementsByName('radioTerm');
+
+    // var checks = document.getElementsByName('checkbox');
+    var qn1 = ""
+    var qn2 = ""
+    var qn3 = ""
+
+    for (var i = 0, length = radioPurpose.length; i < length; i++) {
+      if (radioPurpose[i].checked) {
+        qn1 = radioPurpose[i].value
+        break;
+      }
+
+    }
+    for (var i = 0, length = radioAmount.length; i < length; i++) {
+      if (radioAmount[i].checked) {
+        qn2 = radioAmount[i].value
+        break;
+      }
+
+    }
+    for (var i = 0, length = radioTerm.length; i < length; i++) {
+      if (radioTerm[i].checked) {
+        qn3 = radioTerm[i].value
+        break;
+      }
+    }
+    // ensure that none of the values is empty
+    if (qn1 != "" && qn2 != "" && qn3 != "") {
+      console.log(loan)
+      formulaFunction(qn1, qn2, qn3);
+      // console.log(formulaFunction(qn1, qn2, qn3));
+      console.log("lolo");
+      shuffleArray(loan, formulaFunction(qn1, qn2, qn3))
+
+    }
+});
+
   // array to store information of loan (id, name, description, link)
   var loan = [
     { loanID: 0, name: "Equipment Vehicle Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. Proin viverra ut ipsum sed maximus. Aliquam lacinia ante sed nisl commodo facilisis. Sed consequat, nisl sed scelerisque ultrices, nibh sapien viverra sem, eget facilisis ipsum nulla vel urna. Aliquam in posuere magna. Pellentesque tincidunt id arcu sit amet consequat. Suspendisse imperdiet varius malesuada.", url: "https://www.google.com/" },
