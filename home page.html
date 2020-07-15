@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Carousel scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+    crossorigin="anonymous">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+  body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .grey-section {
+    background-color: #EEEEEE;
+    width: 100%;
+    padding: 2.5% 0;
+  }
+
+  /* Carousel styles */
+
+  /* Make the image fully responsive */
+
+  .carousel-inner img {
+    width: 100%;
+    min-height:200px;
+    object-fit:cover;
+  }
+
+  /* Change carousel indicators to circles */
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+
+  /* persona section */
+
+  .persona-text {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .persona1 {
+    background-image: url("images/persona1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 194px;
+    
+  }
+
+  .persona2 {
+    background-image: url("images/persona2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 194px;
+    
+  }
+
+  .persona3 {
+    background-image: url("images/persona3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 194px;
+    
+  }
+
+  .persona4 {
+    background-image: url("images/persona4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    height: 194px;
+    
+  }
+
+/* styling of persona's 'learn more text' */
+  .learn-more-text {
+    color: #0000FF; 
+    font-size: 12px;
+  }
+
+/* Persona overlay styles */
+  .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.644);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+  /* Overlay link styles */
+  .overlay:hover, .overlay:visited {
+    text-decoration: none;
+    color: white; 
+  }
+
+  .persona1:hover .overlay, .persona2:hover .overlay, .persona3:hover .overlay, .persona4:hover .overlay {
+    opacity: 1;
+  }
+
+  .persona1:hover .persona-text, .persona2:hover .persona-text, .persona3:hover .persona-text, .persona4:hover .persona-text {
+    display: none;
+  }
+
+  /* styles for featured insights */
+.card-insights{
+  margin-bottom: 15px;
+  max-width: 80%;
+}
+
+ 
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .persona1, .persona2, .persona3, .persona4 {
+    height: 292px;
+  }
+
+  .learn-more-text {
+    font-size: 14px;
+  }
+
+  .card-insights {
+    width: 30%;
+  }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+</style>
+
+<body>
+
+
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/business-property-loan.jpg" alt="Business Property Loan" width="1100" height="500" class="img-fluid">
+      </div>
+      <div class="carousel-item">
+        <img src="images/uob-loans-fnb-industry.jpg" alt="UOB loans FnB industry" width="1100" height="500" class="img-fluid">
+      </div>
+      <div class="carousel-item">
+        <img src="images/google-my-business.gif" alt="Google My Business" width="1100" height="500" class="img-fluid">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#carousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+<br>
+
+  <div class="container">
+    <!-- Persona Section w: 305 h: 332-->
+    <h1> Top Industries Using Us As a Solution </h1>
+<br>
+    <!-- Persona Images -->
+    <div class="row justify-content-center">
+
+      <!-- Persona 1 - Retailer, F&B or Service Provider -->
+      <div class="persona1 d-flex align-items-center justify-content-center col">
+        <p class="text-center persona-text">Retailer, F&B or Service Provider
+          <br>
+          <span class="learn-more-text">Learn More</span>
+        </p>
+        <a href="" class="overlay text-center d-flex align-items-center justify-content-center">
+          <p> Comprises of <br> <span class="font-weight-bold">F&B, Consumer and Household Services, Healthcare Services and Retail </span></p>
+        </a>
+      </div>
+    
+      <!-- Persona 2 - Trader or Wholesaler -->
+      <div class="persona2 d-flex align-items-center justify-content-center col">
+        <p class="text-center persona-text">Trader or Wholesaler
+          <br>
+          <span class="learn-more-text">
+            Learn More
+          </span>
+        </p>
+        <a href="" class="overlay text-center d-flex align-items-center justify-content-center">
+          <p> Comprises of <br><span class="font-weight-bold">Commerce/ Wholesaler, Import/Export </span></p>
+        </a>
+      </div>
+    
+      <div class="w-100 d-lg-none"></div>
+    
+      <!-- Persona 3 - Building & Construction, Logistics or Manufacturing -->
+      <div class="persona3 d-flex align-items-center justify-content-center col">
+        <p class="text-center persona-text">Building & Construction, Logistics or Manufacturing
+          <br>
+          <span class="learn-more-text">
+            Learn More
+          </span>
+        </p>
+        <a href="" class="overlay text-center d-flex align-items-center justify-content-center">
+          <p> Comprises of <br><span class="font-weight-bold">Agriculture, Building & Construction, Manufacturing and Transportation & Logistics </span></p>
+        </a>
+      </div>
+    
+      <!-- Persona 4 - Association, Education Provider or Investment Holding Company -->
+      <div class="persona4 d-flex align-items-center justify-content-center col">
+        <p class="text-center persona-text">Association, Education Provider or Investment Holding Company
+          <br>
+          <span class="learn-more-text">
+            Learn More
+          </span>
+        </p>
+        <a href="" class="overlay text-center d-flex align-items-center justify-content-center">
+          <p> Comprises of <br><span class="font-weight-bold">Asset/ Property Management, Association/ Community Services, Investment Holding, Educational Services and Professional Service </span> </p>
+        </a>
+      </div>
+    </div>
+
+<br>
+    <h1> More than just a bank, we go beyond banking to help your business scale and operate most efficiently. Discover solutions
+      customised for you. </h1>
+
+      <br>
+    
+  </div>
+
+
+ <!-- Products & Services Section -->
+  <div class="grey-section">
+    <h1>Products & Services That Might Interest You</h1>
+  
+  
+    <div class="container">
+      <div class="MultiCarousel" data-items="1,2,3,3" data-slide="1" id="MultiCarousel" data-interval="1000">
+        <div class="MultiCarousel-inner">
+          <div class="item">
+            <div>
+              <img src="images/sme-loan.jpg" alt="SME Loan" class="rounded-circle img-fluid img-50">
+              <h5 class="font-weight-bold pt-2">SME Loan</h5>
+              <p>
+                  Help local small businesses gain unsecured working capital financing under EFS. Offers loan up to S$100,000 to young businesses that meet this criteria</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+                <img src="images/business-property-loan2.jpg" alt="Business Property Loan" class="rounded-circle img-fluid img-50">
+              <h5 class="font-weight-bold pt-2">Business Property Loan</h5>
+              <p> Provides financing option for SMEs looking to purchase industry/commercial property or refinancing their existing industry/commercial property loans with other banks</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <img src="images/bizmoney-loan.jpg" alt="Bizmoney Loan" class="rounded-circle img-fluid img-50">
+              <h5 h5 class="font-weight-bold pt-2">Business Loan</h5>
+              <p>Help SMEs expand their business and gain access to working capital financing to support their day-to-day business operations. </p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <img src="images/bizmoney-loan.jpg" alt="Bizmoney Loan" class="rounded-circle img-fluid img-50">
+              <h5 class="font-weight-bold pt-2">BizMoney Loan </h5>
+              <p>Description</p>
+            </div>
+          </div>
+          <div class="item align-items-center">
+            <div>
+              <!-- its a duplicate? -->
+              <img src="images/bizmoney-loan.jpg" alt="Bizmoney Loan" class="rounded-circle img-fluid img-50">
+              <h5 class="font-weight-bold pt-2">Business & Commercial Property Loan</h5>
+              <p>Provides financing option for SMEs looking to purchase industry/commercial property or refinancing their existing industry/commercial property loans with other banks.</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <h5 class="font-weight-bold pt-2">Multi Item Carousel</h5>
+              <p>Description</p>
+            </div>
+          </div>
+          <div class="item">
+            <div>
+              <h5 class="font-weight-bold pt-2">Multi Item Carousel</h5>
+              <p>Description</p>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary leftLst"><</button>
+        <button class="btn btn-primary rightLst">></button>
+      </div>
+  
+    </div>
+
+  </div>
+  
+  <!-- Insights section -->
+  <div class="container">
+    <br>
+    <h1>Business Banking Insights </h1>
+    <br>
+    <div class="row justify-content-center justify-content-around">
+      <div class="card card-insights">
+        <img class="card-img-top img-fluid" src="images/google-my-biz-728x408.jpg" alt="Card image cap">
+        <div class="card-body"> 
+          <h5 class="card-title font-weight-bold">3 ways to keep your employees engaged even as they work from home</h5>
+          <p class="card-text">With telecommuting here to stay for at least the near-term, this new working culture can create fresh challenges for employees. Find out how you can keep your employees motivated, productive, and engaged without the benefit of face-to-face social interaction and camaraderie.</p>
+          <a href="#!" class="card-link">Find Out More</a>
+        </div>
+        <div class="card-footer">
+          10 Jun 2020
+        </div>
+      </div>
+      <div class="card card-insights">
+        <img class="card-img-top img-fluid" src="images/ecommerce-growth-728x408.jpg" alt="Card image cap">
+        <div class="card-body"> 
+          <h5 class="card-title font-weight-bold">Grow your business by taking it online</h5>
+          <p class="card-text">Given the growing trend of online shopping, physical businesses must establish an online presence. Find out what SMEs can do to launch their e-commerce store quickly. </p>
+          <a href="#!" class="card-link">Find Out More</a>
+        </div>
+        <div class="card-footer">
+          24 Jun 2020
+        </div>
+      </div>
+      <div class="card card-insights">
+        <img class="card-img-top img-fluid" src="images/employee-engage-364x204.jpg" alt="Card image cap">
+        <div class="card-body"> 
+          <h5 class="card-title font-weight-bold">How your business can quickly stand out more on Google</h5>
+          <p class="card-text"> An online presence is vital to the ‘new normal’ way of doing business. Find out how to make your business stand out on Google and attract more customers to your website – for free.</p>
+          <a href="#!" class="card-link">Find Out More</a>
+        </div>
+        <div class="card-footer">
+          12 Jun 2020
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- Updates section -->
+  <div class="grey-section">
+    <h1>Updates</h1>
+    <div class="container">
+      <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="1000">
+        <div class="MultiCarousel-inner card-deck">
+          <div class="item card">
+              <img class="card-img-top img-fluid" src="images/google-my-biz-728x408.jpg" alt="Card image cap">
+              <div class="card-body"> 
+                <h5 class="card-title font-weight-bold text-left">Relocation of Jurong East Branch in July</h5>
+              </div> 
+              <div class="card-footer">
+                <h6 class="text-right">June 19, 2020</h6>
+              </div>
+          </div>
+          <div class="item card">
+              <img class="card-img-top img-fluid" src="images/employee-engage-364x204.jpg" alt="Card image cap">
+              <div class="card-body"> 
+                <h5 class="card-title font-weight-bold text-left">Safe Reopening of Banks from June</h5>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-right">May 17, 2020</h6>
+              </div>
+          </div>
+          <div class="item card">
+              <img class="card-img-top img-fluid" src="images/google-my-biz-728x408.jpg" alt="Card image cap">
+              <div class="card-body"> 
+                <h5 class="card-title font-weight-bold text-left">Temporary Disruption of Bank Services from 2-6am</h5>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-right">April 29, 2020</h6>
+              </div>
+          </div>
+          <div class="item card">
+              <img class="card-img-top img-fluid" src="images/google-my-biz-728x408.jpg" alt="Card image cap">
+              <div class="card-body"> 
+                <h5 class="card-title font-weight-bold text-left">Update of UOB Mighty Application</h5>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-right">April 20, 2020</h6>
+              </div>
+          </div>
+          <div class="item card">
+              <img class="card-img-top img-fluid" src="images/google-my-biz-728x408.jpg" alt="Card image cap">
+              <div class="card-body"> 
+                <h5 class="card-title font-weight-bold text-left">Relocation of Jurong East Branch in July</h5>
+              </div>
+              <div class="card-footer">
+                <h6 class="text-right">June 19, 2020</h6>
+              </div>
+          </div>
+        </div>
+        <button class="btn btn-primary leftLst"><</button>
+        <button class="btn btn-primary rightLst">></button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<style>
+
+  /* styles for multi item carousel */
+  .MultiCarousel {
+    overflow: hidden; 
+    padding: 15px 40px; 
+    width: 100%; 
+    position:relative; 
+  }
+  
+  .MultiCarousel .MultiCarousel-inner { 
+    transition: 1s ease all; 
+    float: left; 
+    }
+
+  .MultiCarousel .MultiCarousel-inner .item { 
+    float: left;
+  }
+  
+  .MultiCarousel .MultiCarousel-inner .item > div { 
+    text-align: center; 
+    /* padding:10px; 
+    margin:10px;  */
+    /* color:#666; */
+    color: black;
+  }
+
+  .MultiCarousel .MultiCarousel-inner .item p {
+    width: 80%;
+    margin: auto; 
+    padding: auto;
+  }
+
+  .MultiCarousel .leftLst, .MultiCarousel .rightLst { 
+    position:absolute; 
+    border-radius:50%;
+    top:calc(50% - 20px);
+    background: #00377bad;
+    border: none;
+  }
+
+  .MultiCarousel .leftLst:hover , .MultiCarousel .rightLst:hover { 
+    background: #00377B;
+  }
+
+  .MultiCarousel .leftLst { 
+    left:0; 
+  }
+
+  .MultiCarousel .rightLst {
+    right:0; 
+  }
+    
+  .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
+    pointer-events: none; 
+    background:#ccc; 
+  }
+
+/* Change image sizing */
+  .MultiCarousel .MultiCarousel-inner .img-50 {
+    width: 50%;
+  }
+
+
+  /* Change style of card-footer */
+  .MultiCarousel .MultiCarousel-inner .card-footer {
+    background: white;
+    border: none;
+    padding-top: 0; 
+    margin-top: 0;
+  }
+
+/* end of styles for multi item carousel */
+
+
+
+</style>
+
+<script>
+
+// Code for multi item carousel - Products & Services section
+$(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 1200) {
+                incno = itemsSplit[3];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 992) {
+                incno = itemsSplit[2];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 768) {
+                incno = itemsSplit[1];
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
+
+//end of script for multi item carousel
+  
+</script>
