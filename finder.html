@@ -486,8 +486,6 @@
     // console.log("after shuffle")
     // console.log(tempArray)
 
-    // suggestedLoans = suggestedLoans + '<h1>Other Loans You Might Be Interested In</h1>';
-
     for (var i = 0; i < 4; i++){
       suggestedLoans = suggestedLoans + '<div class="card"> <div class="card-body"><h4 class="card-title">'+tempArray[i].name+'</h4><p class="card-text">'+tempArray[i].description+'</p><a href="'+tempArray[i].url+'" class="card-link">Learn More</a></div></div>'
 
@@ -500,7 +498,7 @@
     //   posts = posts + "<div>" + "<h3>" + array[index].fname + " " + array[index].lname + "</h3><img src=" + array[index].picture + "><p>" + array[index].postText + "</p></div>";
 
     // })
-    // document.getElementById("otherLoansHeader") ='<h1 class="text-left">Other Loans You Might Be Interested In</h1>';
+  
     document.getElementById("otherLoans").innerHTML = '<br><h1 class="text-left">Other Loans You Might Be Interested In</h1><br><div class="row card-deck">' + suggestedLoans + '</div>';
 
   }
