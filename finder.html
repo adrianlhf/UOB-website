@@ -18,8 +18,11 @@
 </head>
 
 <style>
+
   body {
     font-family: 'open sans', sans-serif, Arial;
+   
+    margin: auto;
   }
   
   h1 {
@@ -90,6 +93,7 @@
     border-radius: 10px;
     background-color: #06377B;
   }
+  
 
   /* Styles for Hr/ line */
 
@@ -132,28 +136,39 @@
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) { 
 
+  .body {
+    width: 62%;
+  }
+
   .select-and-result{
     width: 100%;
+    padding: 2em 0;
   }
   .select {
     float: left;
     width: 50%;
-    height: 17em;
+    /* height: 17em; */
+    padding-right: 1em;
   }
 
   .loan-result {
     float: right;
     width: 50%;
     padding: 0;
-    padding-left: 30px;
+    padding-left: 3em;
     border-left: 0.5px solid black;
-    height: 15em;
+
+    height: 19em;
   }
 
   .suggested-loan {
     float: left;
     
   } 
+
+  #description{
+    padding: 1em 0;
+  }
 
   }
 
@@ -180,27 +195,25 @@
   
     <!-- First group of radio buttons -->
     <!-- What do you need the loan for? -->
-    <p>What do you need the loan for?</p>
+    
     <div class="select-and-result">
+      
       <div class="select">
+        <p>What do you need the loan for?</p>
         <div class="qn1">
-          <input type="radio" id="radio1_equipment" name="radioPurpose" value="equipment" checked>
+          <input type="radio" id="radio1_equipment" name="radioPurpose" value="equipment">
           <label for="radio1_equipment"> Equipment</label>
-  
-          <input type="radio" id="radio1_assistance" name="radioPurpose" value="assistance">
-          <label for="radio1_assistance">Relief Assistance</label>
-  
-          <input type="radio" id="radio1_property" name="radioPurpose" value="property">
-          <label for="radio1_property">Property</label>
-  
+          <input type="radio" id="radio1_trade" name="radioPurpose" value="trade">
+          <label for="radio1_trade">Trade</label>
           <input type="radio" id="radio1_vehicle" name="radioPurpose" value="vehicle">
           <label for="radio1_vehicle">Vehicle</label>
   
           <input type="radio" id="radio1_capital" name="radioPurpose" value="capital">
           <label for="radio1_capital">Working Capital</label>
-  
-          <input type="radio" id="radio1_trade" name="radioPurpose" value="trade">
-          <label for="radio1_trade">Trade</label>
+          <input type="radio" id="radio1_property" name="radioPurpose" value="property">
+          <label for="radio1_property">Property</label>
+          <input type="radio" id="radio1_assistance" name="radioPurpose" value="assistance">
+          <label for="radio1_assistance">Relief Assistance</label>
         </div>
   
         <!-- Second group of radio buttons -->
@@ -208,7 +221,7 @@
         <p>How much do you need to loan?</p>
   
         <div class="qn2">
-          <input type="radio" id="radio2_1" name="radioAmount" value="amount1" checked>
+          <input type="radio" id="radio2_1" name="radioAmount" value="amount1">
           <label for="radio2_1"> &#60; $100,000</label>
   
           <input type="radio" id="radio2_2" name="radioAmount" value="amount2">
@@ -222,7 +235,7 @@
         <!--How long is the loan term you are looking for? -->
         <p>How long is the loan term you are looking for?</p>
         <div class="qn3">
-          <input type="radio" id="radio3_1" name="radioTerm" value="term1" checked>
+          <input type="radio" id="radio3_1" name="radioTerm" value="term1">
           <label for="radio3_1"> &#60; 1 year</label>
   
           <input type="radio" id="radio3_2" name="radioTerm" value="term2">
@@ -237,6 +250,7 @@
       
       <!-- <button onclick="testFunction()" type="button" class="btn btn-primary">Get Results</button> -->
       <!-- result section  -->
+     
       <div class="loan-result">
         <h4 id="loan">Select Your Answers To Get A Recommended Loan</h4>
         <p id="description">Loans can help you with... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. </p>
