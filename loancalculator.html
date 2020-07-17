@@ -16,61 +16,116 @@
 
 </head>
 <style>
+  input[type=range] {
+    -webkit-appearance: none;
+  }
 
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -7px;
+
+
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+  }
 </style>
+
 <body>
   <div class="container">
     <h4>Find out the indicative monthly installment payment of your UOB Business Loan</h4>
     <form>
       <div class="form-group">
         <label for="loanAmtInput">Loan Amount</label>
-        <p id= "loanAmtOutput"></p>
-        <input type="range" min="10000" max="1000000" step="1" class="form-control-range" id="loanAmtInput">
+        <p id="loanAmtOutput"></p>
+        <input type="range" min="1000" max="1000000" step="1" class="form-control-range customSlider"
+          id="loanAmtInput">
       </div>
       <div class="form-group">
         <label for="interestRateInput">Interest Rate</label>
-        <p id= "interestRateOutput"></p>
+        <p id="interestRateOutput"></p>
         <input type="range" min="0" max="20" step="0.01" class="form-control-range" id="interestRateInput">
       </div>
-    </form>      
-    <button class = "button" onclick="testFunction()">CLICK ME</button>
+      <div class="form-group">
+        <label for="tenureInput">Tenure</label>
+        <p id="tenureOutput"></p>
+        <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureInput">
+      </div>
+    </form>
+    <button onclick="calculateFunction()" class="btn btn-primary" type="button" >Calculate</button>
 
+    <p id="results"></p>
   </div>
 
 </body>
 
 <script>
-$( document ).ready(function() {
-  displayLoanOutput()
-  displayInterestOutput()
-});
+  $(document).ready(function () {
+    displayOutput()
+  });
 
-document.getElementById("loanAmtInput").oninput = function() {
-  displayLoanOutput()
-}
+  document.getElementById("loanAmtInput").oninput = function () {
+    // displayLoanOutput()
+    displayOutput()
 
-document.getElementById("interestRateInput").oninput = function() {
-  displayInterestOutput()
-}
+  }
 
-function displayLoanOutput() {
-   var val = document.getElementById("loanAmtInput").value //gets the oninput value
-   document.getElementById("loanAmtOutput").innerHTML = "$" + val //displays this value to the html page
-}
+  document.getElementById("interestRateInput").oninput = function () {
+    // displayInterestOutput()
+    displayOutput()
 
-function displayInterestOutput() {
-   var val = document.getElementById("interestRateInput").value //gets the oninput value
-   document.getElementById("interestRateOutput").innerHTML =val + "%"//displays this value to the html page
-}
+  }
 
-function testFunction(){
-  var test = Math.pow(8,2) + 1
-  console.log(test)
-  console.log("i am clicked")
-}
+  document.getElementById("tenureInput").oninput = function () {
+    // displayInterestOutput()
+    displayOutput()
 
-function calculateFunction(){
-  
-}
+  }
+
+
+  function displayOutput() {
+    var val1 = document.getElementById("loanAmtInput").value //gets the oninput value
+    document.getElementById("loanAmtOutput").innerHTML = "$" + val1 //displays this value to the html page
+
+    var val2 = document.getElementById("interestRateInput").value //gets the oninput value
+    document.getElementById("interestRateOutput").innerHTML = val2 + "%"//displays this value to the html page
+
+    var val3 = document.getElementById("tenureInput").value //gets the oninput value
+    document.getElementById("tenureOutput").innerHTML = val3 + " year"//displays this value to the html page
+  }
+
+  function calculateFunction() {
+    var p = parseInt(document.getElementById("loanAmtInput").value)
+    var t = parseFloat(document.getElementById("interestRateInput").value)
+    var y = parseInt(document.getElementById("tenureInput").value)
+
+
+var r = t/100
+    var n = y * 12
+    var result = p * ((Math.pow((r * (1 + (r / n))), n)) / (Math.pow(((1 + (r / n)), (n - 1)))))
+    // var result = p * ((Math.pow((r * (1 + (r / n))), n)) / (Math.pow(((1 + (r / n)), (n - 1)))))
+    console.log(result)
+    console.log("i am clicked")
+  }
+
 </script>
+
 </html>
