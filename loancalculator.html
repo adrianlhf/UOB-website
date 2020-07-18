@@ -56,8 +56,7 @@
       <div class="form-group">
         <label for="loanAmtInput">Loan Amount</label>
         <p id="loanAmtOutput"></p>
-        <input type="range" min="1000" max="1000000" step="1" class="form-control-range customSlider"
-          id="loanAmtInput">
+        <input type="range" min="1000" max="1000000" step="1" class="form-control-range customSlider" id="loanAmtInput">
       </div>
       <div class="form-group">
         <label for="interestRateInput">Interest Rate</label>
@@ -70,9 +69,9 @@
         <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureInput">
       </div>
     </form>
-    <button onclick="calculateFunction()" class="btn btn-primary" type="button" >Calculate</button>
+    <button onclick="calculateFunction()" class="btn btn-primary" type="button">Calculate</button>
 
-    <p id="results"></p>
+    <p id="result"></p>
   </div>
 
 </body>
@@ -118,12 +117,11 @@
     var y = parseInt(document.getElementById("tenureInput").value)
 
 
-var r = t/100
+    var r = t / 100
     var n = y * 12
-    var result = p * ((Math.pow((r * (1 + (r / n))), n)) / (Math.pow(((1 + (r / n)), (n - 1)))))
-    // var result = p * ((Math.pow((r * (1 + (r / n))), n)) / (Math.pow(((1 + (r / n)), (n - 1)))))
-    console.log(result)
-    console.log("i am clicked")
+    var result = p * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
+    
+    document.getElementById("result").innerHTML = result
   }
 
 </script>
