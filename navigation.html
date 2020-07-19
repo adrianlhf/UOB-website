@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="navigation-styles.css">
+
+
+  <!-- script for sticky -->
+  <script>
+    if ($(window).width() > 992) {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 38) {
+          $('#main-navbar').addClass("fixed-top");
+          // add padding top to show content behind navbar
+          $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+        } else {
+          $('#main-navbar').removeClass("fixed-top");
+          // remove padding top from body
+          $('body').css('padding-top', '0');
+        }
+      });
+    } // end if
+  </script>
+
+</head>
+
+<body>
+  <header class="navbar-expand-lg">
+    <!-- level 1 -->
+    <div id="level1" class="navbar navbar-dark  row" style="background-color: #002469;">
+      <button class="btn d-lg-none">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-brand d-lg-none">
+        <a href="" title="UOB" class="logo">
+          <img src="../UOB-website/images/uob-logo-mobile1.png" alt="UOB">
+        </a>
+      </div>
+      <div class="navbar-right d-lg-none">
+        <button type="button" class="btn">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#ffffff"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+            <path fill-rule="evenodd"
+              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+          </svg>
+        </button>
+      </div>
+      <!--first nav row-->
+      <div class="container d-none d-lg-block" id="firstrow">
+        <div class="row">
+          <!-- For the type of uob site -->
+          <div class="btn-group">
+            <button id="dropdown-personal" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span>YOU ARE IN</span>
+              <span class="font-weight-bold">BUSINESS BANKING</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-item-heading">FOR INDIVIDUALS</li>
+              <li><a class="dropdown-item" href="">PERSONAL BANKING</a></li>
+              <li><a class="dropdown-item" href="">WEALTH BANKING</a></li>
+              <li><a class="dropdown-item" href="">PRIVILEGE BANKING</a></li>
+              <li><a class="dropdown-item" href="">PRIVILEGE RESERVE</a></li>
+              <li><a class="dropdown-item" href="">PRIVATE BANKING</a></li>
+            </ul>
+          </div> <!-- end of country-->
+
+          <!-- For diff country -->
+          <div class="btn-group">
+            <button id="dropdown-Language" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span class="font-weight-bold">SINGAPORE</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">UOB CHINA</a>
+              <a class="dropdown-item" href="#">UOB VIETNAM</a>
+              <a class="dropdown-item" href="#">UOB MALAYSIA</a>
+            </div>
+          </div> <!-- end of country-->
+
+          <!-- For help & support -->
+          <div class="btn-group">
+            <button id="dropdown-Language" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span class="font-weight-bold">HELP & SUPPORT</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a>
+              <a class="dropdown-item" href="#">REQUEST A CALL BACK</a>
+              <a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a>
+            </div>
+          </div> <!-- end of help & support -->
+
+          <!-- For login-->
+          <div class="btn-group ml-auto login">
+            <button type="button" class="btn btn-focus" href="#">
+              <i class="material-icons">lock</i>
+              <span class="font-weight-bold">LOGIN</span>
+            </button>
+          </div> <!-- end of login -->
+        </div>
+      </div> <!-- End of container for first row-->
+    </div>
+
+    <!-- level 2 -->
+<div id="nav-bg">
+    <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar row">
+      <!-- Logo -->
+      <div class="navbar-brand d-none d-lg-block ">
+        <!--UOB logo-->
+        <a href="" title="UOB" class="logo mr-auto">
+          <img src="../UOB-website/images/uob-logo.jpg" alt="UOB">
+        </a>
+      </div>
+      <!-- tabs -->
+      <ul role="tablist" class="mainnav navbar-nav justify-content-center col-12 col-lg-auto">
+        <li role="tab" class="nav-item"><a href="#" class="text-dark nav-link">Home</a></li>
+        <li role="tab" class="nav-item dropdown">
+          <a href="#" class="text-dark nav-link dropdown-toggle">Start</a>
+          <ul class="dropdown-menu dropdown-menu-right first-menu">
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Digitalize your Business</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">Accounting</a></li>
+                <li><a class="dropdown-item" href="#">Cyber Marketing</a></li>
+                <li><a class="dropdown-item" href="#">Digital Transaction</a></li>
+                <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Apply for Business Debit Card</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">UOB Platinium Business Card</a></li>
+                <li><a class="dropdown-item" href="#">UOB Business Plus Card</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Open a Business Banking
+                Account</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">Online Account Opening</a></li>
+                <li><a class="dropdown-item" href="#">UOB BizTransact Account</a></li>
+                <li><a class="dropdown-item" href="#">UOB E-Business Account</a></li>
+                <li><a class="dropdown-item" href="#">Singapore Dollar Current Account</a></li>
+                <li><a class="dropdown-item" href="#">BizGlobal Account</a></li>
+                <li><a class="dropdown-item" href="#">Global Currency Account</a></li>
+                <li><a class="dropdown-item" href="#">Reminbi Account</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li role="tab" class="nav-item dropdown">
+          <a href="#" class="text-dark nav-link dropdown-toggle">Run</a>
+          <ul class="dropdown-menu dropdown-menu-right first-menu">
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Make Informed Decisions</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">BizSmart</a></li>
+                <li><a class="dropdown-item" href="#">UOB eAlerts</a></li>
+                <li><a class="dropdown-item" href="#">UOB Business Mobile App</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Insure your Business</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">BizCare</a></li>
+                <li><a class="dropdown-item" href="#">BizDrive</a></li>
+                <li><a class="dropdown-item" href="#">Machinery All Risk Inusurance</a></li>
+                <li><a class="dropdown-item" href="#">Life Inusurance</a></li>
+                <li><a class="dropdown-item" href="#">Employee Benefits</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Manage Cashflow</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">Payment and Collection Services</a></li>
+                <li><a class="dropdown-item" href="#">PayNow corporate</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Manage Employees</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">Payroll Services</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Trade Solutions <br>
+                (import/export services)</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">Import Services</a></li>
+                <li><a class="dropdown-item" href="#">Export Services</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li role="tab" class="nav-item dropdown ">
+          <a href="#" class="text-dark nav-link dropdown-toggle">Grow</a>
+          <ul class="dropdown-menu dropdown-menu-right first-menu">
+            <li>
+              <a class="dropdown-item" href="#">Fixed Deposits</a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Boost your Cashflow and
+                Assets</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">UOB Business Loan</a></li>
+                <li><a class="dropdown-item" href="#">UOB BizMoney</a></li>
+                <li><a class="dropdown-item" href="#">UOB SME Loan</a></li>
+                <li><a class="dropdown-item" href="#">UOB OverDraft</a></li>
+                <li><a class="dropdown-item" href="#">Business Property and Equity Loan</a></li>
+                <li><a class="dropdown-item" href="#">Government Assistant Scheme</a></li>
+                <li><a class="dropdown-item" href="#">Vehicle and Machinery Financing</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li role="tab" class="nav-item dropdown">
+          <a href="#" class="text-dark nav-link dropdown-toggle">Tools</a>
+          <ul class="dropdown-menu dropdown-menu-right first-menu">
+            <li>
+              <a class="dropdown-item" href="#">Create an account</a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#">Loans</a>
+              <ul class="submenu submenu-left dropdown-menu">
+                <li><a class="dropdown-item" href="#">Loans Finder</a></li>
+                <li><a class="dropdown-item" href="#">Loans Comparison</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Installment calculator</a>
+            </li>
+          </ul>
+        </li>
+        <li role="tab" class="nav-item dropdown">
+          <a href="#" class="text-dark nav-link">Insights</a>
+        </li>
+      </ul>
+
+      <!-- Logo -->
+      <div class=" d-none d-lg-block ">
+        <!--UOB logo-->
+        <a href="" title="UOB" class="logo">
+          <img src="../UOB-website/images/right-by-you.png" alt="Right by you">
+        </a>
+      </div>
+    </div>
+  </div>
+  </header>
+
+  <div>
+    <h1>This is the title</h1>
+    <p>How do we need to do this thing? It is very hard  </p>
+
+  </div>
+
+</body>
+
+
+
+</html>
