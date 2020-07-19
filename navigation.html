@@ -21,11 +21,11 @@
     if ($(window).width() > 992) {
       $(window).scroll(function () {
         if ($(this).scrollTop() > 38) {
-          $('#main-navbar').addClass("fixed-top");
+          $('#nav-bg').addClass("fixed-top");
           // add padding top to show content behind navbar
           $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
         } else {
-          $('#main-navbar').removeClass("fixed-top");
+          $('#nav-bg').removeClass("fixed-top");
           // remove padding top from body
           $('body').css('padding-top', '0');
         }
@@ -38,7 +38,7 @@
 <body>
   <header class="navbar-expand-lg">
     <!-- level 1 -->
-    <div id="level1" class="navbar navbar-dark  row" style="background-color: #002469;">
+    <div id="level1" class="navbar navbar-dark" style="background-color: #002469;">
       <button class="btn d-lg-none">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -58,6 +58,7 @@
           </svg>
         </button>
       </div>
+
       <!--first nav row-->
       <div class="container d-none d-lg-block" id="firstrow">
         <div class="row">
@@ -115,7 +116,7 @@
 
     <!-- level 2 -->
 <div id="nav-bg">
-    <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar row">
+    <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar">
       <!-- Logo -->
       <div class="navbar-brand d-none d-lg-block ">
         <!--UOB logo-->

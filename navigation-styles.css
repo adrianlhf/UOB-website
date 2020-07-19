@@ -55,7 +55,9 @@ body {
     display: inline-block;
     vertical-align: 0.125em;
 }
-
+#nav-bg{
+    border-bottom: 1px black solid;
+}
 /* drop down styles */
 @media (min-width: 992px){
 
