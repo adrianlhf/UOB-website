@@ -11,9 +11,8 @@ body {
     list-style-type: none;
     font-size: 14px;
     display: block;
-    padding: 12px 10px;
+    padding: 12px 20px;
     text-transform: uppercase;
-    border-bottom: rgb(0, 0, 0) 1px solid;
 }
 .mainnav{
     padding: 0 ;
@@ -26,15 +25,76 @@ body {
     font-size: 14px;
 }
 
-.dropdown-toggle::after{
+#firstrow .dropdown-toggle::after{
     color: white;
 }
+
 
 #level1 .logo img {
     max-width: 67px;
 }
 
+.login .material-icons {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
 /* second level navigation */
 #main-navbar .logo img{
     max-width: 200px;
+}
+
+.mainnav .dropdown .dropdown-toggle::after{
+    display: none;
+}
+/* .mainnav .dropdown .dropdown-menu .dropdown-toggle::after{
+    display: inline-block;
+    vertical-align: 0.125em;
+} */
+
+/* drop down styles */
+@media (min-width: 992px){
+
+   
+    .dropdown-menu .dropdown-toggle:after{
+        border-top: .3em solid transparent;
+        border-right: 0;
+        border-bottom: .3em solid transparent;
+        border-left: .3em solid;
+    }
+    .navbar .nav-item .dropdown-menu{ 
+        margin-top:0; 
+        right:auto;
+        width: 285px;
+        
+    }
+    .dropdown-menu .dropdown-menu{
+        margin-left:0; 
+        margin-right: 0;
+    }
+    .dropdown-menu li{
+        position: relative;
+    }
+    .nav-item .submenu{ 
+        display: none;
+        position: absolute;
+        left:100%; top:-7px;
+    }
+    .nav-item .submenu-left{ 
+        left:100%; right:auto;
+    }
+    .navbar .nav-item:hover .first-menu{ 
+        display: block; 
+    }
+    .dropdown-menu > li:hover{ 
+        background-color: #f1f1f1 
+    }
+    .dropdown-menu > li:hover > .submenu{
+        display: block;
+    }
+    .dropdown-item{
+        padding-left: 0;
+        padding-right: 10px;
+        white-space: normal ;
+    }
 }
