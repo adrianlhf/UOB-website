@@ -58,6 +58,9 @@ body {
 #nav-bg{
     border-bottom: 1px black solid;
 }
+#main-navbar{
+    padding: 0 !important;
+}
 /* drop down styles */
 @media (min-width: 992px){
 
@@ -105,5 +108,16 @@ body {
     }
     .dropdown-item:hover{
         background-color: #f1f1f1;
+    }
+
+    #searchbutton{
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        
+    }
+    #searchbutton button{
+        margin: auto;
+        height: 77px;
+        width: 70px;
     }
 }
