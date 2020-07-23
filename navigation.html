@@ -9,29 +9,11 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="navigation-styles.css">
-
-
-  <!-- script for sticky -->
-  <script>
-    if ($(window).width() > 992) {
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 38) {
-          $('#nav-bg').addClass("fixed-top");
-          // add padding top to show content behind navbar
-          $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
-        } else {
-          $('#nav-bg').removeClass("fixed-top");
-          // remove padding top from body
-          $('body').css('padding-top', '0');
-        }
-      });
-    } // end if
-  </script>
 
 </head>
 
@@ -39,7 +21,7 @@
   <header class="navbar-expand-lg">
     <!-- level 1 -->
     <div id="level1" class="navbar navbar-dark " style="background-color: #002469;">
-      <button class="btn d-lg-none">
+      <button class="btn d-lg-none" onclick="openNav()">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-brand d-lg-none">
@@ -115,167 +97,534 @@
     </div>
 
     <!-- level 2 -->
-<div id="nav-bg">
-    <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar">
-      <!-- Logo -->
-      <div class="navbar-brand d-none d-lg-block ">
-        <!--UOB logo-->
+    <div id="nav-bg">
+      <!-- mobile -->
+      <div id="sidenav" class="sidenav d-lg-none">
         <a href="" title="UOB" class="logo mr-auto">
-          <img src="../UOB-website/images/uob-logo.jpg" alt="UOB">
+          <img src="../UOB-website/images/right-by-you.png" alt="UOB">
         </a>
-      </div>
-      <!-- tabs -->
-      <ul role="tablist" class="mainnav navbar-nav justify-content-center col-12 col-lg-auto">
-        <li role="tab" class="nav-item"><a href="#" class="text-dark nav-link">Home</a></li>
-        <li role="tab" class="nav-item dropdown">
-          <a href="#" class="text-dark nav-link dropdown-toggle">Start</a>
-          <ul class="dropdown-menu dropdown-menu-right first-menu">
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Digitalize your Business</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">Accounting</a></li>
-                <li><a class="dropdown-item" href="#">Cyber Marketing</a></li>
-                <li><a class="dropdown-item" href="#">Digital Transaction</a></li>
-                <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Apply for Business Debit Card</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">UOB Platinium Business Card</a></li>
-                <li><a class="dropdown-item" href="#">UOB Business Plus Card</a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Open a Business Banking
-                Account</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">Online Account Opening</a></li>
-                <li><a class="dropdown-item" href="#">UOB BizTransact Account</a></li>
-                <li><a class="dropdown-item" href="#">UOB E-Business Account</a></li>
-                <li><a class="dropdown-item" href="#">Singapore Dollar Current Account</a></li>
-                <li><a class="dropdown-item" href="#">BizGlobal Account</a></li>
-                <li><a class="dropdown-item" href="#">Global Currency Account</a></li>
-                <li><a class="dropdown-item" href="#">Reminbi Account</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li role="tab" class="nav-item dropdown">
-          <a href="#" class="text-dark nav-link dropdown-toggle">Run</a>
-          <ul class="dropdown-menu dropdown-menu-right first-menu">
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Make Informed Decisions</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">BizSmart</a></li>
-                <li><a class="dropdown-item" href="#">UOB eAlerts</a></li>
-                <li><a class="dropdown-item" href="#">UOB Business Mobile App</a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Insure your Business</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">BizCare</a></li>
-                <li><a class="dropdown-item" href="#">BizDrive</a></li>
-                <li><a class="dropdown-item" href="#">Machinery All Risk Inusurance</a></li>
-                <li><a class="dropdown-item" href="#">Life Inusurance</a></li>
-                <li><a class="dropdown-item" href="#">Employee Benefits</a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Manage Cashflow</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">Payment and Collection Services</a></li>
-                <li><a class="dropdown-item" href="#">PayNow corporate</a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Manage Employees</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">Payroll Services</a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Trade Solutions <br>
-                (import/export services)</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">Import Services</a></li>
-                <li><a class="dropdown-item" href="#">Export Services</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li role="tab" class="nav-item dropdown ">
-          <a href="#" class="text-dark nav-link dropdown-toggle">Grow</a>
-          <ul class="dropdown-menu dropdown-menu-right first-menu">
-            <li>
-              <a class="dropdown-item" href="#">Fixed Deposits</a>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Boost your Cashflow and
-                Assets</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">UOB Business Loan</a></li>
-                <li><a class="dropdown-item" href="#">UOB BizMoney</a></li>
-                <li><a class="dropdown-item" href="#">UOB SME Loan</a></li>
-                <li><a class="dropdown-item" href="#">UOB OverDraft</a></li>
-                <li><a class="dropdown-item" href="#">Business Property and Equity Loan</a></li>
-                <li><a class="dropdown-item" href="#">Government Assistant Scheme</a></li>
-                <li><a class="dropdown-item" href="#">Vehicle and Machinery Financing</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li role="tab" class="nav-item dropdown">
-          <a href="#" class="text-dark nav-link dropdown-toggle">Tools</a>
-          <ul class="dropdown-menu dropdown-menu-right first-menu">
-            <li>
-              <a class="dropdown-item" href="#">Create an account</a>
-            </li>
-            <li>
-              <a class="dropdown-item dropdown-toggle" href="#">Loans</a>
-              <ul class="submenu submenu-left dropdown-menu">
-                <li><a class="dropdown-item" href="#">Loans Finder</a></li>
-                <li><a class="dropdown-item" href="#">Loans Comparison</a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Installment calculator</a>
-            </li>
-          </ul>
-        </li>
-        <li role="tab" class="nav-item dropdown">
-          <a href="#" class="text-dark nav-link">Insights</a>
-        </li>
-      </ul>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <!--Start nav Dropdown-->
+          <li>
 
-      <div id="searchbutton">
-        <button type="button" class="btn button" >
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#000000"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-            <path fill-rule="evenodd"
-              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-          </svg>
-        </button></div>
-      <!-- Logo -->
-      <div class=" d-none d-lg-block ">
-        <!--UOB logo-->
-        <a href="" title="UOB" class="logo">
-          <img src="../UOB-website/images/right-by-you.png" alt="Right by you">
-        </a>
+            <div class="d-flex dropdown-btn">
+              <a href="#">Start</a>
+              <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+              </svg>
+            </div>
+            <div class="dropdown-container">
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Digitalize your Business</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">Accounting</a>
+                <a href="">CyberMarketing</a>
+                <a href="">Digital Transaction</a>
+                <a href="">Digital Marketing</a>
+              </div>
+              <!-- end of dropdown -->
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Apply for Business Debit Card</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">UOB Platinum Business Card</a>
+                <a href="">UOB Business Plus Card</a>
+              </div>
+              <!-- end of dropdown -->
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Open a business banking account</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">Online Account Opening</a>
+                <a href="">UOB BizTransact Account</a>
+                <a href="">UOB E-Business Account</a>
+                <a href="">Singapore Dollar Current Account</a>
+                <a href="">BizGlobal Account</a>
+                <a href="">Global Currency Account</a>
+                <a href="">Renminbi Account</a>
+              </div>
+              <!-- end of dropdown -->
+            </div>
+          </li>
+          <!--Run nav Dropdown-->
+          <li>
+            <div class="d-flex dropdown-btn">
+              <a href="#">Run</a>
+              <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+              </svg>
+            </div>
+            <div class="dropdown-container">
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Make Informed Decisions</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">BizSmart</a>
+                <a href="">UOB eAlerts</a>
+                <a href="">UOB Business Mobile App</a>
+              </div>
+              <!-- end of dropdown -->
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Insure your Business</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">BizCare</a>
+                <a href="">BizDrive</a>
+                <a href="">Machinery All Risk Insurance</a>
+                <a href="">Life Insurance</a>
+                <a href="">Employee Benefits</a>
+              </div>
+              <!-- end of dropdown -->
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Manage Cashflow</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">Payment and Collection Services</a>
+                <a href="">PayNow Corporate</a>
+              </div>
+              <!-- end of dropdown -->
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Manage Employees</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">Payroll Services</a>
+              </div>
+              <!-- end of dropdown -->
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Trade Solutions <br> (Import/Export Services)</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">Import Services</a>
+                <a href="">Export Services</a>
+              </div>
+              <!-- end of dropdown -->
+            </div>
+          </li>
+          <!--Grow nav Dropdown-->
+          <li>
+            <div class="d-flex dropdown-btn">
+              <a href="#">Grow</a>
+              <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+              </svg>
+            </div>
+            <div class="dropdown-container">
+
+              <a href="">Digitalize your Business</a>
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Open a business banking account</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">UOB Business Loan</a>
+                <a href="">UOB BizMoney</a>
+                <a href="">UOB SME Loan</a>
+                <a href="">UOB Overdraft</a>
+                <a href="">Business Property and Equity Loan</a>
+                <a href="">Government Assistant Scheme</a>
+                <a href="">Vehicle and Machinery Financing</a>
+              </div>
+              <!-- end of dropdown -->
+            </div>
+          </li>
+          <!--Tools nav Dropdown-->
+          <li>
+            <div class="d-flex dropdown-btn">
+              <a href="#">Tools</a>
+              <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+              </svg>
+            </div>
+            <div class="dropdown-container">
+              <a href="">Create an Account</a>
+              <!-- start dropdown -->
+              <div class="d-flex dropdown-btn">
+                <a href="#">Loans</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                  viewBox="0 0 24 24" width="24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <!--end of dropdown button-->
+              <div class="dropdown-container sub-container">
+                <a href="">Loans finder</a>
+                <a href="">Loans Comparison</a>
+              </div>
+              <!-- end of dropdown -->
+              <a href="">Installment Calculator</a>
+            </div>
+          </li>
+          <li><a href="#">Insights</a></li>
+          <hr>
+          <!-- Level 1 side nav dropdown -->
+          <!--Website nav Dropdown-->
+          <li>
+            <div class="d-flex dropdown-btn">
+              <a href="#">YOU ARE IN <span class="font-weight-bold">BUSINESS BANKING</span></a>
+              <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+              </svg>
+            </div>
+            <ul class="dropdown-container">
+              <li>FOR INDIVIDUALS</li>
+              <li><a href="">PERSONAL BANKING</a></li>
+              <li><a href="">WEALTH BANKING</a></li>
+              <li><a href="">PRIVILEGE BANKING</a></li>
+              <li><a href="">PRIVILEGE RESERVE</a></li>
+              <li><a href="">PRIVATE BANKING</a></li>
+            </ul>
+          </li>
+          <!-- country nav dropdown -->
+          <li>
+            <div class="d-flex dropdown-btn">
+              <a href="#"><span class="font-weight-bold">SINGAPORE</span></a>
+              <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+              </svg>
+            </div>
+            <ul class="dropdown-container">
+              <li><a href="">UOB CHINA</a></li>
+              <li><a href="">UOB VIETNAM</a></li>
+              <li><a href="">UOB MALAYSIA</a></li>
+            </ul>
+          </li>
+          <!-- country nav dropdown -->
+          <li>
+            <div class="d-flex dropdown-btn">
+              <a href="#"><span class="font-weight-bold">HELP & SUPPORT</span></a>
+              <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="24"
+                viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+              </svg>
+            </div>
+            <ul class="dropdown-container">
+              <li><a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a></li>
+              <li><a class="dropdown-item" href="#">REQUEST A CALL BACK</a></li>
+              <li><a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- web -->
+      <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar">
+        <!-- Logo -->
+        <div class="navbar-brand d-none d-lg-block ">
+          <!--UOB logo-->
+          <a href="" title="UOB" class="logo mr-auto">
+            <img src="../UOB-website/images/uob-logo.jpg" alt="UOB">
+          </a>
+        </div>
+        <!-- tabs -->
+        <ul role="tablist" class="mainnav navbar-nav justify-content-center col-12 col-lg-auto">
+          <li role="tab" class="nav-item"><a href="#" class="text-dark nav-link">Home</a></li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="#" class="text-dark nav-link dropdown-toggle">Start</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Digitalize your Business</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Accounting</a></li>
+                  <li><a class="dropdown-item" href="#">Cyber Marketing</a></li>
+                  <li><a class="dropdown-item" href="#">Digital Transaction</a></li>
+                  <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Apply for Business Debit Card</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">UOB Platinium Business Card</a></li>
+                  <li><a class="dropdown-item" href="#">UOB Business Plus Card</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Open a Business Banking
+                  Account</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Online Account Opening</a></li>
+                  <li><a class="dropdown-item" href="#">UOB BizTransact Account</a></li>
+                  <li><a class="dropdown-item" href="#">UOB E-Business Account</a></li>
+                  <li><a class="dropdown-item" href="#">Singapore Dollar Current Account</a></li>
+                  <li><a class="dropdown-item" href="#">BizGlobal Account</a></li>
+                  <li><a class="dropdown-item" href="#">Global Currency Account</a></li>
+                  <li><a class="dropdown-item" href="#">Reminbi Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="#" class="text-dark nav-link dropdown-toggle">Run</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Make Informed Decisions</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">BizSmart</a></li>
+                  <li><a class="dropdown-item" href="#">UOB eAlerts</a></li>
+                  <li><a class="dropdown-item" href="#">UOB Business Mobile App</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Insure your Business</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">BizCare</a></li>
+                  <li><a class="dropdown-item" href="#">BizDrive</a></li>
+                  <li><a class="dropdown-item" href="#">Machinery All Risk Inusurance</a></li>
+                  <li><a class="dropdown-item" href="#">Life Inusurance</a></li>
+                  <li><a class="dropdown-item" href="#">Employee Benefits</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Manage Cashflow</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Payment and Collection Services</a></li>
+                  <li><a class="dropdown-item" href="#">PayNow corporate</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Manage Employees</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Payroll Services</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Trade Solutions <br>
+                  (import/export services)</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Import Services</a></li>
+                  <li><a class="dropdown-item" href="#">Export Services</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown ">
+            <a href="#" class="text-dark nav-link dropdown-toggle">Grow</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <a class="dropdown-item" href="#">Fixed Deposits</a>
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Boost your Cashflow and
+                  Assets</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">UOB Business Loan</a></li>
+                  <li><a class="dropdown-item" href="#">UOB BizMoney</a></li>
+                  <li><a class="dropdown-item" href="#">UOB SME Loan</a></li>
+                  <li><a class="dropdown-item" href="#">UOB OverDraft</a></li>
+                  <li><a class="dropdown-item" href="#">Business Property and Equity Loan</a></li>
+                  <li><a class="dropdown-item" href="#">Government Assistant Scheme</a></li>
+                  <li><a class="dropdown-item" href="#">Vehicle and Machinery Financing</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="#" class="text-dark nav-link dropdown-toggle">Tools</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <a class="dropdown-item" href="#">Create an account</a>
+              </li>
+              <li>
+                <a class="dropdown-item dropdown-toggle" href="#">Loans</a>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Loans Finder</a></li>
+                  <li><a class="dropdown-item" href="#">Loans Comparison</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Installment calculator</a>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="#" class="text-dark nav-link">Insights</a>
+          </li>
+        </ul>
+
+        <div id="searchbutton">
+          <button type="button" class="btn button">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#000000"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+              <path fill-rule="evenodd"
+                d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+            </svg>
+          </button></div>
+        <!-- Logo -->
+        <div class=" d-none d-lg-block ">
+          <!--UOB logo-->
+          <a href="" title="UOB" class="logo">
+            <img src="../UOB-website/images/right-by-you.png" alt="Right by you">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
   </header>
 
   <div>
     <h1>This is the title</h1>
-    <p>How do we need to do this thing? It is very hard  </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
+    <p>How do we need to do this thing? It is very hard </p>
 
   </div>
 
+
+
+  <!-- script for sticky -->
+  <script>
+    if ($(window).width() > 992) {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 38) {
+          $('#nav-bg').addClass("fixed-top");
+          // add padding top to show content behind navbar
+          $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+        } else {
+          $('#nav-bg').removeClass("fixed-top");
+          // remove padding top from body
+          $('body').css('padding-top', '0');
+        }
+      });
+    } // end if
+    // script for side navigation
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+      document.getElementById("sidenav").style.width = "70%";
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+      document.getElementById("sidenav").style.width = "0";
+    }
+
+    // dropdown display
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
 
 
