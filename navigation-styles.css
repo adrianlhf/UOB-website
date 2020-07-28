@@ -61,8 +61,129 @@ body {
 #main-navbar{
     padding: 0 !important;
 }
-/* drop down styles */
+
+/* end of dropdown styles */
+/* styles for nav panel */
+#body-overlay{
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color:rgba(34, 34, 34, 0.6);
+    overflow-x: hidden; 
+    padding-top: 60px; 
+}
+.sidenav {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color:#ffffff;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s;
+}
+/* The navigation menu links */
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .dropdown-btn{
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  .sideNavBtn{
+    margin: 8px 8px 8px 32px;
+    display: block;
+    border: none;
+    background-color: #002468;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff ;
+  }
+  /* end of side nav styles */
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }  
+.mobile-icon:hover{
+    fill: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+#sidenav ul{
+    list-style: none;
+    padding: 0;
+}
+/* dropdown styles */
+.dropdown-container {
+    display: none;
+    background-color: #f1f1f1;
+    padding-left: 8px;
+  }
+.dropdown-container .sub-container{
+    background-color: #e0e0e0;
+}
+/* dropdown icon position */
+.mobile-drop{
+    margin-right: 8px;
+}
+/* Screen overlay styles */
+.screen-overlay {
+    height: 100%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity:0;
+    visibility:hidden;
+    background-color: rgba(34, 34, 34, 0.6);
+    transition:opacity .2s linear, visibility .1s, width 1s ease-in;
+  }
+  .screen-overlay.show {
+    transition:opacity .5s ease, width 0s;
+    opacity:1;
+    width:100%;
+    visibility:visible;
+  }
+
+
+  /* drop down styles */
 @media (min-width: 992px){
+    .sticky{
+        position: sticky;
+        top: 0;
+    }
 
     .dropdown-menu .dropdown-toggle:after{
         border-top: .3em solid transparent;
@@ -120,76 +241,6 @@ body {
         height: 77px;
         width: 70px;
     }
-}
-/* styles for nav panel */
-.sidenav {
-    height: 100%;
-    width: 0; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0;
-    left: 0;
-    background-color:#002469;
-    overflow-x: hidden; 
-    padding-top: 60px; 
-    transition: 0.5s;
-}
-/* The navigation menu links */
-.sidenav a{
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-  }
-  .dropdown-btn{
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-  }
-  
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
-  }  
-.mobile-icon:hover{
-    fill: #f1f1f1;
-}
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
 
-#sidenav ul{
-    list-style: none;
-    padding: 0;
-}
-/* dropdown styles */
-.dropdown-container {
-    display: none;
-    background-color: #002458;
-    padding-left: 8px;
-  }
-.dropdown-container .sub-container{
-    background-color: #002445;
-}
-/* dropdown icon position */
-.mobile-drop{
-    margin-right: 8px;
 }
