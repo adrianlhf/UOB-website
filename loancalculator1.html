@@ -10,12 +10,14 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="node_modules\jquery\dist\jquery.min.js"></script>
-  <!-- <script src="jquery.mobile-1.4.5.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
 
 </head>
 <style>
+  /* slider styles */
   input[type=range] {
     -webkit-appearance: none;
   }
@@ -36,8 +38,6 @@
     border-radius: 50%;
     background: goldenrod;
     margin-top: -7px;
-
-
   }
 
   input[type=range]:focus {
@@ -47,31 +47,160 @@
   input[type=range]:focus::-webkit-slider-runnable-track {
     background: #ccc;
   }
+
+
+  /* Styles for Hr/ line */
+
+  hr {
+    border: solid rgb(85, 85, 85) 0.5px;
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {}
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 26px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+
+    .body {
+      width: 62%;
+    }
+
+    .businessCalcDiv {
+      width: 100%;
+      padding: 2em 0;
+    }
+
+    .input-left {
+      float: left;
+      width: 50%;
+      /* height: 17em; */
+      padding: 2em 3em 2em 0;
+      border-right: 0.5px solid black;
+    }
+
+    .result-right {
+      float: right;
+      width: 50%;
+      padding: 2em 3em 2em 3em;
+      height: 19em;
+
+    }
+
+
+
+  }
+
+  /* styles for button */
+  .btnCalculate {
+    width: 40%;
+    padding: 10px 6px;
+    background-color: #002469;
+  }
+
+  .btnCalculate:hover,
+  .btnCalculate:active,
+  .btnCalculate:focus,
+  .btnCalculate:link,
+  .btnCalculate:visited {
+    background-color: #011a49;
+  }
+
+  .inputForm {
+    padding: 3% 0;
+    margin-bottom: 3%;
+  }
+
+  /* style for each element in the form */
+  .form-group {
+    padding: 2% 0;
+  }
+
+  input[type='range'].loanAmtBottom {
+    overflow: hidden;
+    width: 80px;
+    -webkit-appearance: none;
+    background-color: #9a905d;
+  }
+
+  input[type='range'].loanAmtBottom::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+
+  input[type='range'].loanAmtBottom::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: #434343;
+    box-shadow: -80px 0 0 80px #43e5f7;
+  }
+
+  /* styles for text */
+  .result{
+          text-align: center;
+
+  }
 </style>
 
 <body>
   <div class="container">
-    <h4>Find out the indicative monthly installment payment of your UOB Business Loan</h4>
-    <form>
-      <div class="form-group">
-        <label for="loanAmtInput">Loan Amount</label>
-        <p id="loanAmtOutput"></p>
-        <input type="range" min="1000" max="1000000" step="1" class="form-control-range customSlider" id="loanAmtInput">
-      </div>
-      <div class="form-group">
-        <label for="interestRateInput">Interest Rate</label>
-        <p id="interestRateOutput"></p>
-        <input type="range" min="0" max="20" step="0.01" class="form-control-range" id="interestRateInput">
-      </div>
-      <div class="form-group">
-        <label for="tenureInput">Tenure</label>
-        <p id="tenureOutput"></p>
-        <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureInput">
-      </div>
-    </form>
-    <button onclick="calculateFunction()" class="btn btn-primary" type="button">Calculate</button>
+    <div>
 
-    <p id="result"></p>
+      <div class="businessCalcDiv">
+        <h2 style="text-align: center;">Loan Installment Calculator</h2>
+        <div class="input-left">
+          <h4>Find out the indicative monthly installment payment of your UOB
+            Business Loan</h4>
+          <form class="inputForm">
+            <div class="form-group">
+              <label for="loanAmtInput" class="inline">Loan Amount</label>
+              <p id="loanAmtOutput" class="inline" style="float: right"></p>
+              <input type="range" min="0" max="1000000" step="100" class="form-control-range" id="loanAmtInput">
+              <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
+
+            </div>
+            <div class="form-group">
+              <label for="interestRateInput" class="inline">Interest Rate</label>
+              <p id="interestRateOutput" class="inline" style="float: right"></p>
+              <input type="range" min="0" max="20" step="0.01" class="form-control-range" id="interestRateInput">
+            </div>
+            <div class="form-group">
+              <label for="tenureInput" class="inline">Tenure</label>
+              <p id="tenureOutput" class="inline" style="float: right"></p>
+              <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureInput">
+            </div>
+          </form>
+          <button onclick="calculateFunction()" class="btn btn-primary btnCalculate  mx-auto d-block"
+            type="button">Calculate</button>
+        </div>
+        <hr class="d-block d-lg-none">
+        <div class="result-right ">
+          <div class=" align-self-center">
+            <h1 id="amount" class="result">Repayment Summary</h1>
+            <p id="description" class="result">Please enter the loan information to continue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
 </body>
@@ -81,6 +210,7 @@
     displayOutput()
   });
 
+  // call function to display the indicator for the slider
   document.getElementById("loanAmtInput").oninput = function () {
     // displayLoanOutput()
     displayOutput()
@@ -99,18 +229,20 @@
 
   }
 
+  //function to display the indicator for the slider
 
   function displayOutput() {
     var val1 = document.getElementById("loanAmtInput").value //gets the oninput value
-    document.getElementById("loanAmtOutput").innerHTML = "$" + val1 //displays this value to the html page
+    document.getElementById("loanAmtOutput").innerHTML = "$" + numberWithCommas(val1) //displays this value to the html page
 
     var val2 = document.getElementById("interestRateInput").value //gets the oninput value
     document.getElementById("interestRateOutput").innerHTML = val2 + "%"//displays this value to the html page
 
     var val3 = document.getElementById("tenureInput").value //gets the oninput value
-    document.getElementById("tenureOutput").innerHTML = val3 + " year"//displays this value to the html page
+    document.getElementById("tenureOutput").innerHTML = val3 + " year(s)"//displays this value to the html page
   }
 
+  //to calculate the monthly loan payment
   function calculateFunction() {
     var p = parseInt(document.getElementById("loanAmtInput").value)
     var t = parseFloat(document.getElementById("interestRateInput").value)
@@ -120,10 +252,15 @@
     var r = t / 100
     var n = y * 12
     var result = p * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
-    
-    document.getElementById("result").innerHTML = result
-  }
 
+    document.getElementById("amount").innerHTML = "$" + numberWithCommas(Math.round(result))
+    document.getElementById("description").innerHTML = "To assist you in your planning, we are pleased to provide you with a loan repayment schedule for your working capital needs. For more details, visit any of our UOB branches or <a href = './finder.html'> request a callback from us</a>."
+
+  }
+  // add commas after evry 3 digit from the decimal place
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+  }
 </script>
 
 </html>
