@@ -44,6 +44,14 @@ body {
     font-size: 14px;
 }
 
+#level1 .banking-group li{
+    padding: 8px 14px;
+    font-size: 14px;
+}
+#level1 .banking-group .dropdown-item{
+    padding: 0 1.5rem;
+}
+
 /* second level navigation */
 #main-navbar .logo img{
     max-width: 200px;
