@@ -164,15 +164,14 @@
     <div>
 
       <div class="businessCalcDiv">
-        <h2 style="text-align: center;">Loan Installment Calculator</h2>
+        <h2 style="text-align: center;">Buy vs Rent Calculator</h2>
         <div class="input-left">
-          <h4>Find out the indicative monthly installment payment of your UOB
-            Business Loan</h4>
+          <h4>Is it better to buy or rent your commercial property? Calculate to find our which option provides you with greater savings over time.</h4>
           <form class="inputForm">
             <div class="form-group">
-              <label for="loanAmtInput" class="inline">Loan Amount</label>
+              <label for="monthlyRentInput" class="inline">Monthly Rent</label>
               <p id="loanAmtOutput" class="inline" style="float: right"></p>
-              <input type="range" min="0" max="1000000" step="100" class="form-control-range" id="loanAmtInput">
+              <input type="range" min="0" max="100000000" step="1000" class="form-control-range" id="monthlyRentInput">
               <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
 
             </div>
@@ -210,7 +209,7 @@
   });
 
   // call function to display the indicator for the slider
-  document.getElementById("loanAmtInput").oninput = function () {
+  document.getElementById("monthlyRentInput").oninput = function () {
     // displayLoanOutput()
     displayOutput()
 
@@ -231,7 +230,7 @@
   //function to display the indicator for the slider
 
   function displayOutput() {
-    var val1 = document.getElementById("loanAmtInput").value //gets the oninput value
+    var val1 = document.getElementById("monthlyRentInput").value //gets the oninput value
     document.getElementById("loanAmtOutput").innerHTML = "$" + numberWithCommas(val1) //displays this value to the html page
 
     var val2 = document.getElementById("interestRateInput").value //gets the oninput value
@@ -243,7 +242,7 @@
 
   //to calculate the monthly loan payment
   function calculateFunction() {
-    var p = parseInt(document.getElementById("loanAmtInput").value)
+    var p = parseInt(document.getElementById("monthlyRentInput").value)
     var t = parseFloat(document.getElementById("interestRateInput").value)
     var y = parseInt(document.getElementById("tenureInput").value)
 
