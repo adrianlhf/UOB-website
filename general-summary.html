@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,17 +18,27 @@
 
 <style>
     body {
-        position: relative;
+        font-family: "open sans", Arial, Helvetica, sans-serif;
     }
 
-    .img-fluid {
-        width: 100%;
+    h1 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
     }
 
+    /* Styles for all section */
+    .section {
+        padding-top: 6%;
+    }
+
+    /* end of styles for all section */
+
+    /* banner styles */
     .main-banner .description {
         text-align: center;
-        border-bottom: 1px solid #e5e5e5;
-        padding-bottom: 15px;
+        /* border-bottom: 1px solid #e5e5e5; */
+        padding: 15px 0;
     }
 
     .heading2 {
@@ -37,7 +46,7 @@
         font-weight: bold;
     }
 
-    .btn-1 {
+    /* .btn-1 {
         display: inline-block;
         padding: 8px 22px;
         text-decoration: initial;
@@ -48,254 +57,194 @@
         -webkit-background-clip: padding-box;
         background-clip: padding-box;
         outline: none;
-        color: #fff !important;
+        color: #fff;
         font-size: 14px;
         background: #001f67;
         width: 100%;
         max-width: 150px;
         text-align: center;
+    } */
+
+    .btn-1 {
+        background-color: #002469;
+        color: white;
+        font-size: 14px;
     }
 
+    /* end of banner styles */
+
+    /*Content Navigation Bar Styles */
     .nav-heading a {
         font-size: 12px;
         font-weight: bold;
-        color: #0044a0;
+        color: #002469;
     }
 
     .nav-heading li {
-        border-right: 1px solid #e5e5e5;
+        border-right: 0.5px solid #e5e5e5;
         text-align: center;
+        padding-top: 1em;
     }
 
     nav {
-        background-color: white;
-
+        background-color: #ffffff;
+        border: 0.5px solid #e5e5e5;
     }
 
-    .active {
-        border-bottom: 3px solid #001f67;
+    #myScrollspy .active {
+        border-bottom: 5px solid #002469;
     }
+    /* end of content navbar styles */
 
-    .container-fluid {
-        padding: 0px;
-    }
-
-    .container {
-        padding-top: 20px;
-    }
-
-    .sectionimage {
-        width: 100%;
-    }
-
-    .section1 .heading2 {
-        padding-top: 5px;
-    }
-
-    .section1 .btn-1 {
-        float: right;
-    }
-
-
-
-    .section2 .heading2 {
-        padding-top: 30%;
-    }
-
-    .interestedsection .heading2 {
-        padding-top: 10%;
-    }
-
-
-    body .carousel-control-prev-icon,
-    body .carousel-control-next-icon {
-        background-color: #0044a0;
-    }
-
-
-
-    /* styles for Why Chooose UOB section */
-
-    .section3 .card {
-        margin-top: 5%;
-        border: 1px solid black;
-    }
-
-    .section3 .heading2 {
-        padding-top: 30%;
-    }
-
-    .section3 .cardicon {
-        max-width: 20%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5%;
-    }
-
-    .section3 .card-title {
-        font-weight: bold;
-        text-align: center;
-        font-size: 16px;
-    }
-
-    .section3 .card-text {
-        text-align: center;
-        font-size: 13px;
-    }
+    
 
 
     /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 375px) {}
 
-
-    @media (min-width: 375px) {
-        #desktopimage {
-            display: none;
-        }
-    }
-
-    @media (min-width: 576px) {
-
-        /* .nav-heading li {
-            height: 50px;
-        }
-
-        .nav-heading a {
-            vertical-align: center;
-            height: 100px;
-        } */
-
-        .section3 .card {
-            height: 100%;
-        }
-
-        #desktopimage {
-            display: none;
-        }
-
-        #desktopdescription {
-            display: none;
-        }
-
-
-    }
+    @media (min-width: 576px) {}
 
     /* Medium devices (tablets, 768px and up) */
     @media (min-width: 768px) {
-        .img-fluid {
-            width: 100%;
+
+        h1 {
+            font-size: 26px;
         }
 
-    }
-
-    /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {}
-
-    /* Extra large devices (large desktops, 1200px and up) */
-    @media (min-width: 1200px) {
-
-        #mobileimage {
-            display: none;
+        p {
+            font-size: 16px;
         }
 
-        #desktopimage {
-            display: block;
+        .nav-heading a {
+            font-size: 16px;
         }
 
-        #mobiledescription {
-            display: none;
+
+    /* Styles for all content section */
+        .section {
+            padding-top: 4%;
         }
 
-        #desktopdescription {
-            display: block;
-            text-align: left;
-        }
-
-        .main-banner .description .heading2 {
-            margin-top: 0;
-            margin-bottom: 30px;
-            padding-left: 0;
-            font-size: 24px;
+    /* Styles for banner */
+         .main-banner .description .heading2 {
+            font-size: 22px;
         }
 
         .main-banner .description {
             position: absolute;
-            top: 0;
-            right: 5%;
-            width: 60%;
-            color: black;
-            top: 8%;
-            padding: 0 0 0 7%;
-            border: none;
+            right: 1%;
+            width: 55%;
+            top: 5%;
         }
 
-
-        .section1 {
-            width: 100%;
-            display: block;
-            padding-top: 30px;
+        
+        /* Multi item carousel styles */
+        /* to display 3 */
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(33.333%);
         }
 
-        .section1 .sectionimage {
-            float: left;
-            width: 40%;
+        .carousel-inner .carousel-item-left.active,
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-33.333%);
         }
-
-        .section1 .sectiondescription {
-            border-top: 1px solid #e5e5e5;
-            float: left;
-            font-size: 16px;
-            padding: 30px;
-            padding-left: 50px;
-            padding-top: 10px;
-            overflow: auto;
-            width: 60%;
-        }
-
-       
-
     }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        .main-banner .description {
+            top: 10%;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        .main-banner .description {
+            top: 15%;
+        }
+    }
+
+    /* Multi item carousel styles */
+    @media (max-width: 768px) {
+        .carousel-inner .carousel-item>div {
+            display: none;
+            
+        }
+
+        .carousel-inner .carousel-item>div:first-child {
+            display: block;
+            
+        }
+    }
+
+     /* Multi Item Carousel */
+     .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left {
+        transform: translateX(0);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        text-align: center; 
+        vertical-align: middle;
+        height: 25px; 
+        width: 25px;
+    }
+
+    .test {
+        background-color: #002469;
+        padding: 10px;
+    }
+
+    /* end of multi item carousel */
+
 </style>
 
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="50">
 
+    <!-- Image Banner Section -->
     <div class="main-banner">
-        <img src="images/mobilebanner.jpg" class="img-fluid" id="mobileimage" alt="responsive image">
-        <img src="images/homeimage.jpg" class="img-fluid" id="desktopimage" alt="responsive image">
+        <img src="images/mobilebanner.jpg" class="img-fluid w-100 d-block d-md-none" id="mobileimage" alt="responsive image">
+        <img src="images/homeimage.jpg" class="img-fluid w-100 d-none d-md-block" id="desktopimage" alt="responsive image">
 
-        <div class="description" id="mobiledescription">
+        <!-- mobile description -->
+        <div class="description d-block d-md-none">
             <h2 class="heading2">Maximize your extra cash</h2>
-            <a class="btn-1" href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-OD" title="Apply now"
+            <a class="btn-1 btn" href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-OD" title="Apply now"
                 banner_name="overdraft">Apply now</a>
         </div>
 
-        <ul class="list-unstyled" id="desktopimage">
-            <li>
-                <div class="description" id="desktopdescription">
-                    <h2 class="heading2">Ready funds for your business, whenever you need it</h2>
-                    <p>Pay interest only on the amount you use, when you use it.</p>
-                    <a class="btn-1 dtm-banner" href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-OD"
-                        title="Apply now" banner_name="overdraft">Apply now</a>
-                </div>
-            </li>
-        </ul>
-
+        <!-- desktop description -->
+        <div class="description d-none d-md-block text-left">
+            <h2 class="heading2 mb-1">Ready funds for your business, whenever you need it</h2>
+            <p>Pay interest only on the amount you use, when you use it.</p>
+            <a class="btn-1 dtm-banner btn" href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-OD"
+                title="Apply now" banner_name="overdraft">Apply now</a>
+        </div>
     </div>
 
+    <!-- Content navbar -->
     <nav class="sticky-top" id="myScrollspy">
 
         <ul class="nav-heading navbar-nav navbar-expand nav justify-content-center">
             <li class="nav-item col-4">
-                <a class="nav-link" href="#section1" title="uobbusinessloan">UOB Business Loan</a>
+                <a class="nav-link active" href="#section1" title="header1">Header 1</a>
             </li>
 
             <li class="nav-item col-4">
-                <a class="nav-link" href="#section2" title="Loan instalment calculator">Loan Instalment Calculator</a>
+                <a class="nav-link" href="#section2" title="header2">Header 2</a>
             </li>
 
             <li class="nav-item col-4">
-                <a class="nav-link" href="#section3" title="FAQs">Why Choose UOB</a>
+                <a class="nav-link" href="#section3" title="header3">Header 3</a>
             </li>
 
         </ul>
@@ -304,138 +253,119 @@
 
     <div class="container">
 
-        <div class="section1" id="section1">
-            <img src="images/mobilecontentimage.jpg" alt="" class="sectionimage">
-            <div class="sectiondescription">
-                <h2 class="heading2">UOB Business Loan</h2>
-                <p>We are committed to supporting you and your business during these tough times.
-                    Improve your cash flow with these loan schemes announced at the Resilience and Solidarity Budget
-                    2020.
-                </p>
-                <a class="btn-1 dtm-button" target="_blank"
-                    href="https://www.uob.com.sg/business/operate/paynow-corporate.page" title="Click here"
-                    button_name="Click here">Compare
+        <div class="section1 section" id="section1">
+            <h1 class="pb-2"> Header 1 </h1>
+            <!-- Add ur layout here -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+        </div>
+
+        <div class="section2 section" id="section2">
+            <h1 class="pb-2"> Header 2 </h1>
+            <!-- Add ur layout here -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
+            </p> 
+        </div>
+
+        <div class="section3 section" id="section3">
+            <h1 class="pb-2"> Header 3</h1>
+
+           <!-- Add ur layout here -->
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p> 
+
+        </div>
+    
+
+    <!-- You may be interested section -->
+    <div class="interestedsection section" id="interestedsection"">
+        <h1 class="pb-2"> You May Be Interested In</h1>
+        <div class="row mx-auto my-auto">
+            <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                <div class="carousel-inner w-100" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="img-fluid card-img-top" src="images/image1.jpg" alt="CyberSecurity">
+                                <div class="card-body"> CyberSecurity </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="img-fluid card-img-top" src="images/image2.jpg" alt="E-transactions">
+                                <div class="card-body"> E-transactions </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="img-fluid card-img-top" src="images/image3.jpg" alt="Payroll">
+                                <div class="card-body"> Payroll Services </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="img-fluid card-img-top" src="images/image4.jpg" alt="Accounting">
+                                <div class="card-body"> Accounting </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                    <div class="test rounded-circle">
+                    <span class="carousel-control-prev-icon"
+                        aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                    </div>
+                </a>
+                <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                    <div class="test rounded-circle">
+                    <span class="carousel-control-next-icon"
+                        aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </div>
                 </a>
             </div>
         </div>
-
-        <div class="section2" id="section2">
-            <h2 class="heading2"> Loan Instalment Calculator</h2>
-        </div>
-
-        <div class="section3" id="section3">
-            <h2 class="heading2"> Why Choose UOB</h2>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="cardicon" src="images/bankingconvenience.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Banking Convenience</h4>
-                            <p class="card-text">
-                                Extensive Branch Network <br>
-                                Over 50 branches and 1200 ATMs island-wide
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="cardicon" src="images/bankinghotline.jpg" alt="Card image cap">
-                        <div class="card-body">
-
-                            <h4 class="card-title">Dedicated Business Banking Hotline (12 hours)</h4>
-                            <p class="card-text">
-                                62598188 <br>
-                                8am - 8pm, Mon - Sat, excl. Public Holidays
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="card">
-                        <img class="cardicon" src="images/bestsmebank.jpg" alt="Card image cap">
-                        <div class="card-body">
-
-                            <h4 class="card-title">Best SME Bank in Singapore and Asia Pacific 2019</h4>
-                            <p class="card-text">
-                                The Asian Banker <br>
-                                The International Excellence in Retail Financial
-                                Services Awards </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
     </div>
-
-
-
-    <div class="interestedsection" id="interestedsection">
-        <h2 class="heading2"> You may be interested in</h2>
-        <div id="gallery" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <img class="img-fluid card-img-top" src="images/image1.jpg" alt="Image 1" />
-                                <div class="card-body">CyberSecurity</div>
-                            </div>
-                        </div>
-
-
-                        <div class="col">
-                            <div class="card">
-                                <img class="img-fluid card-img-top" src="images/image2.jpg" alt="Image 1" />
-                                <div class="card-body">E-transactions</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <img class="img-fluid card-img-top" src="images/image3.jpg" alt="Image 1" />
-                                <div class="card-body">Payroll Services</div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <img class="img-fluid card-img-top" src="images/image4.jpg" alt="Image 1" />
-                                <div class="card-body">Accounting</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-
-            <a class="carousel-control-next" href="#gallery" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-
-
-
-
+</div>
 
 
 </body>
+<script>
+
+    // Script for multi item carousel
+    $('#recipeCarousel').carousel({
+        interval: 4000
+    })
+
+    $('.carousel .carousel-item').each(function () {
+        var minPerSlide = 3;
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < minPerSlide; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    // end of script for multi item carousel
+
+</script>
 
 </html>
