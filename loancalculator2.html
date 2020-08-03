@@ -81,7 +81,7 @@
             width: 62%;
         }
 
-        .businessCalcDiv {
+        .BRcalcDiv {
             width: 100%;
             padding: 2em 0;
         }
@@ -106,17 +106,17 @@
     }
 
     /* styles for button */
-    .btnCalculate {
+    .buttonStyle {
         width: 40%;
         padding: 10px 6px;
         background-color: #002469;
     }
 
-    .btnCalculate:hover,
-    .btnCalculate:active,
-    .btnCalculate:focus,
-    .btnCalculate:link,
-    .btnCalculate:visited {
+    .buttonStyle:hover,
+    .buttonStyle:active,
+    .buttonStyle:focus,
+    .buttonStyle:link,
+    .buttonStyle:visited {
         background-color: #011a49;
     }
 
@@ -158,65 +158,106 @@
         text-align: center;
 
     }
+
+    /*results*/
+    .after-calculate {
+        display: none;
+    }
+
+
 </style>
 
 <body>
     <div class="container">
         <div>
 
-            <div class="businessCalcDiv">
+            <div class="BRcalcDiv">
                 <h2 style="text-align: center;">Buy vs Rent Calculator</h2>
                 <div class="input-left">
                     <h4>Is it better to buy or rent your commercial property? Calculate to find out which option
                         provides you with greater savings over time.</h4>
-                    <form class="inputForm" name="formLoanCalculate1">
+                    <form class="inputForm" name="formBRcalculator">
+                        <!-- section for first part of buy vs rent calculator -->
+                        <h5>Rental Information</h5>
                         <div class="form-group">
-                            <label for="loanAmtInput" class="inline">Loan Amount</label>
-                            <!-- <p id="loanAmtOutput" class="inline" style="float: right"></p> -->
-                            <span class="inline" style="float: right">$<input type="text" id="loanAmtOutput"
+                            <label for="BRmonthlyRentRange" class="inline">Monthly Rent</label>
+                            <span class="inline" style="float: right">$<input type="text" id="BRmonthlyRentInput"
                                     class="inline numericOnly validateInput" style="float: right"
-                                    name="loanAmtOutput"></span>
-                            <input type="range" min="0" max="1000000" step="1000" class="form-control-range"
-                                id="loanAmtInput">
-                            <p id="errorMsg1"></p>
-                            <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
+                                    name="BRmonthlyRentInput"></span>
+                            <input type="range" min="0" max="100000000" step="1" class="form-control-range"
+                                id="BRmonthlyRentRange">
+                            <p id="BRerrorMsg1"></p>
 
                         </div>
                         <div class="form-group">
-                            <label for="interestRateInput" class="inline">Interest Rate</label><span class="inline"
-                                style="float: right">
-                                <input type="text" id="interestRateOutput" name="interestRateOutput"
-                                    class="inline numericDecOnly validateInput" style="float: right">%</span>
-                            <input type="range" min="0" max="20" step="0.01" class="form-control-range"
-                                id="interestRateInput">
-
-                            <p id="errorMsg2"></p>
-
-                        </div>
-                        <div class="form-group">
-                            <label for="tenureInput" class="inline">Tenure</label>
-                            <span class="inline" style="float: right"><input type="number" min="1" max="5"
-                                    id="tenureOutput" class="inline numericOnly5" style="float: right">year(s)
+                            <label for="BRperiodStayRange" class="inline">Intended Period of Stay</label>
+                            <span class="inline" style="float: right"><input type="number" min="1" max="99"
+                                    id="BRperiodStayInput" class="inline numericOnly" style="float: right">year(s)
                             </span>
-                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureInput">
-                            <p id="errorMsg3"></p>
+                            <input type="range" min="1" max="99" step="1" class="form-control-range"
+                                id="BRperiodStayRange" value="15">
+                            <p id="BRerrorMsg2"></p>
 
                         </div>
+                        <!-- section for second part of buy vs rent calculator -->
+
+                        <h5>Property Loan Information</h5>
+                        <div class="form-group">
+                            <label for="BRpurchasePriceRange" class="inline">Purchase Price</label>
+                            <span class="inline" style="float: right">$<input type="text" id="BRpurchasePriceInput"
+                                    class="inline numericOnly validateInput" style="float: right"
+                                    name="BRpurchasePriceInput"></span>
+                            <input type="range" min="0" max="100000000" step="1" class="form-control-range"
+                                id="BRpurchasePriceRange">
+                            <p id="BRerrorMsg3"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="BRinterestRateRange" class="inline">Interest Rate</label><span class="inline"
+                                style="float: right">
+                                <input type="text" id="BRinterestRateInput" name="BRinterestRateInput"
+                                    class="inline numericDecOnly validateInput" style="float: right">%</span>
+                            <input type="range" min="1" max="5" step="0.01" class="form-control-range"
+                                id="BRinterestRateRange">
+
+                            <p id="BRerrorMsg4"></p>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="BRloanTenureRange" class="inline">Loan Tenure</label>
+                            <span class="inline" style="float: right"><input type="number" min="1" max="30" name="BRloanTenureInput" id="BRloanTenureInput" class="inline numericOnly"
+                                    style="float: right">year(s)
+                            </span>
+                            <input type="range" min="1" max="30" step="1" class="form-control-range"
+                                id="BRloanTenureRange" value="25">
+                            <p id="BRerrorMsg5"></p>
+
+                        </div>
+
+
                     </form>
-                    <button onclick="calculateFunction()" id="calculateBtn"
-                        class="btn btn-primary btnCalculate mx-auto d-block" type="button">Calculate</button>
+                    <button onclick="BRcalculateFunction()" id="BRcalculateBtn"
+                        class="btn btn-primary buttonStyle mx-auto d-block" type="button">Calculate</button>
                 </div>
                 <hr class="d-block d-lg-none">
                 <div class="result-right ">
                     <div class=" align-self-center">
-                        <h1 id="amount" class="result">Repayment Summary</h1>
-                        <p id="description" class="result">Please enter the loan information to continue.</p>
+                        <h1 id="amount" class="result before-calculate">Savings Summary</h1>
+                        <p class="before-calculate">Please enter your Rental and Property Loan information to
+                            continue.</p>
+                        <div class="result after-calculate" id="BRresult ">
+                            <p id="savings-buyorrent"></p>
+                            <p id="savings-description"></p>
+                            <button class="btn btn-primary buttonStyle mx-auto d-block" type="button"><a href = "./finder.html">Request for Callback</a></button>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
 
 </body>
 
@@ -228,15 +269,6 @@
         $(".numericOnly").keypress(function (e) {
 
             if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
-
-            // var character = String.fromCharCode(e.keyCode)
-            // var newValue = this.value + character;
-
-            // if (parseInt(removeCommas(newValue)) > 1000000) {
-            //     $("#errorMsg1").text("Value cannot be more than 1,000,000!")
-            //     this.value = addCommas(1000000)
-            //     return false;
-            // }
         });
 
         $(".numericDecOnly").keypress(function (e) {
@@ -250,151 +282,236 @@
             if (isNaN(newValue) || hasDecimalPlace(newValue, 3)) {
                 return false;
             }
-            // if (newValue > 20) {
-            //     $("#errorMsg2").text("Value cannot be more than 20!")
-            //     this.value = 20
-            //     return false;
-            // }
-        });
-
-        $(".numericOnly5").keypress(function (e) {
-            if (String.fromCharCode(e.keyCode).match(/[^0-5]/g)) return false;
-
-            // only allows 1 digit numbers
-            var strNum = Math.ceil(Math.log10(document.getElementById("tenureOutput").value + 1))
-
-            if (strNum > 0) {
-                console.log("longgg")
-                return false
-            }
 
         });
+
+
 
         //event to bind function that validate input and disables button if invalid
-        $("#loanAmtOutput").on("change paste keyup", function () {
+        $("#BRmonthlyRentInput").on("change paste keyup", function () {
             validateFunction()
-            // $("#errorMsg1").text("")
         });
 
-
-        $("#interestRateOutput").on("change paste keyup", function () {
+        $("#BRperiodStayInput").on("change paste keyup", function () {
             validateFunction()
-            // $("#errorMsg2").text("")
-
         });
+
+        $("#BRpurchasePriceInput").on("change paste keyup", function () {
+            validateFunction()
+        });
+
+        $("#BRinterestRateInput").on("change paste keyup", function () {
+            validateFunction()
+        });
+
+        $("#BRloanTenureInput").on("change paste keyup", function () {
+            validateFunction()
+        });
+
 
     });
 
 
-
+    // function testFunction(){
+    //     $(".savings-buy-text").show()
+    // }
 
 
     // call function to display the indicator for the slider
-    document.getElementById("loanAmtInput").oninput = function () {
+    document.getElementById("BRmonthlyRentRange").oninput = function () {
         displayOutput()
         validateFunction()
-        // $("#errorMsg1").text("")
-
     }
 
-    document.getElementById("interestRateInput").oninput = function () {
+    document.getElementById("BRperiodStayRange").oninput = function () {
         displayOutput()
         validateFunction()
-        // $("#errorMsg2").text("")
-
-
     }
 
-    document.getElementById("tenureInput").oninput = function () {
+    document.getElementById("BRpurchasePriceRange").oninput = function () {
         displayOutput()
-        // validateFunction()
+        validateFunction()
+    }
 
+    document.getElementById("BRinterestRateRange").oninput = function () {
+        displayOutput()
+        validateFunction()
+    }
 
+    document.getElementById("BRloanTenureRange").oninput = function () {
+        displayOutput()
+        validateFunction()
     }
 
     //function to display the indicator in the input box for the slider
-
     function displayOutput() {
-        var val1 = document.getElementById("loanAmtInput").value //gets the oninput value
-        document.getElementById("loanAmtOutput").value = addCommas(parseInt(val1)) //displays this value to the html page
+        var val1 = document.getElementById("BRmonthlyRentRange").value //gets the oninput value
+        document.getElementById("BRmonthlyRentInput").value = addCommas(parseInt(val1)) //displays this value to the html page
 
-        var val2 = document.getElementById("interestRateInput").value //gets the oninput value
-        document.getElementById("interestRateOutput").value = val2//displays this value to the html page
+        var val2 = document.getElementById("BRperiodStayRange").value //gets the oninput value
+        document.getElementById("BRperiodStayInput").value = val2 //displays this value to the html page
 
-        var val3 = document.getElementById("tenureInput").value //gets the oninput value
-        document.getElementById("tenureOutput").value = val3 //displays this value to the html page
+        var val3 = document.getElementById("BRpurchasePriceRange").value //gets the oninput value
+        document.getElementById("BRpurchasePriceInput").value = addCommas(parseInt(val3)) //displays this value to the html page
+
+        var val4 = document.getElementById("BRinterestRateRange").value //gets the oninput value
+        document.getElementById("BRinterestRateInput").value = val4//displays this value to the html page   
+
+        var val5 = document.getElementById("BRloanTenureRange").value //gets the oninput value
+        document.getElementById("BRloanTenureInput").value = val5//displays this value to the html page    
     }
 
     // validate input
     function validateFunction() {
-
-        var a = parseInt(removeCommas(document.getElementById("loanAmtOutput").value))
-        var b = parseFloat(document.getElementById("interestRateOutput").value)
-        var c = parseInt(document.getElementById("tenureOutput").value)
         // var regexp = /^\d+\.\d{0,2}$/;
+        //variables to retrieve value from all variables in buy vs rent calculator
+        var a = parseInt(removeCommas(document.getElementById("BRmonthlyRentInput").value))
+        var b = parseInt(document.getElementById("BRperiodStayInput").value)
+        var c = parseInt(removeCommas(document.getElementById("BRpurchasePriceInput").value))
+        var d = parseFloat(document.getElementById("BRinterestRateInput").value)
+        var e = parseInt(document.getElementById("BRloanTenureInput").value)
 
         //validating input according to each condition
+
+        //a. monthly rent
+        //validate min(>0) max (100000000), NaN
         if (isNaN(a)) {
-            document.getElementById("calculateBtn").disabled = true
-            document.getElementById("errorMsg1").innerHTML = "Value is not a number"
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg1").text("Value is not a number")
         }
-        else if (a > 1000000) {
-            document.getElementById("calculateBtn").disabled = true
-            document.getElementById("errorMsg1").innerHTML = "Value cannot be more than 1,000,000"
+        else if (a > 100000000) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg1").text("Value cannot be more than 100million")
         }
 
         else if (a <= 0) {
-            document.getElementById("calculateBtn").disabled = true
-            document.getElementById("errorMsg1").innerHTML = "Value cannot be less than 0"
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg1").text("Value cannot be less than or equal to 0")
         }
 
+        //b. intended period of stay
+        // validate min (1), max(99),isNaN
+        else if (isNaN(b)) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg2").text("Value is not a number")
+        }
         else if (b <= 0) {
-            document.getElementById("calculateBtn").disabled = true
-            document.getElementById("errorMsg2").innerHTML = "Value cannot be less than 0"
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg2").text("Value cannot be less than 1")
+        }
+        else if (b > 99) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg2").text("Value cannot be more than 99")
         }
 
-        else if (b > 20) {
-            document.getElementById("calculateBtn").disabled = true
-            document.getElementById("errorMsg2").innerHTML = "Value cannot be more than 20"
+        //c. purchase price
+        // validate min(>0) max (100000000), NaN
+        else if (isNaN(c)) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg3").text("Value is not a number")
+        }
+        else if (c <= 0) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg3").text("Value cannot be less than or equal to 0")
+        }
+        else if (c > 100000000) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg3").text("Value cannot be more than 100million")
         }
 
-        // else if (!regexp.test(b)) {
-        //     document.getElementById("calculateBtn").disabled = true
-        //     document.getElementById("errorMsg2").innerHTML = ""
-
-        // }
+        //d. intended period of stay
+        // validate min(>0) max(5)
+        else if (isNaN(d)) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg4").text("Value is not a number")
+        }
+        else if (d <= 0) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg4").text("Value cannot be less than or equal to 0")
+        }
+        else if (d > 5) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg4").text("Value cannot be more than 5")
+        }
+        //e. loan tenure
+        //validate min(1) max (30) isNaN
+        else if (isNaN(e)) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg5").text("Value is not a number")
+        }
+        else if (e <= 0) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg5").text("Value cannot be less than 1")
+        }
+        else if (e > 30) {
+            $("#BRcalculateBtn").attr("disabled", true);
+            $("#BRerrorMsg5").text("Value cannot be more than 30")
+        }
+        //if everything is valid, button will be activated
         else {
-            document.getElementById("calculateBtn").disabled = false
-            $("#errorMsg1").text("")
-            $("#errorMsg2").text("")
-            $("#errorMsg3").text("")
+            $("#BRcalculateBtn").attr("disabled", false);
 
-            $("#loanAmtInput").val(a)
-            $("#interestRateInput").val(b)
-            $("#tenureInput").val(c)
+            $("#BRerrorMsg1").text("")
+            $("#BRerrorMsg2").text("")
+            $("#BRerrorMsg3").text("")
+            $("#BRerrorMsg4").text("")
+            $("#BRerrorMsg5").text("")
+
+
+            $("#BRmonthlyRentRange").val(a)
+            $("#BRperiodStayRange").val(b)
+            $("#BRinterestRateRange").val(d)
+
         }
 
     }
 
     //to calculate the monthly loan payment
-    function calculateFunction() {
-        var p = parseInt(removeCommas(document.getElementById("loanAmtOutput").value))
-        var t = parseFloat(document.getElementById("interestRateOutput").value)
-        var y = parseInt(document.getElementById("tenureOutput").value)
+    function BRcalculateFunction() {
+        $(".before-calculate").hide()
+        $(".after-calculate").show()
+
+        //Rental Information
+        var a = parseInt(removeCommas(document.getElementById("BRmonthlyRentInput").value))
+        var b = parseInt(document.getElementById("BRperiodStayInput").value)
+        var c = parseInt(removeCommas(document.getElementById("BRpurchasePriceInput").value))
+        var d = parseFloat(document.getElementById("BRinterestRateInput").value)
+        var e = parseInt(document.getElementById("BRloanTenureInput").value)
+
+        //Total Rent
+        var totalRent = a * (b * 12)
+        console.log("total rent = " + totalRent)
+
+        //Property Loan Information
+
+        var propertyLoan = c + (c * ((d / 100) + (e * 0.002)))
+        console.log("property loan = " + propertyLoan)
+        // var className = document.getElementsByClassName("savings-buy-text")[0].className
+        // console.log(className)
+        //compare both sum and calculate differences
+        var difference = 0
+        if (totalRent > propertyLoan) {
+            difference = Math.round(totalRent - propertyLoan)
+
+            document.getElementById("savings-buyorrent").innerHTML = "Buying is the better option"
+
+            document.getElementById("savings-description").innerHTML = "There would be savings of $" + addCommas(difference) + " over " + e + " years if you buy a property."
+        }
+
+        else if (totalRent < propertyLoan) {
+            difference = Math.round(propertyLoan - totalRent)
+
+        }
 
 
-        var r = t / 100
-        var n = y * 12
-        var result = p * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
-
-        document.getElementById("amount").innerHTML = "$" + addCommas(Math.round(result))
-        document.getElementById("description").innerHTML = "To assist you in your planning, we are pleased to provide you with a loan repayment schedule for your working capital needs. For more details, visit any of our UOB branches or <a href = './finder.html'> request a callback from us</a>."
 
     }
+
     // add commas after every 3 digit from the decimal place
     function addCommas(x) {
         return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
     }
+
     //remove commas so that it can be inserted into the calculate function
     function removeCommas(str) {
         while (str.search(",") >= 0) {

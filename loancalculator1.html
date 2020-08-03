@@ -2,264 +2,415 @@
 <html lang="en">
 
 <head>
-  <!-- <link rel="stylesheet" href="styles.css"> -->
-  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 </head>
 
 </head>
 <style>
-  /* slider styles */
-  input[type=range] {
-    -webkit-appearance: none;
-  }
-
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 300px;
-    height: 10px;
-    background: #ddd;
-    border: none;
-    border-radius: 3px;
-  }
-
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background: goldenrod;
-    margin-top: -7px;
-  }
-
-  input[type=range]:focus {
-    outline: none;
-  }
-
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #ccc;
-  }
-
-
-  /* Styles for Hr/ line */
-
-  hr {
-    border: solid rgb(85, 85, 85) 0.5px;
-  }
-
-  /* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) {}
-
-  /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) {
-    h1 {
-      font-size: 26px;
+    /* slider styles */
+    input[type=range] {
+        -webkit-appearance: none;
     }
 
-    h4 {
-      font-size: 20px;
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 300px;
+        height: 10px;
+        background: #ddd;
+        border: none;
+        border-radius: 3px;
     }
 
-    p {
-      font-size: 16px;
-    }
-  }
-
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-
-    .body {
-      width: 62%;
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background: goldenrod;
+        margin-top: -7px;
     }
 
-    .businessCalcDiv {
-      width: 100%;
-      padding: 2em 0;
+    input[type=range]:focus {
+        outline: none;
     }
 
-    .input-left {
-      float: left;
-      width: 50%;
-      /* height: 17em; */
-      padding: 2em 3em 2em 0;
-      border-right: 0.5px solid black;
-    }
-
-    .result-right {
-      float: right;
-      width: 50%;
-      padding: 2em 3em 2em 3em;
-      height: 19em;
-
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #ccc;
     }
 
 
-  }
+    /* Styles for Hr/ line */
 
-  /* styles for button */
-  .btnCalculate {
-    width: 40%;
-    padding: 10px 6px;
-    background-color: #002469;
-  }
+    hr {
+        border: solid rgb(85, 85, 85) 0.5px;
+    }
 
-  .btnCalculate:hover,
-  .btnCalculate:active,
-  .btnCalculate:focus,
-  .btnCalculate:link,
-  .btnCalculate:visited {
-    background-color: #011a49;
-  }
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {}
 
-  .inputForm {
-    padding: 3% 0;
-    margin-bottom: 3%;
-  }
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 26px;
+        }
 
-  /* style for each element in the form */
-  .form-group {
-    padding: 2% 0;
-  }
+        h4 {
+            font-size: 20px;
+        }
 
-  input[type='range'].loanAmtBottom {
-    overflow: hidden;
-    width: 80px;
-    -webkit-appearance: none;
-    background-color: #9a905d;
-  }
+        p {
+            font-size: 16px;
+        }
+    }
 
-  input[type='range'].loanAmtBottom::-webkit-slider-runnable-track {
-    height: 10px;
-    -webkit-appearance: none;
-    color: #13bba4;
-    margin-top: -1px;
-  }
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
 
-  input[type='range'].loanAmtBottom::-webkit-slider-thumb {
-    width: 10px;
-    -webkit-appearance: none;
-    height: 10px;
-    cursor: ew-resize;
-    background: #434343;
-    box-shadow: -80px 0 0 80px #43e5f7;
-  }
+        .body {
+            width: 62%;
+        }
 
-  /* styles for text */
-  .result{
-          text-align: center;
+        .businessCalcDiv {
+            width: 100%;
+            padding: 2em 0;
+        }
 
-  }
+        .input-left {
+            float: left;
+            width: 50%;
+            /* height: 17em; */
+            padding: 2em 3em 2em 0;
+            border-right: 0.5px solid black;
+        }
+
+        .result-right {
+            float: right;
+            width: 50%;
+            padding: 2em 3em 2em 3em;
+            height: 19em;
+
+        }
+
+
+    }
+
+    /* styles for button */
+    .btnCalculate {
+        width: 40%;
+        padding: 10px 6px;
+        background-color: #002469;
+    }
+
+    .btnCalculate:hover,
+    .btnCalculate:active,
+    .btnCalculate:focus,
+    .btnCalculate:link,
+    .btnCalculate:visited {
+        background-color: #011a49;
+    }
+
+    .inputForm {
+        padding: 3% 0;
+        margin-bottom: 3%;
+    }
+
+    /* style for each element in the form */
+    .form-group {
+        padding: 2% 0;
+    }
+
+    input[type='range'].loanAmtBottom {
+        overflow: hidden;
+        width: 80px;
+        -webkit-appearance: none;
+        background-color: #9a905d;
+    }
+
+    input[type='range'].loanAmtBottom::-webkit-slider-runnable-track {
+        height: 10px;
+        -webkit-appearance: none;
+        color: #13bba4;
+        margin-top: -1px;
+    }
+
+    input[type='range'].loanAmtBottom::-webkit-slider-thumb {
+        width: 10px;
+        -webkit-appearance: none;
+        height: 10px;
+        cursor: ew-resize;
+        background: #434343;
+        box-shadow: -80px 0 0 80px #43e5f7;
+    }
+
+    /* styles for text */
+    .result {
+        text-align: center;
+
+    }
 </style>
 
 <body>
-  <div class="container">
-    <div>
+    <div class="container">
+        <div>
 
-      <div class="businessCalcDiv">
-        <h2 style="text-align: center;">Loan Installment Calculator</h2>
-        <div class="input-left">
-          <h4>Find out the indicative monthly installment payment of your UOB
-            Business Loan</h4>
-          <form class="inputForm">
-            <div class="form-group">
-              <label for="loanAmtInput" class="inline">Loan Amount</label>
-              <p id="loanAmtOutput" class="inline" style="float: right"></p>
-              <input type="range" min="0" max="1000000" step="100" class="form-control-range" id="loanAmtInput">
-              <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
+            <div class="businessCalcDiv">
+                <h2 style="text-align: center;">Loan Installment Calculator</h2>
+                <div class="input-left">
+                    <h4>Find out the indicative monthly installment payment of your UOB
+                        Business Loan</h4>
+                    <form class="inputForm" name="formLoanCalculate1">
+                        <div class="form-group">
+                            <label for="loanAmtRange" class="inline">Loan Amount</label>
+                            <!-- <p id="loanAmtInput" class="inline" style="float: right"></p> -->
+                            <span class="inline" style="float: right">$<input type="text" id="loanAmtInput"
+                                    class="inline numericOnly validateInput" style="float: right"
+                                    name="loanAmtInput"></span>
+                            <input type="range" min="0" max="1000000" step="1" class="form-control-range"
+                                id="loanAmtRange">
+                            <p id="errorMsg1"></p>
+                            <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
 
+                        </div>
+                        <div class="form-group">
+                            <label for="interestRateRange" class="inline">Interest Rate</label><span class="inline"
+                                style="float: right">
+                                <input type="text" id="interestRateInput" name="interestRateInput"
+                                    class="inline numericDecOnly validateInput" style="float: right">%</span>
+                            <input type="range" min="0" max="20" step="0.01" class="form-control-range"
+                                id="interestRateRange">
+
+                            <p id="errorMsg2"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="tenureRange" class="inline">Tenure</label>
+                            <span class="inline" style="float: right"><input type="number" min="1" max="5"
+                                    id="tenureInput" class="inline numericOnly5" style="float: right">year(s)
+                            </span>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureRange">
+                            <p id="errorMsg3"></p>
+
+                        </div>
+                    </form>
+                    <button onclick="calculateFunction()" id="calculateBtn"
+                        class="btn btn-primary btnCalculate mx-auto d-block" type="button">Calculate</button>
+                </div>
+                <hr class="d-block d-lg-none">
+                <div class="result-right ">
+                    <div class=" align-self-center">
+                        <h1 id="amount" class="result">Repayment Summary</h1>
+                        <p id="description" class="result">Please enter the loan information to continue.</p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-              <label for="interestRateInput" class="inline">Interest Rate</label>
-              <p id="interestRateOutput" class="inline" style="float: right"></p>
-              <input type="range" min="0" max="20" step="0.01" class="form-control-range" id="interestRateInput">
-            </div>
-            <div class="form-group">
-              <label for="tenureInput" class="inline">Tenure</label>
-              <p id="tenureOutput" class="inline" style="float: right"></p>
-              <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureInput">
-            </div>
-          </form>
-          <button onclick="calculateFunction()" class="btn btn-primary btnCalculate  mx-auto d-block"
-            type="button">Calculate</button>
         </div>
-        <hr class="d-block d-lg-none">
-        <div class="result-right ">
-          <div class=" align-self-center">
-            <h1 id="amount" class="result">Repayment Summary</h1>
-            <p id="description" class="result">Please enter the loan information to continue.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  </div>
+    </div>
 
 </body>
 
 <script>
-  $(document).ready(function () {
-    displayOutput()
-  });
+    $(document).ready(function () {
+        displayOutput()
 
-  // call function to display the indicator for the slider
-  document.getElementById("loanAmtInput").oninput = function () {
-    // displayLoanOutput()
-    displayOutput()
+        //prevents user from entering anything other than . and numbers
+        $(".numericOnly").keypress(function (e) {
 
-  }
+            if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
 
-  document.getElementById("interestRateInput").oninput = function () {
-    // displayInterestOutput()
-    displayOutput()
+            // var character = String.fromCharCode(e.keyCode)
+            // var newValue = this.value + character;
 
-  }
+            // if (parseInt(removeCommas(newValue)) > 1000000) {
+            //     $("#errorMsg1").text("Value cannot be more than 1,000,000!")
+            //     this.value = addCommas(1000000)
+            //     return false;
+            // }
+        });
 
-  document.getElementById("tenureInput").oninput = function () {
-    // displayInterestOutput()
-    displayOutput()
+        $(".numericDecOnly").keypress(function (e) {
 
-  }
+            // if (String.fromCharCode(e.keyCode).match(/[0-9]+(\.[0-9][0-9]?)?/g)) return true;
+            if (String.fromCharCode(e.keyCode).match(/[^0-9.]/g)) return false;
 
-  //function to display the indicator for the slider
+            var character = String.fromCharCode(e.keyCode)
+            var newValue = this.value + character;
 
-  function displayOutput() {
-    var val1 = document.getElementById("loanAmtInput").value //gets the oninput value
-    document.getElementById("loanAmtOutput").innerHTML = "$" + numberWithCommas(val1) //displays this value to the html page
+            if (isNaN(newValue) || hasDecimalPlace(newValue, 3)) {
+                return false;
+            }
+            // if (newValue > 20) {
+            //     $("#errorMsg2").text("Value cannot be more than 20!")
+            //     this.value = 20
+            //     return false;
+            // }
+        });
 
-    var val2 = document.getElementById("interestRateInput").value //gets the oninput value
-    document.getElementById("interestRateOutput").innerHTML = val2 + "%"//displays this value to the html page
+        $(".numericOnly5").keypress(function (e) {
+            if (String.fromCharCode(e.keyCode).match(/[^0-5]/g)) return false;
 
-    var val3 = document.getElementById("tenureInput").value //gets the oninput value
-    document.getElementById("tenureOutput").innerHTML = val3 + " year(s)"//displays this value to the html page
-  }
+            // only allows 1 digit numbers
+            var strNum = Math.ceil(Math.log10(document.getElementById("tenureInput").value + 1))
 
-  //to calculate the monthly loan payment
-  function calculateFunction() {
-    var p = parseInt(document.getElementById("loanAmtInput").value)
-    var t = parseFloat(document.getElementById("interestRateInput").value)
-    var y = parseInt(document.getElementById("tenureInput").value)
+            if (strNum > 0) {
+                console.log("longgg")
+                return false
+            }
+
+        });
+
+        //event to bind function that validate input and disables button if invalid
+        $("#loanAmtInput").on("change paste keyup", function () {
+            validateFunction()
+            // $("#errorMsg1").text("")
+        });
 
 
-    var r = t / 100
-    var n = y * 12
-    var result = p * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
+        $("#interestRateInput").on("change paste keyup", function () {
+            validateFunction()
+            // $("#errorMsg2").text("")
 
-    document.getElementById("amount").innerHTML = "$" + numberWithCommas(Math.round(result))
-    document.getElementById("description").innerHTML = "To assist you in your planning, we are pleased to provide you with a loan repayment schedule for your working capital needs. For more details, visit any of our UOB branches or <a href = './finder.html'> request a callback from us</a>."
+        });
 
-  }
-  // add commas after evry 3 digit from the decimal place
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-  }
+    });
+
+
+
+
+
+    // call function to display the indicator for the slider
+    document.getElementById("loanAmtRange").oninput = function () {
+        displayOutput()
+        validateFunction()
+        // $("#errorMsg1").text("")
+
+    }
+
+    document.getElementById("interestRateRange").oninput = function () {
+        displayOutput()
+        validateFunction()
+        // $("#errorMsg2").text("")
+
+
+    }
+
+    document.getElementById("tenureRange").oninput = function () {
+        displayOutput()
+        // validateFunction()
+
+
+    }
+
+    //function to display the indicator in the input box for the slider
+
+    function displayOutput() {
+        var val1 = document.getElementById("loanAmtRange").value //gets the oninput value
+        document.getElementById("loanAmtInput").value = addCommas(parseInt(val1)) //displays this value to the html page
+
+        var val2 = document.getElementById("interestRateRange").value //gets the oninput value
+        document.getElementById("interestRateInput").value = val2//displays this value to the html page
+
+        var val3 = document.getElementById("tenureRange").value //gets the oninput value
+        document.getElementById("tenureInput").value = val3 //displays this value to the html page
+    }
+
+    // validate input
+    function validateFunction() {
+
+        var a = parseInt(removeCommas(document.getElementById("loanAmtInput").value))
+        var b = parseFloat(document.getElementById("interestRateInput").value)
+        var c = parseInt(document.getElementById("tenureInput").value)
+        // var regexp = /^\d+\.\d{0,2}$/;
+
+        //validating input according to each condition
+        if (isNaN(a)) {
+            $("#calculateBtn").attr("disabled", true);
+            $("#errorMsg1").text("Value is not a number")
+        }
+        else if (a > 1000000) {
+            $("#calculateBtn").attr("disabled", true);
+            $("#errorMsg1").text("Value cannot be more than 1 million")
+        }
+
+        else if (a <= 0) {
+            $("#calculateBtn").attr("disabled", true);
+            $("#errorMsg1").text("Value cannot be less than or equal to 0")
+        }
+
+        else if (b <= 0) {
+            $("#calculateBtn").attr("disabled", true);
+            $("#errorMsg2").text("Value cannot be less than or equal to 0")
+        }
+
+        else if (b > 20) {
+            $("#calculateBtn").attr("disabled", true);
+            $("#errorMsg2").text("Value cannot be more than 20")
+        }
+
+        // else if (!regexp.test(b)) {
+        //              $("#calculateBtn").attr("disabled", true);
+        //     document.getElementById("errorMsg2").innerHTML = ""
+
+        // }
+        else {
+            document.getElementById("calculateBtn").disabled = false
+            $("#errorMsg1").text("")
+            $("#errorMsg2").text("")
+            $("#errorMsg3").text("")
+
+            $("#loanAmtRange").val(a)
+            $("#interestRateRange").val(b)
+            $("#tenureRange").val(c)
+        }
+
+    }
+
+    //to calculate the monthly loan payment
+    function calculateFunction() {
+        var p = parseInt(removeCommas(document.getElementById("loanAmtInput").value))
+        var t = parseFloat(document.getElementById("interestRateInput").value)
+        var y = parseInt(document.getElementById("tenureInput").value)
+
+
+        var r = t / 100
+        var n = y * 12
+        var result = p * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
+
+        document.getElementById("amount").innerHTML = "$" + addCommas(Math.round(result))
+        document.getElementById("description").innerHTML = "To assist you in your planning, we are pleased to provide you with a loan repayment schedule for your working capital needs. For more details, visit any of our UOB branches or <a href = './finder.html'> request a callback from us</a>."
+
+    }
+    // add commas after every 3 digit from the decimal place
+    function addCommas(x) {
+        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    }
+    //remove commas so that it can be inserted into the calculate function
+    function removeCommas(str) {
+        while (str.search(",") >= 0) {
+            str = (str + "").replace(',', '');
+        }
+        return str;
+    };
+
+    //ensures that interest rate does not exceed two decimal place
+    function hasDecimalPlace(value, x) {
+        var pointIndex = value.indexOf('.');
+        return pointIndex >= 0 && pointIndex < value.length - x;
+    }
+
+
+
 </script>
 
 </html>
