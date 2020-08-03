@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Carousel scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+  .chatbot {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    bottom: 30px;
+    right: 30px;
+    z-index: 50;
+    background-color: #002469;
+  }
+  .close-chatbot {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    bottom: 30px;
+    right: 30px;
+    z-index: 51;
+    background-color: rgba(220, 220, 220, 0.6);
+    display: none;
+  }
+
+  .chat-popup {
+    display: none;
+    bottom: 100px;
+    right: 30px;
+    background-color: white;
+    border: black 1px solid;
+    position: absolute;
+    width: 400px;
+    height: 600px;
+  }
+
+  .chat-popup-header {
+    background-color: #002469;
+    color: white;
+  }
+</style>
+
+<body>
+
+  <button class="chatbot" onclick="chatPopup()">
+    <img src="./images/elephant-icon-UOB.png">
+  </button>
+  <button class="close-chatbot" id="close-chatbot" onclick="popupClose()">
+    
+  </button>
+
+  <div class="chat-popup" id="chat-popup">
+    <div class="chat-popup-header d-flex">
+      <div class="text">
+        <p>Karen</p>
+        <p>Virtual Assistance Bot</p>
+      </div>
+      <div class="close-popup">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 9l6 6 6-6" /></svg>
+      </div>
+    </div>
+    <div class="chat-popup-body">
+      <input id="chat-input" type="text" placeholder="Type a message here" autocomplete="off" />
+    </div>
+  </div>
+
+</body>
+
+
+<script>
+  var cp = ""
+  function chatPopup() {
+    document.getElementById("chat-popup").style.display = "block"
+    document.getElementById("close-chatbot").style.display = "block"
+
+  }
+
+  function popupClose(){
+    document.getElementById("chat-popup").style.display = "none"
+    document.getElementById("close-chatbot").style.display = "none"
+
+  }
+</script>
+
+</html>
