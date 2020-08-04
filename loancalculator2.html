@@ -87,7 +87,6 @@
         }
 
         .input-left {
-            float: left;
             width: 50%;
             /* height: 17em; */
             padding: 2em 3em 2em 0;
@@ -95,13 +94,17 @@
         }
 
         .result-right {
-            float: right;
+            /* float: right; */
             width: 50%;
             padding: 2em 3em 2em 3em;
             height: 19em;
 
         }
 
+        .calcRow {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
     }
 
@@ -160,20 +163,18 @@
     }
 
     /*results*/
-    .after-calculate {
+    .BRafterCalculate {
         display: none;
     }
-
-
 </style>
 
 <body>
     <div class="container">
-        <div>
 
-            <div class="BRcalcDiv">
-                <h2 style="text-align: center;">Buy vs Rent Calculator</h2>
-                <div class="input-left">
+        <div class="BRcalcDiv ">
+            <h2 style="text-align: center;">Buy vs Rent Calculator</h2>
+            <div class="calcRow">
+                <div class="input-left ">
                     <h4>Is it better to buy or rent your commercial property? Calculate to find out which option
                         provides you with greater savings over time.</h4>
                     <form class="inputForm" name="formBRcalculator">
@@ -226,7 +227,8 @@
 
                         <div class="form-group">
                             <label for="BRloanTenureRange" class="inline">Loan Tenure</label>
-                            <span class="inline" style="float: right"><input type="number" min="1" max="30" name="BRloanTenureInput" id="BRloanTenureInput" class="inline numericOnly"
+                            <span class="inline" style="float: right"><input type="number" min="1" max="30"
+                                    name="BRloanTenureInput" id="BRloanTenureInput" class="inline numericOnly"
                                     style="float: right">year(s)
                             </span>
                             <input type="range" min="1" max="30" step="1" class="form-control-range"
@@ -243,22 +245,61 @@
                 <hr class="d-block d-lg-none">
                 <div class="result-right ">
                     <div class=" align-self-center">
-                        <h1 id="amount" class="result before-calculate">Savings Summary</h1>
-                        <p class="before-calculate">Please enter your Rental and Property Loan information to
+                        <h1 id="amount" class="result BRbeforeCalculate">Savings Summary</h1>
+                        <p class="BRbeforeCalculate">Please enter your Rental and Property Loan information to
                             continue.</p>
-                        <div class="result after-calculate" id="BRresult ">
-                            <p id="savings-buyorrent"></p>
-                            <p id="savings-description"></p>
-                            <button class="btn btn-primary buttonStyle mx-auto d-block" type="button"><a href = "./finder.html">Request for Callback</a></button>
-
+                        <div class="result BRafterCalculate" id="BRresult">
+                            <p id="BRbuyorrent"></p>
+                            <p id="BRdescription"></p>
+                            <button class="btn btn-primary buttonStyle mx-auto d-block" type="button"><a
+                                    href="./finder.html">Request for Callback</a></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="CPAcalcDiv ">
+            <h2 style="text-align: center;">Commercial Property Affordability Calculator</h2>
+            <div class="calcRow">
+                <div class="input-left ">
+                    <h4>To help you make your decision if you should buy or rent a property, click here to find out
+                        more.
+                    </h4>
+                    <form class="inputForm" name="formCPAcalcDiv">
+                        <!-- section for first part of buy vs rent calculator -->
+                        <h5>Rental Information</h5>
+                        <div class="form-group">
+                            <label for="CPApropertyValRange" class="inline">Property Value</label>
+                            <span class="inline" style="float: right">$<input type="text" id="CPApropertyValInput"
+                                    class="inline numericOnly validateInput" style="float: right"
+                                    name="CPApropertyValInput"></span>
+                            <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
+                                id="CPApropertyValRange">
+                            <p id="BRerrorMsg1"></p>
 
+                        </div>
+
+                    </form>
+                    <button onclick="BRcalculateFunction()" id="BRcalculateBtn"
+                        class="btn btn-primary buttonStyle mx-auto d-block" type="button">Calculate</button>
+
+                </div>
+
+                <hr class="d-block d-lg-none">
+
+                <div class="result-right ">
+                    <div class=" align-self-center">
+                        <h1 id="amount" class="result CPAbeforeCalculate">Repayment Summary</h1>
+                        <p class="CPAbeforeCalculate">Please enter the mortgage information to continue.</p>
+                        <div class="result CPAafterCalculate" id="CPAresult">
+                          <p id="CPAdescription"></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 <script>
@@ -310,11 +351,6 @@
 
 
     });
-
-
-    // function testFunction(){
-    //     $(".savings-buy-text").show()
-    // }
 
 
     // call function to display the indicator for the slider
@@ -468,8 +504,8 @@
 
     //to calculate the monthly loan payment
     function BRcalculateFunction() {
-        $(".before-calculate").hide()
-        $(".after-calculate").show()
+        $(".BRbeforeCalculate").hide()
+        $(".BRafterCalculate").show()
 
         //Rental Information
         var a = parseInt(removeCommas(document.getElementById("BRmonthlyRentInput").value))
@@ -493,9 +529,9 @@
         if (totalRent > propertyLoan) {
             difference = Math.round(totalRent - propertyLoan)
 
-            document.getElementById("savings-buyorrent").innerHTML = "Buying is the better option"
+            document.getElementById("BRbuyorrent").innerHTML = "Buying is the better option"
 
-            document.getElementById("savings-description").innerHTML = "There would be savings of $" + addCommas(difference) + " over " + e + " years if you buy a property."
+            document.getElementById("BRdescription").innerHTML = "There would be savings of $" + addCommas(difference) + " over " + e + " years if you buy a property."
         }
 
         else if (totalRent < propertyLoan) {
