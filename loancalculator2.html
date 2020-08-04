@@ -181,7 +181,7 @@
                         <!-- section for first part of buy vs rent calculator -->
                         <h5>Rental Information</h5>
                         <div class="form-group">
-                            <label for="BRmonthlyRentRange" class="inline">Monthly Rent</label>
+                            <label for="BRmonthlyRentInput" class="inline">Monthly Rent</label>
                             <span class="inline" style="float: right">$<input type="text" id="BRmonthlyRentInput"
                                     class="inline numericOnly validateInput" style="float: right"
                                     name="BRmonthlyRentInput"></span>
@@ -191,7 +191,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label for="BRperiodStayRange" class="inline">Intended Period of Stay</label>
+                            <label for="BRperiodStayInput" class="inline">Intended Period of Stay</label>
                             <span class="inline" style="float: right"><input type="number" min="1" max="99"
                                     id="BRperiodStayInput" class="inline numericOnly" style="float: right">year(s)
                             </span>
@@ -204,7 +204,7 @@
 
                         <h5>Property Loan Information</h5>
                         <div class="form-group">
-                            <label for="BRpurchasePriceRange" class="inline">Purchase Price</label>
+                            <label for="BRpurchasePriceInput" class="inline">Purchase Price</label>
                             <span class="inline" style="float: right">$<input type="text" id="BRpurchasePriceInput"
                                     class="inline numericOnly validateInput" style="float: right"
                                     name="BRpurchasePriceInput"></span>
@@ -214,7 +214,7 @@
 
                         </div>
                         <div class="form-group">
-                            <label for="BRinterestRateRange" class="inline">Interest Rate</label><span class="inline"
+                            <label for="BRinterestRateInput" class="inline">Interest Rate</label><span class="inline"
                                 style="float: right">
                                 <input type="text" id="BRinterestRateInput" name="BRinterestRateInput"
                                     class="inline numericDecOnly validateInput" style="float: right">%</span>
@@ -226,7 +226,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="BRloanTenureRange" class="inline">Loan Tenure</label>
+                            <label for="BRloanTenureInput" class="inline">Loan Tenure</label>
                             <span class="inline" style="float: right"><input type="number" min="1" max="30"
                                     name="BRloanTenureInput" id="BRloanTenureInput" class="inline numericOnly"
                                     style="float: right">year(s)
@@ -262,26 +262,55 @@
         <div class="CPAcalcDiv ">
             <h2 style="text-align: center;">Commercial Property Affordability Calculator</h2>
             <div class="calcRow">
-                <div class="input-left ">
-                    <h4>To help you make your decision if you should buy or rent a property, click here to find out
-                        more.
-                    </h4>
+                <div class="input-left">
                     <form class="inputForm" name="formCPAcalcDiv">
                         <!-- section for first part of buy vs rent calculator -->
-                        <h5>Rental Information</h5>
                         <div class="form-group">
-                            <label for="CPApropertyValRange" class="inline">Property Value</label>
+                            <label for="CPApropertyValInput" class="inline">Property Value</label>
                             <span class="inline" style="float: right">$<input type="text" id="CPApropertyValInput"
                                     class="inline numericOnly validateInput" style="float: right"
-                                    name="CPApropertyValInput"></span>
-                            <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
-                                id="CPApropertyValRange">
-                            <p id="BRerrorMsg1"></p>
+                                    name="CPApropertyValInput" value="1000000"></span>
+                            <!-- <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
+                                id="CPApropertyValRange"> -->
+                            <p id="CPAerrorMsg1"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="CPAloanAmountInput" class="inline">Loan Amount</label>
+                            <span class="inline" style="float: right">$<input type="text" id="CPAloanAmountInput"
+                                    class="inline numericOnly validateInput" style="float: right"
+                                    name="CPAloanAmountInput" value="900000"></span>
+                            <!-- <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
+                                id="CPApropertyValRange"> -->
+                            <p id="CPAerrorMsg2"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="CPAloanTenureInput" class="inline">Loan Tenure</label>
+                            <span class="inline" style="float: right"><input type="number" min="1" max="30"
+                                    name="CPAloanTenureInput" id="CPAloanTenureInput" class="inline numericOnly"
+                                    style="float: right">year(s)
+                            </span>
+                            <input type="range" min="5" max="30" step="1" class="form-control-range"
+                                id="CPAloanTenureRange" value="20">
+                            <p id="CPAerrorMsg3"></p>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="CPAinterestRateInput" class="inline">Interest Rate</label><span class="inline"
+                                style="float: right">
+                                <input type="text" id="CPAinterestRateInput" name="CPAinterestRateInput"
+                                    class="inline numericDecOnly validateInput" style="float: right">%</span>
+                            <input type="range" min="1" max="5" step="0.01" class="form-control-range"
+                                id="CPAinterestRateRange">
+
+                            <p id="CPAerrorMsg4"></p>
 
                         </div>
 
                     </form>
-                    <button onclick="BRcalculateFunction()" id="BRcalculateBtn"
+                    <button onclick="CPAcalculateFunction()" id="CPAcalculateBtn"
                         class="btn btn-primary buttonStyle mx-auto d-block" type="button">Calculate</button>
 
                 </div>
@@ -289,12 +318,12 @@
                 <hr class="d-block d-lg-none">
 
                 <div class="result-right ">
-                    <div class=" align-self-center">
+                    <div class="align-self-center">
                         <h1 id="amount" class="result CPAbeforeCalculate">Repayment Summary</h1>
                         <p class="CPAbeforeCalculate">Please enter the mortgage information to continue.</p>
                         <div class="result CPAafterCalculate" id="CPAresult">
-                          <p id="CPAdescription"></p>
-                            
+                            <p id="CPAdescription"></p>
+
                         </div>
                     </div>
                 </div>
@@ -328,25 +357,43 @@
 
 
 
-        //event to bind function that validate input and disables button if invalid
+        //Buy vs Rent: event to bind function that validate input and disables button if invalid
         $("#BRmonthlyRentInput").on("change paste keyup", function () {
-            validateFunction()
+            BRvalidateFunction()
         });
 
         $("#BRperiodStayInput").on("change paste keyup", function () {
-            validateFunction()
+            BRvalidateFunction()
         });
 
         $("#BRpurchasePriceInput").on("change paste keyup", function () {
-            validateFunction()
+            BRvalidateFunction()
         });
 
         $("#BRinterestRateInput").on("change paste keyup", function () {
-            validateFunction()
+            BRvalidateFunction()
         });
 
         $("#BRloanTenureInput").on("change paste keyup", function () {
-            validateFunction()
+            BRvalidateFunction()
+        });
+
+        //CPA: attach event to bind function that validate input and disables button if invalid
+
+        $("#CPApropertyValInput").on("change paste keyup", function () {
+            CPAvalidateFunction()
+        });
+
+        $("#CPAloanAmountInput").on("change paste keyup", function () {
+            CPAvalidateFunction()
+        });
+
+        $("#CPAloanTenureInput").on("change paste keyup", function () {
+            CPAvalidateFunction()
+        });
+
+        $("#CPAinterestRateInput").on("change paste keyup", function () {
+            CPAvalidateFunction()
         });
 
 
@@ -356,49 +403,79 @@
     // call function to display the indicator for the slider
     document.getElementById("BRmonthlyRentRange").oninput = function () {
         displayOutput()
-        validateFunction()
+        BRvalidateFunction()
     }
 
     document.getElementById("BRperiodStayRange").oninput = function () {
         displayOutput()
-        validateFunction()
+        BRvalidateFunction()
     }
 
     document.getElementById("BRpurchasePriceRange").oninput = function () {
         displayOutput()
-        validateFunction()
+        BRvalidateFunction()
     }
 
     document.getElementById("BRinterestRateRange").oninput = function () {
         displayOutput()
-        validateFunction()
+        BRvalidateFunction()
     }
 
     document.getElementById("BRloanTenureRange").oninput = function () {
         displayOutput()
-        validateFunction()
+        BRvalidateFunction()
     }
+
+//CPA
+    document.getElementById("CPAloanTenureRange").oninput = function () {
+        displayOutput()
+        CPAvalidateFunction()
+    }
+
+    document.getElementById("CPAinterestRateRange").oninput = function () {
+        displayOutput()
+        CPAvalidateFunction()
+    }
+
 
     //function to display the indicator in the input box for the slider
     function displayOutput() {
-        var val1 = document.getElementById("BRmonthlyRentRange").value //gets the oninput value
-        document.getElementById("BRmonthlyRentInput").value = addCommas(parseInt(val1)) //displays this value to the html page
 
-        var val2 = document.getElementById("BRperiodStayRange").value //gets the oninput value
-        document.getElementById("BRperiodStayInput").value = val2 //displays this value to the html page
+        //BR
+        var BRval1 = document.getElementById("BRmonthlyRentRange").value
+        document.getElementById("BRmonthlyRentInput").value = addCommas(parseInt(BRval1))
 
-        var val3 = document.getElementById("BRpurchasePriceRange").value //gets the oninput value
-        document.getElementById("BRpurchasePriceInput").value = addCommas(parseInt(val3)) //displays this value to the html page
+        var BRval2 = document.getElementById("BRperiodStayRange").value
+        document.getElementById("BRperiodStayInput").value = BRval2
 
-        var val4 = document.getElementById("BRinterestRateRange").value //gets the oninput value
-        document.getElementById("BRinterestRateInput").value = val4//displays this value to the html page   
+        var BRval3 = document.getElementById("BRpurchasePriceRange").value //gets the oninput value
+        document.getElementById("BRpurchasePriceInput").value = addCommas(parseInt(BRval3)) //displays this value to the html page
 
-        var val5 = document.getElementById("BRloanTenureRange").value //gets the oninput value
-        document.getElementById("BRloanTenureInput").value = val5//displays this value to the html page    
+        var BRval4 = document.getElementById("BRinterestRateRange").value //gets the oninput value
+        document.getElementById("BRinterestRateInput").value = BRval4//displays this value to the html page   
+
+        var BRval5 = document.getElementById("BRloanTenureRange").value //gets the oninput value
+        document.getElementById("BRloanTenureInput").value = BRval5//displays this value to the html page    
+
+        //CPA
+
+        // var CPAval1 = document.getElementById("CPApropertyValInput").value
+        // document.getElementById("CPApropertyValInput").value = addCommas(parseInt(CPAval1))
+
+        // var CPAval2 = document.getElementById("CPAloanAmountInput").value
+        // document.getElementById("CPAloanAmountInput").value = addCommas(parseInt(CPAval2))
+
+        var CPAval3 = document.getElementById("CPAloanTenureRange").value
+        document.getElementById("CPAloanTenureInput").value = CPAval3
+
+        var CPAval4 = document.getElementById("CPAinterestRateRange").value
+        document.getElementById("CPAinterestRateInput").value = CPAval4
+
+
     }
 
-    // validate input
-    function validateFunction() {
+    // validate input fpr br
+    function BRvalidateFunction() {
         // var regexp = /^\d+\.\d{0,2}$/;
         //variables to retrieve value from all variables in buy vs rent calculator
         var a = parseInt(removeCommas(document.getElementById("BRmonthlyRentInput").value))
@@ -502,7 +579,7 @@
 
     }
 
-    //to calculate the monthly loan payment
+    //to calculate the buy amount vs rent amount
     function BRcalculateFunction() {
         $(".BRbeforeCalculate").hide()
         $(".BRafterCalculate").show()
@@ -543,6 +620,73 @@
 
     }
 
+    //validate input for cpa
+    function CPAvalidateFunction() {
+        var a = parseInt(removeCommas(document.getElementById("CPApropertyValInput").value))
+        var b = parseInt(removeCommas(document.getElementById("CPAloanAmtInput").value))
+        var c = parseInt(document.getElementById("CPAloanTenureInput").value)
+        var d = parseFloat(document.getElementById("CPAinterestRateInput").value)
+
+        //a. property value
+        if (isNaN(a)) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg1").text("Value is not a number")
+        }
+        else if (a > 999999999) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg1").text("Value cannot be more than 999,999,999")
+        }
+
+        else if (a < 100000) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg1").text("Value cannot be less than or equal to 100,000")
+        }
+        //b. loan amount 
+        else if (isNaN(b)) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg2").text("Value is not a number")
+        }
+        else if (b < 80000) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg2").text("Value cannot be less than 80,000")
+        }
+        else if (b > 99999999) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg2").text("Value cannot be more than 99,999,999")
+        }
+        //c. loan tenure
+        else if (isNaN(c)) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg3").text("Value is not a number")
+        }
+        else if (c < 5) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg3").text("Value cannot be less than 5")
+        }
+        else if (c > 30) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg3").text("Value cannot be more than 30")
+        }
+        //d. interest rate
+        else if (isNaN(d)) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg4").text("Value is not a number")
+        }
+        else if (d < 1) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg3").text("Value cannot be less than 1")
+        }
+        else if (d > 5) {
+            $("#CPAcalculateBtn").attr("disabled", true);
+            $("#CPAerrorMsg3").text("Value cannot be more than 5")
+        }
+    }
+
+    //to calcualte commercial property affordability 
+    function CPAcalculateFunction() {
+
+
+    }
     // add commas after every 3 digit from the decimal place
     function addCommas(x) {
         return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
