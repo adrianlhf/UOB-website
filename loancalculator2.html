@@ -163,7 +163,8 @@
     }
 
     /*results*/
-    .BRafterCalculate {
+    .BRafterCalculate,
+    .CPAafterCalculate {
         display: none;
     }
 </style>
@@ -251,8 +252,8 @@
                         <div class="result BRafterCalculate" id="BRresult">
                             <p id="BRbuyorrent"></p>
                             <p id="BRdescription"></p>
-                            <button class="btn btn-primary buttonStyle mx-auto d-block" type="button"><a
-                                    href="./finder.html">Request for Callback</a></button>
+                            <a href="https://uniservices1.uobgroup.com/appforms/business/UOB_Business_Property_Loan_Customer_Online_Promotion.page"
+                                class="btn btn-primary">Request for callback</a>
                         </div>
                     </div>
                 </div>
@@ -269,7 +270,7 @@
                             <label for="CPApropertyValInput" class="inline">Property Value</label>
                             <span class="inline" style="float: right">$<input type="text" id="CPApropertyValInput"
                                     class="inline numericOnly validateInput" style="float: right"
-                                    name="CPApropertyValInput" value="1000000"></span>
+                                    name="CPApropertyValInput" value="1,000,000"></span>
                             <!-- <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
                                 id="CPApropertyValRange"> -->
                             <p id="CPAerrorMsg1"></p>
@@ -279,7 +280,7 @@
                             <label for="CPAloanAmountInput" class="inline">Loan Amount</label>
                             <span class="inline" style="float: right">$<input type="text" id="CPAloanAmountInput"
                                     class="inline numericOnly validateInput" style="float: right"
-                                    name="CPAloanAmountInput" value="900000"></span>
+                                    name="CPAloanAmountInput" value="900,000"></span>
                             <!-- <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
                                 id="CPApropertyValRange"> -->
                             <p id="CPAerrorMsg2"></p>
@@ -323,6 +324,11 @@
                         <p class="CPAbeforeCalculate">Please enter the mortgage information to continue.</p>
                         <div class="result CPAafterCalculate" id="CPAresult">
                             <p id="CPAdescription"></p>
+                            <p>Based on your input, plan ahead by getting a loan repayment schedule done up for you.
+                            </p>
+                            <p>To find out more about above, simply have us call you at your convenience. <a
+                                    href="https://uniservices1.uobgroup.com/appforms/business/UOB_Business_Property_Loan_Customer_Online_Promotion.page">Request
+                                    a callback from us.</a></p>
 
                         </div>
                     </div>
@@ -426,7 +432,7 @@
         BRvalidateFunction()
     }
 
-//CPA
+    //CPA
     document.getElementById("CPAloanTenureRange").oninput = function () {
         displayOutput()
         CPAvalidateFunction()
@@ -623,7 +629,7 @@
     //validate input for cpa
     function CPAvalidateFunction() {
         var a = parseInt(removeCommas(document.getElementById("CPApropertyValInput").value))
-        var b = parseInt(removeCommas(document.getElementById("CPAloanAmtInput").value))
+        var b = parseInt(removeCommas(document.getElementById("CPAloanAmountInput").value))
         var c = parseInt(document.getElementById("CPAloanTenureInput").value)
         var d = parseFloat(document.getElementById("CPAinterestRateInput").value)
 
@@ -680,10 +686,40 @@
             $("#CPAcalculateBtn").attr("disabled", true);
             $("#CPAerrorMsg3").text("Value cannot be more than 5")
         }
+        else {
+            $("#CPAcalculateBtn").attr("disabled", false);
+
+            $("#CPAerrorMsg1").text("")
+            $("#CPAerrorMsg2").text("")
+            $("#CPAerrorMsg3").text("")
+            $("#CPAerrorMsg4").text("")
+
+            $("#CPAloanTenureRange").val(c)
+            $("#CPAinterestRateRange").val(d)
+
+
+        }
     }
 
     //to calcualte commercial property affordability 
     function CPAcalculateFunction() {
+
+        $(".CPAbeforeCalculate").hide()
+        $(".CPAafterCalculate").show()
+
+        var a = parseInt(removeCommas(document.getElementById("CPApropertyValInput").value))
+        var b = parseInt(removeCommas(document.getElementById("CPAloanAmountInput").value))
+        var c = parseInt(document.getElementById("CPAloanTenureInput").value)
+        var d = parseFloat(document.getElementById("CPAinterestRateInput").value)
+
+        var r = d / 100
+        var n = c * 12
+
+        var monthlyPayment = b * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
+
+        document.getElementById("CPAdescription").innerHTML = "The estimated repayment amount would be $" + addCommas(Math.round(monthlyPayment)) + " per month."
+
+
 
 
     }
