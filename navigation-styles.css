@@ -54,7 +54,7 @@ body {
     vertical-align: 0.125em;
 }
 #nav-bg{
-    border-bottom: 1px black solid;
+    border-bottom: 1px #bbbbbb solid;
 }
 #main-navbar{
     padding: 0 !important;
@@ -90,7 +90,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 16px;
-    color: #818181;
+    color: #002469;
     display: block;
     border: none;
     background: none;
@@ -98,6 +98,18 @@ body {
     cursor: pointer;
     outline: none;
   }
+
+.sidenav .dropdown-container {
+    padding: 10px 0px;
+}
+
+.sidenav .dropdown-container a{
+    padding: 8px 8px 8px 42px;
+}
+.sidenav .dropdown-container .sub-container a{
+    padding: 8px 8px 8px 58px;
+}
+
   .dropdown-btn{
     text-decoration: none;
     font-size: 25px;
@@ -110,7 +122,7 @@ body {
     outline: none;
   }
   .sideNavBtn{
-    margin: 8px 8px 8px 32px;
+    margin: 20px 8px 8px 32px;
     display: block;
     border: none;
     background-color: #002468;
@@ -119,15 +131,9 @@ body {
     outline: none;
     color: #ffffff ;
   }
-  /* end of side nav styles */
 
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
-  }  
-.mobile-icon:hover{
-    fill: #f1f1f1;
+.sidenavLine{
+    width: 80%;
 }
 
 /* Position and style the close button (top right corner) */
@@ -143,18 +149,19 @@ body {
     list-style: none;
     padding: 0;
 }
+/* end of side nav styles */
+
 /* dropdown styles */
 .dropdown-container {
     display: none;
     background-color: #f1f1f1;
-    padding-left: 8px;
   }
 .dropdown-container .sub-container{
     background-color: #e0e0e0;
 }
 /* dropdown icon position */
 .mobile-drop{
-    margin-right: 8px;
+    margin-right: 12px;
 }
 /* Screen overlay styles */
 .screen-overlay {
@@ -177,6 +184,10 @@ body {
 
 
   /* drop down styles */
+
+@media (min-width: 768px){
+
+}
 @media (min-width: 992px){
     .mainnav li{
         list-style-type: none;
@@ -196,8 +207,8 @@ body {
         padding: 1.25rem 1.75rem;
         box-sizing: border-box;
     }
-    .mainnav li .dropdown-menu{
-        top: 98%;
+    .navbar-expand-lg .navbar-nav .nav-link:hover{
+        background-color: #f1f1f1;
     }
     
     .sticky{
@@ -235,6 +246,9 @@ body {
     .navbar .nav-item:hover .first-menu{ 
         display: block; 
     }
+    .dropdown-menu .dropdown-item-heading{
+        background-color: #f1f1f1;
+    }
     .dropdown-menu > li:hover{ 
         background-color: #f1f1f1 
 
@@ -252,8 +266,8 @@ body {
     }
 
     #searchbutton{
-        border-left: 1px solid black;
-        border-right: 1px solid black;
+        border-left: 1px solid #bbbbbb;
+        border-right: 1px solid #bbbbbb;
         
     }
     #searchbutton button{
