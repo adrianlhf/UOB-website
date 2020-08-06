@@ -184,17 +184,17 @@
                         <div class="form-group">
                             <label for="BRmonthlyRentInput" class="inline">Monthly Rent</label>
                             <span class="inline" style="float: right">$<input type="text" id="BRmonthlyRentInput"
-                                    class="inline numericOnly validateInput" style="float: right"
-                                    name="BRmonthlyRentInput"></span>
-                            <input type="range" min="0" max="100000000" step="1" class="form-control-range"
-                                id="BRmonthlyRentRange">
+                                    class="inline numericOnly clearInput clickEvent" style="float: right"
+                                    name="BRmonthlyRentInput" value="5,000"></span>
+                            <!-- <input type="range" min="0" max="100000000" step="1" class="form-control-range"
+                                id="BRmonthlyRentRange"> -->
                             <p id="BRerrorMsg1"></p>
 
                         </div>
                         <div class="form-group">
                             <label for="BRperiodStayInput" class="inline">Intended Period of Stay</label>
-                            <span class="inline" style="float: right"><input type="number" min="1" max="99"
-                                    id="BRperiodStayInput" class="inline numericOnly" style="float: right">year(s)
+                            <span class="inline" style="float: right"><input type="text"
+                                    id="BRperiodStayInput" class="inline numericOnly clickEvent" style="float: right">year(s)
                             </span>
                             <input type="range" min="1" max="99" step="1" class="form-control-range"
                                 id="BRperiodStayRange" value="15">
@@ -207,10 +207,10 @@
                         <div class="form-group">
                             <label for="BRpurchasePriceInput" class="inline">Purchase Price</label>
                             <span class="inline" style="float: right">$<input type="text" id="BRpurchasePriceInput"
-                                    class="inline numericOnly validateInput" style="float: right"
-                                    name="BRpurchasePriceInput"></span>
-                            <input type="range" min="0" max="100000000" step="1" class="form-control-range"
-                                id="BRpurchasePriceRange">
+                                    class="inline numericOnly clickEvent" style="float: right"
+                                    name="BRpurchasePriceInput" value="800,000"></span>
+                            <!-- <input type="range" min="0" max="100000000" step="1" class="form-control-range"
+                                id="BRpurchasePriceRange"> -->
                             <p id="BRerrorMsg3"></p>
 
                         </div>
@@ -218,7 +218,7 @@
                             <label for="BRinterestRateInput" class="inline">Interest Rate</label><span class="inline"
                                 style="float: right">
                                 <input type="text" id="BRinterestRateInput" name="BRinterestRateInput"
-                                    class="inline numericDecOnly validateInput" style="float: right">%</span>
+                                    class="inline numericDecOnly clickEvent" style="float: right">%</span>
                             <input type="range" min="1" max="5" step="0.01" class="form-control-range"
                                 id="BRinterestRateRange">
 
@@ -228,8 +228,8 @@
 
                         <div class="form-group">
                             <label for="BRloanTenureInput" class="inline">Loan Tenure</label>
-                            <span class="inline" style="float: right"><input type="number" min="1" max="30"
-                                    name="BRloanTenureInput" id="BRloanTenureInput" class="inline numericOnly"
+                            <span class="inline" style="float: right"><input type="text"
+                                    name="BRloanTenureInput" id="BRloanTenureInput" class="inline numericOnly clickEvent"
                                     style="float: right">year(s)
                             </span>
                             <input type="range" min="1" max="30" step="1" class="form-control-range"
@@ -252,6 +252,9 @@
                         <div class="result BRafterCalculate" id="BRresult">
                             <p id="BRbuyorrent"></p>
                             <p id="BRdescription"></p>
+                            <p>To find out how you can finance your property, request for a callback from us now.
+
+                            </p>
                             <a href="https://uniservices1.uobgroup.com/appforms/business/UOB_Business_Property_Loan_Customer_Online_Promotion.page"
                                 class="btn btn-primary">Request for callback</a>
                         </div>
@@ -269,7 +272,7 @@
                         <div class="form-group">
                             <label for="CPApropertyValInput" class="inline">Property Value</label>
                             <span class="inline" style="float: right">$<input type="text" id="CPApropertyValInput"
-                                    class="inline numericOnly validateInput" style="float: right"
+                                    class="inline numericOnly clickEvent" style="float: right"
                                     name="CPApropertyValInput" value="1,000,000"></span>
                             <!-- <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
                                 id="CPApropertyValRange"> -->
@@ -279,7 +282,7 @@
                         <div class="form-group">
                             <label for="CPAloanAmountInput" class="inline">Loan Amount</label>
                             <span class="inline" style="float: right">$<input type="text" id="CPAloanAmountInput"
-                                    class="inline numericOnly validateInput" style="float: right"
+                                    class="inline numericOnly clickEvent" style="float: right"
                                     name="CPAloanAmountInput" value="900,000"></span>
                             <!-- <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
                                 id="CPApropertyValRange"> -->
@@ -288,8 +291,8 @@
                         </div>
                         <div class="form-group">
                             <label for="CPAloanTenureInput" class="inline">Loan Tenure</label>
-                            <span class="inline" style="float: right"><input type="number" min="1" max="30"
-                                    name="CPAloanTenureInput" id="CPAloanTenureInput" class="inline numericOnly"
+                            <span class="inline" style="float: right"><input type="text" 
+                                    name="CPAloanTenureInput" id="CPAloanTenureInput" class="inline numericOnly clickEvent"
                                     style="float: right">year(s)
                             </span>
                             <input type="range" min="5" max="30" step="1" class="form-control-range"
@@ -302,7 +305,7 @@
                             <label for="CPAinterestRateInput" class="inline">Interest Rate</label><span class="inline"
                                 style="float: right">
                                 <input type="text" id="CPAinterestRateInput" name="CPAinterestRateInput"
-                                    class="inline numericDecOnly validateInput" style="float: right">%</span>
+                                    class="inline numericDecOnly clickEvent" style="float: right">%</span>
                             <input type="range" min="1" max="5" step="0.01" class="form-control-range"
                                 id="CPAinterestRateRange">
 
@@ -362,6 +365,22 @@
         });
 
 
+        //to clear input upon clicking the input box and put default if user leave input blank
+        var default_val = '';
+        $('input.clickEvent:text').focus(function () {
+            if ($(this).val() == $(this).data('default_val') || !$(this).data('default_val')) {
+                $(this).data('default_val', $(this).val());
+                $(this).val('');
+            }
+            BRvalidateFunction()
+            CPAvalidateFunction()
+        });
+
+        $('input.clickEvent:text').blur(function () {
+            if ($(this).val() == '') $(this).val($(this).data('default_val'));
+            BRvalidateFunction()
+            CPAvalidateFunction()
+        });
 
         //Buy vs Rent: event to bind function that validate input and disables button if invalid
         $("#BRmonthlyRentInput").on("change paste keyup", function () {
@@ -407,20 +426,20 @@
 
 
     // call function to display the indicator for the slider
-    document.getElementById("BRmonthlyRentRange").oninput = function () {
-        displayOutput()
-        BRvalidateFunction()
-    }
+    // document.getElementById("BRmonthlyRentRange").oninput = function () {
+    //     displayOutput()
+    //     BRvalidateFunction()
+    // }
 
     document.getElementById("BRperiodStayRange").oninput = function () {
         displayOutput()
         BRvalidateFunction()
     }
 
-    document.getElementById("BRpurchasePriceRange").oninput = function () {
-        displayOutput()
-        BRvalidateFunction()
-    }
+    // document.getElementById("BRpurchasePriceRange").oninput = function () {
+    //     displayOutput()
+    //     BRvalidateFunction()
+    // }
 
     document.getElementById("BRinterestRateRange").oninput = function () {
         displayOutput()
@@ -448,14 +467,14 @@
     function displayOutput() {
 
         //BR
-        var BRval1 = document.getElementById("BRmonthlyRentRange").value
-        document.getElementById("BRmonthlyRentInput").value = addCommas(parseInt(BRval1))
+        // var BRval1 = document.getElementById("BRmonthlyRentRange").value
+        // document.getElementById("BRmonthlyRentInput").value = addCommas(parseInt(BRval1))
 
         var BRval2 = document.getElementById("BRperiodStayRange").value
         document.getElementById("BRperiodStayInput").value = BRval2
 
-        var BRval3 = document.getElementById("BRpurchasePriceRange").value //gets the oninput value
-        document.getElementById("BRpurchasePriceInput").value = addCommas(parseInt(BRval3)) //displays this value to the html page
+        // var BRval3 = document.getElementById("BRpurchasePriceRange").value
+        // document.getElementById("BRpurchasePriceInput").value = addCommas(parseInt(BRval3)) 
 
         var BRval4 = document.getElementById("BRinterestRateRange").value //gets the oninput value
         document.getElementById("BRinterestRateInput").value = BRval4//displays this value to the html page   
@@ -620,6 +639,9 @@
         else if (totalRent < propertyLoan) {
             difference = Math.round(propertyLoan - totalRent)
 
+            document.getElementById("BRbuyorrent").innerHTML = "Renting is the better option"
+
+            document.getElementById("BRdescription").innerHTML = "There would be savings of $" + addCommas(difference) + " over " + e + " years if you rent a property."
         }
 
 
@@ -720,9 +742,8 @@
         document.getElementById("CPAdescription").innerHTML = "The estimated repayment amount would be $" + addCommas(Math.round(monthlyPayment)) + " per month."
 
 
-
-
     }
+    
     // add commas after every 3 digit from the decimal place
     function addCommas(x) {
         return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");

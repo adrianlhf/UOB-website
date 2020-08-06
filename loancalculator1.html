@@ -171,22 +171,23 @@
                         Business Loan</h4>
                     <form class="inputForm" name="formLoanCalculate1">
                         <div class="form-group">
-                            <label for="loanAmtRange" class="inline">Loan Amount</label>
+                            <label for="loanAmtInput" class="inline">Loan Amount</label>
                             <!-- <p id="loanAmtInput" class="inline" style="float: right"></p> -->
                             <span class="inline" style="float: right">$<input type="text" id="loanAmtInput"
-                                    class="inline numericOnly validateInput" style="float: right"
-                                    name="loanAmtInput"></span>
-                            <input type="range" min="0" max="1000000" step="1" class="form-control-range"
-                                id="loanAmtRange">
+                                    class="inline numericOnly validateInput clickEvent" style="float: right"
+                                    name="loanAmtInput" value="550,000"></span>
+                            <!-- <input type="range" min="0" max="1000000" step="1" class="form-control-range"
+                                id="loanAmtRange"> -->
                             <p id="errorMsg1"></p>
                             <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
 
                         </div>
                         <div class="form-group">
-                            <label for="interestRateRange" class="inline">Interest Rate</label><span class="inline"
+                            <label for="interestRateInput" class="inline">Interest Rate</label><span class="inline"
                                 style="float: right">
                                 <input type="text" id="interestRateInput" name="interestRateInput"
-                                    class="inline numericDecOnly validateInput" style="float: right">%</span>
+                                    class="inline numericDecOnly validateInput class clickEvent"
+                                    style="float: right">%</span>
                             <input type="range" min="0" max="20" step="0.01" class="form-control-range"
                                 id="interestRateRange">
 
@@ -194,9 +195,9 @@
 
                         </div>
                         <div class="form-group">
-                            <label for="tenureRange" class="inline">Tenure</label>
-                            <span class="inline" style="float: right"><input type="number" min="1" max="5"
-                                    id="tenureInput" class="inline numericOnly5" style="float: right">year(s)
+                            <label for="tenureInput" class="inline">Tenure</label>
+                            <span class="inline" style="float: right"><input type="text" id="tenureInput"
+                                    class="inline numericOnly5 clickEvent" style="float: right">year(s)
                             </span>
                             <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureRange">
                             <p id="errorMsg3"></p>
@@ -283,6 +284,22 @@
 
         });
 
+        //to clear input upon clicking the input box and put default if user leave input blank
+        var default_val = '';
+        $('input.clickEvent:text').focus(function () {
+            if ($(this).val() == $(this).data('default_val') || !$(this).data('default_val')) {
+                $(this).data('default_val', $(this).val());
+                $(this).val('');
+            }
+            validateFunction()
+        });
+
+        $('input.clickEvent:text').blur(function () {
+            if ($(this).val() == '') $(this).val($(this).data('default_val'));
+            validateFunction()
+
+        });
+
     });
 
 
@@ -290,12 +307,12 @@
 
 
     // call function to display the indicator for the slider
-    document.getElementById("loanAmtRange").oninput = function () {
-        displayOutput()
-        validateFunction()
-        // $("#errorMsg1").text("")
+    // document.getElementById("loanAmtRange").oninput = function () {
+    //     displayOutput()
+    //     validateFunction()
+    //     // $("#errorMsg1").text("")
 
-    }
+    // }
 
     document.getElementById("interestRateRange").oninput = function () {
         displayOutput()
@@ -315,8 +332,8 @@
     //function to display the indicator in the input box for the slider
 
     function displayOutput() {
-        var val1 = document.getElementById("loanAmtRange").value //gets the oninput value
-        document.getElementById("loanAmtInput").value = addCommas(parseInt(val1)) //displays this value to the html page
+        // var val1 = document.getElementById("loanAmtRange").value //gets the oninput value
+        // document.getElementById("loanAmtInput").value = addCommas(parseInt(val1)) //displays this value to the html page
 
         var val2 = document.getElementById("interestRateRange").value //gets the oninput value
         document.getElementById("interestRateInput").value = val2//displays this value to the html page
@@ -333,46 +350,71 @@
         var c = parseInt(document.getElementById("tenureInput").value)
         // var regexp = /^\d+\.\d{0,2}$/;
 
+        var array = [a, b, c]
         //validating input according to each condition
-        if (isNaN(a)) {
-            $("#calculateBtn").attr("disabled", true);
-            $("#errorMsg1").text("Value is not a number")
-        }
-        else if (a > 1000000) {
-            $("#calculateBtn").attr("disabled", true);
-            $("#errorMsg1").text("Value cannot be more than 1 million")
-        }
 
-        else if (a <= 0) {
-            $("#calculateBtn").attr("disabled", true);
-            $("#errorMsg1").text("Value cannot be less than or equal to 0")
-        }
+        $.each( array,function(index,value){
+            if (isNaN(a)) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg1").text("Value is not a number")
+            }
+            else if (a > 1000000) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg1").text("Value cannot be more than 1 million")
+            }
 
-        else if (b <= 0) {
-            $("#calculateBtn").attr("disabled", true);
-            $("#errorMsg2").text("Value cannot be less than or equal to 0")
-        }
+            else if (a <= 0) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg1").text("Value cannot be less than or equal to 0")
+            }
 
-        else if (b > 20) {
-            $("#calculateBtn").attr("disabled", true);
-            $("#errorMsg2").text("Value cannot be more than 20")
-        }
+            else if (isNaN(b)) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg2").text("Value is not a number")
+            }
 
-        // else if (!regexp.test(b)) {
-        //              $("#calculateBtn").attr("disabled", true);
-        //     document.getElementById("errorMsg2").innerHTML = ""
+            else if (b <= 0) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg2").text("Value cannot be less than or equal to 0")
+            }
 
-        // }
-        else {
-            document.getElementById("calculateBtn").disabled = false
-            $("#errorMsg1").text("")
-            $("#errorMsg2").text("")
-            $("#errorMsg3").text("")
+            else if (b > 20) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg2").text("Value cannot be more than 20")
+            }
 
-            $("#loanAmtRange").val(a)
-            $("#interestRateRange").val(b)
-            $("#tenureRange").val(c)
-        }
+            else if (isNaN(c)) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg3").text("Value is not a number")
+            }
+
+            else if (c <= 0) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg3").text("Value cannot be less than 1")
+            }
+
+            else if (c > 5) {
+                $("#calculateBtn").attr("disabled", true);
+                $("#errorMsg3").text("Value cannot be more than 5")
+            }
+
+            // else if (!regexp.test(b)) {
+            //              $("#calculateBtn").attr("disabled", true);
+            //     document.getElementById("errorMsg2").innerHTML = ""
+
+            // }
+            else {
+                document.getElementById("calculateBtn").disabled = false
+                $("#errorMsg1").text("")
+                $("#errorMsg2").text("")
+                $("#errorMsg3").text("")
+
+                // $("#loanAmtRange").val(a)
+                $("#interestRateRange").val(b)
+                $("#tenureRange").val(c)
+            }
+         } )
+
 
     }
 
