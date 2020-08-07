@@ -222,11 +222,13 @@ body {
         border-bottom: .3em solid transparent;
         border-left: .3em solid;
     }
+    .navigationdrop-line{
+        margin: 0 auto;
+        width: 80%;
+    }
     .navbar .nav-item .dropdown-menu{ 
         right:auto;
         width: 285px;
-        
-        
     }
     .dropdown-menu .dropdown-menu{
         margin-left:0; 
