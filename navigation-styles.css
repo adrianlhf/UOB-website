@@ -258,6 +258,7 @@ body {
     }
     .dropdown-menu > li:hover > .submenu{
         display: block;
+        margin-top: 6px;
     }
     #main-navbar .dropdown-item{
         padding-left: 0;
