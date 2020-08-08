@@ -28,24 +28,11 @@
     }
 
     /* button styles */
-/* .btn-1 {
-        display: inline-block;
-        padding: 8px 22px;
-        text-decoration: initial;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -moz-background-clip: padding;
-        -webkit-background-clip: padding-box;
-        background-clip: padding-box;
-        outline: none;
-        color: #fff;
-        font-size: 14px;
-        background: #001f67;
-        width: 100%;
-        max-width: 150px;
-        text-align: center;
-    } */
+
+    .btn-banner {
+        background-color: white;
+        color: #002469
+    }
 
     .btn-1 {
         background-color: #002469;
@@ -53,7 +40,8 @@
         font-size: 14px;
     }
 
-    .btn-1:focus, .btn-2:focus {
+    .btn-1:focus,
+    .btn-2:focus {
         box-shadow: none;
     }
 
@@ -67,7 +55,7 @@
         color: #002469;
         font-size: 14px;
     }
-    
+
     .btn-2:hover {
         background-color: #002469;
         color: white;
@@ -84,15 +72,16 @@
 
     /* banner styles */
     .main-banner .description {
-        text-align: center;
-        /* border-bottom: 1px solid #e5e5e5; */
-        padding: 15px 0;
+        bottom: 5%;
+        position: absolute;
+        z-index: 2;
     }
 
-    .heading2 {
-        font-size: 16px;
-        font-weight: bold;
+    .banner {
+        position: absolute;
+        bottom: 0;
     }
+
 
     /* end of banner styles */
 
@@ -109,7 +98,7 @@
         padding-top: 1em;
     }
 
-    nav {
+    .content-nav {
         background-color: #ffffff;
         border: 0.5px solid #e5e5e5;
     }
@@ -117,15 +106,30 @@
     #myScrollspy .active {
         border-bottom: 5px solid #002469;
     }
-    /* end of content navbar styles */
 
-    
+    /* end of content navbar styles */
 
 
     /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 375px) {}
+    @media (min-width: 375px) {
+        .main-banner .description {
+            bottom: 10%;
+        }
+    }
 
-    @media (min-width: 576px) {}
+    @media (min-width: 576px) {
+        .main-banner .description {
+            bottom: 15%;
+        }
+
+        .main-banner .description h1 {
+            font-size: 20px;
+        }
+
+        .btn-banner {
+           font-size: 20px;
+        }
+    }
 
     /* Medium devices (tablets, 768px and up) */
     @media (min-width: 768px) {
@@ -143,15 +147,15 @@
         }
 
 
-    /* Styles for all content section */
+        /* Styles for all content section */
         .section {
             padding-top: 4%;
         }
 
-    /* Styles for banner */
-         .main-banner .description .heading2 {
+        /* Styles for banner */
+        /* .main-banner .description .heading2 {
             font-size: 22px;
-        }
+        } */
 
         .main-banner .description {
             position: absolute;
@@ -160,7 +164,7 @@
             top: 5%;
         }
 
-        
+
         /* Multi item carousel styles */
         /* to display 3 */
         .carousel-inner .carousel-item-right.active,
@@ -192,17 +196,17 @@
     @media (max-width: 768px) {
         .carousel-inner .carousel-item>div {
             display: none;
-            
+
         }
 
         .carousel-inner .carousel-item>div:first-child {
             display: block;
-            
+
         }
     }
 
-     /* Multi Item Carousel */
-     .carousel-inner .carousel-item.active,
+    /* Multi Item Carousel */
+    .carousel-inner .carousel-item.active,
     .carousel-inner .carousel-item-next,
     .carousel-inner .carousel-item-prev {
         display: flex;
@@ -215,9 +219,9 @@
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        text-align: center; 
+        text-align: center;
         vertical-align: middle;
-        height: 25px; 
+        height: 25px;
         width: 25px;
     }
 
@@ -227,7 +231,6 @@
     }
 
     /* end of multi item carousel */
-
 </style>
 
 
@@ -235,19 +238,25 @@
 
     <!-- Image Banner Section -->
     <div class="main-banner">
-        <img src="images/mobilebanner.jpg" class="img-fluid w-100 d-block d-md-none" id="mobileimage" alt="responsive image">
-        <img src="images/homeimage.jpg" class="img-fluid w-100 d-none d-md-block" id="desktopimage" alt="responsive image">
-
-        <!-- mobile description -->
-        <div class="description d-block d-md-none">
-            <h2 class="heading2">Maximize your extra cash</h2>
-            <a class="btn-1 btn" href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-OD" title="Apply now"
-                banner_name="overdraft">Apply now</a>
+        <div class="position-relative">
+            <div class="description d-block d-md-none w-100 d-flex justify-content-center">
+                <h1 class="font-weight-bold text-white text-left w-50">Ready funds for your business, whenever you need it.
+                </h1>
+                <a class="btn-banner btn align-self-center mx-2"
+                    href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-OD" title="Apply now"
+                    banner_name="overdraft">Apply now</a>
+            </div>
+            <img src="images/blue-banner.png" alt="banner" class="banner img-fluid w-100 d-block d-md-none">
+            <img src="images/mobilebanner.jpg" class="img-fluid w-100 d-block d-md-none" id="mobileimage"
+                alt="responsive image">
         </div>
+
+        <img src="images/homeimage.jpg" class="img-fluid w-100 d-none d-md-block" id="desktopimage"
+            alt="responsive image">
 
         <!-- desktop description -->
         <div class="description d-none d-md-block text-left">
-            <h2 class="heading2 mb-1">Ready funds for your business, whenever you need it</h2>
+            <h2 class="mb-1">Ready funds for your business, whenever you need it.</h2>
             <p>Pay interest only on the amount you use, when you use it.</p>
             <a class="btn-1 dtm-banner btn" href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-OD"
                 title="Apply now" banner_name="overdraft">Apply now</a>
@@ -255,7 +264,7 @@
     </div>
 
     <!-- Content navbar -->
-    <nav class="sticky-top" id="myScrollspy">
+    <nav class="sticky-top content-nav" id="myScrollspy">
 
         <ul class="nav-heading navbar-nav navbar-expand nav justify-content-center">
             <li class="nav-item col-4">
@@ -279,86 +288,108 @@
         <div class="section1 section" id="section1">
             <h1 class="pb-2"> Header 1 </h1>
             <!-- Add ur layout here -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
 
         <div class="section2 section" id="section2">
             <h1 class="pb-2"> Header 2 </h1>
             <!-- Add ur layout here -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                
-            </p> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+
+            </p>
         </div>
 
         <div class="section3 section" id="section3">
             <h1 class="pb-2"> Header 3</h1>
 
-           <!-- Add ur layout here -->
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p> 
+            <!-- Add ur layout here -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
 
         </div>
-    
 
-    <!-- You may be interested section -->
-    <div class="interestedsection section" id="interestedsection"">
-        <h1 class="pb-2"> You May Be Interested In</h1>
-        <div class="row mx-auto my-auto">
-            <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-                <div class="carousel-inner w-100" role="listbox">
-                    <div class="carousel-item active">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img class="img-fluid card-img-top" src="images/image1.jpg" alt="CyberSecurity">
-                                <div class="card-body"> CyberSecurity </div>
+
+        <!-- You may be interested section -->
+        <div class="interestedsection section" id="interestedsection"">
+        <h1 class=" pb-2"> You May Be Interested In</h1>
+            <div class="row mx-auto my-auto">
+                <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner w-100" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top" src="images/image1.jpg" alt="CyberSecurity">
+                                    <div class="card-body"> CyberSecurity </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top" src="images/image2.jpg" alt="E-transactions">
+                                    <div class="card-body"> E-transactions </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top" src="images/image3.jpg" alt="Payroll">
+                                    <div class="card-body"> Payroll Services </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img class="img-fluid card-img-top" src="images/image4.jpg" alt="Accounting">
+                                    <div class="card-body"> Accounting </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img class="img-fluid card-img-top" src="images/image2.jpg" alt="E-transactions">
-                                <div class="card-body"> E-transactions </div>
-                            </div>
+                    <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+                        <div class="c-icon rounded-circle">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img class="img-fluid card-img-top" src="images/image3.jpg" alt="Payroll">
-                                <div class="card-body"> Payroll Services </div>
-                            </div>
+                    </a>
+                    <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+                        <div class="c-icon rounded-circle">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img class="img-fluid card-img-top" src="images/image4.jpg" alt="Accounting">
-                                <div class="card-body"> Accounting </div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
-                    <div class="c-icon rounded-circle">
-                    <span class="carousel-control-prev-icon"
-                        aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                    </div>
-                </a>
-                <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
-                    <div class="c-icon rounded-circle">
-                    <span class="carousel-control-next-icon"
-                        aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                </div>
-                </a>
             </div>
         </div>
     </div>
-</div>
 
 
 </body>
