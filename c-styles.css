@@ -1,0 +1,219 @@
+
+body {
+    font-family: "open sans", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* button styles */
+
+.btn-banner {
+    background-color: white;
+    color: #002469
+}
+
+.btn-1 {
+    background-color: #002469;
+    color: white;
+    font-size: 14px;
+}
+
+.btn-1:focus,
+.btn-2:focus {
+    box-shadow: none;
+}
+
+.btn-1:hover {
+    background-color: #001438;
+    color: white;
+}
+
+.btn-2 {
+    border-color: #002469;
+    color: #002469;
+    font-size: 14px;
+}
+
+.btn-2:hover {
+    background-color: #002469;
+    color: white;
+}
+
+/* end of button styles */
+
+/* Styles for all section */
+.section {
+    padding-top: 6%;
+}
+
+/* end of styles for all section */
+
+/* banner styles */
+.main-banner .description {
+    bottom: 5%;
+    position: absolute;
+}
+
+.banner {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* end of banner styles */
+
+/*Content Navigation Bar Styles */
+.nav-heading a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #002469;
+}
+
+.nav-heading li {
+    border-right: 0.5px solid #e5e5e5;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.content-nav {
+    background-color: #ffffff;
+    border: 0.5px solid #e5e5e5;
+    z-index: 0;
+}
+
+#myScrollspy .active {
+    border-bottom: 5px solid #002469;
+}
+
+/* end of content navbar styles */
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 375px) {
+    .main-banner .description {
+        bottom: 10%;
+    }
+}
+
+@media (min-width: 576px) {
+    .main-banner .description {
+        bottom: 15%;
+    }
+
+    .main-banner .description h1 {
+        font-size: 20px;
+    }
+
+    .btn-banner {
+       font-size: 20px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .nav-heading a {
+        font-size: 16px;
+    }
+
+
+    /* Styles for all content section */
+    .section {
+        padding-top: 4%;
+    }
+
+    /* Styles for banner */
+    /* .main-banner .description .heading2 {
+        font-size: 22px;
+    } */
+
+    .main-banner .description {
+        position: absolute;
+        right: 1%;
+        width: 55%;
+        top: 5%;
+    }
+
+
+    /* Multi item carousel styles */
+    /* to display 3 */
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(33.333%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-33.333%);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .main-banner .description {
+        top: 10%;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .main-banner .description {
+        top: 18%;
+    }
+}
+
+/* Multi item carousel styles */
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+
+    }
+}
+
+/* Multi Item Carousel */
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    text-align: center;
+    vertical-align: middle;
+    height: 25px;
+    width: 25px;
+}
+
+.c-icon {
+    background-color: #002469;
+    padding: 10px;
+}
+
+.carousel-a {
+    z-index: 0;
+}
+
+/* end of multi item carousel */
