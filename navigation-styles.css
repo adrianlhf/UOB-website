@@ -105,9 +105,11 @@ body {
 
 .sidenav .dropdown-container a{
     padding: 8px 8px 8px 42px;
+    max-width: 235px;
 }
 .sidenav .dropdown-container .sub-container a{
     padding: 8px 8px 8px 58px;
+    max-width: 100%;
 }
 
   .dropdown-btn{
@@ -229,6 +231,7 @@ body {
     .navbar .nav-item .dropdown-menu{ 
         right:auto;
         width: 285px;
+        padding: 0;
     }
     .dropdown-menu .dropdown-menu{
         margin-left:0; 
