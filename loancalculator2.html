@@ -257,7 +257,273 @@
                             </p>
                             <a href="https://uniservices1.uobgroup.com/appforms/business/UOB_Business_Property_Loan_Customer_Online_Promotion.page"
                                 class="btn btn-primary">Request for callback</a>
+                            <table class="table" id="BRtable">
+                                <thead>
+                                    <tr>
+                                        <th>Cost After 15 Years</th>
+                                        <th>Rent</th>
+                                        <th>Buy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="BRtbody">
+                                    <!-- " <div class=''>
+                                    <tr>
+                                        <th>Set Up Costs</th>
+                                        <th>$20,000</th>
+                                        <th>$" +addCommas(BsetUpCost)+ "+</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Downpayment/Deposit</td>
+                                        <td>$10,000</td>
+                                        <td>$" + addCommas(parseInt(0.553*BsetUpCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Agent Fees</td>
+                                        <td>$10,000</td>
+                                        <td>$" + addCommas(parseInt(0.004*BsetUpCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Legal Fees</td>
+                                        <td>-</td>
+                                        <td>$" +addCommas( parseInt(0.009*BsetUpCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mortgage Duty</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.003*BsetUpCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Buyer Stamp Duty</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.064*BsetUpCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GST</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.193*BsetUpCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Initial Renovation</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.174*BsetUpCost))+ "</td>
+                                    </tr>
+
+                                </div>
+
+                                <div class=''>
+                                    <tr>
+                                        <th>Running Costs</th>
+                                        <th>$" + addCommas(RrunningCost) + "</th>
+                                        <th>$" + addCommas(BrunningCost) + "</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>Rent Payments</td>
+                                        <td>$" + addCommas(RrunningCost) + "</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mortgage Payments</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.848*BrunningCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Property Tax</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.087*BrunningCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maintenance Costs</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.012*BrunningCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facilities Fees</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.0053*BrunningCost))+ "</td>
+                                    </tr>
+                                </div>
+
+                                <div class=''>
+                                    <tr>
+                                        <th>Opportunity Costs</th>
+                                        <th>$" + addCommas(RopportunityCost) + "</th>
+                                        <th>$" + addCommas(BopportunityCost)+ "</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Set Up</td>
+                                        <td>$" + addCommas(parseInt(0.044*RopportunityCost))+ "</td>
+                                        <td>$" + addCommas(parseInt(0.254*BopportunityCost))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Running Costs</td>
+                                        <td>$" + addCommas(parseInt(0.956*RopportunityCost))+ "</td>
+                                        <td>$" + addCommas(parseInt(0.746*BopportunityCost))+ "</td>
+                                    </tr>
+                                </div>
+
+                                <div class=''>
+
+                                    <tr>
+                                        <th>Net Proceeeds</th>
+                                        <th>$(" + addCommas((0.675*BOverallNumber)-2500-(0.002*propertyLoan))+ ")</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Proceeds from sale</td>
+                                        <td>$10,000</td>
+                                        <td>$(" + addCommas(parseInt(0.675*BOverallNumber))+ ")</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seller Stamp Duty</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Agent Fees</td>
+                                        <td>-</td>
+                                        <td>$" + addCommas(parseInt(0.002*c))+ "</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Legal Fees</td>
+                                        <td>-</td>
+                                        <td>$2,500</td>
+                                    </tr>
+                                </div>
+                                <th>
+                                    <tr>Total Cost</tr>
+                                    <tr>$" + addCommas(propertyLoan)+ "</tr>
+                                    <tr>$" + addCommas(totalRent)+ "</tr>
+                                </th>" -->
+                                </tbody>
+                                <!-- <tbody id="BRtbody">
+                                <div class="">
+                                    <tr>
+                                        <th>Set Up Costs</th>
+                                        <th>$20,000</th>
+                                        <th>$288,000</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Downpayment/Deposit</td>
+                                        <td>$10,000</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Agent Fees</td>
+                                        <td>$10,000</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Legal Fees</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mortgage Duty</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Buyer Stamp Duty</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GST</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Initial Renovation</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+
+                                </div>
+
+                                <div class="">
+                                    <tr>
+                                        <th>Running Costs</th>
+                                        <th>$20,000</th>
+                                        <th>$288,000</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Rent Payments</td>
+                                        <td>$10,000</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mortgage Payments</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Property Tax</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maintenance Costs</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facilities Fees</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                </div>
+
+                                <div class="">
+                                    <tr>
+                                        <th>Opportunity Costs</th>
+                                        <th>$20,000</th>
+                                        <th>$288,000</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Set Up</td>
+                                        <td>$10,000</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Running Costs</td>
+                                        <td>$10,000</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                </div>
+
+                                <div class="">
+
+                                    <tr>
+                                        <th>Net Proceeeds</th>
+                                        <th>$20,000</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Proceeds from sale</td>
+                                        <td>$10,000</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seller Stamp Duty</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Agent Fees</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Legal Fees</td>
+                                        <td>-</td>
+                                        <td>$160,000</td>
+                                    </tr>
+                                </div>
+                            </tbody> -->
+                            </table>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -388,43 +654,6 @@
             CPAvalidateFunction
         });
 
-        // $("#BRmonthlyRentInput").on("change paste keyup", function () {
-        //     BRvalidateFunction()
-        // });
-
-        // $("#BRperiodStayInput").on("change paste keyup", function () {
-        //     BRvalidateFunction()
-        // });
-
-        // $("#BRpurchasePriceInput").on("change paste keyup", function () {
-        //     BRvalidateFunction()
-        // });
-
-        // $("#BRinterestRateInput").on("change paste keyup", function () {
-        //     BRvalidateFunction()
-        // });
-
-        // $("#BRloanTenureInput").on("change paste keyup", function () {
-        //     BRvalidateFunction()
-        // });
-
-        // //CPA: attach event to bind function that validate input and disables button if invalid
-
-        // $("#CPApropertyValInput").on("change paste keyup", function () {
-        //     CPAvalidateFunction()
-        // });
-
-        // $("#CPAloanAmountInput").on("change paste keyup", function () {
-        //     CPAvalidateFunction()
-        // });
-
-        // $("#CPAloanTenureInput").on("change paste keyup", function () {
-        //     CPAvalidateFunction()
-        // });
-
-        // $("#CPAinterestRateInput").on("change paste keyup", function () {
-        //     CPAvalidateFunction()
-        // });
 
 
     });
@@ -697,8 +926,31 @@
             document.getElementById("BRdescription").innerHTML = "There would be savings of $" + addCommas(difference) + " over " + e + " years if you rent a property."
         }
 
+        //table code
+        var BOverallNumber = 3.077 * propertyLoan
+        var ROverallNumber = totalRent + 10000
 
 
+        //var for each section
+        var BsetUpCost = parseInt(0.218 * BOverallNumber)
+        var BrunningCost = parseInt(0.772 * BOverallNumber)
+        var BopportunityCost = parseInt(0.007 * BOverallNumber)
+
+        var RrunningCost = parseInt(0.986 * totalRent)
+        var RopportunityCost = parseInt(0.004 * totalRent)
+
+
+
+
+
+
+
+
+
+
+
+        //generate table to show details
+        document.getElementById("BRtbody").innerHTML = " <div class=''> <tr> <th>Set Up Costs</th> <th>$20,000</th> <th>$" + addCommas(BsetUpCost) + "</th> </tr> <tr> <td>Downpayment/Deposit</td> <td>$10,000</td> <td>$" + addCommas(parseInt(0.553 * BsetUpCost)) + "</td> </tr> <tr> <td>Agent Fees</td> <td>$10,000</td> <td>$" + addCommas(parseInt(0.004 * BsetUpCost)) + "</td> </tr> <tr> <td>Legal Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.009 * BsetUpCost)) + "</td> </tr> <tr> <td>Mortgage Duty</td> <td>-</td> <td>$" + addCommas(parseInt(0.003 * BsetUpCost)) + "</td> </tr> <tr> <td>Buyer Stamp Duty</td> <td>-</td> <td>$" + addCommas(parseInt(0.064 * BsetUpCost)) + "</td> </tr> <tr> <td>GST</td> <td>-</td> <td>$" + addCommas(parseInt(0.193 * BsetUpCost)) + "</td> </tr> <tr> <td>Initial Renovation</td> <td>-</td> <td>$" + addCommas(parseInt(0.174 * BsetUpCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Running Costs</th> <th>$" + addCommas(RrunningCost) + "</th> <th>$" + addCommas(BrunningCost) + "</th> </tr> <tr> <td>Rent Payments</td> <td>$" + addCommas(RrunningCost) + "</td> <td>-</td> </tr> <tr> <td>Mortgage Payments</td> <td>-</td> <td>$" + addCommas(parseInt(0.848 * BrunningCost)) + "</td> </tr> <tr> <td>Property Tax</td> <td>-</td> <td>$" + addCommas(parseInt(0.087 * BrunningCost)) + "</td> </tr> <tr> <td>Maintenance Costs</td> <td>-</td> <td>$" + addCommas(parseInt(0.012 * BrunningCost)) + "</td> </tr> <tr> <td>Facilities Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.0053 * BrunningCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Opportunity Costs</th> <th>$" + addCommas(RopportunityCost) + "</th> <th>$" + addCommas(BopportunityCost) + "</th> </tr> <tr> <td>Set Up</td> <td>$" + addCommas(parseInt(0.044 * RopportunityCost)) + "</td> <td>$" + addCommas(parseInt(0.254 * BopportunityCost)) + "</td> </tr> <tr> <td>Running Costs</td> <td>$" + addCommas(parseInt(0.956 * RopportunityCost)) + "</td> <td>$" + addCommas(parseInt(0.746 * BopportunityCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Net Proceeeds</th> <th>$(" + addCommas((0.675 * BOverallNumber) - 2500 - (0.002 * propertyLoan)) + ")</th> <th></th> </tr> <tr> <td>Proceeds from sale</td> <td>$10,000</td> <td>$(" + addCommas(parseInt(0.675 * BOverallNumber)) + ")</td> </tr> <tr> <td>Seller Stamp Duty</td> <td>-</td> <td>-</td> </tr> <tr> <td>Agent Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.002 * c)) + "</td> </tr> <tr> <td>Legal Fees</td> <td>-</td> <td>$2,500</td> </tr> </div> <th> <tr>Total Cost</tr> <tr>$" + addCommas(propertyLoan) + "</tr> <tr>$" + addCommas(totalRent) + "</tr> </th>"
     }
 
     //validate input for cpa
@@ -804,8 +1056,8 @@
             }
 
         })
-      
-        if(trueFalseArr.length == 4) {
+
+        if (trueFalseArr.length == 4) {
             $("#CPAcalculateBtn").attr("disabled", false);
 
 
