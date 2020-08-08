@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+
+</head>
+<style>
+    /* slider styles */
+    input[type=range] {
+        -webkit-appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 300px;
+        height: 10px;
+        background: #ddd;
+        border: none;
+        border-radius: 3px;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background: goldenrod;
+        margin-top: -7px;
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #ccc;
+    }
+
+
+    /* Styles for Hr/ line */
+
+    hr {
+        border: solid rgb(85, 85, 85) 0.5px;
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {}
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 26px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+
+        .body {
+            width: 62%;
+        }
+
+        .businessCalcDiv {
+            width: 100%;
+            padding: 2em 0;
+        }
+
+        .input-left {
+            float: left;
+            width: 50%;
+            /* height: 17em; */
+            padding: 2em 3em 2em 0;
+            border-right: 0.5px solid black;
+        }
+
+        .result-right {
+            float: right;
+            width: 50%;
+            padding: 2em 3em 2em 3em;
+            height: 19em;
+
+        }
+
+
+    }
+
+    /* styles for button */
+    .btnCalculate {
+        width: 40%;
+        padding: 10px 6px;
+        background-color: #002469;
+    }
+
+    .btnCalculate:hover,
+    .btnCalculate:active,
+    .btnCalculate:focus,
+    .btnCalculate:link,
+    .btnCalculate:visited {
+        background-color: #011a49;
+    }
+
+    .inputForm {
+        padding: 3% 0;
+        margin-bottom: 3%;
+    }
+
+    /* style for each element in the form */
+    .form-group {
+        padding: 2% 0;
+    }
+
+    input[type='range'].loanAmtBottom {
+        overflow: hidden;
+        width: 80px;
+        -webkit-appearance: none;
+        background-color: #9a905d;
+    }
+
+    input[type='range'].loanAmtBottom::-webkit-slider-runnable-track {
+        height: 10px;
+        -webkit-appearance: none;
+        color: #13bba4;
+        margin-top: -1px;
+    }
+
+    input[type='range'].loanAmtBottom::-webkit-slider-thumb {
+        width: 10px;
+        -webkit-appearance: none;
+        height: 10px;
+        cursor: ew-resize;
+        background: #434343;
+        box-shadow: -80px 0 0 80px #43e5f7;
+    }
+
+    /* styles for text */
+    .result {
+        text-align: center;
+
+    }
+
+    .afterCalculate {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div>
+
+            <div class="businessCalcDiv">
+                <h2 style="text-align: center;">Commercial Vehicle/Hire Purchase Loan Calculator
+                </h2>
+                <div class="input-left">
+                
+                    <form class="inputForm" name="formLoanCalculate1">
+                        <div class="form-group">
+                            <label for="purchasePriceInput" class="inline">Loan Amount</label>
+                            <span class="inline" style="float: right">$<input type="text" id="purchasePriceInput"
+                                    class="inline numericOnly validateInput clickEvent" style="float: right"
+                                    name="purchasePriceInput" value="80,000"></span>
+
+                            <p id="errorMsg1"></p>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="downPaymentInput" class="inline">Down Payment</label>
+                            <span class="inline" style="float: right">$<input type="text" id="downPaymentInput"
+                                    class="inline numericOnly validateInput clickEvent" style="float: right"
+                                    name="downPaymentInput" value="0"></span>
+
+                            <p id="errorMsg2"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="interestRateInput" class="inline">Interest Rate</label><span class="inline"
+                                style="float: right">
+                                <input type="text" id="interestRateInput" name="interestRateInput"
+                                    class="inline numericDecOnly validateInput clickEvent "
+                                    style="float: right">%</span>
+                            <input type="range" min="0" max="5" step="0.01" class="form-control-range" value="0"
+                                id="interestRateRange">
+
+                            <p id="errorMsg3"></p>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="tenureInput" class="inline">Loan Tenure</label>
+                            <span class="inline" style="float: right"><input type="text" id="tenureInput"
+                                    class="inline numericOnly7 clickEvent" style="float: right">year(s)
+                            </span>
+                            <input type="range" min="1" max="7" step="1" class="form-control-range" id="tenureRange" value="1">
+                            <p id="errorMsg4"></p>
+
+                        </div>
+
+                    </form>
+                    <button onclick="calculateFunction()" id="calculateBtn"
+                        class="btn btn-primary btnCalculate mx-auto d-block" type="button">Calculate</button>
+                </div>
+                <hr class="d-block d-lg-none">
+
+
+                <div class="result-right ">
+                    <div class=" align-self-center">
+                        <h1 id="amount" class="result beforeCalculate">Repayment Summary</h1>
+                        <p class="beforeCalculate">Please enter the information to
+                            continue.</p>
+                        <div class="result afterCalculate" id="result">
+                            <p>The loan amount is
+                            </p>
+                            <p id="loanAmtDisplay"></p>
+                            <p id="interestRateDisplay">
+                            </p>
+                            <p>There would be an estimate repayment of</p>
+                            <p id="monthlyAmtDisplay"></p>
+                            <p>To assist you in your planning, we are pleased to provide you with a loan repayment
+                                schedule for your Commercial Vehicle or Machinery & Equipment Financing needs. For more
+                                details, visit any of our UOB branches or <a
+                                    href="https://uniservices1.uobgroup.com/appforms/business/UOB_Call_Back_Request.page?ProdName=Vehicle-and-Machinery-Financing">request
+                                    a callback</a> from us.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        displayOutput()
+
+        //prevents user from entering anything other than . and numbers
+        $(".numericOnly").keypress(function (e) {
+
+            if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
+
+        });
+
+        $(".numericDecOnly").keypress(function (e) {
+
+            // if (String.fromCharCode(e.keyCode).match(/[0-9]+(\.[0-9][0-9]?)?/g)) return true;
+            if (String.fromCharCode(e.keyCode).match(/[^0-9.]/g)) return false;
+
+            var character = String.fromCharCode(e.keyCode)
+            var newValue = this.value + character;
+
+            if (isNaN(newValue) || hasDecimalPlace(newValue, 3)) {
+                return false;
+            }
+            // if (newValue > 20) {
+            //     $("#errorMsg3").text("Value cannot be more than 20!")
+            //     this.value = 20
+            //     return false;
+            // }
+        });
+
+        $(".numericOnly7").keypress(function (e) {
+            if (String.fromCharCode(e.keyCode).match(/[^1-7]/g)) return false;
+
+            // only allows 1 digit numbers
+            var strNum = Math.ceil(Math.log10(document.getElementById("tenureInput").value + 1))
+
+            if (strNum > 0) {
+                console.log("longgg")
+                return false
+            }
+
+        });
+
+        //event to bind validate function with input, this validate input and disables button if invalid
+        //everytime user types it will validate current input field, showing error msg immediately as user types
+        $("input.clickEvent:text").on("change paste keyup", function () {
+            validateFunction()
+            console.log("change paste keyup")
+
+        });
+
+
+        //to clear input upon clicking the input box and put default if user leave input blank
+        var default_val = '';
+        $('input.clickEvent:text').focus(function () {
+            if ($(this).val() == $(this).data('default_val') || !$(this).data('default_val')) {
+                $(this).data('default_val', $(this).val());
+                $(this).val('');
+            }
+            validateFunction()
+        });
+
+        $('input.clickEvent:text').blur(function () {
+            if ($(this).val() == '') $(this).val($(this).data('default_val'));
+            validateFunction()
+
+        });
+
+    });
+
+
+
+
+
+    // call function to display the indicator for the slider
+
+
+    document.getElementById("interestRateRange").oninput = function () {
+        // displayOutput()
+        var val2 = document.getElementById("interestRateRange").value //gets the oninput value
+        document.getElementById("interestRateInput").value = val2//displays this value to the html page
+        validateFunction()
+        // $("#errorMsg3").text("")
+
+
+    }
+
+    document.getElementById("tenureRange").oninput = function () {
+        var val3 = document.getElementById("tenureRange").value //gets the oninput value
+        document.getElementById("tenureInput").value = val3 //displays this value to the html page
+        validateFunction()
+
+
+    }
+
+    //function to display the indicator in the input box for the slider
+
+    function displayOutput() {
+
+        var val2 = document.getElementById("interestRateRange").value //gets the oninput value
+        document.getElementById("interestRateInput").value = val2//displays this value to the html page
+
+        var val3 = document.getElementById("tenureRange").value //gets the oninput value
+        document.getElementById("tenureInput").value = val3 //displays this value to the html page
+    }
+
+    // validate input
+    function validateFunction() {
+
+        var a = parseInt(removeCommas(document.getElementById("purchasePriceInput").value))
+        var b = parseInt(removeCommas(document.getElementById("downPaymentInput").value))
+        var c = parseFloat(document.getElementById("interestRateInput").value)
+        var d = parseInt(document.getElementById("tenureInput").value)
+        // var regexp = /^\d+\.\d{0,2}$/;
+
+        var array = [
+            {
+                name: "loanAmt",
+                value: a
+            },
+            {
+                name: "downPayment",
+                value: b
+            },
+            {
+                name: "interestRate",
+                value: c
+            }, {
+                name: "tenure",
+                value: d
+            }]
+
+        var trueFalseArr = []
+
+        $.each(array, function (index, element) {
+
+            if (array[index].name == "loanAmt") {
+                if (isNaN(array[index].value)) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg1").text("Value is not a number")
+                }
+                else if (array[index].value < 5000) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg1").text("Value cannot be less than 5,000")
+                }
+                else if (array[index].value > 500000) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg1").text("Value cannot be more than 500,000")
+                }
+
+
+                else {
+                    $("#errorMsg1").text("")
+                    trueFalseArr.push("true")
+                }
+
+
+            }
+            else if (array[index].name == "downPayment") {
+                if (isNaN(array[index].value)) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg2").text("Value is not a number")
+                }
+
+                else if (array[index].value < 0) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg2").text("Value cannot be less than 0")
+                }
+
+                else if (array[index].value > 500000) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg2").text("Value cannot be more than $500,000")
+                }
+                else {
+                    $("#errorMsg2").text("")
+                    trueFalseArr.push("true")
+                }
+            }
+
+
+            else if (array[index].name == "interestRate") {
+                // console.log("b")
+                // console.log(array[index].value)
+                if (isNaN(array[index].value)) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg3").text("Value is not a number")
+                }
+
+                else if (array[index].value < 0) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg3").text("Value cannot be less than 0")
+                }
+
+                else if (array[index].value > 5) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg3").text("Value cannot be more than 5")
+                }
+                else {
+                    $("#errorMsg3").text("")
+                    trueFalseArr.push("true")
+                }
+
+            }
+            else if (array[index].name == "tenure") {
+                // console.log("c")
+                // console.log(array[index].value)
+                if (isNaN(array[index].value)) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg4").text("Value is not a number")
+                }
+
+                else if (array[index].value < 1) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg4").text("Value cannot be less than 1")
+                }
+
+                else if (array[index].value > 7) {
+                    $("#calculateBtn").attr("disabled", true);
+                    $("#errorMsg4").text("Value cannot be more than 7")
+                }
+                else {
+                    $("#errorMsg4").text("")
+                    trueFalseArr.push("true")
+                }
+
+            }
+
+        })
+
+
+        if (trueFalseArr.length == 4) {
+
+            $("#calculateBtn").attr("disabled", false);
+
+            $("#interestRateRange").val(c)
+            $("#tenureRange").val(d)
+
+        }
+
+
+    }
+
+    //to calculate the monthly loan payment
+    function calculateFunction() {
+        $(".beforeCalculate").hide()
+        $(".afterCalculate").show()
+        var p = parseInt(removeCommas(document.getElementById("purchasePriceInput").value));
+        var d = parseInt(removeCommas(document.getElementById("downPaymentInput").value));
+        var t = parseFloat(document.getElementById("interestRateInput").value);
+        var y = parseInt(document.getElementById("tenureInput").value);
+
+        var totalAmt = p - d
+        var int = t/100
+        var months = y*12
+        var monthlyAmt = (totalAmt * (1 + int)) / months
+
+        document.getElementById("loanAmtDisplay").innerHTML = "$" + addCommas(Math.round(totalAmt))
+        document.getElementById("interestRateDisplay").innerHTML = "(Effective Interest Rate of " + t + "% p.a)"
+        document.getElementById("monthlyAmtDisplay").innerHTML = "$" + addCommas(Math.round(monthlyAmt)) + "/month"
+
+    }
+    // add commas after every 3 digit from the decimal place
+    function addCommas(x) {
+        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    }
+    //remove commas so that it can be inserted into the calculate function
+    function removeCommas(str) {
+        while (str.search(",") >= 0) {
+            str = (str + "").replace(',', '');
+        }
+        return str;
+    };
+
+    //ensures that interest rate does not exceed two decimal place
+    function hasDecimalPlace(value, x) {
+        var pointIndex = value.indexOf('.');
+        return pointIndex >= 0 && pointIndex < value.length - x;
+    }
+
+
+
+</script>
+
+</html>
