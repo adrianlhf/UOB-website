@@ -193,8 +193,8 @@
                         </div>
                         <div class="form-group">
                             <label for="BRperiodStayInput" class="inline">Intended Period of Stay</label>
-                            <span class="inline" style="float: right"><input type="text"
-                                    id="BRperiodStayInput" class="inline numericOnly clickEvent" style="float: right">year(s)
+                            <span class="inline" style="float: right"><input type="text" id="BRperiodStayInput"
+                                    class="inline numericOnly clickEvent" style="float: right">year(s)
                             </span>
                             <input type="range" min="1" max="99" step="1" class="form-control-range"
                                 id="BRperiodStayRange" value="15">
@@ -228,8 +228,8 @@
 
                         <div class="form-group">
                             <label for="BRloanTenureInput" class="inline">Loan Tenure</label>
-                            <span class="inline" style="float: right"><input type="text"
-                                    name="BRloanTenureInput" id="BRloanTenureInput" class="inline numericOnly clickEvent"
+                            <span class="inline" style="float: right"><input type="text" name="BRloanTenureInput"
+                                    id="BRloanTenureInput" class="inline numericOnly clickEvent"
                                     style="float: right">year(s)
                             </span>
                             <input type="range" min="1" max="30" step="1" class="form-control-range"
@@ -282,8 +282,8 @@
                         <div class="form-group">
                             <label for="CPAloanAmountInput" class="inline">Loan Amount</label>
                             <span class="inline" style="float: right">$<input type="text" id="CPAloanAmountInput"
-                                    class="inline numericOnly clickEvent" style="float: right"
-                                    name="CPAloanAmountInput" value="900,000"></span>
+                                    class="inline numericOnly clickEvent" style="float: right" name="CPAloanAmountInput"
+                                    value="900,000"></span>
                             <!-- <input type="range" min="100000" max="999999999" step="1" class="form-control-range"
                                 id="CPApropertyValRange"> -->
                             <p id="CPAerrorMsg2"></p>
@@ -291,8 +291,8 @@
                         </div>
                         <div class="form-group">
                             <label for="CPAloanTenureInput" class="inline">Loan Tenure</label>
-                            <span class="inline" style="float: right"><input type="text" 
-                                    name="CPAloanTenureInput" id="CPAloanTenureInput" class="inline numericOnly clickEvent"
+                            <span class="inline" style="float: right"><input type="text" name="CPAloanTenureInput"
+                                    id="CPAloanTenureInput" class="inline numericOnly clickEvent"
                                     style="float: right">year(s)
                             </span>
                             <input type="range" min="5" max="30" step="1" class="form-control-range"
@@ -382,44 +382,49 @@
             CPAvalidateFunction()
         });
 
-        //Buy vs Rent: event to bind function that validate input and disables button if invalid
-        $("#BRmonthlyRentInput").on("change paste keyup", function () {
+        //event to bind function that validate input and disables button if invalid
+        $("input.clickEvent:text").on("change paste keyup", function () {
             BRvalidateFunction()
+            CPAvalidateFunction
         });
 
-        $("#BRperiodStayInput").on("change paste keyup", function () {
-            BRvalidateFunction()
-        });
+        // $("#BRmonthlyRentInput").on("change paste keyup", function () {
+        //     BRvalidateFunction()
+        // });
 
-        $("#BRpurchasePriceInput").on("change paste keyup", function () {
-            BRvalidateFunction()
-        });
+        // $("#BRperiodStayInput").on("change paste keyup", function () {
+        //     BRvalidateFunction()
+        // });
 
-        $("#BRinterestRateInput").on("change paste keyup", function () {
-            BRvalidateFunction()
-        });
+        // $("#BRpurchasePriceInput").on("change paste keyup", function () {
+        //     BRvalidateFunction()
+        // });
 
-        $("#BRloanTenureInput").on("change paste keyup", function () {
-            BRvalidateFunction()
-        });
+        // $("#BRinterestRateInput").on("change paste keyup", function () {
+        //     BRvalidateFunction()
+        // });
 
-        //CPA: attach event to bind function that validate input and disables button if invalid
+        // $("#BRloanTenureInput").on("change paste keyup", function () {
+        //     BRvalidateFunction()
+        // });
 
-        $("#CPApropertyValInput").on("change paste keyup", function () {
-            CPAvalidateFunction()
-        });
+        // //CPA: attach event to bind function that validate input and disables button if invalid
 
-        $("#CPAloanAmountInput").on("change paste keyup", function () {
-            CPAvalidateFunction()
-        });
+        // $("#CPApropertyValInput").on("change paste keyup", function () {
+        //     CPAvalidateFunction()
+        // });
 
-        $("#CPAloanTenureInput").on("change paste keyup", function () {
-            CPAvalidateFunction()
-        });
+        // $("#CPAloanAmountInput").on("change paste keyup", function () {
+        //     CPAvalidateFunction()
+        // });
 
-        $("#CPAinterestRateInput").on("change paste keyup", function () {
-            CPAvalidateFunction()
-        });
+        // $("#CPAloanTenureInput").on("change paste keyup", function () {
+        //     CPAvalidateFunction()
+        // });
+
+        // $("#CPAinterestRateInput").on("change paste keyup", function () {
+        //     CPAvalidateFunction()
+        // });
 
 
     });
@@ -435,11 +440,6 @@
         displayOutput()
         BRvalidateFunction()
     }
-
-    // document.getElementById("BRpurchasePriceRange").oninput = function () {
-    //     displayOutput()
-    //     BRvalidateFunction()
-    // }
 
     document.getElementById("BRinterestRateRange").oninput = function () {
         displayOutput()
@@ -509,10 +509,16 @@
         var d = parseFloat(document.getElementById("BRinterestRateInput").value)
         var e = parseInt(document.getElementById("BRloanTenureInput").value)
 
+        console.log("offf")
         //validating input according to each condition
-
+        var array = [a, b, c, d, e]
         //a. monthly rent
         //validate min(>0) max (100000000), NaN
+        $.each(array, function (index, value) {
+            console.log(value)
+            console.log("yeee")
+        })
+
         if (isNaN(a)) {
             $("#BRcalculateBtn").attr("disabled", true);
             $("#BRerrorMsg1").text("Value is not a number")
@@ -743,7 +749,7 @@
 
 
     }
-    
+
     // add commas after every 3 digit from the decimal place
     function addCommas(x) {
         return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
