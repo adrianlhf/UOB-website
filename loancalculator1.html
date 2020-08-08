@@ -347,7 +347,7 @@
         var array = [
             {
                 name: "loanAmt",
-                value: parseInt(a)
+                value: a
             },
             {
                 name: "interestRate",
@@ -359,7 +359,7 @@
 
         var trueFalseArr = []
        
-        $.each(array, function (index, value) {
+        $.each(array, function (index, element) {
 
             if (array[index].name == "loanAmt") {
                 if (isNaN(array[index].value)) {
@@ -379,7 +379,7 @@
                 else {
                     console.log("valid1")
                     $("#errorMsg1").text("")
-                    trueFalseArr.push("yes")
+                    trueFalseArr.push("true")
                 }
 
 
@@ -404,7 +404,7 @@
                 else {
                     console.log("valid2")
                     $("#errorMsg2").text("")
-                    trueFalseArr.push("yes")
+                    trueFalseArr.push("true")
                 }
 
             }
@@ -428,7 +428,7 @@
                 else {
                     console.log("valid3")
                     $("#errorMsg3").text("")
-                    trueFalseArr.push("yes")
+                    trueFalseArr.push("true")
                 }
 
             }
@@ -438,10 +438,8 @@
 
         if (trueFalseArr.length == 3) {
             console.log("HOORAY")
-            document.getElementById("calculateBtn").disabled = false
-            $("#errorMsg1").text("")
-            $("#errorMsg2").text("")
-            $("#errorMsg3").text("")
+
+            $("#calculateBtn").attr("disabled", false);
 
             // $("#loanAmtRange").val(a)
             $("#interestRateRange").val(b)
