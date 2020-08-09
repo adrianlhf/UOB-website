@@ -218,8 +218,8 @@
 
         <!-- copy from here -->
 
-        <div class="card-deck text-center row justify-content-center">
-            <div class="card rounded-0 col-md-4">
+        <div class="card-deck text-center mx-auto layout3">
+            <div class="card rounded-0 layout3-card">
                 <img class="img-fluid mx-auto pt-4 w-75" src="images/business-plus-card.png" alt="icon1">
                 <div class="card-body">
                     <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
@@ -234,7 +234,7 @@
                 </div>
             </div>
 
-            <div class="card rounded-0 col-md-4">
+            <div class="card rounded-0 layout3-card">
                 <img class="img-fluid mx-auto pt-4 w-75" src="images/business-plus-card.png" alt="icon2">
                 <div class="card-body">
                     <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
@@ -256,10 +256,9 @@
 
     <!-- Slider 1 -->
     <!-- Responsive, have transition, a slide w loops (1st item to last to 1st again) -->
-    <div class="section grey-section">
+    <div class="section">
         <h1> Slider 1</h1>
-        <h4 class="text-center">Make sure to use this in grey background add class "grey-section", make sure to make
-            content same length because this slider i cant make it such that everything same height</h4>
+        <h4 class="text-center">Make sure to make content same length because this slider i cant make it such that everything same height</h4>
         <h5 class="text-center font-weight-bold">Take css (u should have copied 2 parts of css, 1 on text size, 1 on
             slider styles), javascript for this</h4>
             <br>
@@ -271,7 +270,7 @@
                     <div class="carousel-inner w-100" role="listbox">
                         <div class="carousel-item active">
                             <div class="col-md-4">
-                                <div class="card border-0 bg-white">
+                                <div class="card bg-white">
                                     <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg"
                                         alt="icon">
                                     <div class="card-body">
@@ -290,7 +289,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="col-md-4">
-                                <div class="card border-0 bg-white">
+                                <div class="card bg-white">
                                     <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg"
                                         alt="icon">
                                     <div class="card-body">
@@ -309,7 +308,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="col-md-4">
-                                <div class="card border-0 bg-white">
+                                <div class="card bg-white">
                                     <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg"
                                         alt="icon">
                                     <div class="card-body">
@@ -328,7 +327,7 @@
                         </div>
                         <div class="carousel-item">
                             <div class="col-md-4">
-                                <div class="card border-0 bg-white">
+                                <div class="card bg-white">
                                     <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg"
                                         alt="icon">
                                     <div class="card-body">
@@ -597,6 +596,63 @@
 
     </div>
 
+    <!-- table layout 1-->
+    <div class="section">
+        <h1>Table Layout 1</h1>
+        <h4 class="text-center">Copy CSS</h4>
+
+        <!-- copy from here -->
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <tbody>
+                    <tr>
+                        <td class="table-blue">column 1</td>
+                        <td>column 2</td>
+                    </tr>
+                    <tr>
+                        <td class="table-blue">column 1</td>
+                        <td>column 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- end copy here  -->
+
+    </div>
+
+    <!-- table layout 2 -->
+    <div class="section">
+        <h1>Table Layout 2</h1>
+        <h4 class="text-center">Copy CSS</h4>
+
+        <!-- copy from here -->
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr class="table-blue">
+                        <th scope="col">Column 1 Header</th>
+                        <th scope="col">Column 2 Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>column 1</td>
+                        <td>column 2</td>
+                    </tr>
+                    <tr>
+                        <td>column 1</td>
+                        <td>column 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- end copy here  -->
+    </div>
+
 
     <br><br><br><br><br><br><br><br>
 </body>
@@ -621,7 +677,13 @@
     /* end of layout 2 and slider 1 styles */
 
 
+    .card-deck {
+        display: block;
+    }
 
+    .card-deck .card {
+        margin-bottom: 15px;
+    }
 
     /* slider 1 styles */
 
@@ -638,6 +700,26 @@
         .carousel-inner .carousel-item-left.active,
         .carousel-inner .carousel-item-prev {
             transform: translateX(-33.333%);
+        }
+
+    }
+
+    /* Card deck styles */
+    @media (min-width: 992px) {
+        .card-deck {
+            display: flex;
+        }
+
+        .card-deck .card {
+            margin-bottom: 0px;
+        }
+
+        .layout3 {
+            width: 75%;
+        }
+
+        .layout3-card {
+            width: 25%;
         }
     }
 
@@ -780,6 +862,13 @@
     }
 
     /* end of styles for FAQ */
+
+
+    /* styles for table */
+    .table-blue {
+        background-color: #002469;
+        color: white;
+    }
 </style>
 
 
