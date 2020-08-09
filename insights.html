@@ -24,23 +24,27 @@
         width: 100%;
     }
 
-    /* persona section */
+    /* category section */
+
 
     .category-text {
-        color: #ffffff;
+        color: white;
         font-weight: bold;
         text-align: center;
         margin: 17% 30%;
     }
 
     .overlay-text {
-        margin: 17% 17%;
+        margin-top: 5%;
+        width: auto;
+        text-align: center;
     }
 
     .categoryall {
-
         width: 100%;
         height: auto;
+        margin-bottom: 15px;
+
     }
 
     .category1 {
@@ -54,6 +58,7 @@
         /* background-image: url("images/insights/market-trends.jpg"); */
         background-repeat: no-repeat;
         background-size: cover;
+
 
 
     }
@@ -81,14 +86,18 @@
     }
 
     /* category overlay styles */
+    
+
     .overlay {
         position: absolute;
         background-color: rgba(0, 0, 0, 0.644);
-        width: 100%;
+        width: auto;
         height: 100%;
         opacity: 0;
         transition: .5s ease;
-        left: 0
+        left: 0;
+        margin: 0 15px;
+
     }
 
     /* Overlay link styles */
@@ -120,7 +129,13 @@
     @media (min-width: 768px) {}
 
     /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {}
+    @media (min-width: 992px) {
+        .overlay-text {
+            margin-top: 16%;
+            width: auto;
+            text-align: center;
+        }
+    }
 
     /* Extra large devices (large desktops, 1200px and up) */
     @media (min-width: 1200px) {}
@@ -352,69 +367,96 @@
 
             <br>
             <!-- Category Images -->
-            <div class="row justify-content-around">
+            <div class="row justify-content-around ">
 
                 <!-- Category 1 Manage Your Business -->
-                <div class="category1 categoryall position-relative col-md-6">
+                <div class="category1 categoryall position-relative col-md-6"> <a class=" overlay1 text-center "></a>
                     <p class="position-absolute category-text">
-                        Retailer, F&B or Service Provider
+                        Manage Your Business
                         <br>
-                        <span class="learn-more-text">Learn More</span>
+                        <span class="learn-more-text">See More</span>
                     </p>
+
+
+
                     <img src="images/insights/mange-your-bueinsess.jpg" class="img-fluid category1">
-
-
                     <a href="" class=" overlay text-center ">
-                        <p class="overlay-text"> Comprises of <br> <span class="font-weight-bold">F&B, Consumer and
-                                Household Services,
-                                Healthcare Services and Retail </span></p>
+
+                        <p class="overlay-text"> Short Summary
+
+                        </p>
+                        <p class="font-weight-bold">
+                            Sustain and grow your business by capturing opportunities in the current business landscape
+                        </p>
                     </a>
                 </div>
-                <!-- Category 2 Stay ahead of tech and market trends -->
+
+                <!-- Category 2 Stay ahaed of tech and market trends -->
                 <div class="category2 categoryall position-relative col-md-6">
-                    <p class="position-absolute category-text ">Retailer, F&B or Service Provider
-                        <br>
-                        <span class="learn-more-text">Learn More</span>
-                    </p>
-                    <img src="images/insights/market-trends.jpg" class="img-fluid category1">
-                    <a href="" class=" overlay text-center ">
-                        <p class="overlay-text"> Comprises of <br> <span class="font-weight-bold">F&B, Consumer and
-                                Household Services,
-                                Healthcare Services and Retail </span></p>
-                    </a>
-                </div>
-
-                <!-- Category 3 Manage Your Business -->
-                <div class="category1 categoryall position-relative col-md-6">
                     <p class="position-absolute category-text">
-                        Retailer, F&B or Service Provider
+                        Stay Ahead of Tech and Market Trends
                         <br>
-                        <span class="learn-more-text">Learn More</span>
+                        <span class="learn-more-text"> See More </span>
                     </p>
-                    <img src="images/insights/mange-your-bueinsess.jpg" class="img-fluid category1">
 
+                    <img src="images/insights/market-trends.jpg" class="img-fluid category1">
 
                     <a href="" class=" overlay text-center ">
-                        <p class="overlay-text"> Comprises of <br> <span class="font-weight-bold">F&B, Consumer and
-                                Household Services,
-                                Healthcare Services and Retail </span></p>
+
+                        <p class="overlay-text"> Short Summary
+
+                        </p>
+                        <p class=" font-weight-bold">
+                            Understand how market and technological developments including digitalisation can impact and
+                            benefit your business
+                        </p>
                     </a>
                 </div>
-                <!-- Category 4 Stay ahead of tech and market trends -->
-                <div class="category2 categoryall position-relative col-md-6">
-                    <p class="position-absolute category-text ">Retailer, F&B or Service Provider
+
+                <!-- Category 3 Learn from Industry Peers and Experts -->
+                <div class="category3 categoryall position-relative col-md-6">
+                    <p class="position-absolute category-text">
+                        Learn from Industry Peers and Experts
                         <br>
-                        <span class="learn-more-text">Learn More</span>
+                        <span class="learn-more-text">See More</span>
                     </p>
-                    <img src="images/insights/market-trends.jpg" class="img-fluid category1">
+
+
+                    <img src="images/insights/building-your-network.jpg" class="img-fluid category1">
                     <a href="" class=" overlay text-center ">
-                        <p class="overlay-text"> Comprises of <br> <span class="font-weight-bold">F&B, Consumer and
-                                Household Services,
-                                Healthcare Services and Retail </span></p>
+
+                        <p class="overlay-text"> Short Summary
+
+                        </p>
+                        <p class=" font-weight-bold">
+                            Connect with industry peers and gain insights from subject matter experts
+                        </p>
+                    </a>
+                </div>
+
+                <!-- Category 4 Invest in Your People -->
+                <div class="category4 categoryall position-relative col-md-6">
+                    <p class="position-absolute category-text">
+                        Invest in Your People
+                        <br>
+                        <span class="learn-more-text">See More</span>
+                    </p>
+
+
+                    <img src="images/insights/investing-people.jpg" class="img-fluid category1">
+                    <a href="" class=" overlay text-center ">
+
+                        <p class="overlay-text"> Short Summary
+
+                        </p>
+                        <p class="font-weight-bold">
+                            Discover ways to keep your employees engaged and increase staff productivity
+
+                        </p>
                     </a>
                 </div>
             </div>
-
+        </div>
 
 
 </body>
