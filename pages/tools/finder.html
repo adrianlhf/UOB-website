@@ -11,20 +11,19 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="node_modules\jquery\dist\jquery.min.js"></script>
   <!-- <script src="jquery.mobile-1.4.5.js"></script> -->
 
 </head>
 
 <style>
-
   body {
     font-family: 'open sans', sans-serif, Arial;
-   
+
     margin: auto;
   }
-  
+
   h1 {
     font-size: 16px;
     text-align: center;
@@ -93,7 +92,7 @@
     border-radius: 10px;
     background-color: #06377B;
   }
-  
+
 
   /* Styles for Hr/ line */
 
@@ -110,23 +109,27 @@
     border: none;
   }
 
-  .btnFindOutMore:hover, .btnFindOutMore:active, .btnFindOutMore:focus, .btnFindOutMore:link, btnFindOutMore:visited{
+  .btnFindOutMore:hover,
+  .btnFindOutMore:active,
+  .btnFindOutMore:focus,
+  .btnFindOutMore:link,
+  btnFindOutMore:visited {
     background-color: #011a49;
   }
 
 
   /* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) {  }
+  @media (min-width: 576px) {}
 
   /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) { 
+  @media (min-width: 768px) {
     h1 {
       font-size: 26px;
     }
 
     h4 {
-    font-size: 20px;
-  }
+      font-size: 20px;
+    }
 
     p {
       font-size: 16px;
@@ -134,53 +137,53 @@
   }
 
   /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) { 
+  @media (min-width: 992px) {
 
-  .body {
-    width: 62%;
-  }
+    .body {
+      width: 62%;
+    }
 
-  .select-and-result{
-    width: 100%;
-    padding: 2em 0;
-  }
-  .select {
-    float: left;
-    width: 50%;
-    /* height: 17em; */
-    padding-right: 1em;
-  }
+    .select-and-result {
+      width: 100%;
+      padding: 2em 0;
+    }
 
-  .loan-result {
-    float: right;
-    width: 50%;
-    padding: 0;
-    padding-left: 3em;
-    border-left: 0.5px solid black;
+    .select {
+      float: left;
+      width: 50%;
+      /* height: 17em; */
+      padding-right: 1em;
+    }
 
-    height: 19em;
-  }
+    .loan-result {
+      float: right;
+      width: 50%;
+      padding: 0;
+      padding-left: 3em;
+      border-left: 0.5px solid black;
 
-  .suggested-loan {
-    float: left;
-    
-  } 
+      height: 19em;
+    }
 
-  #description{
-    padding: 1em 0;
-  }
+    .suggested-loan {
+      float: left;
+
+    }
+
+    #description {
+      padding: 1em 0;
+    }
 
   }
 
   /* Extra large devices (large desktops, 1200px and up) */
-  @media (min-width: 1200px) { }
-  
+  @media (min-width: 1200px) {}
 </style>
 
 <body>
   <div class="container">
     <h1> Find the perfect loan for your business </h1>
-  
+
     <!-- <div id="ck-button">
       <label>
         <input type="checkbox" value="red" name="checkbox"><span>red</span>
@@ -192,12 +195,12 @@
         <input type="checkbox" value="orange" name="checkbox"><span>orange</span>
       </label>
     </div> -->
-  
+
     <!-- First group of radio buttons -->
     <!-- What do you need the loan for? -->
-    
+
     <div class="select-and-result">
-      
+
       <div class="select">
         <p>What do you need the loan for?</p>
         <div class="qn1">
@@ -207,7 +210,7 @@
           <label for="radio1_trade">Trade</label>
           <input type="radio" id="radio1_vehicle" name="radioPurpose" value="vehicle">
           <label for="radio1_vehicle">Vehicle</label>
-  
+
           <input type="radio" id="radio1_capital" name="radioPurpose" value="capital">
           <label for="radio1_capital">Working Capital</label>
           <input type="radio" id="radio1_property" name="radioPurpose" value="property">
@@ -215,60 +218,64 @@
           <input type="radio" id="radio1_assistance" name="radioPurpose" value="assistance">
           <label for="radio1_assistance">Relief Assistance</label>
         </div>
-  
+
         <!-- Second group of radio buttons -->
         <!-- How much do you need to loan? -->
         <p>How much do you need to loan?</p>
-  
+
         <div class="qn2">
           <input type="radio" id="radio2_1" name="radioAmount" value="amount1">
           <label for="radio2_1"> &#60; $100,000</label>
-  
+
           <input type="radio" id="radio2_2" name="radioAmount" value="amount2">
           <label for="radio2_2">$100,000 to $500,000</label>
-  
+
           <input type="radio" id="radio2_3" name="radioAmount" value="amount3">
           <label for="radio2_3">$500,000 to $1,000,000</label>
         </div>
-  
+
         <!-- Third group of radio buttons -->
         <!--How long is the loan term you are looking for? -->
         <p>How long is the loan term you are looking for?</p>
         <div class="qn3">
           <input type="radio" id="radio3_1" name="radioTerm" value="term1">
           <label for="radio3_1"> &#60; 1 year</label>
-  
+
           <input type="radio" id="radio3_2" name="radioTerm" value="term2">
           <label for="radio3_2">1 to 5 years</label>
-  
+
           <input type="radio" id="radio3_3" name="radioTerm" value="term3">
           <label for="radio3_3">More than 5 years</label>
         </div>
-      
-      <hr class="d-block d-lg-none">
+
+        <hr class="d-block d-lg-none">
       </div>
-      
+
       <!-- <button onclick="testFunction()" type="button" class="btn btn-primary">Get Results</button> -->
       <!-- result section  -->
-     
+
       <div class="loan-result">
         <h4 id="loan">Select Your Answers To Get A Recommended Loan</h4>
-        <p id="description">Loans can help you with... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. </p>
+        <p id="description">Loans can help you with... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+          turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec
+          pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.
+        </p>
         <div id="divFindOutMore">
-          <a href="https://www.google.com/" target="_blank" class="btn btn-primary btn-block btnFindOutMore">Click Here to
+          <a href="https://www.google.com/" target="_blank" class="btn btn-primary btn-block btnFindOutMore">Click Here
+            to
             Find Out More </a>
         </div>
       </div>
     </div>
-    
-  
+
+
     <!-- Division for suggested loans -->
     <div class="suggested-loan" id="otherLoans">
-      
+
       <!-- <h1 class="text-left">Other Loans You Might Be Interested In</h1> -->
-      
+
       <!-- <div class="row card-deck"> -->
-        <!-- <div class="card">
+      <!-- <div class="card">
           <div class="card-body">
             <h4 class="card-title">Card title</h4>
             <p class="card-text">
@@ -311,7 +318,7 @@
             <a href="#!" class="card-link">Learn More</a>
           </div>
         </div> -->
-  
+
       <!-- </div> -->
     </div>
   </div>
@@ -319,47 +326,47 @@
 
 <script>
 
-// remember to delete 
-// $( document ).ready(function() {
-//   var radioPurpose = document.getElementsByName('radioPurpose');
-//     var radioAmount = document.getElementsByName('radioAmount');
-//     var radioTerm = document.getElementsByName('radioTerm');
+  // remember to delete 
+  // $( document ).ready(function() {
+  //   var radioPurpose = document.getElementsByName('radioPurpose');
+  //     var radioAmount = document.getElementsByName('radioAmount');
+  //     var radioTerm = document.getElementsByName('radioTerm');
 
-//     // var checks = document.getElementsByName('checkbox');
-//     var qn1 = ""
-//     var qn2 = ""
-//     var qn3 = ""
+  //     // var checks = document.getElementsByName('checkbox');
+  //     var qn1 = ""
+  //     var qn2 = ""
+  //     var qn3 = ""
 
-//     for (var i = 0, length = radioPurpose.length; i < length; i++) {
-//       if (radioPurpose[i].checked) {
-//         qn1 = radioPurpose[i].value
-//         break;
-//       }
+  //     for (var i = 0, length = radioPurpose.length; i < length; i++) {
+  //       if (radioPurpose[i].checked) {
+  //         qn1 = radioPurpose[i].value
+  //         break;
+  //       }
 
-//     }
-//     for (var i = 0, length = radioAmount.length; i < length; i++) {
-//       if (radioAmount[i].checked) {
-//         qn2 = radioAmount[i].value
-//         break;
-//       }
+  //     }
+  //     for (var i = 0, length = radioAmount.length; i < length; i++) {
+  //       if (radioAmount[i].checked) {
+  //         qn2 = radioAmount[i].value
+  //         break;
+  //       }
 
-//     }
-//     for (var i = 0, length = radioTerm.length; i < length; i++) {
-//       if (radioTerm[i].checked) {
-//         qn3 = radioTerm[i].value
-//         break;
-//       }
-//     }
-//     // ensure that none of the values is empty
-//     if (qn1 != "" && qn2 != "" && qn3 != "") {
-//       console.log(loan)
-//       formulaFunction(qn1, qn2, qn3);
-//       // console.log(formulaFunction(qn1, qn2, qn3));
-//       console.log("lolo");
-//       shuffleArray(loan, formulaFunction(qn1, qn2, qn3))
+  //     }
+  //     for (var i = 0, length = radioTerm.length; i < length; i++) {
+  //       if (radioTerm[i].checked) {
+  //         qn3 = radioTerm[i].value
+  //         break;
+  //       }
+  //     }
+  //     // ensure that none of the values is empty
+  //     if (qn1 != "" && qn2 != "" && qn3 != "") {
+  //       console.log(loan)
+  //       formulaFunction(qn1, qn2, qn3);
+  //       // console.log(formulaFunction(qn1, qn2, qn3));
+  //       console.log("lolo");
+  //       shuffleArray(loan, formulaFunction(qn1, qn2, qn3))
 
-//     }
-// });
+  //     }
+  // });
 
   // array to store information of loan (id, name, description, link)
   var loan = [
@@ -500,10 +507,10 @@
     // console.log("after shuffle")
     // console.log(tempArray)
 
-    for (var i = 0; i < 4; i++){
-      suggestedLoans = suggestedLoans + '<div class="card"> <div class="card-body"><h4 class="card-title">'+tempArray[i].name+'</h4><p class="card-text">'+tempArray[i].description+'</p><a href="'+tempArray[i].url+'" class="card-link">Learn More</a></div></div>'
+    for (var i = 0; i < 4; i++) {
+      suggestedLoans = suggestedLoans + '<div class="card"> <div class="card-body"><h4 class="card-title">' + tempArray[i].name + '</h4><p class="card-text">' + tempArray[i].description + '</p><a href="' + tempArray[i].url + '" class="card-link">Learn More</a></div></div>'
 
-      if ((i+1)%2 == 0){
+      if ((i + 1) % 2 == 0) {
         suggestedLoans = suggestedLoans + '<div class="w-100 d-none d-sm-block d-md-block d-lg-none"><br></div>';
       }
     }
@@ -512,7 +519,7 @@
     //   posts = posts + "<div>" + "<h3>" + array[index].fname + " " + array[index].lname + "</h3><img src=" + array[index].picture + "><p>" + array[index].postText + "</p></div>";
 
     // })
-  
+
     document.getElementById("otherLoans").innerHTML = '<br><h1 class="text-left">Other Loans You Might Be Interested In</h1><br><div class="row card-deck">' + suggestedLoans + '</div>';
 
   }
