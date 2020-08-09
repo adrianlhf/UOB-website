@@ -6,6 +6,10 @@
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 
+    <!-- carousell script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -23,6 +27,12 @@
     body {
         width: 100%;
     }
+    /* featured insights section */
+
+    .featuredarticles{
+        border-top:1.2px solid black;
+    }
+  
 
     /* category section */
 
@@ -48,14 +58,12 @@
     }
 
     .category1 {
-        /* background-image: url("images/insights/mange-your-bueinsess.jpg"); */
         background-repeat: no-repeat;
         background-size: cover;
 
     }
 
     .category2 {
-        /* background-image: url("images/insights/market-trends.jpg"); */
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -64,7 +72,6 @@
     }
 
     .category3 {
-        /* background-image: url("images/insights/building-your-network.jpg"); */
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -72,7 +79,6 @@
     }
 
     .category4 {
-        /* background-image: url("images/insights/investing-people.jpg"); */
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -86,7 +92,7 @@
     }
 
     /* category overlay styles */
-    
+
 
     .overlay {
         position: absolute;
@@ -122,6 +128,16 @@
     }
 
 
+    /* styles for card section */
+    .card-deck {
+        display: block;
+    }
+
+    .card-deck .card {
+        margin-bottom: 15px;
+    }
+
+
     /* Small devices (landscape phones, 576px and up) */
     @media (min-width: 576px) {}
 
@@ -135,6 +151,13 @@
             width: auto;
             text-align: center;
         }
+        .card-deck {
+            display: flex;
+        }
+
+        .card-deck .card {
+            margin-bottom: 0px;
+        }
     }
 
     /* Extra large devices (large desktops, 1200px and up) */
@@ -146,11 +169,11 @@
     <!-- header  -->
     <div class="container top  ">
         <header class="header">
-            <div class="headliner text-wrap">
-                <h1 class="headertitle">
+            <div class="headliner text-wrap pb-4 pt-5">
+                <h1 class="headertitle pb-2">
                     Featured Insights
                 </h1>
-                <div id="headersubtitle">
+                <div id="headersubtitle ">
                     Get the latest market trends, networking opportunities and access business advice to help SME's grow
                     their business
                 </div>
@@ -164,7 +187,7 @@
     <!-- featured articles-->
     <div class="container featuredarticles">
         <!-- first big article -->
-        <div class="toparticle row ">
+        <div class="toparticle row pt-5 ">
             <div class="topimages col-lg-6 col-md-6 ">
 
                 <a href="">
@@ -202,9 +225,9 @@
 
         <!-- second row articles -->
 
-        <div class="secondaryarticle row">
+        <div class="secondaryarticle row ">
             <!--   1 of 4 articles -->
-            <div class="item col-lg-3 col-md-3 ">
+            <div class="item col-lg-3 col-md-6 pt-4">
                 <div class="secondaryimages  ">
 
                     <a href="">
@@ -240,7 +263,7 @@
 
             </div>
             <!--   2 of 4 articles -->
-            <div class="item col-lg-3 col-md-3 ">
+            <div class="item col-lg-3 col-md-6 pt-4 ">
                 <div class="secondaryimages  ">
 
                     <a href="">
@@ -276,7 +299,7 @@
 
             </div>
             <!--   3 of 4 articles -->
-            <div class="item col-lg-3 col-md-3 ">
+            <div class="item col-lg-3 col-md-6  pt-4">
                 <div class="secondaryimages  ">
 
                     <a href="">
@@ -310,7 +333,7 @@
             </div>
 
             <!--   4 of 4 articles -->
-            <div class="item col-lg-3 col-md-3 ">
+            <div class="item col-lg-3 col-md-6  pt-4">
                 <div class="secondaryimages  ">
 
                     <a href="">
@@ -370,7 +393,7 @@
             <div class="row justify-content-around ">
 
                 <!-- Category 1 Manage Your Business -->
-                <div class="category1 categoryall position-relative col-md-6"> <a class=" overlay1 text-center "></a>
+                <div class="category1 categoryall position-relative col-md-6">
                     <p class="position-absolute category-text">
                         Manage Your Business
                         <br>
@@ -459,6 +482,65 @@
         </div>
 
 
+        <!-- explore more solutions header   -->
+        <header class="header">
+            <div class="headliner text-wrap text-left">
+                <h3 class="headertitle3">
+                    Explore More Solutions
+                    </h1>
+
+            </div>
+
+        </header>
+
+        <!-- explore more solutions card selection -->
+
+
+        <div class="card-deck text-center">
+            <div class="card rounded-0">
+                <a href="./business_property_and_equity_loan.html">
+                    <img class="img-fluid w-100  " src="images/insights/uob_business_property_loan.jpg"
+                        alt="UOB_Business_property">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">UOB Business Property</h4>
+                    <p class="card-text layout2-p">
+                        Get Up to 90% financing for your mortgage
+                    </p>
+                </div>
+            </div>
+
+            <div class="card rounded-0">
+                <a href="./bizsmart.html">
+                    <img class="img-fluid w-100" src="images/insights/uob_bizsmart.jpg" alt="UOB_bizsmart">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">UOB Bizsmart</h4>
+                    <p class="card-text layout2-p">
+                        Integrated solutions to help you manage and grow your business
+                    </p>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <a href="./uob_business_mobile_app.html">
+                    <img class="img-fluid w-100" src="images/insights/uob_business.jpg" alt="UOB_business">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">UOB Business</h4>
+                    <p class="card-text layout2-p">
+                        A Single Access to all your business and banking needs
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
 </body>
 
 
@@ -466,7 +548,5 @@
 
 
 <script>
-
-
 
 </script>
