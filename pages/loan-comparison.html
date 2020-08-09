@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+</head>
+
+<style>
+    body {
+        font-family: 'open sans', sans-serif, Arial;
+
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+
+    .card-deck {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+
+    .card {
+        background-color: #ffffff;
+        flex: 0 0 50%;
+    }
+
+    .btnFindOutMore:hover,
+    .btnFindOutMore:active,
+    .btnFindOutMore:focus,
+    .btnFindOutMore:link,
+    .btnFindOutMore:visited {
+        background-color: #011a49;
+    }
+
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {}
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 26px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+
+        .body {
+            width: 62%;
+        }
+
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {}
+
+    /* styles for table */
+    .img img {
+        width: 246px;
+    }
+
+    .img {
+        padding: 2px !important;
+        background-color: #f6f6f6;
+    }
+
+    table {
+        margin: 10px 0 0 0;
+        width: inherit;
+    }
+
+    .tablehead {
+        background-color: #002469;
+        color: white;
+    }
+
+    .table {
+        width: auto;
+        overflow-x: auto;
+    }
+
+    .item {
+        width: 250px;
+        padding: 10%;
+    }
+
+    @media (min-width: 768px) {
+        .table {
+            overflow: unset;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Business Loans We Offer</h1>
+        <!-- <p>Select loans to compare</p> -->
+        <!-- <div class="card-deck row">
+            <div class="card card-insights mb-sm-4" style="text-align: center;">
+                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Business Loan</h5>
+                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
+                        culture can create fresh challenges for employees.</p>
+                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
+                </div>
+                <div class="card-footer">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
+                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-insights mb-sm-4" style="text-align: center;">
+                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Business Loan</h5>
+                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
+                        culture can create fresh challenges for employees.</p>
+                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
+                </div>
+                <div class="card-footer">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
+                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-insights mb-sm-4" style="text-align: center;">
+                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Business Loan</h5>
+                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
+                        culture can create fresh challenges for employees.</p>
+                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
+                </div>
+                <div class="card-footer">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
+                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-insights mb-sm-4" style="text-align: center;">
+                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Business Loan</h5>
+                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
+                        culture can create fresh challenges for employees.</p>
+                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
+                </div>
+                <div class="card-footer">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
+                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
+                    </div>
+                </div>
+            </div>
+<div class="w-100"></div>
+            <div class="card card-insights mb-sm-4" style="text-align: center;">
+                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Business Loan</h5>
+                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
+                        culture can create fresh challenges for employees.</p>
+                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
+                </div>
+                <div class="card-footer">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
+                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-insights mb-sm-4" style="text-align: center;">
+                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Business Loan</h5>
+                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
+                        culture can create fresh challenges for employees.</p>
+                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
+                </div>
+                <div class="card-footer">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
+                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-insights mb-sm-4" style="text-align: center;">
+                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">Business Loan</h5>
+                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
+                        culture can create fresh challenges for employees.</p>
+                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
+                </div>
+                <div class="card-footer">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
+                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+      -->
+
+
+        <!-- </div> -->
+
+        COMPARE YOUR LOANS
+        <div class="table" id="compareTable">
+
+        </div>
+        <!-- <div class="table">
+            <table class="mx-auto">
+                <tr class="d-flex">
+                    <td class="img">Img</td>
+                    <td class="img">Img</td>
+                    <td class="img">Img</td>
+
+                </tr>
+                <tr class="tablehead justify-content-around">
+                    <th>Spec 1</th>
+                </tr>
+                <tr class="d-flex">
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+
+                </tr>
+
+                <tr class="tablehead">
+                    <th>Spec 1</th>
+                </tr>
+                <tr class="d-flex justify-content-around">
+                    <td class="item"> Lorem</td>
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+
+                </tr>
+                <tr class="tablehead">
+                    <th>Spec 1</th>
+                </tr>
+                <tr class="d-flex justify-content-around">
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+
+                </tr>
+                <tr class="tablehead">
+                    <th>Spec 1</th>
+                </tr>
+                <tr class="d-flex justify-content-around">
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+                </tr>
+
+
+            </table>
+        </div> -->
+        <div id="selectLoans"></div>
+        <button class="btn btn-primary" id="btnCompare" onclick="compareFunction()" disabled>Compare</button>
+        <button class="btn btn-primary" id="btnReselect" style="display: none"
+            onclick="reselectFunction()">Reselect</button>
+
+    </div>
+
+</body>
+<script>
+    var loanArray = [
+        { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle. Facility installment of up to 7 years and Hire Purchase financing available for commercial vehicle and commercial vehicle with renewed COE. ", url: "./vehicle_and _machinery-financing.html", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "Low interest rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
+
+        { loanID: 1, name: "SME Equipment Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "./government_assistant_scheme.html", amount: "Financing of up to 90% of the market valuation or purchase price of your new equipment", tenure: "Up to 8 years", category: "Equipment & Vehicle", interestRate: "- Minimum interest of 4.25% for loan tenure of 4 years and below <br>- Minimum interest of 4.75% for loan tenure of more than 4 years", img: "../images/homepage/google-my-biz-728x408.jpg" },
+
+        { loanID: 2, name: "Temporary Bridging Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time", url: "./government_assistant_scheme.html", amount: "Up to S$1 million", tenure: "Up to 5 years", category: "Relief Assistance", interestRate: "Low Interest Rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
+
+        { loanID: 3, name: "Business Property Loan", description: "Low Interest Rates on your new Business Property Loan, or when you refinance with us and higher loan quantum to help you get the most out of your property.", url: "./business_property_and_equity_loan.html", amount: "- Get up to 100% of your business property value that can be used to cash out as an extended loan when you refinance with us <br>- Get up to 90% of your property value or purchase price for your mortgage for new industrial / commercial property purchase", tenure: "Up to 20 years", category: "Property", interestRate: "Low Interest Rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
+
+        { loanID: 4, name: "Loan Insurance Scheme", description: "Short-term trade loans with an added benefit of a reduced trade risks and risk is co-shared with 75% risk borne by insurers. 50% of the premium will be supported by SPRING Singapore and IE Singapore. Available for both domestic and overseas trade facilities", url: "./government_assistant_scheme.html", amount: "Depends on case to case basis", tenure: "Up to 5 years", category: "Trade", interestRate: "Minimum of 3% intrest rate", img: "../images/homepage/google-my-biz-728x408.jpg" },
+
+        { loanID: 5, name: "Bizmoney Loan", description: "Up to S$350,000 of financing, fixed monthly repayment of up to 4 years and no property or monetary deposit collateral required", url: "./uob_bizmoney.html", amount: "Up to $350,000", tenure: "Up to 5 years", category: "Working Capital", interestRate: "-", img: "../images/homepage/google-my-biz-728x408.jpg" },
+
+        { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "./government_assistant_scheme.html", amount: "Up to $1million", tenure: "Fixed monthly repayment period of up to 5 years", category: "Working Capital", interestRate: "-", img: "../images/homepage/google-my-biz-728x408.jpg" }
+    ]
+    //store name of spec and property reference for loanArray
+    var specsArray = [{ spec: "Image", propertyRef: "img" }, { spec: "Name", propertyRef: "name" }, { spec: "Description", propertyRef: "description" }, { spec: "Amount", propertyRef: "amount" }, { spec: "Loan Tenure", propertyRef: "tenure" }, { spec: "Category", propertyRef: "category" }, { spec: "Interest Rate", propertyRef: "interestRate" }]
+
+    var compareArray = []
+
+    $(document).ready(function () {
+        displayLoans()
+
+        // $("#btnCompare").click(function () {
+        //     $.each($("input[name='select']:checked"), function () {
+        //         // favorite.push($(this).val());
+        //         compareArray.push(loanArray[$(this).val()])
+        //     });
+        //     $("#selectLoans").hide()
+        // });
+
+        $('input.checkboxClass').on('change', function (evt) {
+            console.log("yeee")
+            if ($("input[name='select']:checked").length >= 2 && $("input[name='select']:checked").length <= 4) {
+                $("#btnCompare").attr("disabled", false)
+            }
+            else if ($("input[name='select']:checked").length <= 1) {
+                $("#btnCompare").attr("disabled", true)
+            }
+            else if ($("input[name='select']:checked").length > 4) {
+                this.checked = false;
+            }
+        });
+    });
+
+
+
+    function displayLoans() {
+        var string = "<div class='card-deck'>"
+        for (var i = 0; i < loanArray.length; i++) {
+            string += '<div class="card card-insights mb-sm-4" style="text-align: center;"> <img class="card-img-top img-fluid"' + 'src="' + loanArray[i].img + '"alt="Card image cap"> <div class="card-body"> <h5 class="card-title font-weight-bold">' + loanArray[i].name + '</h5> <p class="card-text">' + loanArray[i].description + '</p> <a href="' + loanArray[i].url + '" class="card-link btn btn-primary">Find Out More</a> </div> <div class="card-footer"> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input checkboxClass" id="select' + loanArray[i].loanID + '" value="' + loanArray[i].loanID + '" name="select"> <label class="custom-control-label" for="select' + loanArray[i].loanID + '">Select Loan</label> </div> </div> </div>'
+
+            if (i == 3) {
+                string += ' <div class="w-100"></div>'
+            }
+
+        }
+        $("#selectLoans").html(string);
+
+    }
+
+    //change to compare table content
+    //change button to reselect
+    function compareFunction() {
+        //hide select loans thing
+        $("#selectLoans").hide()
+        $("#btnCompare").hide()
+        $("#btnReselect").show()
+        $("#compareTable").show();
+
+        compareArray = []
+        //push selected loans into compareArray
+        $.each($("input[name='select']:checked"), function () {
+            // favorite.push($(this).val());
+            compareArray.push(loanArray[$(this).val()])
+        });
+
+        var compareStr = ""
+
+        $.each(specsArray, function (index, value) {
+            console.log("inCompareFunction")
+
+            if (specsArray[index].propertyRef == "img") {
+                compareStr += ' <table class="mx-auto"><tr class="d-flex">'
+                $.each(compareArray, function (i, value) {
+                    compareStr += ' <td class="img"><img src = "' + compareArray[i].img + '"></td>'
+                })
+                compareStr += "</tr>"
+            }
+            else {
+                compareStr += '<tr class="tablehead justify-content-around"><th>' + specsArray[index].spec + '</th></tr><tr class="d-flex">'
+                $.each(compareArray, function (i, value) {
+                    // if(compareArray[i].keys specsArray[index].propertyRef)
+                    compareStr += '<td class="item">' + compareArray[i][specsArray[index].propertyRef] + '</td>'
+                })
+                compareStr += "</tr>"
+            }
+        })
+        compareStr += "</table>"
+        $("#compareTable").html(compareStr);
+
+        // <tr class="tablehead justify-content-around">
+        //             <th>Spec 1</th>
+        //         </tr>
+        //         <tr class="d-flex">
+        //             <td class="item"> Lorem </td>
+        //             <td class="item"> Lorem </td>
+        //             <td class="item"> Lorem </td>
+
+        //         </tr>
+
+
+    }
+
+    //change back to select loans content
+    //clear compareArray
+    function reselectFunction() {
+
+        $("#compareTable").hide();
+        $("#btnReselect").hide()
+        $("#btnCompare").show()
+        $("#btnCompare").attr("disabled", true)
+        $("#selectLoans").show()
+
+        $("input[name='select']:checkbox").prop('checked', false);
+
+    }
+
+
+</script>
+
+</html>
