@@ -211,7 +211,7 @@
 
         </div> 
       -->
-       
+
 
         <!-- </div> -->
         <div id="selectLoans"></div>
@@ -236,17 +236,24 @@
         { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "", amount: "Up to $1million", tenure: "Fixed monthly repayment period of up to 5 years", category: "Working Capital", interestRate: "-", img: "../images/homepage/google-my-biz-728x408.jpg" }
     ]
 
-var compareArray = []
+    var compareArray = []
     $(document).ready(function () {
         displayLoans()
 
-        $("#testingBtn").click(function(){
+        $("#testingBtn").click(function () {
             var favorite = [];
-            $.each($("input[name='select']:checked"), function(){
+            $.each($("input[name='select']:checked"), function () {
                 // favorite.push($(this).val());
-                compareArray.push()
+                compareArray.push(loanArray[$(this).val()])
             });
-            console.log("My favourite sports are: " + favorite.join(", "));
+            console.log(compareArray)
+        });
+
+        $('input.checkboxClass').on('change', function (evt) {
+            console.log("yeee")
+            if ($("input[name='select']:checked").length > 4) {
+                this.checked = false;
+            }
         });
     });
 
@@ -264,8 +271,8 @@ var compareArray = []
     function displayLoans() {
         var string = "<div class='card-deck'>"
         for (var i = 0; i < loanArray.length; i++) {
-            string += '<div class="card card-insights mb-sm-4" style="text-align: center;"> <img class="card-img-top img-fluid"' + 'src="' + loanArray[i].img + '"alt="Card image cap"> <div class="card-body"> <h5 class="card-title font-weight-bold">' + loanArray[i].name + '</h5> <p class="card-text">' + loanArray[i].description + '</p> <a href="' + loanArray[i].url + '" class="card-link btn btn-primary">Find Out More</a> </div> <div class="card-footer"> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input" id="select' + loanArray[i].loanID +'" value="' + loanArray[i].loanID + '" name="select"> <label class="custom-control-label" for="select' +loanArray[i].loanID + '">Select Loan</label> </div> </div> </div>'
-            
+            string += '<div class="card card-insights mb-sm-4" style="text-align: center;"> <img class="card-img-top img-fluid"' + 'src="' + loanArray[i].img + '"alt="Card image cap"> <div class="card-body"> <h5 class="card-title font-weight-bold">' + loanArray[i].name + '</h5> <p class="card-text">' + loanArray[i].description + '</p> <a href="' + loanArray[i].url + '" class="card-link btn btn-primary">Find Out More</a> </div> <div class="card-footer"> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input checkboxClass" id="select' + loanArray[i].loanID + '" value="' + loanArray[i].loanID + '" name="select"> <label class="custom-control-label" for="select' + loanArray[i].loanID + '">Select Loan</label> </div> </div> </div>'
+
             if (i == 3) {
                 string += ' <div class="w-100"></div>'
             }
@@ -276,7 +283,8 @@ var compareArray = []
 
     }
 
-    
+
+
 
 </script>
 
