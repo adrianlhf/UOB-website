@@ -96,18 +96,18 @@
         <h1>Business Loans We Offer</h1>
         <p>Select loans to compare</p>
         <div class="card-deck">
-            <div class="card card-insights mb-sm-4">
+            <div class="card card-insights mb-sm-4" style="text-align: center;">
                 <img class="card-img-top img-fluid" src="../../images/homepage/google-my-biz-728x408.jpg"
                     alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">Business Loan</h5>
                     <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
                         culture can create fresh challenges for employees.</p>
-                    <a href="#!" class="card-link">Find Out More</a>
+                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
                 </div>
                 <div class="card-footer">
-                    <div class="custom-control custom-checkbox" style="text-align: center;">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <div class="custom-control custom-checkbox" >
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
                         <label class="custom-control-label" for="customCheck1">Select Loan</label>
                     </div>
                 </div>
@@ -154,19 +154,26 @@
                     12 Jun 2020
                 </div>
             </div>
-        </div>
+        </div>            <button onclick="testingFunction()">Testing</button>
+
     </div>
 
 </body>
 <script>
-  var loanArr = [
-    { loanID: 0, name: "Equipment Vehicle Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "https://www.google.com/" },
-    { loanID: 1, name: "SME Equipment Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. ", url: "" },
-    { loanID: 2, name: "Temporary Bridging Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" },
-    { loanID: 3, name: "Business Property Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" },
-    { loanID: 4, name: "Loan Insurance Scheme", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" },
-    { loanID: 5, name: "Bizmoney Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" },
-    { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" }
+var loan = [
+    { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle. Facility installment of up to 7 years and Hire Purchase financing available for commercial vehicle and commercial vehicle with renewed COE. Obtain ownership of the asset upon fulfilling payment of loan installment", url: "" },
+    { loanID: 1, name: "SME Equipment Loan", description: " Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "" },
+    { loanID: 2, name: "Temporary Bridging Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time", url: "" },
+    { loanID: 3, name: "Business Property Loan", description: "Low Interest Rates on your new Business Property Loan, or when you refinance with us and higher loan quantum to help you get the most out of your property.", url: "" },
+    { loanID: 4, name: "Loan Insurance Scheme", description: "Short-term trade loans with an added benefit of a reduced trade risks and risk is co-shared with 75% risk borne by insurers. 50% of the premium will be supported by SPRING Singapore and IE Singapore. Available for both domestic and overseas trade facilities", url: "" },
+    { loanID: 5, name: "Bizmoney Loan", description: "Up to S$350,000 of financing, fixed monthly repayment of up to 4 years and no property or monetary deposit collateral required", url: "" },
+    { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "" }
   ]
+
+function testingFunction(){
+    var test = $("#customCheck1").val()
+    console.log(test)
+}
+
 </script>
 </html>
