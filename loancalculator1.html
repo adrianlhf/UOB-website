@@ -37,7 +37,7 @@
         height: 24px;
         width: 24px;
         border-radius: 50%;
-        background: goldenrod;
+        background: #bbbbbb;
         margin-top: -7px;
     }
 
@@ -87,20 +87,16 @@
         }
 
         .input-left {
-            float: left;
-            width: 50%;
-            /* height: 17em; */
             padding: 2em 3em 2em 0;
             border-right: 0.5px solid black;
         }
 
         .result-right {
-            float: right;
-            width: 50%;
-            padding: 2em 3em 2em 3em;
-            height: 19em;
-
+            padding: 15% 3em;
+            height: auto;
+            vertical-align: middle;
         }
+
 
 
     }
@@ -153,63 +149,97 @@
         box-shadow: -80px 0 0 80px #43e5f7;
     }
 
+    .allCalcInput {
+        border-radius: 0px;
+        padding: 0 0 0 10px;
+        margin: 0 5px 0 5px;
+        width: 100px;
+        border: 0;
+        background-color: #e8e8e8;
+    }
+    #tenureInput{
+        width: 65px;
+    }
+    .allCalcInput:focus {
+        outline: 0;
+        background-color: #c3c3c3;
+    }
+    .sliderCalc{
+        margin-top: 1rem;
+    }
+    .allErrorMsg {
+        color: red;
+        height: 30px;
+        margin: 1rem 0 0 0;
+    }
+
+
     /* styles for text */
     .result {
         text-align: center;
+    }
 
+    #amount {
+        padding: 0 30px;
+    }
+
+    .calcResult {
+        font-size: 150%;
     }
 </style>
 
 <body>
     <div class="container">
         <div>
-
             <div class="businessCalcDiv">
                 <h2 style="text-align: center;">Loan Installment Calculator</h2>
-                <div class="input-left">
-                    <h4>Find out the indicative monthly installment payment of your UOB
-                        Business Loan</h4>
-                    <form class="inputForm" name="formLoanCalculate1">
-                        <div class="form-group">
-                            <label for="loanAmtInput" class="inline">Loan Amount</label>
-                            <!-- <p id="loanAmtInput" class="inline" style="float: right"></p> -->
-                            <span class="inline" style="float: right">$<input type="text" id="loanAmtInput"
-                                    class="inline numericOnly validateInput clickEvent" style="float: right"
-                                    name="loanAmtInput" value="550,000"></span>
-                            <!-- <input type="range" min="0" max="1000000" step="1" class="form-control-range"
+                <div class="row">
+                    <div class="input-left col-lg-6">
+                        <h4>Find out the indicative monthly installment payment of your UOB
+                            Business Loan</h4>
+                        <form class="inputForm" name="formLoanCalculate1">
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <label for="loanAmtInput" class="inline">Loan Amount</label>
+                                    <!-- <p id="loanAmtInput" class="inline" style="float: right"></p> -->
+                                    <span class="inline calcInputField">$<input type="text" id="loanAmtInput"
+                                            class="inline numericOnly validateInput clickEvent allCalcInput"
+                                            name="loanAmtInput" value="550,000"></span>
+                                </div>
+                                <!-- <input type="range" min="0" max="1000000" step="1" class="form-control-range"
                                 id="loanAmtRange"> -->
-                            <p id="errorMsg1"></p>
-                            <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
-
-                        </div>
-                        <div class="form-group">
-                            <label for="interestRateInput" class="inline">Interest Rate</label><span class="inline"
-                                style="float: right">
-                                <input type="text" id="interestRateInput" name="interestRateInput"
-                                    class="inline numericDecOnly validateInput class clickEvent"
-                                    style="float: right">%</span>
-                            <input type="range" min="0" max="20" step="0.01" class="form-control-range"
-                                id="interestRateRange">
-
-                            <p id="errorMsg2"></p>
-
-                        </div>
-                        <div class="form-group">
-                            <label for="tenureInput" class="inline">Tenure</label>
-                            <span class="inline" style="float: right"><input type="text" id="tenureInput"
-                                    class="inline numericOnly5 clickEvent" style="float: right">year(s)
-                            </span>
-                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="tenureRange">
-                            <p id="errorMsg3"></p>
-
-                        </div>
-                    </form>
-                    <button onclick="calculateFunction()" id="calculateBtn"
-                        class="btn btn-primary btnCalculate mx-auto d-block" type="button">Calculate</button>
-                </div>
-                <hr class="d-block d-lg-none">
-                <div class="result-right ">
-                    <div class=" align-self-center">
+                                <p id="errorMsg1" class="allErrorMsg"></p>
+                                <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <label for="interestRateInput" class="inline">Interest Rate</label>
+                                    <span class="inline calcInputField">
+                                        <input type="text" id="interestRateInput" name="interestRateInput"
+                                            class="inline numericDecOnly validateInput class clickEvent allCalcInput">%
+                                    </span>
+                                </div>
+                                <input type="range" min="0" max="20" step="0.01" class="form-control-range sliderCalc"
+                                    id="interestRateRange">
+                                <p id="errorMsg2" class="allErrorMsg"></p>
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <label for="tenureInput" class="inline">Tenure</label>
+                                    <span class="inline calcInputField"><input type="text" id="tenureInput"
+                                            class="inline numericOnly5 clickEvent allCalcInput">year(s)
+                                    </span>
+                                </div>
+                                <input type="range" min="1" max="5" step="1" class="form-control-range sliderCalc"
+                                    id="tenureRange">
+                                <p id="errorMsg3" class="allErrorMsg"></p>
+                            </div>
+                        </form>
+                        <button onclick="calculateFunction()" id="calculateBtn"
+                            class="btn btn-primary btnCalculate mx-auto d-block" type="button">Calculate</button>
+                    </div>
+                    <hr class="d-block d-lg-none">
+                    <div class="result-right col-lg-6">
                         <h1 id="amount" class="result">Repayment Summary</h1>
                         <p id="description" class="result">Please enter the loan information to continue.</p>
                     </div>
@@ -308,7 +338,7 @@
     document.getElementById("interestRateRange").oninput = function () {
         // displayOutput()
         var val2 = document.getElementById("interestRateRange").value //gets the oninput value
-        document.getElementById("interestRateInput").value = val2//displays this value to the html page
+        document.getElementById("interestRateInput").value = val2 //displays this value to the html page
         validateFunction()
         // $("#errorMsg2").text("")
 
@@ -330,7 +360,7 @@
         // document.getElementById("loanAmtInput").value = addCommas(parseInt(val1)) //displays this value to the html page
 
         var val2 = document.getElementById("interestRateRange").value //gets the oninput value
-        document.getElementById("interestRateInput").value = val2//displays this value to the html page
+        document.getElementById("interestRateInput").value = val2 //displays this value to the html page
 
         var val3 = document.getElementById("tenureRange").value //gets the oninput value
         document.getElementById("tenureInput").value = val3 //displays this value to the html page
@@ -344,8 +374,7 @@
         var c = parseInt(document.getElementById("tenureInput").value)
         // var regexp = /^\d+\.\d{0,2}$/;
 
-        var array = [
-            {
+        var array = [{
                 name: "loanAmt",
                 value: a
             },
@@ -355,84 +384,69 @@
             }, {
                 name: "tenure",
                 value: c
-            }]
+            }
+        ]
 
         var trueFalseArr = []
-       
+
         $.each(array, function (index, element) {
 
             if (array[index].name == "loanAmt") {
                 if (isNaN(array[index].value)) {
                     $("#calculateBtn").attr("disabled", true);
-                    $("#errorMsg1").text("Value is not a number")
-                }
-                else if (array[index].value > 1000000) {
+                    $("#errorMsg1").text("Value is not a number");
+                } else if (array[index].value > 1000000) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg1").text("Value cannot be more than 1 million")
                     console.log("TOO MUCH")
-                }
-
-                else if (array[index].value <= 0) {
+                } else if (array[index].value <= 0) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg1").text("Value cannot be less than or equal to 0")
-                }
-                else {
+                } else {
                     console.log("valid1")
                     $("#errorMsg1").text("")
                     trueFalseArr.push("true")
                 }
 
 
-            }
-            else if (array[index].name == "interestRate") {
+            } else if (array[index].name == "interestRate") {
                 // console.log("b")
                 // console.log(array[index].value)
                 if (isNaN(array[index].value)) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg2").text("Value is not a number")
-                }
-
-                else if (array[index].value <= 0) {
+                } else if (array[index].value <= 0) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg2").text("Value cannot be less than or equal to 0")
-                }
-
-                else if (array[index].value > 20) {
+                } else if (array[index].value > 20) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg2").text("Value cannot be more than 20")
-                }
-                else {
+                } else {
                     console.log("valid2")
                     $("#errorMsg2").text("")
                     trueFalseArr.push("true")
                 }
 
-            }
-            else if (array[index].name == "tenure") {
+            } else if (array[index].name == "tenure") {
                 // console.log("c")
                 // console.log(array[index].value)
                 if (isNaN(array[index].value)) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg3").text("Value is not a number")
-                }
-
-                else if (array[index].value <= 0) {
+                } else if (array[index].value <= 0) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg3").text("Value cannot be less than 1")
-                }
-
-                else if (array[index].value > 5) {
+                } else if (array[index].value > 5) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg3").text("Value cannot be more than 5")
-                }
-                else {
+                } else {
                     console.log("valid3")
                     $("#errorMsg3").text("")
                     trueFalseArr.push("true")
                 }
 
             }
-       
+
         })
 
 
@@ -446,7 +460,7 @@
             $("#tenureRange").val(c)
 
         }
-     
+
 
     }
 
@@ -461,8 +475,11 @@
         var n = y * 12
         var result = p * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
 
-        document.getElementById("amount").innerHTML = "$" + addCommas(Math.round(result))
-        document.getElementById("description").innerHTML = "To assist you in your planning, we are pleased to provide you with a loan repayment schedule for your working capital needs. For more details, visit any of our UOB branches or <a href = 'https://forms.uob.com.sg/business/loans/apply?productCode=BB-WCL&_ga=2.197797551.1269659257.1596547628-1579856385.1594901938'> request a callback from us</a>."
+        document.getElementById("amount").innerHTML =
+            "There would be an estimate repayment of<br><span class='calcResult'>$" + addCommas(Math.round(result)) +
+            "</span> /month"
+        document.getElementById("description").innerHTML =
+            "To assist you in your planning, we are pleased to provide you with a loan repayment schedule for your working capital needs. For more details, visit any of our UOB branches or <br><a href = 'https://forms.uob.com.sg/business/loans/apply?productCode=BB-WCL&_ga=2.197797551.1269659257.1596547628-1579856385.1594901938'> request a callback from us</a>."
 
     }
     // add commas after every 3 digit from the decimal place
@@ -482,9 +499,6 @@
         var pointIndex = value.indexOf('.');
         return pointIndex >= 0 && pointIndex < value.length - x;
     }
-
-
-
 </script>
 
 </html>
