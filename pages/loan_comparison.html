@@ -88,12 +88,47 @@
 
     /* Extra large devices (large desktops, 1200px and up) */
     @media (min-width: 1200px) {}
+
+    /* styles for table */
+    .img img{
+        width: 246px;
+    }
+    .img{
+        padding: 2px !important;
+        background-color: #f6f6f6;
+    }
+
+    table {
+        margin: 10px 0 0 0;
+        width: inherit;
+    }
+
+    .tablehead {
+        background-color: #002469;
+        color: white;
+    }
+
+    .table {
+        width: auto;
+        overflow-x: auto;
+    }
+
+    .item {
+        width: 250px;
+        padding: 10%;
+    }
+
+    @media (min-width: 768px) {
+        .table {
+            overflow: unset;
+        }
+    }
 </style>
 
 <body>
     <div class="container">
         <h1>Business Loans We Offer</h1>
-        <p>Select loans to compare</p>
+        <!-- <p>Select loans to compare</p> -->
         <!-- <div class="card-deck row">
             <div class="card card-insights mb-sm-4" style="text-align: center;">
                 <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
@@ -214,8 +249,61 @@
 
 
         <!-- </div> -->
+
+        COMPARE YOUR LOANS
+        <div class = "table" id = "compareTable">
+
+        </div>
+        <!-- <div class="table">
+            <table class="mx-auto">
+                <tr class="d-flex">
+                    <td class="img">Img</td>
+                    <td class="img">Img</td>
+                    <td class="img">Img</td>
+
+                </tr>
+                <tr class="tablehead justify-content-around">
+                    <th>Spec 1</th>
+                </tr>
+                <tr class="d-flex">
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+
+                </tr>
+
+                <tr class="tablehead">
+                    <th>Spec 1</th>
+                </tr>
+                <tr class="d-flex justify-content-around">
+                    <td class="item"> Lorem</td>
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+
+                </tr>
+                <tr class="tablehead">
+                    <th>Spec 1</th>
+                </tr>
+                <tr class="d-flex justify-content-around">
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+
+                </tr>
+                <tr class="tablehead">
+                    <th>Spec 1</th>
+                </tr>
+                <tr class="d-flex justify-content-around">
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+                    <td class="item"> Lorem </td>
+                </tr>
+
+
+            </table>
+        </div> -->
         <div id="selectLoans"></div>
-        <button onclick="testingFunction()" id="testingBtn">Testing</button>
+        <button class="btn btn-primary" id="btnCompare" onclick="compareFunction()" disabled>Compare</button>
 
     </div>
 
@@ -225,6 +313,7 @@
         { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle. Facility installment of up to 7 years and Hire Purchase financing available for commercial vehicle and commercial vehicle with renewed COE. Obtain ownership of the asset upon fulfilling payment of loan installment", url: "", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "-", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
         { loanID: 1, name: "SME Equipment Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "", amount: "Financing of up to 90% of the market valuation or purchase price of your new equipment", tenure: "Up to 8 years", category: "Equipment & Vehicle", interestRate: "- Minimum interest of 4.25% for loan tenure of 4 years and below <br>- Minimum interest of 4.75% for loan tenure of more than 4 years", img: "../images/homepage/google-my-biz-728x408.jpg" },
+
         { loanID: 2, name: "Temporary Bridging Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time", url: "", amount: "-", tenure: "Up to 5 years", category: "Relief Assistance", interestRate: "Low Interest Rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
         { loanID: 3, name: "Business Property Loan", description: "Low Interest Rates on your new Business Property Loan, or when you refinance with us and higher loan quantum to help you get the most out of your property.", url: "", amount: "- Get up to 100% of your business property value that can be used to cash out as an extended loan when you refinance with us <br>- Get up to 90% of your property value or purchase price for your mortgage for new industrial / commercial property purchase", tenure: "-", category: "Property", interestRate: "Low Interest Rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
@@ -235,38 +324,37 @@
 
         { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "", amount: "Up to $1million", tenure: "Fixed monthly repayment period of up to 5 years", category: "Working Capital", interestRate: "-", img: "../images/homepage/google-my-biz-728x408.jpg" }
     ]
+    //store name of spec and property reference for loanArray
+    var specsArray = [{ spec:"Image", propertyRef: "img" }, { spec: "Name", propertyRef: "name" }, { spec : "Description", propertyRef: "description" }, { spec : "Amount", propertyRef : "amount" }, { spec : "Loan Tenure", propertyRef : "tenure" }, { spec : "Category", propertyRef : "category" }, { spec : "Interest Rate", propertyRef : "interestRate" }]
 
     var compareArray = []
+
     $(document).ready(function () {
         displayLoans()
 
-        $("#testingBtn").click(function () {
-            var favorite = [];
-            $.each($("input[name='select']:checked"), function () {
-                // favorite.push($(this).val());
-                compareArray.push(loanArray[$(this).val()])
-            });
-            console.log(compareArray)
-        });
+        // $("#btnCompare").click(function () {
+        //     $.each($("input[name='select']:checked"), function () {
+        //         // favorite.push($(this).val());
+        //         compareArray.push(loanArray[$(this).val()])
+        //     });
+        //     $("#selectLoans").hide()
+        // });
 
         $('input.checkboxClass').on('change', function (evt) {
             console.log("yeee")
-            if ($("input[name='select']:checked").length > 4) {
+            if ($("input[name='select']:checked").length >= 2 && $("input[name='select']:checked").length <= 4) {
+                $("#btnCompare").attr("disabled", false)
+            }
+            else if ($("input[name='select']:checked").length <= 1) {
+                $("#btnCompare").attr("disabled", true)
+            }
+            else if ($("input[name='select']:checked").length > 4) {
                 this.checked = false;
             }
         });
     });
 
-    //   ,amount:"" ,tenure: "", category: "", interestRate:""
-    function testingFunction() {
-        // $("").click(function(){
-        //     var favorite = [];
-        //     $.each($("input[name='select']:checked"), function(){
-        //         favorite.push($(this).val());
-        //     });
-        //     alert("My favourite sports are: " + favorite.join(", "));
-        // });
-    }
+
 
     function displayLoans() {
         var string = "<div class='card-deck'>"
@@ -278,12 +366,59 @@
             }
 
         }
-
-        $("#selectLoans").html(string)
+        $("#selectLoans").html(string);
 
     }
 
+    //change to compare table content
+    //change button to reselect
+    function compareFunction() {
+        //hide select loans thing
+        $("#selectLoans").hide()
+        //push selected loans into compareArray
+        $.each($("input[name='select']:checked"), function () {
+            // favorite.push($(this).val());
+            compareArray.push(loanArray[$(this).val()])
+        });
 
+        var compareStr = ""
+
+        $.each(specsArray, function (index, value) {
+
+            if (specsArray[index].propertyRef == "img") {
+                compareStr += ' <table class="mx-auto"><tr class="d-flex">'
+                $.each(compareArray, function (i, value) {
+                    compareStr += ' <td class="img"><img src = "' + compareArray[i].img + '"></td>'
+                })
+                compareStr += "</tr>"
+            }
+            else {
+                compareStr += '<tr class="tablehead justify-content-around"><th>' + specsArray[index].spec + '</th></tr><tr class="d-flex">'
+                $.each(compareArray, function (i, value) {
+                    // if(compareArray[i].keys specsArray[index].propertyRef)
+                    compareStr += '<td class="item">' + compareArray[i][specsArray[index].propertyRef] + '</td>'
+                })
+                compareStr += "</tr>"
+            }
+        })
+        $("#compareTable").html(compareStr);
+
+        // <tr class="tablehead justify-content-around">
+        //             <th>Spec 1</th>
+        //         </tr>
+        //         <tr class="d-flex">
+        //             <td class="item"> Lorem </td>
+        //             <td class="item"> Lorem </td>
+        //             <td class="item"> Lorem </td>
+
+        //         </tr>
+
+    }
+    //change back to select loans content
+    //clear compareArray
+    function reselectFunction() {
+        displayLoans()
+    }
 
 
 </script>
