@@ -19,28 +19,46 @@
 </head>
 
 <style>
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
   .chatbot {
     width: 60px;
     height: 60px;
     position: absolute;
     border-radius: 50%;
     border: none;
+    outline: none;
     bottom: 30px;
     right: 30px;
     z-index: 50;
     background-color: #002469;
   }
+  .chatbot:focus{
+    box-shadow: 0 !important;
+  }
+
+  .chatbot:active {
+    outline: none;
+  }
+
   .close-chatbot {
     width: 60px;
     height: 60px;
     position: absolute;
     border-radius: 50%;
     border: none;
+    outline: none;
     bottom: 30px;
     right: 30px;
     z-index: 51;
     background-color: rgba(220, 220, 220, 0.6);
     display: none;
+  }
+  .close-chatbot:focus {
+    box-shadow: 0 !important;
   }
 
   .chat-popup {
@@ -50,7 +68,12 @@
     background-color: white;
     border: black 1px solid;
     position: absolute;
-    width: 400px;
+
+  }
+
+  .chat-popup-content {
+    position: relative;
+    width: 300px;
     height: 600px;
   }
 
@@ -58,31 +81,200 @@
     background-color: #002469;
     color: white;
   }
+
+  .profilePic {
+    padding: 0.5rem 0.25rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0.5rem;
+  }
+
+  .popup-header {
+    text-align: center;
+    margin: 0.5rem;
+  }
+
+  .close-popup {
+    margin: 0.75rem;
+  }
+
+  .chat-popup-body {
+    max-height: 440px;
+    overflow: auto;
+  }
+
+  .userText {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    height: auto;
+
+  }
+
+  .userTextRight {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    word-wrap: break-word;
+    background-color: #f6f6f6;
+    border-radius: 1rem;
+    max-width: 250px;
+    margin: 5px 15px 0 0;
+  }
+
+  .tri-right::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0px;
+    left: auto;
+    top: 5px;
+    bottom: auto;
+    border: 15px solid;
+    border-color: #f6f6f6 transparent transparent transparent;
+  }
+
+  .botIcon {
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    padding: 12px 0 0 5px;
+    margin: 7px 0 0 10px;
+  }
+
+  .botText {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    height: auto;
+    max-width: 250px;
+    margin: 5px 0 0 15px;
+  }
+
+  .botTextLeft {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    color: #ffffff;
+    background-color: #002469;
+    border-radius: 1rem;
+  }
+
+  .chatbot-link {
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+  }
+
+  .chatbot-link:hover {
+    color: grey;
+  }
+
+
+  .tri-left::after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: auto;
+    left: -10px;
+    top: 4px;
+    bottom: auto;
+    border: 15px solid;
+    border-color: #002469 transparent transparent transparent;
+  }
+
+  .chat-suggestion {
+    position: absolute;
+    bottom: 54px;
+    width: 100%;
+    overflow: auto;
+    height: 40px;
+  }
+
+  .chat-suggestion-btn {
+    background-color: #002469;
+    border-radius: 30px;
+    padding: 2% 3%;
+    color: white;
+    margin: 0 1%;
+  }
+
+  .chat-popup-input {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  #chat-input {
+    width: 90%;
+    padding-left: 5px;
+    margin: 0 2%;
+  }
+
+  .chat-input-btn {
+    color: #ffffff;
+    background-color: #002469;
+    margin: 0 2%;
+  }
+
+  @media (min-width: 768px){
+    .chat-popup-content {
+    width: 400px;
+  }
+  }
+
 </style>
 
 <body>
-
-  <button class="chatbot" onclick="chatPopup()">
+<div ></div>
+  <button class="chatbot btn" onclick="chatPopup()">
     <img src="./images/elephant-icon-UOB.png">
   </button>
-  <button class="close-chatbot" id="close-chatbot" onclick="popupClose()">
-    
+  <button class="close-chatbot btn" id="close-chatbot" onclick="popupClose()">
+
   </button>
 
   <div class="chat-popup" id="chat-popup">
-    <div class="chat-popup-header d-flex">
-      <div class="text">
-        <p>Karen</p>
-        <p>Virtual Assistance Bot</p>
+    <div class="chat-popup-content">
+      <div class="chat-popup-header d-flex justify-content-between">
+        <div class="botIcon">
+          <img src="./images/elephant-icon-UOB.png" alt="">
+        </div>
+        <div class="popup-header">
+          <p>Karen</p>
+          <p>Virtual Assistance Bot</p>
+        </div>
+        <div class="close-popup" onclick="popupClose()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6" /></svg>
+        </div>
       </div>
-      <div class="close-popup">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 9l6 6 6-6" /></svg>
+      <div id="chatLog" class="chat-popup-body">
+        <div class="botText tri-left">
+          <p class="botTextLeft">Hi I am Karen and I'll take all your enquiries.</p>
+        </div>
       </div>
-    </div>
-    <div class="chat-popup-body">
-      <input id="chat-input" type="text" placeholder="Type a message here" autocomplete="off" />
+      <div class="chat-suggestion d-flex">
+        <div class="chat-suggestion-btn" onclick="suggest('Loans?')">
+          <p>Loans?</p>
+        </div>
+        <div class="chat-suggestion-btn" onclick="suggest('Calculation')">
+          <p>Calculation</p>
+        </div>
+        <div class="chat-suggestion-btn" onclick="suggest('BizSmart')">
+          <p>BizSmart</p>
+        </div>
+        <div class="chat-suggestion-btn" onclick="suggest('Hello')">
+          <p>Hello</p>
+        </div>
+      </div>
+      <div class="chat-popup-input d-flex">
+        <input id="chat-input" type="text" placeholder="Type a message here" autocomplete="off" />
+        <button class="chat-input-btn btn " onclick="submit()">Send</button>
+      </div>
     </div>
   </div>
 
@@ -90,17 +282,67 @@
 
 
 <script>
-  var cp = ""
+  // opening chatbot
   function chatPopup() {
     document.getElementById("chat-popup").style.display = "block"
     document.getElementById("close-chatbot").style.display = "block"
-
   }
-
-  function popupClose(){
+  // closing chatbot
+  function popupClose() {
     document.getElementById("chat-popup").style.display = "none"
     document.getElementById("close-chatbot").style.display = "none"
+  }
+  // array of responses
+  var know = {
+    "Hello": "hi",
+    "how are you?": "good",
+    "ok": ":)",
+    "Loans?": "Here are some useful links about loans that you can get: <a class='chatbot-link' href='https://www.uob.com.sg/business/finance/business-bundle-loan.page'>Business Loans</a>",
+    "Calculation": "Here are the links to some calculators: <a class='chatbot-link' href='https://www.uob.com.sg/business/finance/business-bundle-loan.page'>UOB Business Loan</a>",
+    "BizSmart": "This is the link to <a class='chatbot-link' href='https://www.uob.com.sg/business/BizSmart/index.html'>BizSmart</a>"
+  };
+  // submitting value
+  function submit() {
+    var user = document.getElementById("chat-input").value;
+    var user = document.getElementById("chat-input").value;
+    talk(user)
+  }
+  // replies from chatbot
+  function talk(user) {
+    document.getElementById("chatLog").innerHTML += "<div class='userText'><p class='userTextRight tri-right'>" + user +
+      "</p></div>";
+    setTimeout(function () {
+      if (user in know) {
+        document.getElementById("chatLog").innerHTML += "<div class='botText tri-left'><p class='botTextLeft'>" +
+          know[user] + "</p></div>";
+      } else {
+        document.getElementById("chatLog").innerHTML +=
+          "<div class='botText'><p class='botTextLeft tri-left'> I dont know </p></div>"
+      }
+    }, 500)
+    document.getElementById("chat-input").value = "";
+    updateScroll();
+    setTimeout(function(){
+      updateScroll();
+    },501)
+  }
+  // for pressing enter to submit
+  document.getElementById("chat-input")
+    .addEventListener("keydown", function (e) {
+      if (e.keyCode === 13) {
+        submit(e)
+      }
+    })
 
+  // suggestion button
+  function suggest(e) {
+    console.log(e);
+    talk(e)
+  }
+  // auto scroll for chatbot
+  function updateScroll() {
+    var scrollchat = document.getElementById('chatLog');
+    scrollchat.scrollTop = scrollchat.scrollHeight
   }
 </script>
 
