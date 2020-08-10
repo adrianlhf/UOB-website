@@ -1,6 +1,25 @@
+h5{
+    font-weight: bold;
+}
+
+
+hr{
+    margin-top: 50px;
+}
+
+.notbold{
+    font-weight: normal;
+    
+}
+
+.nobulletpoint{
+    list-style: none;
+}
+
 
 body {
     font-family: "open sans", Arial, Helvetica, sans-serif;
+
 }
 
 h1 {
@@ -20,6 +39,14 @@ h1 {
     background-color: #002469;
     color: white;
     font-size: 14px;
+}
+
+#webapplynowbutton{
+    position: absolute;
+    bottom: 15%;
+    left: 6%;
+    font-size: 12px;
+
 }
 
 .btn-1:focus,
@@ -63,7 +90,6 @@ h1 {
     bottom: 0;
 }
 
-
 /* end of banner styles */
 
 /*Content Navigation Bar Styles */
@@ -92,6 +118,68 @@ h1 {
 /* end of content navbar styles */
 
 
+  /* Styles for FAQ */
+  .accordion .opened::before {
+    content: "-";
+    padding: 0px 15px;
+    border: 1px solid #002469;
+    border-radius: 50%;
+    color: white;
+    background-color: #002469;
+    font-size: 30px;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+.accordion .collapsed::before {
+    /* symbol for "collapsed" panels */
+    content: "+";
+    padding: 0px 11px;
+    border: 1px solid #002469;
+    border-radius: 50%;
+    color: #002469;
+    background-color: white;
+    font-size: 30px;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+.acc-text {
+    padding-left: 1.95em;
+}
+
+/* end of styles for FAQ */
+
+/*  Styles for the layouts */
+    
+    /* layout 2 and slider 1 styles */
+    .layout2-title,
+    .slider-title {
+        font-size: 16px;
+    }
+
+    .layout2-p,
+    .slider-p {
+        font-size: 13px;
+    }
+
+    /* end of layout 2 and slider 1 styles */
+
+    
+    .card-deck {
+        display: block;
+    }
+
+    .card-deck .card {
+        margin-bottom: 15px;
+    }
+
+      /* styles for table */
+      .table-blue {
+        background-color: #002469;
+        color: white;
+    }
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 375px) {
     .main-banner .description {
@@ -116,6 +204,9 @@ h1 {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
+
+   
+
     h1 {
         font-size: 26px;
     }
@@ -135,9 +226,6 @@ h1 {
     }
 
     /* Styles for banner */
-    /* .main-banner .description .heading2 {
-        font-size: 22px;
-    } */
 
     .main-banner .description {
         position: absolute;
@@ -165,12 +253,42 @@ h1 {
     .main-banner .description {
         top: 10%;
     }
+
+    #webapplynowbutton{
+        position: absolute;
+        bottom: 20%;
+        left: 6%;
+        font-size: 16px;
+    }
+
+    .card-deck {
+        display: flex;
+    }
+
+    .card-deck .card {
+        margin-bottom: 0px;
+    }
+
+    .layout3 {
+        width: 75%;
+    }
+
+    .layout3-card {
+        width: 25%;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .main-banner .description {
         top: 18%;
+    }
+
+    #webapplynowbutton{
+        position: absolute;
+        bottom: 22%;
+        left: 6%;
+        font-size: 20px;
     }
 }
 
@@ -185,7 +303,10 @@ h1 {
         display: block;
 
     }
+
+    
 }
+
 
 /* Multi Item Carousel */
 .carousel-inner .carousel-item.active,
@@ -214,6 +335,11 @@ h1 {
 
 .carousel-a {
     z-index: 0;
+}
+
+ /* Change image sizing */
+ .MultiCarousel .MultiCarousel-inner .img-50 {
+    width: 50%;
 }
 
 /* end of multi item carousel */

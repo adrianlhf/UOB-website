@@ -47,14 +47,14 @@
 
 /* Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {
-  .footer-content ul {
-    text-align: left;
+  @media (min-width: 768px) {
+    .footer-content ul {
+      text-align: left;
+    }
+    .socialmediapictures {
+      text-align: right;
+    }
+    .socialmedialinks {
+      text-align: right !important;
+    }
   }
-  .socialmediapictures {
-    text-align: right;
-  }
-  .socialmedialinks {
-    text-align: right !important;
-  }
-}
