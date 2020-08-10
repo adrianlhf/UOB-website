@@ -97,6 +97,7 @@ h1 {
     font-size: 12px;
     font-weight: bold;
     color: #002469;
+    overflow-wrap: break-word;
 }
 
 .nav-heading li {
@@ -114,6 +115,11 @@ h1 {
 #myScrollspy .active {
     border-bottom: 5px solid #002469;
 }
+#myScrollspy .col-3{
+    padding-left: 0;
+    padding-right: 0;
+}
+
 
 /* end of content navbar styles */
 
@@ -166,11 +172,11 @@ h1 {
     /* end of layout 2 and slider 1 styles */
 
     
-    .layout2.card-deck, .layout3.card-deck {
+    .layout2.card-deck, .layout3.card-deck, .layout4.card-deck, .layout5.card-deck{
         display: block;
     }
 
-    .layout2.card-deck .card, .layout3.card-deck .card {
+    .layout2.card-deck .card, .layout3.card-deck .card, .layout4.card-deck .card, .layout5.card-deck .card {
         margin-bottom: 15px;
     }
 
@@ -261,11 +267,11 @@ h1 {
         font-size: 16px;
     }
 
-    .layout2.card-deck, .layout3.card-deck {
+    .layout2.card-deck, .layout3.card-deck, .layout4.card-deck, .layout5.card-deck {
         display: flex;
     }
 
-    .layout2.card-deck .card, .layout3.card-deck .card{
+    .layout2.card-deck .card, .layout3.card-deck .card, .layout4.card-deck .card, .layout5.card-deck .card{
         margin-bottom: 0px;
     }
 
