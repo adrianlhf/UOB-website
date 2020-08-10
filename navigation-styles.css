@@ -235,6 +235,9 @@ body {
         margin-left:0; 
         margin-right: 0;
     }
+    .dropdown-menu {
+        margin-top: 0;
+    }
     .dropdown-menu li{
         position: relative;
     }
@@ -280,7 +283,7 @@ body {
         width: 70px;
     }
 
-    .active{
+    #nav-bg .active{
         border-bottom: red 2px solid;
     }
 }
