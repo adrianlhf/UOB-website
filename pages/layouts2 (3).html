@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Carousel scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        font-family: "open sans", Arial, Helvetica, sans-serif;
+    }
+
+    .grey-section {
+        background-color: #EEEEEE;
+        width: 100%;
+        padding: 2.5% 0;
+    }
+
+    h1 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .btn-1 {
+        background-color: #002469;
+        color: white;
+        font-size: 14px;
+    }
+
+    .btn-1:focus,
+    .btn-2:focus {
+        box-shadow: none;
+    }
+
+    .btn-1:hover {
+        background-color: #001438;
+        color: white;
+    }
+
+    .btn-2 {
+        border-color: #002469;
+        color: #002469;
+        font-size: 14px;
+    }
+
+    .btn-2:hover {
+        background-color: #002469;
+        color: white;
+    }
+
+    /* Styles for all section */
+    .section {
+        padding-top: 6%;
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 375px) {}
+
+    @media (min-width: 576px) {}
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+
+        h1 {
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        /* Styles for all content section */
+        .section {
+            padding-top: 4%;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {}
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {}
+</style>
+<style>
+    /* Double check the font sizing please thanks */
+    /* i nvr add breakpoint font size cuz idk */
+
+    /* layout 2 and slider 1 styles */
+    .layout2-title,
+    .slider-title {
+        font-size: 16px;
+    }
+
+    .layout2-p,
+    .slider-p {
+        font-size: 13px;
+    }
+
+    /* end of layout 2 and slider 1 styles */
+
+
+    .card-deck {
+        display: block;
+    }
+
+    .card-deck .card {
+        margin-bottom: 15px;
+    }
+
+    /* slider 1 styles */
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+
+        /* Multi item carousel styles */
+        /* to display 3 */
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(33.333%);
+        }
+
+        .carousel-inner .carousel-item-left.active,
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-33.333%);
+        }
+
+    }
+
+    /* Card deck styles */
+    @media (min-width: 992px) {
+        .card-deck {
+            display: flex;
+        }
+
+        .card-deck .card {
+            margin-bottom: 0px;
+        }
+
+        .layout3 {
+            width: 75%;
+        }
+
+        .layout3-card {
+            width: 25%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .carousel-inner .carousel-item>div {
+            display: none;
+
+        }
+
+        .carousel-inner .carousel-item>div:first-child {
+            display: block;
+
+        }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+
+    }
+
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left {
+        transform: translateX(0);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        text-align: center;
+        vertical-align: middle;
+        height: 25px;
+        width: 25px;
+    }
+
+    .c-icon {
+        background-color: #002469;
+        padding: 10px;
+    }
+
+    /* end of slider 1 styles */
+
+
+    /* Slider 2 Styles */
+    .MultiCarousel {
+        overflow: hidden;
+        padding: 15px 40px;
+        width: 100%;
+        position: relative;
+    }
+
+    .MultiCarousel .MultiCarousel-inner {
+        transition: 1s ease all;
+        float: left;
+    }
+
+    .MultiCarousel .MultiCarousel-inner .item {
+        float: left;
+    }
+
+    .MultiCarousel .MultiCarousel-inner .item>div {
+        text-align: center;
+        /* padding:10px; 
+    margin:10px;  */
+        /* color:#666; */
+        color: black;
+    }
+
+    .MultiCarousel .MultiCarousel-inner .item p {
+        width: 80%;
+        margin: auto;
+        padding: auto;
+    }
+
+    .MultiCarousel .leftLst,
+    .MultiCarousel .rightLst {
+        position: absolute;
+        border-radius: 50%;
+        top: calc(50% - 20px);
+        background: #00377bad;
+        border: none;
+        padding: 10px;
+    }
+
+    .MultiCarousel .leftLst:hover,
+    .MultiCarousel .rightLst:hover {
+        background: #00377B;
+    }
+
+    .MultiCarousel .leftLst {
+        left: 0;
+    }
+
+    .MultiCarousel .rightLst {
+        right: 0;
+    }
+
+    .MultiCarousel .leftLst.over,
+    .MultiCarousel .rightLst.over {
+        pointer-events: none;
+        background: #ccc;
+    }
+
+    /* Change image sizing */
+    .MultiCarousel .MultiCarousel-inner .img-50 {
+        width: 50%;
+    }
+
+    /* end of styles for slider 2 */
+
+
+    /* Styles for FAQ */
+    .accordion .opened::before {
+        content: "-";
+        padding: 0px 15px;
+        border: 1px solid #002469;
+        border-radius: 50%;
+        color: white;
+        background-color: #002469;
+        font-size: 30px;
+        font-weight: normal;
+        margin-right: 20px;
+    }
+
+    .accordion .collapsed::before {
+        /* symbol for "collapsed" panels */
+        content: "+";
+        padding: 0px 11px;
+        border: 1px solid #002469;
+        border-radius: 50%;
+        color: #002469;
+        background-color: white;
+        font-size: 30px;
+        font-weight: normal;
+        margin-right: 20px;
+    }
+
+    .acc-text {
+        padding-left: 1.95em;
+    }
+
+    /* end of styles for FAQ */
+
+
+    /* styles for table */
+    .table-blue {
+        background-color: #002469;
+        color: white;
+    }
+</style>
+
+<body class="container">
+
+    <!-- layout 4 -->
+    <div class="section">
+        <h1> Layout 4 </h1><br>
+
+        <!-- copy from here -->
+
+        <div class="card-deck text-center mx-auto">
+            <div class="card rounded-0">
+                <img class="img-fluid w-100" src="images/image1.jpg" alt="icon1">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </div>
+                <div class="card-footer bg-white border-0"><a href="#" class="btn btn-1">Apply Now</a></div>
+            </div>
+            <div class="card rounded-0">
+                <img class="img-fluid w-100" src="images/image2.jpg" alt="icon2">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </div>
+                <div class="card-footer bg-white border-0"><a href="#" class="btn btn-1">Apply Now</a></div>
+            </div>
+            <div class="card rounded-0">
+                <img class="img-fluid w-100" src="images/image2.jpg" alt="icon2">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                </div>
+                <div class="card-footer bg-white border-0"><a href="#" class="btn btn-1">Apply Now</a></div>
+            </div>
+            <div class="card rounded-0">
+                <img class="img-fluid w-100" src="images/image2.jpg" alt="icon2">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+
+                    </p>
+                </div>
+                <div class="card-footer bg-white border-0"><a href="#" class="btn btn-1">Apply Now</a></div>
+            </div>
+        </div>
+
+        <!-- end copy here -->
+    </div>
+
+    <!-- layout 5 -->
+    <div class="section">
+        <h1> Layout 5 </h1>
+        <h4 class="text-center">Copy css</h4><br>
+
+        <!-- copy from here -->
+
+        <div class="card-deck text-left text-lg-center">
+
+            <div class="card rounded-0 mb-3">
+                <div class="row">
+                    <div class="col-lg-12 col-3">
+                        <img class="img-fluid mx-auto pt-4 pl-4 pl-0" src="images/bankingconvenience.jpg" alt="icon1">
+                    </div>
+                    <div class="col-lg-12 col-9">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                            <p class="card-text layout2-p">
+                                top content <br>
+                                Bottom content Lorem ipsum dolor sit amet
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="card rounded-0 mb-3">
+                <div class="row">
+                    <div class="col-lg-12 col-3">
+                        <img class="img-fluid mx-auto pt-4 pl-4 pl-0" src="images/bankingconvenience.jpg" alt="icon1">
+                    </div>
+                    <div class="col-lg-12 col-9">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                            <p class="card-text layout2-p">
+                                top content <br>
+                                Bottom content Lorem ipsum dolor sit amet
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="w-100 d-none d-lg-block"></div>
+            <div class="card rounded-0 mb-3">
+                <div class="row">
+                    <div class="col-lg-12 col-3">
+                        <img class="img-fluid mx-auto pt-4 pl-4 pl-0" src="images/bankingconvenience.jpg" alt="icon1">
+                    </div>
+                    <div class="col-lg-12 col-9">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                            <p class="card-text layout2-p">
+                                top content <br>
+                                Bottom content Lorem ipsum dolor sit amet
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="card rounded-0 mb-3">
+                <div class="row">
+                    <div class="col-lg-12 col-3">
+                        <img class="img-fluid mx-auto pt-4 pl-4 pl-0" src="images/bankingconvenience.jpg" alt="icon1">
+                    </div>
+                    <div class="col-lg-12 col-9">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                            <p class="card-text layout2-p">
+                                top content <br>
+                                Bottom content Lorem ipsum dolor sit amet
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+            
+      
+
+            <!-- end copy here -->
+
+        </div>
+    </div>
+    <br><br><br><br>
+</body>

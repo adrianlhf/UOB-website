@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Carousel scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<!-- breakpoint template -->
+<style>
+    @media (min-width: 375px) {}
+
+    @media (min-width: 576px) {}
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {}
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {}
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {}
+</style>
+
+<!-- styles that should be in the general summary page already -->
+<style>
+    body {
+        font-family: "open sans", Arial, Helvetica, sans-serif;
+    }
+
+    .grey-section {
+        background-color: #EEEEEE;
+        width: 100%;
+        padding: 2.5% 0;
+    }
+
+    h1 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .btn-1 {
+        background-color: #002469;
+        color: white;
+        font-size: 14px;
+    }
+
+    .btn-1:focus,
+    .btn-2:focus {
+        box-shadow: none;
+    }
+
+    .btn-1:hover {
+        background-color: #001438;
+        color: white;
+    }
+
+    .btn-2 {
+        border-color: #002469;
+        color: #002469;
+        font-size: 14px;
+    }
+
+    .btn-2:hover {
+        background-color: #002469;
+        color: white;
+    }
+
+    /* Styles for all section */
+    .section {
+        padding-top: 6%;
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 375px) {}
+
+    @media (min-width: 576px) {}
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+
+        h1 {
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        /* Styles for all content section */
+        .section {
+            padding-top: 4%;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {}
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {}
+</style>
+
+<body class="container">
+    <h1> CHECK FOR FONT SIZING, idk whats the standard sizing?? Change according to the breakpoints ty </h1>
+    <!-- Layout 1 w 1 button -->
+    <div class="section">
+        <h1>Layout 1 w 1 button</h1>
+        <h4 class="text-center">If udw this btn color, use class="btn-1" instead of 'btn-2'</h4><br>
+
+        <!-- copy from here -->
+
+        <div class="row">
+            <img src="images/mobilecontentimage.jpg" alt="" class="img-fluid w-100 col-md-6 col-lg-5">
+            <div class="text-center text-md-left pt-3 px-3 p-md-0 pl-md-3 col-md-6 col-lg-7">
+                <h4>Header</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <a class="btn-2 btn float-right float-md-left" target="_blank" href="#"> button
+                </a>
+            </div>
+        </div>
+
+        <!-- end copy here -->
+    </div>
+    <!-- end of layout 1 w 1 button -->
+
+    <!-- layout 1 w 2 buttons -->
+    <div class="section">
+        <h1>Layout 1 w 2 button</h1>
+        <h4 class="text-center">If udw this btn color, use class="btn-1" instead of 'btn-2'</h4><br>
+
+        <!-- copy from here -->
+
+        <div class="row">
+            <img src="images/mobilecontentimage.jpg" alt="" class="img-fluid w-100 col-md-6 col-lg-5">
+            <div class="text-center text-md-left pt-3 px-3 p-md-0 pl-md-3 col-md-6 col-lg-7">
+                <h4>Header</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <a class="btn-2 btn float-right float-md-none ml-2 ml-md-0 mr-md-2" target="_blank" href="#"> button
+                </a>
+                <a class="btn-2 btn float-right float-md-none" target="_blank" href="#"> button2
+                </a>
+            </div>
+        </div>
+
+        <!-- end copy here -->
+    </div>
+
+
+    <!-- Layout 2 -->
+    <div class="section">
+        <h1> Layout 2 </h1>
+        <h4 class="text-center">Copy css</h4><br>
+
+        <!-- copy from here -->
+
+        <div class="card-deck text-center">
+            <div class="card rounded-0">
+                <img class="img-fluid mx-auto pt-4" src="images/bankingconvenience.jpg" alt="icon1">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text layout2-p">
+                        top content <br>
+                        Bottom content Lorem ipsum dolor sit amet
+                    </p>
+                </div>
+            </div>
+
+            <div class="card rounded-0">
+                <img class="img-fluid mx-auto pt-4" src="images/bankinghotline.jpg" alt="icon2">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text layout2-p">
+                        top content <br>
+                        Bottom content Lorem ipsum dolor sit amet
+                    </p>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <img class="img-fluid mx-auto pt-4" src="images/bestsmebank.jpg" alt="icon3">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text layout2-p">
+                        top content <br>
+                        Bottom content Lorem ipsum dolor sit amet
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- end copy here -->
+
+    </div>
+
+
+    <!-- Layout 3 -->
+    <div class="section">
+        <h1> Layout 3 </h1><br>
+
+        <!-- copy from here -->
+
+        <div class="card-deck text-center mx-auto layout3">
+            <div class="card rounded-0 layout3-card">
+                <img class="img-fluid mx-auto pt-4 w-75" src="images/business-plus-card.png" alt="icon1">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="card-footer bg-white border-0 text-right"><a href="#">Learn More</a></div>
+                </div>
+            </div>
+
+            <div class="card rounded-0 layout3-card">
+                <img class="img-fluid mx-auto pt-4 w-75" src="images/business-plus-card.png" alt="icon2">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="card-footer bg-white border-0 text-right"><a href="#">Learn More</a></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end copy here -->
+    </div>
+
+
+    <!-- Slider 1 -->
+    <!-- Responsive, have transition, a slide w loops (1st item to last to 1st again) -->
+    <div class="section">
+        <h1> Slider 1</h1>
+        <h4 class="text-center">Make sure to make content same length because this slider i cant make it such that everything same height</h4>
+        <h5 class="text-center font-weight-bold">Take css (u should have copied 2 parts of css, 1 on text size, 1 on
+            slider styles), javascript for this</h4>
+            <br>
+
+            <!-- copy from here  -->
+
+            <div class="row mx-auto my-auto text-center">
+                <div id="carousel2" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner w-100" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="col-md-4">
+                                <div class="card bg-white">
+                                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg"
+                                        alt="icon">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold slider-title">Card Title 1</h4>
+                                        <p class="card-text slider-p">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore
+                                            et dolore magna aliqua.
+                                        </p>
+                                        <div class="card-footer bg-white border-0 text-right"><a href="#">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card bg-white">
+                                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg"
+                                        alt="icon">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold slider-title">Card Title 1</h4>
+                                        <p class="card-text slider-p">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore
+                                            et dolore magna aliqua.
+                                        </p>
+                                        <div class="card-footer bg-white border-0 text-right"><a href="#">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card bg-white">
+                                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg"
+                                        alt="icon">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold slider-title">Card Title 1</h4>
+                                        <p class="card-text slider-p">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore
+                                            et dolore magna aliqua.
+                                        </p>
+                                        <div class="card-footer bg-white border-0 text-right"><a href="#">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card bg-white">
+                                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg"
+                                        alt="icon">
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold slider-title">Card Title 1</h4>
+                                        <p class="card-text slider-p">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore
+                                            et dolore magna aliqua.
+                                        </p>
+                                        <div class="card-footer bg-white border-0 text-right"><a href="#">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev w-auto" href="#carousel2" role="button" data-slide="prev">
+                        <div class="c-icon rounded-circle">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
+                        </div>
+                    </a>
+                    <a class="carousel-control-next w-auto" href="#carousel2" role="button" data-slide="next">
+                        <div class="c-icon rounded-circle">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- End copy here -->
+
+
+
+
+
+    </div>
+
+
+    <!-- slider 2 -->
+    <!-- Responsive, no transition, static, ends at last cant loop back to first item -->
+    <div class="section">
+        <h1>Slider 2</h1>
+        <h4 class="text-center">Copy CSS, Javascript</h4><br>
+
+        <!-- copy from here  -->
+
+        <div class="MultiCarousel" data-items="1,2,3,4" data-slide="1" id="MultiCarousel" data-interval="1000">
+            <div class="MultiCarousel-inner card-deck">
+                <div class="item card">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg" alt="icon">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold slider-title">Card Title 1</h4>
+                        <p class="card-text slider-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-white text-right border-top-0"><a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="item card">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg" alt="icon">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold slider-title">Card Title 2</h4>
+                        <p class="card-text slider-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-white text-right border-top-0"><a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="item card">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg" alt="icon">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold slider-title">Card Title 3</h4>
+                        <p class="card-text slider-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-white text-right border-top-0"><a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="item card">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg" alt="icon">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold slider-title">Card Title 4</h4>
+                        <p class="card-text slider-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-white text-right border-top-0"><a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="item card">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="images/bankingconvenience.jpg" alt="icon">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold slider-title">Card Title 5</h4>
+                        <p class="card-text slider-p">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore
+                            et dolore magna aliqua.
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-white text-right border-top-0"><a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary leftLst"><span class="carousel-control-prev-icon"></span></button>
+            <button class="btn btn-primary rightLst"><span class="carousel-control-next-icon"></span></button>
+
+        </div>
+
+        <!-- end copy here -->
+    </div>
+
+
+    <!-- Faq layout -->
+    <div class="section">
+        <h1>FAQ Layout</h1>
+        <h4 class="text-center">Copy CSS</h4><br>
+
+        <!-- Start Copy from here  -->
+        <div id="accordion" role="tablist" class="accordion">
+            <div class="card border border-top-0 border-left-0 border-right-0">
+                <div class="card-header border-0 bg-white row" role="tab">
+                    <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                        data-toggle="collapse" href="#collapse1" aria-expanded="false">
+                    </a>
+                    <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What is your question?</h5>
+                </div>
+
+                <div id="collapse1" class="collapse row" role="tabpanel" data-parent="#accordion">
+                    <span class="col-2 col-lg-1"></span>
+                    <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border border-top-0 border-left-0 border-right-0">
+                <div class="card-header border-0 bg-white row" role="tab">
+                    <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                        data-toggle="collapse" href="#collapse2" aria-expanded="false">
+                    </a>
+                    <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What is your question?</h5>
+                </div>
+
+                <div id="collapse2" class="collapse row" role="tabpanel" data-parent="#accordion">
+                    <span class="col-2 col-lg-1"></span>
+                    <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border border-top-0 border-left-0 border-right-0">
+                <div class="card-header border-0 bg-white row" role="tab">
+                    <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                        data-toggle="collapse" href="#collapse3" aria-expanded="false">
+                    </a>
+                    <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What is your question?</h5>
+                </div>
+
+                <div id="collapse3" class="collapse row" role="tabpanel" data-parent="#accordion">
+                    <span class="col-2 col-lg-1"></span>
+                    <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border border-top-0 border-left-0 border-right-0">
+                <div class="card-header border-0 bg-white row" role="tab">
+                    <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                        data-toggle="collapse" href="#collapse4" aria-expanded="false">
+                    </a>
+                    <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What is your question?</h5>
+                </div>
+
+                <div id="collapse4" class="collapse row" role="tabpanel" data-parent="#accordion">
+                    <span class="col-2 col-lg-1"></span>
+                    <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border border-top-0 border-left-0 border-right-0">
+                <div class="card-header border-0 bg-white row" role="tab">
+                    <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                        data-toggle="collapse" href="#collapse5" aria-expanded="false">
+                    </a>
+                    <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What is your question?</h5>
+                </div>
+
+                <div id="collapse5" class="collapse row" role="tabpanel" data-parent="#accordion">
+                    <span class="col-2 col-lg-1"></span>
+                    <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- this must be the last item, add more above this -->
+            <div class="card border-0">
+                <div class="card-header border-0 bg-white row" role="tab">
+                    <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                        data-toggle="collapse" href="#collapselast" aria-expanded="false">
+                    </a>
+                    <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What is your question?</h5>
+                </div>
+
+                <div id="collapselast" class="collapse row" role="tabpanel" data-parent="#accordion">
+                    <span class="col-2 col-lg-1"></span>
+                    <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end copy here -->
+
+    </div>
+
+    <!-- table layout 1-->
+    <div class="section">
+        <h1>Table Layout 1</h1>
+        <h4 class="text-center">Copy CSS</h4>
+
+        <!-- copy from here -->
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <tbody>
+                    <tr>
+                        <td class="table-blue">column 1</td>
+                        <td>column 2</td>
+                    </tr>
+                    <tr>
+                        <td class="table-blue">column 1</td>
+                        <td>column 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- end copy here  -->
+
+    </div>
+
+    <!-- table layout 2 -->
+    <div class="section">
+        <h1>Table Layout 2</h1>
+        <h4 class="text-center">Copy CSS</h4>
+
+        <!-- copy from here -->
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr class="table-blue">
+                        <th scope="col">Column 1 Header</th>
+                        <th scope="col">Column 2 Header</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>column 1</td>
+                        <td>column 2</td>
+                    </tr>
+                    <tr>
+                        <td>column 1</td>
+                        <td>column 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- end copy here  -->
+
+        <div class="card-deck text-center mx-auto">
+            <div class="card rounded-0">
+                <img class="img-fluid w-100" src="images/image1.jpg" alt="icon1">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="card-footer bg-white border-0 p-0"><a href="#" class="btn btn-1">Apply Now</a></div>
+                </div>
+            </div>
+
+            <div class="card rounded-0">
+                <img class="img-fluid w-100" src="images/image2.jpg" alt="icon2">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="card-footer bg-white border-0 p-0"><a href="#" class="btn btn-1">Apply Now</a></div>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <img class="img-fluid w-100" src="images/image2.jpg" alt="icon2">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="card-footer bg-white border-0 p-0"><a href="#" class="btn btn-1">Apply Now</a></div>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <img class="img-fluid w-100" src="images/image2.jpg" alt="icon2">
+                <div class="card-body">
+                    <h4 class="card-title font-weight-bold layout2-title">Card Title 1</h4>
+                    <p class="card-text text-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+                    <div class="card-footer bg-white border-0 p-0"><a href="#" class="btn btn-1">Apply Now</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <br><br><br><br><br><br><br><br>
+</body>
+
+
+<!-- Styles for the layouts -->
+<style>
+    /* Double check the font sizing please thanks */
+    /* i nvr add breakpoint font size cuz idk */
+
+    /* layout 2 and slider 1 styles */
+    .layout2-title,
+    .slider-title {
+        font-size: 16px;
+    }
+
+    .layout2-p,
+    .slider-p {
+        font-size: 13px;
+    }
+
+    /* end of layout 2 and slider 1 styles */
+
+
+    .card-deck {
+        display: block;
+    }
+
+    .card-deck .card {
+        margin-bottom: 15px;
+    }
+
+    /* slider 1 styles */
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+
+        /* Multi item carousel styles */
+        /* to display 3 */
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(33.333%);
+        }
+
+        .carousel-inner .carousel-item-left.active,
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-33.333%);
+        }
+
+    }
+
+    /* Card deck styles */
+    @media (min-width: 992px) {
+        .card-deck {
+            display: flex;
+        }
+
+        .card-deck .card {
+            margin-bottom: 0px;
+        }
+
+        .layout3 {
+            width: 75%;
+        }
+
+        .layout3-card {
+            width: 25%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .carousel-inner .carousel-item>div {
+            display: none;
+
+        }
+
+        .carousel-inner .carousel-item>div:first-child {
+            display: block;
+
+        }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+
+    }
+
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left {
+        transform: translateX(0);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        text-align: center;
+        vertical-align: middle;
+        height: 25px;
+        width: 25px;
+    }
+
+    .c-icon {
+        background-color: #002469;
+        padding: 10px;
+    }
+
+    /* end of slider 1 styles */
+
+
+    /* Slider 2 Styles */
+    .MultiCarousel {
+        overflow: hidden;
+        padding: 15px 40px;
+        width: 100%;
+        position: relative;
+    }
+
+    .MultiCarousel .MultiCarousel-inner {
+        transition: 1s ease all;
+        float: left;
+    }
+
+    .MultiCarousel .MultiCarousel-inner .item {
+        float: left;
+    }
+
+    .MultiCarousel .MultiCarousel-inner .item>div {
+        text-align: center;
+        /* padding:10px; 
+    margin:10px;  */
+        /* color:#666; */
+        color: black;
+    }
+
+    .MultiCarousel .MultiCarousel-inner .item p {
+        width: 80%;
+        margin: auto;
+        padding: auto;
+    }
+
+    .MultiCarousel .leftLst,
+    .MultiCarousel .rightLst {
+        position: absolute;
+        border-radius: 50%;
+        top: calc(50% - 20px);
+        background: #00377bad;
+        border: none;
+        padding: 10px;
+    }
+
+    .MultiCarousel .leftLst:hover,
+    .MultiCarousel .rightLst:hover {
+        background: #00377B;
+    }
+
+    .MultiCarousel .leftLst {
+        left: 0;
+    }
+
+    .MultiCarousel .rightLst {
+        right: 0;
+    }
+
+    .MultiCarousel .leftLst.over,
+    .MultiCarousel .rightLst.over {
+        pointer-events: none;
+        background: #ccc;
+    }
+
+    /* Change image sizing */
+    .MultiCarousel .MultiCarousel-inner .img-50 {
+        width: 50%;
+    }
+
+    /* end of styles for slider 2 */
+
+
+    /* Styles for FAQ */
+    .accordion .opened::before {
+        content: "-";
+        padding: 0px 15px;
+        border: 1px solid #002469;
+        border-radius: 50%;
+        color: white;
+        background-color: #002469;
+        font-size: 30px;
+        font-weight: normal;
+        margin-right: 20px;
+    }
+
+    .accordion .collapsed::before {
+        /* symbol for "collapsed" panels */
+        content: "+";
+        padding: 0px 11px;
+        border: 1px solid #002469;
+        border-radius: 50%;
+        color: #002469;
+        background-color: white;
+        font-size: 30px;
+        font-weight: normal;
+        margin-right: 20px;
+    }
+
+    .acc-text {
+        padding-left: 1.95em;
+    }
+
+    /* end of styles for FAQ */
+
+
+    /* styles for table */
+    .table-blue {
+        background-color: #002469;
+        color: white;
+    }
+</style>
+
+
+<!-- script for sliders -->
+<script>
+    // Script for slider 1
+    $('#carousel2').carousel({
+        interval: 4000
+    })
+
+    $('.carousel .carousel-item').each(function () {
+        var minPerSlide = 3;
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < minPerSlide; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    // end of script for slider 1
+
+
+    // script for slider 2
+    // Code for multi item carousel - Products & Services section
+    $(document).ready(function () {
+        var itemsMainDiv = ('.MultiCarousel');
+        var itemsDiv = ('.MultiCarousel-inner');
+        var itemWidth = "";
+
+        $('.leftLst, .rightLst').click(function () {
+            var condition = $(this).hasClass("leftLst");
+            if (condition)
+                click(0, this);
+            else
+                click(1, this)
+        });
+
+        ResCarouselSize();
+
+        $(window).resize(function () {
+            ResCarouselSize();
+        });
+
+        //this function define the size of the items
+        function ResCarouselSize() {
+            var incno = 0;
+            var dataItems = ("data-items");
+            var itemClass = ('.item');
+            var id = 0;
+            var btnParentSb = '';
+            var itemsSplit = '';
+            var sampwidth = $(itemsMainDiv).width();
+            var bodyWidth = $('body').width();
+            $(itemsDiv).each(function () {
+                id = id + 1;
+                var itemNumbers = $(this).find(itemClass).length;
+                btnParentSb = $(this).parent().attr(dataItems);
+                itemsSplit = btnParentSb.split(',');
+                $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+                if (bodyWidth >= 1200) {
+                    incno = itemsSplit[3];
+                    itemWidth = sampwidth / incno;
+                }
+                else if (bodyWidth >= 992) {
+                    incno = itemsSplit[2];
+                    itemWidth = sampwidth / incno;
+                }
+                else if (bodyWidth >= 768) {
+                    incno = itemsSplit[1];
+                    itemWidth = sampwidth / incno;
+                }
+                else {
+                    incno = itemsSplit[0];
+                    itemWidth = sampwidth / incno;
+                }
+                $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+                $(this).find(itemClass).each(function () {
+                    $(this).outerWidth(itemWidth);
+                });
+
+                $(".leftLst").addClass("over");
+                $(".rightLst").removeClass("over");
+            });
+        }
+
+
+        //this function used to move the items
+        function ResCarousel(e, el, s) {
+            var leftBtn = ('.leftLst');
+            var rightBtn = ('.rightLst');
+            var translateXval = '';
+            var divStyle = $(el + ' ' + itemsDiv).css('transform');
+            var values = divStyle.match(/-?[\d\.]+/g);
+            var xds = Math.abs(values[4]);
+            if (e == 0) {
+                translateXval = parseInt(xds) - parseInt(itemWidth * s);
+                $(el + ' ' + rightBtn).removeClass("over");
+
+                if (translateXval <= itemWidth / 2) {
+                    translateXval = 0;
+                    $(el + ' ' + leftBtn).addClass("over");
+                }
+            }
+            else if (e == 1) {
+                var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+                translateXval = parseInt(xds) + parseInt(itemWidth * s);
+                $(el + ' ' + leftBtn).removeClass("over");
+
+                if (translateXval >= itemsCondition - itemWidth / 2) {
+                    translateXval = itemsCondition;
+                    $(el + ' ' + rightBtn).addClass("over");
+                }
+            }
+            $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+        }
+
+        //It is used to get some elements from btn
+        function click(ell, ee) {
+            var Parent = "#" + $(ee).parent().attr("id");
+            var slide = $(Parent).attr("data-slide");
+            ResCarousel(ell, Parent, slide);
+        }
+
+    });
+
+//end of script for slider 2
+</script>
