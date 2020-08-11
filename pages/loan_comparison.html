@@ -7,12 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <!-- Carousel scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <title>Loan Comparison</title>
+    <title>UOB Commercial Property Loan | Business Property Loan</title>
     <link rel="stylesheet" href="../styles/navigation-styles.css">
     <link rel="stylesheet" href="../styles/c-styles.css">
     <link rel="stylesheet" href="../styles/footer-styles.css">
@@ -39,7 +42,7 @@
         font-size: 14px;
     }
 
-
+    /* for loans */
     .card-deck {
         display: flex;
         flex-flow: row wrap;
@@ -60,6 +63,44 @@
         background-color: #011a49;
     }
 
+    /* Hide stuff */
+    .afterCompare {
+        display: none;
+    }
+
+    /* styles for stickyBtm */
+    .stickyBtm {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 62px;
+        background-color: #eeeeee;
+        color: white;
+        text-align: right;
+
+    }
+
+    .stickyBtmBtn {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin-top: 13.5px;
+        margin-right: 10%;
+
+    }
+
+    /* compare instruction */
+    .compareInstructions {
+        padding: 2%;
+        text-align: center;
+    }
+
+    .compareInstructions img {
+        margin-top: 2%;
+    }
 
     /* Small devices (landscape phones, 576px and up) */
     @media (min-width: 576px) {}
@@ -76,6 +117,10 @@
 
         p {
             font-size: 16px;
+        }
+
+        .table {
+            overflow: unset;
         }
     }
 
@@ -119,12 +164,6 @@
     .item {
         width: 250px;
         padding: 10%;
-    }
-
-    @media (min-width: 768px) {
-        .table {
-            overflow: unset;
-        }
     }
 </style>
 
@@ -863,136 +902,20 @@
 
         </div>
     </header> <!-- end of navigation-->
-    <h1 class="text-left py-3 ml-4">UOB Business Loans Comparison</h1>
+    <h1 class="text-left py-3 ml-4">UOB Business Loan Comparison</h1>
 
     <div class="container">
-
-        <!-- <p>Select loans to compare</p> -->
-        <!-- <div class="card-deck row">
-            <div class="card card-insights mb-sm-4" style="text-align: center;">
-                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Business Loan</h5>
-                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
-                        culture can create fresh challenges for employees.</p>
-                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
-                </div>
-                <div class="card-footer">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
-                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-insights mb-sm-4" style="text-align: center;">
-                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Business Loan</h5>
-                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
-                        culture can create fresh challenges for employees.</p>
-                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
-                </div>
-                <div class="card-footer">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
-                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-insights mb-sm-4" style="text-align: center;">
-                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Business Loan</h5>
-                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
-                        culture can create fresh challenges for employees.</p>
-                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
-                </div>
-                <div class="card-footer">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
-                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-insights mb-sm-4" style="text-align: center;">
-                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Business Loan</h5>
-                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
-                        culture can create fresh challenges for employees.</p>
-                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
-                </div>
-                <div class="card-footer">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
-                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
-                    </div>
-                </div>
-            </div>
-<div class="w-100"></div>
-            <div class="card card-insights mb-sm-4" style="text-align: center;">
-                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Business Loan</h5>
-                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
-                        culture can create fresh challenges for employees.</p>
-                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
-                </div>
-                <div class="card-footer">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
-                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-insights mb-sm-4" style="text-align: center;">
-                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Business Loan</h5>
-                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
-                        culture can create fresh challenges for employees.</p>
-                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
-                </div>
-                <div class="card-footer">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
-                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-insights mb-sm-4" style="text-align: center;">
-                <img class="card-img-top img-fluid" src="../images/homepage/google-my-biz-728x408.jpg"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Business Loan</h5>
-                    <p class="card-text">With telecommuting here to stay for at least the near-term, this new working
-                        culture can create fresh challenges for employees.</p>
-                    <a href="#!" class="card-link btn btn-primary">Find Out More</a>
-                </div>
-                <div class="card-footer">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="lalalla">
-                        <label class="custom-control-label" for="customCheck1">Select Loan</label>
-                    </div>
-                </div>
-            </div>
-
-        </div> 
-      -->
-
-
-        <!-- </div> -->
-
-        COMPARE YOUR LOANS
-        <div class="table" id="compareTable">
-
+        <!-- before compare -->
+        <div style="text-align: center;" class="beforeCompare">
+            <h2><b>Business Loans We Offer</b></h2>
+            <p>Select one to compare</p>
         </div>
+        <!-- after compare -->
+        <div style="text-align: center;" class="afterCompare">
+            <h2><b>Compare Loans</b></h2>
+        </div>
+
+
         <!-- <div class="table">
             <table class="mx-auto">
                 <tr class="d-flex">
@@ -1041,13 +964,189 @@
 
             </table>
         </div> -->
-        <div id="selectLoans"></div>
-        <button class="btn btn-primary" id="btnCompare" onclick="compareFunction()" disabled>Compare</button>
-        <button class="btn btn-primary" id="btnReselect" style="display: none"
-            onclick="reselectFunction()">Reselect</button>
+        <!-- Cards for users to select loans to compare -->
+        <div id="selectLoans" class="beforeCompare"></div>
+        <!-- Comparison Table -->
+        <div class="table afterCompare" id="compareTable">
 
+        </div>
+        <hr>
+        <div class="compareInstructions">
+            <h2>How to compare loans?</h2>
+            <img src="../images/miscellaneous/CompareLoansIntructions.png" alt="Instructions on how to compare loans"
+                class="img-fluid w-75">
+        </div>
+        <!-- <button class="btn btn-primary" id="btnCompare" onclick="compareFunction()" disabled>Compare</button>
+        <button class="btn btn-primary" id="btnReselect" style="display: none"
+            onclick="reselectFunction()">Reselect</button> -->
+        <div class="interestedsection section pb-4" id="interestedsection">
+            <h1 class="pb-2"> You May Be Interested In</h1>
+            <div class="row mx-auto my-auto">
+                <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner w-100" role="listbox">
+
+
+                        <div class="carousel-item active">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <a href="https://sg.bibplus.uobgroup.com/BIB/public/"> <img
+                                            class="img-fluid card-img-top" src="../images/uobebusiness/interested2.jpg"
+                                            alt="E-transactions"></a>
+                                    <div class="card-body"> UOB Business Internet Banking Plus</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <a href="https://www.uob.com.sg/business/transact/foreign-exchange.page"><img
+                                            class="img-fluid card-img-top" src="../images/uobebusiness/interested3.jpg"
+                                            alt="Payroll"></a>
+                                    <div class="card-body"> Foreign Exchange </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <a href="https://www.uob.com.sg/business/access/business-mobile-app.page"> <img
+                                            class="img-fluid card-img-top" src="../images/uobebusiness/interested4.jpg"
+                                            alt="UOB Business App"></a>
+                                    <div class="card-body"> UOB Business App </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev w-auto carousel-a" href="#recipeCarousel" role="button"
+                        data-slide="prev">
+                        <div class="c-icon rounded-circle">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
+                        </div>
+                    </a>
+                    <a class="carousel-control-next w-auto carousel-a" href="#recipeCarousel" role="button"
+                        data-slide="next">
+                        <div class="c-icon rounded-circle">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
+
+    <!-- Footer -->
+    <div class="border-top">
+        <div class="container">
+            <footer class="footer-content row pb-5">
+                <!-- div for words links -->
+                <div class=" left col-md-7 col-sm-12 col-xs-12">
+                    <!-- list for links -->
+                    <ul class="links list-unstyled ">
+                        <li>
+                            <a href="./about_us.html" target="_blank">About Us</a>
+                            <span> | </span>
+                        </li>
+
+                        <li>
+                            <a href="./investor_relations.html" target="_blank">Investor Relations</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./careers.html" target="_blank">Careers</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./customer_service.html" target="_blank">Customer Service</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./contactus.html" target="_blank">Contact Us</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./other_uob_sites.html" target="_blank">Other UOB Sites</a>
+                        </li>
+                    </ul>
+                    <div class="regno">
+                        <!-- ul class for reg.no -->
+                        <ul class="registration list-unstyled ">
+                            <li>
+                                <a>
+                                    Copyright © 2020 United Overseas Bank Limited Co.
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    Reg. No. 193500026Z. All Rights Reserved.
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- div for social media -->
+                <div class="right col-md-5 col-sm-12 col-xs-12">
+                    <!-- div for social media picture -->
+                    <div class="socialmediapictures list-unstyled ">
+                        <li>
+                            <a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/"
+                                class="facebookicon col 3">
+                                <img src="../images/footer/facebook.png" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
+                                class="instagramicon col 3">
+                                <img src="../images/footer/instagram.png" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
+                                class="linkedinicon col 3">
+                                <img src="../images/footer/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
+                                class="youtubeicon col 3">
+                                <img src="../images/footer/youtube.png" alt="Youtube">
+                            </a>
+                        </li>
+                    </div>
+
+                    <!-- for temrs of use under social media -->
+                    <div class="terms list-unstyled">
+                        <ul class="socialmedialinks list-unstyled ">
+                            <li>
+                                <a href="./social_media_terms_of_use.html" target="_blank">Social Media Terms of Use</a>
+                                <span> | </span>
+                            </li>
+                            <li>
+                                <a href="./legal_notices.html" target="_blank">Legal Notices</a>
+                                <span> | </span>
+                            </li>
+                            <li>
+                                <a href="./privary_and_security.html" target="_blank">Privacy & Security</a>
+                            </li>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <div class="stickyBtm">
+        <div>
+            <button class="btn btn-2 stickyBtmBtn beforeCompare" id="btnCompare" onclick="compareFunction()"
+                disabled><b>Compare</b></button></div>
+        <button class="btn btn-2 stickyBtmBtn afterCompare" id="btnReselect" onclick="reselectFunction()">
+            <b>Reselect</b></button>
+    </div>
 </body>
 <script>
     //sticky navbar
@@ -1098,6 +1197,7 @@
         });
     }
 
+    //start of script for loan comparison
     var loanArray = [
         { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle. Facility installment of up to 7 years and Hire Purchase financing available for commercial vehicle and commercial vehicle with renewed COE. ", url: "./vehicle_and _machinery-financing.html", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "Low interest rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
@@ -1107,7 +1207,7 @@
 
         { loanID: 3, name: "Business Property Loan", description: "Low Interest Rates on your new Business Property Loan, or when you refinance with us and higher loan quantum to help you get the most out of your property.", url: "./business_property_and_equity_loan.html", amount: "- Get up to 100% of your business property value that can be used to cash out as an extended loan when you refinance with us <br>- Get up to 90% of your property value or purchase price for your mortgage for new industrial / commercial property purchase", tenure: "Up to 20 years", category: "Property", interestRate: "Low Interest Rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
-        { loanID: 4, name: "Loan Insurance Scheme", description: "Short-term trade loans with an added benefit of a reduced trade risks and risk is co-shared with 75% risk borne by insurers. 50% of the premium will be supported by SPRING Singapore and IE Singapore. Available for both domestic and overseas trade facilities", url: "./government_assistant_scheme.html", amount: "Depends on case to case basis", tenure: "Up to 5 years", category: "Trade", interestRate: "Minimum of 3% intrest rate", img: "../images/homepage/google-my-biz-728x408.jpg" },
+        { loanID: 4, name: "Loan Insurance Scheme", description: "Short-term trade loans with an added benefit of a reduced trade risks and risk is co-shared with 75% risk borne by insurers. 50% of the premium will be supported by SPRING Singapore and IE Singapore. Available for both domestic and overseas trade facilities", url: "./government_assistant_scheme.html", amount: "Depends on case to case basis", tenure: "Up to 5 years", category: "Trade", interestRate: "Minimum of 3% Interest Rate", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
         { loanID: 5, name: "Bizmoney Loan", description: "Up to S$350,000 of financing, fixed monthly repayment of up to 4 years and no property or monetary deposit collateral required", url: "./uob_bizmoney.html", amount: "Up to $350,000", tenure: "Up to 5 years", category: "Working Capital", interestRate: "-", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
@@ -1121,14 +1221,6 @@
     $(document).ready(function () {
         displayLoans()
 
-        // $("#btnCompare").click(function () {
-        //     $.each($("input[name='select']:checked"), function () {
-        //         // favorite.push($(this).val());
-        //         compareArray.push(loanArray[$(this).val()])
-        //     });
-        //     $("#selectLoans").hide()
-        // });
-
         $('input.checkboxClass').on('change', function (evt) {
             console.log("yeee")
             if ($("input[name='select']:checked").length >= 2 && $("input[name='select']:checked").length <= 4) {
@@ -1137,6 +1229,7 @@
             else if ($("input[name='select']:checked").length <= 1) {
                 $("#btnCompare").attr("disabled", true)
             }
+            //prevents 4 or more from being checked
             else if ($("input[name='select']:checked").length > 4) {
                 this.checked = false;
             }
@@ -1148,7 +1241,7 @@
     function displayLoans() {
         var string = "<div class='card-deck'>"
         for (var i = 0; i < loanArray.length; i++) {
-            string += '<div class="card card-insights mb-sm-4" style="text-align: center;"> <img class="card-img-top img-fluid"' + 'src="' + loanArray[i].img + '"alt="Card image cap"> <div class="card-body"> <h5 class="card-title font-weight-bold">' + loanArray[i].name + '</h5> <p class="card-text">' + loanArray[i].description + '</p> <a href="' + loanArray[i].url + '" class="card-link btn btn-primary">Find Out More</a> </div> <div class="card-footer"> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input checkboxClass" id="select' + loanArray[i].loanID + '" value="' + loanArray[i].loanID + '" name="select"> <label class="custom-control-label" for="select' + loanArray[i].loanID + '">Select Loan</label> </div> </div> </div>'
+            string += '<div class="card card-insights mb-sm-4" style="text-align: center;"> <img class="card-img-top img-fluid"' + 'src="' + loanArray[i].img + '"alt="Card image cap"> <div class="card-body"> <h5 class="card-title font-weight-bold">' + loanArray[i].name + '</h5> <p class="card-text">' + loanArray[i].description + '</p> <a href="' + loanArray[i].url + '" class="card-link btn btn-primary">Find Out More</a> </div> <div class="card-footer"> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input checkboxClass" id="select' + loanArray[i].loanID + '" value="' + loanArray[i].loanID + '" name="select"> <label class="custom-control-label" for="select' + loanArray[i].loanID + '"><b>Select Loan</b></label> </div> </div> </div>'
 
             if (i == 3) {
                 string += ' <div class="w-100"></div>'
@@ -1163,10 +1256,13 @@
     //change button to reselect
     function compareFunction() {
         //hide select loans thing
-        $("#selectLoans").hide()
-        $("#btnCompare").hide()
-        $("#btnReselect").show()
-        $("#compareTable").show();
+        // $("#selectLoans").hide()
+        // $("#btnCompare").hide()
+        // $("#btnReselect").show()
+        // $("#compareTable").show();
+        $(".beforeCompare").hide()
+        $(".afterCompare").show()
+
 
         compareArray = []
         //push selected loans into compareArray
@@ -1216,16 +1312,43 @@
     //clear compareArray
     function reselectFunction() {
 
-        $("#compareTable").hide();
-        $("#btnReselect").hide()
-        $("#btnCompare").show()
+        // $("#compareTable").hide();
+        // $("#btnReselect").hide()
+        // $("#btnCompare").show()
+        // $("#selectLoans").show()
+
         $("#btnCompare").attr("disabled", true)
-        $("#selectLoans").show()
+        $(".afterCompare").hide()
+        $(".beforeCompare").show()
 
         $("input[name='select']:checkbox").prop('checked', false);
 
     }
 
+    // Script for multi item carousel
+    $('#recipeCarousel').carousel({
+        interval: 4000
+    })
+
+    $('.carousel .carousel-item').each(function () {
+        var minPerSlide = 3;
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < minPerSlide; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    // end of script for multi item carousel
 
 </script>
 
