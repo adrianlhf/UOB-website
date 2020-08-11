@@ -91,6 +91,12 @@ h1 {
     position: absolute;
 }
 
+.ownorrentbanner .description {
+    bottom: 5%;
+    left: 50%;
+    position: absolute;
+}
+
 .banner {
     position: absolute;
     bottom: 0;
@@ -244,6 +250,18 @@ h1 {
         right: 1%;
         width: 55%;
         top: 5%;
+
+    }
+
+    .ownorrentbanner .description {
+        top: 20%;
+        left: 50%;
+        position: absolute;
+        font-size: 14px;
+    }
+    .ownorrentbanner .h1 {
+       
+        font-size: 14px;
     }
 
 
@@ -266,11 +284,17 @@ h1 {
         top: 10%;
     }
 
+    .ownorrentbanner .description {
+        top: 20%;
+        left: 50%;
+        position: absolute;
+        font-size: 6px;
+    }
+
     #webapplynowbutton{
         position: absolute;
         bottom: 20%;
         left: 6%;
-        font-size: 16px;
     }
 
     .layout2.card-deck, .layout3.card-deck, .layout4.card-deck, .layout5.card-deck {
@@ -288,10 +312,24 @@ h1 {
     .layout3-card {
         width: 25%;
     }
+
+    .ownorrentbanner .description {
+        font-size: 16px;
+        top: 5%;
+        left: 50%;
+        position: absolute;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+    .ownorrentbanner .description {
+        top: 20%;
+        left: 50%;
+        position: absolute;
+    }
+
     .main-banner .description {
         top: 18%;
     }
