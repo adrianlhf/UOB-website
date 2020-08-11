@@ -1,18 +1,18 @@
-h5{
+h5 {
     font-weight: bold;
 }
 
 
-hr{
+hr {
     margin-top: 50px;
 }
 
-.notbold{
+.notbold {
     font-weight: normal;
-    
+
 }
 
-.nobulletpoint{
+.nobulletpoint {
     list-style: none;
 }
 
@@ -41,7 +41,7 @@ h1 {
     font-size: 14px;
 }
 
-#webapplynowbutton{
+#webapplynowbutton {
     position: absolute;
     bottom: 15%;
     left: 6%;
@@ -118,8 +118,8 @@ h1 {
 /* end of content navbar styles */
 
 
-  /* Styles for FAQ */
-  .accordion .opened::before {
+/* Styles for FAQ */
+.accordion .opened::before {
     content: "-";
     padding: 0px 15px;
     border: 1px solid #002469;
@@ -151,34 +151,34 @@ h1 {
 /* end of styles for FAQ */
 
 /*  Styles for the layouts */
-    
-    /* layout 2 and slider 1 styles */
-    .layout2-title,
-    .slider-title {
-        font-size: 16px;
-    }
 
-    .layout2-p,
-    .slider-p {
-        font-size: 13px;
-    }
+/* layout 2 and slider 1 styles */
+.layout2-title,
+.slider-title {
+    font-size: 16px;
+}
 
-    /* end of layout 2 and slider 1 styles */
+.layout2-p,
+.slider-p {
+    font-size: 13px;
+}
 
-    
-    .card-deck {
-        display: block;
-    }
+/* end of layout 2 and slider 1 styles */
 
-    .card-deck .card {
-        margin-bottom: 15px;
-    }
 
-      /* styles for table */
-      .table-blue {
-        background-color: #002469;
-        color: white;
-    }
+.card-deck {
+    display: block;
+}
+
+.card-deck .card {
+    margin-bottom: 15px;
+}
+
+/* styles for table */
+.table-blue {
+    background-color: #002469;
+    color: white;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 375px) {
@@ -197,7 +197,7 @@ h1 {
     }
 
     .btn-banner {
-       font-size: 20px;
+        font-size: 20px;
     }
 }
 
@@ -205,7 +205,7 @@ h1 {
 @media (min-width: 768px) {
 
 
-   
+
 
     h1 {
         font-size: 26px;
@@ -254,7 +254,7 @@ h1 {
         top: 10%;
     }
 
-    #webapplynowbutton{
+    #webapplynowbutton {
         position: absolute;
         bottom: 20%;
         left: 6%;
@@ -284,7 +284,7 @@ h1 {
         top: 18%;
     }
 
-    #webapplynowbutton{
+    #webapplynowbutton {
         position: absolute;
         bottom: 22%;
         left: 6%;
@@ -301,10 +301,9 @@ h1 {
 
     .carousel-inner .carousel-item>div:first-child {
         display: block;
-
     }
 
-    
+
 }
 
 
@@ -336,6 +335,7 @@ h1 {
 .carousel-a {
     z-index: 0;
 }
+
 .MultiCarousel {
     overflow: hidden;
     padding: 15px 40px;
@@ -392,23 +392,26 @@ h1 {
     background: #ccc;
 }
 
- /* Change image sizing */
+/* Change image sizing */
 .MultiCarousel .MultiCarousel-inner .img-50 {
     width: 50%;
 }
 
 /* end of multi item carousel */
-.covid-box{
+.covid-box {
     width: 100%;
 }
-.dark-img{
+
+.dark-img {
     position: relative;
 }
-.dark-img img{
+
+.dark-img img {
     width: 100%;
     margin: 0 auto;
 }
-.dark-img::before{
+
+.dark-img::before {
     background-color: #000;
     position: absolute;
     content: '';
@@ -418,11 +421,12 @@ h1 {
     bottom: 0;
     opacity: 0.5;
 }
-.covid-text{
+
+.covid-text {
     color: white;
     font-weight: bold;
     top: 40%;
-    width: 100% ;
+    width: 100%;
     text-align: center;
     font-size: 18px;
     font-weight: 700;
@@ -430,6 +434,7 @@ h1 {
     left: 0;
     text-decoration: inherit;
 }
-a{
+
+a {
     color: #002469;
 }
