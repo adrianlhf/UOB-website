@@ -15,7 +15,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>UOB Commercial Property Loan | Business Property Loan</title>
+    <title>UOB Business Loan Comparison</title>
     <link rel="stylesheet" href="../styles/navigation-styles.css">
     <link rel="stylesheet" href="../styles/c-styles.css">
     <link rel="stylesheet" href="../styles/footer-styles.css">
@@ -55,17 +55,33 @@
         flex: 0 0 50%;
     }
 
-    .btnFindOutMore:hover,
+    /* .btnFindOutMore:hover,
     .btnFindOutMore:active,
     .btnFindOutMore:focus,
     .btnFindOutMore:link,
     .btnFindOutMore:visited {
         background-color: #011a49;
+    } */
+    .card-text {
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+
+    .btnFindOutMore {
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        width: 90%;
     }
 
     /* Hide stuff */
     .afterCompare {
         display: none;
+    }
+
+    /* comparetable */
+    #selectLoans {
+        margin-top: 2rem;
     }
 
     /* styles for stickyBtm */
@@ -88,8 +104,7 @@
         left: 0;
         bottom: 0;
         margin-top: 13.5px;
-        margin-right: 10%;
-
+        /* margin-right: 10%; */
     }
 
     /* compare instruction */
@@ -103,7 +118,12 @@
     }
 
     /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {}
+    @media (min-width: 576px) {
+        .compareInstructions img {
+            width: 100%;
+        }
+
+    }
 
     /* Medium devices (tablets, 768px and up) */
     @media (min-width: 768px) {
@@ -122,6 +142,13 @@
         .table {
             overflow: unset;
         }
+
+        .compareInstructions img {
+            width: 75%;
+        }
+
+
+
     }
 
     /* Large devices (desktops, 992px and up) */
@@ -131,6 +158,20 @@
             width: 62%;
         }
 
+        /* sticky btm */
+        .stickyBtm {
+            height: 80px;
+
+        }
+
+        .stickyBtmBtn {
+            height: 40px;
+            margin-top: 20px;
+            /* margin-right: 10%; */
+            font-size: 16px;
+
+
+        }
     }
 
     /* Extra large devices (large desktops, 1200px and up) */
@@ -906,12 +947,12 @@
 
     <div class="container">
         <!-- before compare -->
-        <div style="text-align: center;" class="beforeCompare">
+        <div style="text-align: center;" class="beforeCompare" ">
             <h2><b>Business Loans We Offer</b></h2>
-            <p>Select one to compare</p>
+            <h4>Select one to compare</h4>
         </div>
         <!-- after compare -->
-        <div style="text-align: center;" class="afterCompare">
+        <div style=" text-align: center;" class="afterCompare">
             <h2><b>Compare Loans</b></h2>
         </div>
 
@@ -974,8 +1015,9 @@
         <div class="compareInstructions">
             <h2>How to compare loans?</h2>
             <img src="../images/miscellaneous/CompareLoansIntructions.png" alt="Instructions on how to compare loans"
-                class="img-fluid w-75">
+                class="img-fluid">
         </div>
+        <hr>
         <!-- <button class="btn btn-primary" id="btnCompare" onclick="compareFunction()" disabled>Compare</button>
         <button class="btn btn-primary" id="btnReselect" style="display: none"
             onclick="reselectFunction()">Reselect</button> -->
@@ -1141,9 +1183,12 @@
     </div>
 
     <div class="stickyBtm">
-        <div>
+        <div class="container">
+            <p id="qtyIndicator" style="display: inline;">2 selected</p>
+
             <button class="btn btn-2 stickyBtmBtn beforeCompare" id="btnCompare" onclick="compareFunction()"
-                disabled><b>Compare</b></button></div>
+                disabled><b>Compare</b></button>
+        </div>
         <button class="btn btn-2 stickyBtmBtn afterCompare" id="btnReselect" onclick="reselectFunction()">
             <b>Reselect</b></button>
     </div>
@@ -1199,7 +1244,7 @@
 
     //start of script for loan comparison
     var loanArray = [
-        { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle. Facility installment of up to 7 years and Hire Purchase financing available for commercial vehicle and commercial vehicle with renewed COE. ", url: "./vehicle_and _machinery-financing.html", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "Low interest rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
+        { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle.  ", url: "./vehicle_and _machinery-financing.html", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "Low interest rates", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
         { loanID: 1, name: "SME Equipment Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "./government_assistant_scheme.html", amount: "Financing of up to 90% of the market valuation or purchase price of your new equipment", tenure: "Up to 8 years", category: "Equipment & Vehicle", interestRate: "- Minimum interest of 4.25% for loan tenure of 4 years and below <br>- Minimum interest of 4.75% for loan tenure of more than 4 years", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
@@ -1209,9 +1254,9 @@
 
         { loanID: 4, name: "Loan Insurance Scheme", description: "Short-term trade loans with an added benefit of a reduced trade risks and risk is co-shared with 75% risk borne by insurers. 50% of the premium will be supported by SPRING Singapore and IE Singapore. Available for both domestic and overseas trade facilities", url: "./government_assistant_scheme.html", amount: "Depends on case to case basis", tenure: "Up to 5 years", category: "Trade", interestRate: "Minimum of 3% Interest Rate", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
-        { loanID: 5, name: "Bizmoney Loan", description: "Up to S$350,000 of financing, fixed monthly repayment of up to 4 years and no property or monetary deposit collateral required", url: "./uob_bizmoney.html", amount: "Up to $350,000", tenure: "Up to 5 years", category: "Working Capital", interestRate: "-", img: "../images/homepage/google-my-biz-728x408.jpg" },
+        { loanID: 5, name: "Bizmoney Loan", description: "Up to S$350,000 of financing, fixed monthly repayment of up to 4 years and no property or monetary deposit collateral required", url: "./uob_bizmoney.html", amount: "Up to $350,000", tenure: "Up to 5 years", category: "Working Capital", interestRate: "Up to 5% per month", img: "../images/homepage/google-my-biz-728x408.jpg" },
 
-        { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "./government_assistant_scheme.html", amount: "Up to $1million", tenure: "Fixed monthly repayment period of up to 5 years", category: "Working Capital", interestRate: "-", img: "../images/homepage/google-my-biz-728x408.jpg" }
+        { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "./government_assistant_scheme.html", amount: "Up to $1million", tenure: "Fixed monthly repayment period of up to 5 years", category: "Working Capital", interestRate: "Low Interest Rates", img: "../images/homepage/google-my-biz-728x408.jpg" }
     ]
     //store name of spec and property reference for loanArray
     var specsArray = [{ spec: "Image", propertyRef: "img" }, { spec: "Name", propertyRef: "name" }, { spec: "Description", propertyRef: "description" }, { spec: "Amount", propertyRef: "amount" }, { spec: "Loan Tenure", propertyRef: "tenure" }, { spec: "Category", propertyRef: "category" }, { spec: "Interest Rate", propertyRef: "interestRate" }]
@@ -1241,7 +1286,7 @@
     function displayLoans() {
         var string = "<div class='card-deck'>"
         for (var i = 0; i < loanArray.length; i++) {
-            string += '<div class="card card-insights mb-sm-4" style="text-align: center;"> <img class="card-img-top img-fluid"' + 'src="' + loanArray[i].img + '"alt="Card image cap"> <div class="card-body"> <h5 class="card-title font-weight-bold">' + loanArray[i].name + '</h5> <p class="card-text">' + loanArray[i].description + '</p> <a href="' + loanArray[i].url + '" class="card-link btn btn-primary">Find Out More</a> </div> <div class="card-footer"> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input checkboxClass" id="select' + loanArray[i].loanID + '" value="' + loanArray[i].loanID + '" name="select"> <label class="custom-control-label" for="select' + loanArray[i].loanID + '"><b>Select Loan</b></label> </div> </div> </div>'
+            string += '<div class="card card-insights mb-sm-4" style="text-align: center;"> <img class="card-img-top img-fluid"' + 'src="' + loanArray[i].img + '"alt="Card image cap"> <div class="card-body position-relative"> <h5 class="card-title font-weight-bold">' + loanArray[i].name + '</h5> <p class="card-text">' + loanArray[i].description + '</p> <a href="' + loanArray[i].url + '" class="card-link btn btn-2 btnFindOutMore">Find Out More</a> </div> <div class="card-footer"> <div class="custom-control custom-checkbox"> <input type="checkbox" class="custom-control-input checkboxClass" id="select' + loanArray[i].loanID + '" value="' + loanArray[i].loanID + '" name="select"> <label class="custom-control-label" for="select' + loanArray[i].loanID + '"><b>Select Loan</b></label> </div> </div> </div>'
 
             if (i == 3) {
                 string += ' <div class="w-100"></div>'
