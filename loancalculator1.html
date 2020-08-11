@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="loancalc-styles.css">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,202 +16,26 @@
 
 </head>
 
-</head>
-<style>
-    /* slider styles */
-    input[type=range] {
-        -webkit-appearance: none;
-    }
-
-    input[type=range]::-webkit-slider-runnable-track {
-        width: 300px;
-        height: 10px;
-        background: #ddd;
-        border: none;
-        border-radius: 3px;
-    }
-
-    input[type=range]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        border: none;
-        height: 24px;
-        width: 24px;
-        border-radius: 50%;
-        background: #bbbbbb;
-        margin-top: -7px;
-    }
-
-    input[type=range]:focus {
-        outline: none;
-    }
-
-    input[type=range]:focus::-webkit-slider-runnable-track {
-        background: #ccc;
-    }
-
-
-    /* Styles for Hr/ line */
-
-    hr {
-        border: solid rgb(85, 85, 85) 0.5px;
-    }
-
-    /* Small devices (landscape phones, 576px and up) */
-    @media (min-width: 576px) {}
-
-    /* Medium devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
-        h1 {
-            font-size: 26px;
-        }
-
-        h4 {
-            font-size: 20px;
-        }
-
-        p {
-            font-size: 16px;
-        }
-    }
-
-    /* Large devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-
-        .body {
-            width: 62%;
-        }
-
-        .businessCalcDiv {
-            width: 100%;
-            padding: 2em 0;
-        }
-
-        .input-left {
-            padding: 2em 3em 2em 0;
-            border-right: 0.5px solid black;
-        }
-
-        .result-right {
-            padding: 15% 3em;
-            height: auto;
-            vertical-align: middle;
-        }
-
-
-
-    }
-
-    /* styles for button */
-    .btnCalculate {
-        width: 40%;
-        padding: 10px 6px;
-        background-color: #002469;
-    }
-
-    .btnCalculate:hover,
-    .btnCalculate:active,
-    .btnCalculate:focus,
-    .btnCalculate:link,
-    .btnCalculate:visited {
-        background-color: #011a49;
-    }
-
-    .inputForm {
-        padding: 3% 0;
-        margin-bottom: 3%;
-    }
-
-    /* style for each element in the form */
-    .form-group {
-        padding: 2% 0;
-    }
-
-    input[type='range'].loanAmtBottom {
-        overflow: hidden;
-        width: 80px;
-        -webkit-appearance: none;
-        background-color: #9a905d;
-    }
-
-    input[type='range'].loanAmtBottom::-webkit-slider-runnable-track {
-        height: 10px;
-        -webkit-appearance: none;
-        color: #13bba4;
-        margin-top: -1px;
-    }
-
-    input[type='range'].loanAmtBottom::-webkit-slider-thumb {
-        width: 10px;
-        -webkit-appearance: none;
-        height: 10px;
-        cursor: ew-resize;
-        background: #434343;
-        box-shadow: -80px 0 0 80px #43e5f7;
-    }
-
-    .allCalcInput {
-        border-radius: 0px;
-        padding: 0 0 0 10px;
-        margin: 0 5px 0 5px;
-        width: 100px;
-        border: 0;
-        background-color: #e8e8e8;
-    }
-    #tenureInput{
-        width: 65px;
-    }
-    .allCalcInput:focus {
-        outline: 0;
-        background-color: #c3c3c3;
-    }
-    .sliderCalc{
-        margin-top: 1rem;
-    }
-    .allErrorMsg {
-        color: red;
-        height: 30px;
-        margin: 1rem 0 0 0;
-    }
-
-
-    /* styles for text */
-    .result {
-        text-align: center;
-    }
-
-    #amount {
-        padding: 0 30px;
-    }
-
-    .calcResult {
-        font-size: 150%;
-    }
-</style>
-
 <body>
     <div class="container">
         <div>
             <div class="businessCalcDiv">
-                <h2 style="text-align: center;">Loan Installment Calculator</h2>
-                <div class="row">
-                    <div class="input-left col-lg-6">
-                        <h4>Find out the indicative monthly installment payment of your UOB
-                            Business Loan</h4>
-                        <form class="inputForm" name="formLoanCalculate1">
-                            <div class="form-group">
+                <h1 class="text-center">Loan Installment Calculator</h1>
+                <div class="row pt-2 pt-lg-4">
+                    <div class="input-left col-lg-6 pb-4 pb-lg-0 mx-2 mx-lg-0">
+                        <p class="font-weight-bold">Find out the indicative monthly installment payment of your UOB
+                            Business Loan</p>
+                        <form name="formLoanCalculate1">
+                            <div class="form-group pb-0 mb-0">
                                 <div class="d-flex justify-content-between">
                                     <label for="loanAmtInput" class="inline">Loan Amount</label>
-                                    <!-- <p id="loanAmtInput" class="inline" style="float: right"></p> -->
                                     <span class="inline calcInputField">$<input type="text" id="loanAmtInput"
                                             class="inline numericOnly validateInput clickEvent allCalcInput"
                                             name="loanAmtInput" value="550,000"></span>
                                 </div>
-                                <!-- <input type="range" min="0" max="1000000" step="1" class="form-control-range"
-                                id="loanAmtRange"> -->
-                                <p id="errorMsg1" class="allErrorMsg"></p>
-                                <!-- <input type="range" min="0" max="1000000" step="100" class="form-control-range" class ="loanAmtBottom"> -->
+                                <p id="errorMsg1" class="allErrorMsg mt-0 mb-3"></p>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group py-0">
                                 <div class="d-flex justify-content-between">
                                     <label for="interestRateInput" class="inline">Interest Rate</label>
                                     <span class="inline calcInputField">
@@ -219,37 +43,46 @@
                                             class="inline numericDecOnly validateInput class clickEvent allCalcInput">%
                                     </span>
                                 </div>
-                                <input type="range" min="0" max="20" step="0.01" class="form-control-range sliderCalc"
-                                    id="interestRateRange">
+
+                                <div class="slider-container">
+                                    <span class="bar interest-bar"><span class="fill"></span></span>
+                                    <input type="range" min="0" max="20" step="0.01" value="10"
+                                        class="sliderCalc slider" id="interestRateRange">
+                                </div>
                                 <p id="errorMsg2" class="allErrorMsg"></p>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group py-0">
                                 <div class="d-flex justify-content-between">
                                     <label for="tenureInput" class="inline">Tenure</label>
                                     <span class="inline calcInputField"><input type="text" id="tenureInput"
                                             class="inline numericOnly5 clickEvent allCalcInput">year(s)
                                     </span>
                                 </div>
-                                <input type="range" min="1" max="5" step="1" class="form-control-range sliderCalc"
-                                    id="tenureRange">
+
+                                <div class="slider-container">
+                                    <span class="bar tenure-bar"><span class="fill"></span></span>
+                                    <input type="range" min="1" max="5" value="3" step="1" class="sliderCalc slider"
+                                        id="tenureRange">
+                                </div>
                                 <p id="errorMsg3" class="allErrorMsg"></p>
                             </div>
                         </form>
                         <button onclick="calculateFunction()" id="calculateBtn"
-                            class="btn btn-primary btnCalculate mx-auto d-block" type="button">Calculate</button>
+                            class="btn btn-calculate mx-auto d-block" type="button">Calculate</button>
                     </div>
-                    <hr class="d-block d-lg-none">
-                    <div class="result-right col-lg-6">
-                        <h1 id="amount" class="result">Repayment Summary</h1>
-                        <p id="description" class="result">Please enter the loan information to continue.</p>
+
+                    <div class="h-auto align-self-center result-right col-lg-6 text-center mt-4 mt-lg-0">
+                        <h1 id="amount">Repayment Summary</h1>
+                        <p id="description" class="font-italic">Please enter the loan information to continue.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
 
 </body>
+<link rel="stylesheet" href="loancalc-styles.css">
 
 <script>
     $(document).ready(function () {
@@ -260,19 +93,12 @@
 
             if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
 
-            // var character = String.fromCharCode(e.keyCode)
-            // var newValue = this.value + character;
 
-            // if (parseInt(removeCommas(newValue)) > 1000000) {
-            //     $("#errorMsg1").text("Value cannot be more than 1,000,000!")
-            //     this.value = addCommas(1000000)
-            //     return false;
-            // }
         });
 
         $(".numericDecOnly").keypress(function (e) {
 
-            // if (String.fromCharCode(e.keyCode).match(/[0-9]+(\.[0-9][0-9]?)?/g)) return true;
+            return true;
             if (String.fromCharCode(e.keyCode).match(/[^0-9.]/g)) return false;
 
             var character = String.fromCharCode(e.keyCode)
@@ -281,11 +107,7 @@
             if (isNaN(newValue) || hasDecimalPlace(newValue, 3)) {
                 return false;
             }
-            // if (newValue > 20) {
-            //     $("#errorMsg2").text("Value cannot be more than 20!")
-            //     this.value = 20
-            //     return false;
-            // }
+
         });
 
         $(".numericOnly5").keypress(function (e) {
@@ -306,6 +128,7 @@
         $("input.clickEvent:text").on("change paste keyup", function () {
             validateFunction()
             console.log("change paste keyup")
+            setbar();
 
         });
 
@@ -356,8 +179,7 @@
     //function to display the indicator in the input box for the slider
 
     function displayOutput() {
-        // var val1 = document.getElementById("loanAmtRange").value //gets the oninput value
-        // document.getElementById("loanAmtInput").value = addCommas(parseInt(val1)) //displays this value to the html page
+
 
         var val2 = document.getElementById("interestRateRange").value //gets the oninput value
         document.getElementById("interestRateInput").value = val2 //displays this value to the html page
@@ -375,16 +197,16 @@
         // var regexp = /^\d+\.\d{0,2}$/;
 
         var array = [{
-                name: "loanAmt",
-                value: a
-            },
-            {
-                name: "interestRate",
-                value: b
-            }, {
-                name: "tenure",
-                value: c
-            }
+            name: "loanAmt",
+            value: a
+        },
+        {
+            name: "interestRate",
+            value: b
+        }, {
+            name: "tenure",
+            value: c
+        }
         ]
 
         var trueFalseArr = []
@@ -410,8 +232,6 @@
 
 
             } else if (array[index].name == "interestRate") {
-                // console.log("b")
-                // console.log(array[index].value)
                 if (isNaN(array[index].value)) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg2").text("Value is not a number")
@@ -423,13 +243,12 @@
                     $("#errorMsg2").text("Value cannot be more than 20")
                 } else {
                     console.log("valid2")
+                    $("#interestRateRange").val(b)
                     $("#errorMsg2").text("")
                     trueFalseArr.push("true")
                 }
 
             } else if (array[index].name == "tenure") {
-                // console.log("c")
-                // console.log(array[index].value)
                 if (isNaN(array[index].value)) {
                     $("#calculateBtn").attr("disabled", true);
                     $("#errorMsg3").text("Value is not a number")
@@ -442,6 +261,7 @@
                 } else {
                     console.log("valid3")
                     $("#errorMsg3").text("")
+                    $("#tenureRange").val(c)
                     trueFalseArr.push("true")
                 }
 
@@ -454,10 +274,8 @@
             console.log("HOORAY")
 
             $("#calculateBtn").attr("disabled", false);
-
-            // $("#loanAmtRange").val(a)
-            $("#interestRateRange").val(b)
-            $("#tenureRange").val(c)
+            // $("#interestRateRange").val(b)
+            // $("#tenureRange").val(c)
 
         }
 
@@ -499,6 +317,36 @@
         var pointIndex = value.indexOf('.');
         return pointIndex >= 0 && pointIndex < value.length - x;
     }
+
+
+    //script for range slider (make progress bar move with the thumb)
+    // var progressBar = $(".bar .fill");
+    var slider = $(".slider");
+    var interestSlider = $("#interestRateRange");
+    var tenureSlider = $("#tenureRange")
+    var interestProgressBar = $(".bar.interest-bar .fill");
+    var tenureProgressBar = $(".bar.tenure-bar .fill");
+
+    function setbar() {
+        // progressBar.css('width', slider.val() + "%");
+        interestProgressBar.css('width', interestSlider.val() * 5 + "%");
+
+        if (tenureSlider.val() == "1") {
+            tenureProgressBar.css('width', 0 + "%");
+        } else if (tenureSlider.val() == "2") {
+            tenureProgressBar.css('width', 25 + "%");
+        } else if (tenureSlider.val() == "3") {
+            tenureProgressBar.css('width', 50 + "%");
+        } else if (tenureSlider.val() == "4") {
+            tenureProgressBar.css('width', 75 + "%");
+        } else if (tenureSlider.val() == "5") {
+            tenureProgressBar.css('width', 100 + "%");
+        } 
+
+    }
+
+    slider.on("input", setbar);
+    setbar();
 </script>
 
 </html>
