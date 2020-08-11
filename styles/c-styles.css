@@ -1,3 +1,8 @@
+#whyapplynowsection{
+
+    background-color: #002469;
+    color: white;
+}
 h5{
     font-weight: bold;
 }
@@ -189,7 +194,10 @@ h1 {
         background-color: #002469;
         color: white;
     }
-
+    .table-grey {
+        background-color: #eeeeee;
+        color: rgb(33,37,41);
+    }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 375px) {
     .main-banner .description {
@@ -242,8 +250,8 @@ h1 {
         right: 1%;
         width: 55%;
         top: 5%;
+       
     }
-
 
     /* Multi item carousel styles */
     /* to display 3 */
@@ -262,6 +270,7 @@ h1 {
 @media (min-width: 992px) {
     .main-banner .description {
         top: 10%;
+       
     }
 
     #webapplynowbutton{
