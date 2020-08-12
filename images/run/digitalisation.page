@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UOB : UOB Business app - Built for business. Download now</title>
+<!--grid-layout-->
+<!--ls:begin[stylesheet]-->
+<style type="text/css">
+          
+          .iw_container
+          {
+            max-width:800px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+          .iw_stretch
+          {
+            min-width: 100% !important;
+          }
+        </style>
+<link href="/mobile0c9a66/iwov-resources/grid/bootstrap.css" type="text/css" rel="stylesheet">
+<!--ls:end[stylesheet]-->
+<!--ls:begin[meta-keywords]-->
+<meta name="keywords" content="">
+<!--ls:end[meta-keywords]-->
+<!--ls:begin[meta-description]-->
+<meta name="description" content="UOB Business- With multiple features in one app, the new UOB Business app gives SMEs a single access to all business and banking needs. Now on App Store & Google Play.">
+<!--ls:end[meta-description]-->
+<!--ls:begin[custom-meta-data]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="country" content="sg">
+<meta name="language" content="English(US)">
+<meta name="segment" content="business">
+<meta name="segment-label" content="Business Banking">
+<meta name="language-value" content="English(US)">
+<!--ls:end[custom-meta-data]-->
+<!--ls:begin[meta-vpath]-->
+<meta name="vpath" content="">
+<!--ls:end[meta-vpath]-->
+<!--ls:begin[meta-page-locale-name]-->
+<meta name="page-locale-name" content="">
+<!--ls:end[meta-page-locale-name]-->
+<!--ls:begin[script]-->
+<script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/analytics.js" data-tg-="show"></script>
+<!--ls:end[script]-->
+<!--ls:begin[script]--><script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/cookie_handler.js" data-tg-="show"></script>
+<!--ls:end[script]-->
+<!--ls:begin[script]--><script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/initiator.js" data-tg-="show"></script>
+<!--ls:end[script]-->
+<!--ls:begin[stylesheet]-->
+<link type="text/css" href="/mobile0c9a66/iwov-resources/css/bootstrap.min.css" rel="stylesheet" >
+<!--ls:end[stylesheet]-->
+<!--ls:begin[stylesheet]-->
+<link type="text/css" href="/mobile0c9a66/iwov-resources/css/style.css" rel="stylesheet" >
+<!--ls:end[stylesheet]-->
+<!--ls:begin[stylesheet]-->
+<link type="text/css" href="/mobile0c9a66/iwov-resources/css/desktop-style.css" rel="stylesheet" >
+<!--ls:end[stylesheet]-->
+<!--ls:begin[stylesheet]-->
+
+<!--ls:end[stylesheet]-->
+<!--ls:begin[stylesheet]-->
+
+<!--ls:end[stylesheet]-->
+<!--ls:begin[stylesheet]-->
+<link type="text/css" href="/mobile0c9a66/iwov-resources/css/product-card-detail/product-card-detail-desktop-style.css" rel="stylesheet" >
+<!--ls:end[stylesheet]-->
+<!--ls:begin[stylesheet]-->
+
+<!--ls:end[stylesheet]-->
+<!--ls:begin[stylesheet]-->
+
+<!--ls:end[stylesheet]-->
+<!--ls:begin[script]-->
+<script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/libs/jquery.min.js" ></script>
+<!--ls:end[script]-->
+<!--ls:begin[script]--><script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/libs/bootstrap.min.js" ></script>
+<!--ls:end[script]-->
+<!--ls:begin[script]--><script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/libs/plugins.min.js" ></script>
+<!--ls:end[script]-->
+<!--ls:begin[script]--><script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/main.js" ></script>
+<!--ls:end[script]-->
+<!--ls:begin[script]--><script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/product-card-detail/product-card-detail-main.js" ></script>
+<!--ls:end[script]-->
+<!--ls:begin[script]--><script type="text/javascript" src="/mobile0c9a66/iwov-resources/js/libs/modernizr.min.js" ></script>
+<!--ls:end[script]-->
+<!--ls:begin[head-injection]--><script src="//assets.adobedtm.com/4f0de1c2a678946ab5959eeb23f3c13fd6552995/satelliteLib-584985543080f70b51078cd33cdd0fd548906d90.js"></script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PBG4DX');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "UOB - United Overseas Bank",
+  "url": "http://www.uob.com.sg/",
+  "logo": "http://www.uob.com.sg/web-resources/common/images/uob-logo.jpg",
+  "sameAs" : [ "https://www.facebook.com/UOB.sg/",
+  "https://www.linkedin.com/company/uob",
+  "https://www.youtube.com/user/UOBOnlineBanking",
+  "https://plus.google.com/+UnitedOverseasBank"]
+}
+</script>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico" >
+<link rel="shortcut icon" type="image/png" href="/web-resources/common/images/uob_icon_192x192.png" >
+<link rel="apple-touch-icon" href="/web-resources/common/images/uob_icon_180x180.png">
+<link rel="canonical" href="https://www.uob.com.sg/business/access/business-mobile-app.page"  /> <meta name="productname" content="BizApp" /><meta name="productcategory" content="BB Access" /><!--ls:end[head-injection]--><!--ls:begin[tracker-injection]--><!--ls:end[tracker-injection]--><!--ls:begin[script]--><!--ls:end[script]--></head>
+<body>
+<!--ls:begin[body]--><!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PBG4DX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager -->
+
+
+
+<!--[if lt IE 9 ]>
+<div style='width:100%;text-align:center;background-color: #f2dede; color: #a94442;padding: 6px; font-weight:bold;position: absolute; top: 0px;z-index: 2000;'><p><b>Notification:</b> Please upgrade your browser for an enhanced browsing experience.<br>Please <a href='https://uniservices1.uobgroup.com/secure/forms/urlext_redirection.jsp?CC=SG&URL=https://whatbrowser.org' target='_blank'><span style='font-style: normal; font-variant: normal; line-height: normal; color: #a94442; text-decoration: underline' target='_blank'>click here</span></a> to update to a more recent one. </p></div>
+<script> $("#header").attr("style","margin-top:50px");  </script>
+<![endif]-->
+
+<div class="container-fluid iw_section" id="sectionivd6ezsm"> 
+ <div class="row iw_row iw_stretch" id="rowivd6ezsn"> 
+  <div class="iw_columns col-lg-12" id="colivd6ezso"> 
+   <div class="iw_component" id="iw_comp1478832043701">
+     <div id="toppage" class="wrapper"><a href="#skip" title="Skip To Main Content" class="skip-link">Skip To Main Content</a></div>
+<header id="header">
+   <div role="banner" class="container">
+      <div class="navbar-header"><button type="button" title="Menu" class="navbar-toggle off"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="sr-only">UOB bank</div>
+         <div class="navbar-brand"><a href="https://www.uob.com.sg/business" title="UOB" class="logo dtm-anchor" anchor_name="UOB"><img src="/web-resources/common/images/uob-logo.jpg" data-uob-tg-mobile-src="/web-resources/common/images/uob-logo-mobile.png" alt="UOB"></a></div>
+         <div class="navbar-right">
+            <div class="block-dropdowns">
+               <div data-uob-tg-desktop="show" class="block-personal"><button id="dropdown-personal" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-focus"></button><div aria-labelledby="dropdown-personal" class="dropdown-menu">
+                     <ul class="list-unstyled">
+                        <li class="dropdown-item-heading">FOR INDIVIDUALS</li>
+                        <li><a title="PERSONAL BANKING" anchor_name="PERSONAL BANKING" href="/personal/index.page">PERSONAL BANKING</a></li>
+                        <li><a title="WEALTH BANKING" anchor_name="WEALTH BANKING" href="/wealthbanking/index.page">WEALTH BANKING</a></li>
+                        <li><a title="PRIVILEGE BANKING" anchor_name="PRIVILEGE BANKING" href="/privilegebanking/index.page">PRIVILEGE BANKING</a></li>
+                        <li><a title="PRIVILEGE RESERVE" anchor_name="PRIVILEGE RESERVE" href="/privilegereserve/index_pvr.html">PRIVILEGE RESERVE</a></li>
+                        <li><a title="PRIVATE BANKING" anchor_name="PRIVATE BANKING" href="/private/index.page">PRIVATE BANKING</a></li>
+                        <li class="dropdown-item-heading">FOR COMPANIES</li>
+                        <li><a title="BUSINESS BANKING" anchor_name="BUSINESS BANKING" href="/business/index.page">BUSINESS BANKING</a></li>
+                        <li><a title="COMMERCIAL BANKING" anchor_name="COMMERCIAL BANKING" href="/corporate/commercial-banking/index.page">COMMERCIAL BANKING</a></li>
+                        <li><a title="CORPORATE AND INSTITUTIONAL BANKING" anchor_name="CORPORATE AND INSTITUTIONAL BANKING" href="/corporate/index.page">CORPORATE AND INSTITUTIONAL BANKING</a></li>
+                        <li><a title="FOREIGN DIRECT INVESTMENT" anchor_name="FOREIGN DIRECT INVESTMENT" href="https://www.uobgroup.com/foreign-direct-investment/index.page">FOREIGN DIRECT INVESTMENT</a></li>
+                        <li><a title="INDUSTRY INSIGHTS" anchor_name="INDUSTRY INSIGHTS" href="https://www.uobgroup.com/industry-insights/index.page">INDUSTRY INSIGHTS</a></li>
+                        <li class="dropdown-item-heading">About UOB</li>
+                        <li><a title="UOB GROUP" anchor_name="UOB GROUP" href="https://www.uobgroup.com/">UOB GROUP</a></li>
+                        <li><a target="_blank" title="UOB Tech Start-up Ecosystem" anchor_name="UOB Tech Start-up Ecosystem" href="https://www.uobgroup.com/techecosystem">UOB Tech Start-up Ecosystem</a></li>
+                        <li class="dropdown-item-heading">UOB GROUP SUBSIDIARIES</li>
+                        <li><a target="_blank" title="UOB ASSET MANAGEMENT" anchor_name="UOB ASSET MANAGEMENT" href="https://www.uobam.com.sg/">UOB ASSET MANAGEMENT</a></li>
+                        <li><a target="_blank" title="UOB ALTERNATIVE INVESTMENT MANAGEMENT" anchor_name="UOB ALTERNATIVE INVESTMENT MANAGEMENT" href="https://www.uobaim.com.sg/">UOB ALTERNATIVE INVESTMENT MANAGEMENT</a></li>
+                        <li><a target="_blank" title="UNITED OVERSEAS INSURANCE" anchor_name="UNITED OVERSEAS INSURANCE" href="https://www.uoi.com.sg/">UNITED OVERSEAS INSURANCE</a></li>
+                        <li><a target="_blank" title="UOB TRAVEL PLANNERS" anchor_name="UOB TRAVEL PLANNERS" href="https://www.uobtravel.com/">UOB TRAVEL PLANNERS</a></li>
+                        <li><a target="_blank" title="UOB VENTURE MANAGEMENT" anchor_name="UOB VENTURE MANAGEMENT" href="https://www.uobvm.com.sg/">UOB VENTURE MANAGEMENT</a></li>
+                        <li><a target="_blank" title="UOB GLOBAL CAPITAL" anchor_name="UOB GLOBAL CAPITAL" href="https://www.uobglobal.com/">UOB GLOBAL CAPITAL</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div data-uob-tg-desktop="show" class="block-languages"><button id="dropdown-languages" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-focus"></button><div aria-labelledby="dropdown-languages" class="dropdown-menu">
+                     <ul class="list-unstyled">
+                        <li><a title="UOB GROUP" anchor_name="GROUP" href="https://www.uobgroup.com">UOB GROUP</a></li>
+                        <li><a title="UOB SINGAPORE" anchor_name="SINGAPORE" href="https://www.uob.com.sg/personal/index.page">UOB SINGAPORE</a></li>
+                        <li><a title="UOB CHINA" anchor_name="CHINA" href="https://www.uobchina.com.cn">UOB CHINA</a></li>
+                        <li><a title="UOB HONG KONG" anchor_name="HONG KONG" href="http://www.uob.com.hk">UOB HONG KONG</a></li>
+                        <li><a title="UOB INDONESIA" anchor_name="INDONESIA" href="http://www.uob.co.id">UOB INDONESIA</a></li>
+                        <li><a title="UOB MALAYSIA" anchor_name="MALAYSIA" href="https://www.uob.com.my">UOB MALAYSIA</a></li>
+                        <li><a title="UOB MUMBAI" anchor_name="MUMBAI" href="https://www.uobgroup.com/in/">UOB MUMBAI</a></li>
+                        <li><a title="UOB PHILIPPINES" anchor_name="PHILIPPINES" href="https://www.uob.com.ph">UOB PHILIPPINES</a></li>
+                        <li><a title="UOB TAIPEI" anchor_name="TAIPEI" href="https://www.uob.com.tw/zh/landing.html">UOB TAIPEI</a></li>
+                        <li><a title="UOB THAILAND" anchor_name="THAILAND" href="https://www.uob.co.th">UOB THAILAND</a></li>
+                        <li><a title="UOB TOKYO" anchor_name="TOKYO" href="https://www.uob.co.jp">UOB TOKYO</a></li>
+                        <li><a title="UOB VIETNAM" anchor_name="VIETNAM" href="https://www.uob.com.vn">UOB VIETNAM</a></li>
+                        <li><a title="UOB YANGON" anchor_name="YANGON" href="https://www.uobgroup.com/myanmar/">UOB YANGON</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="block-login"><button id="dropdown-login" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Login" class="btn-focus"><span data-uob-tg-mobile="hide" class="text-bold">Login</span><span class="icon icon-lock"></span></button><div aria-labelledby="dropdown-login" class="dropdown-menu">
+                     <ul class="list-unstyled">
+                        <li><a class="dtm-anchor" target="_blank" anchor_name="UOB PERSONAL INTERNET BANKING" title="UOB PERSONAL INTERNET BANKING" href="https://pib.uob.com.sg/PIBLogin/Public/processPreCapture.do?keyId=lpc">UOB PERSONAL INTERNET BANKING</a></li>
+                        <li><a class="dtm-anchor" target="_blank" anchor_name="BUSINESS INTERNET BANKING PLUS" title="BUSINESS INTERNET BANKING PLUS" href="/BIB/index.html?s_pid=HOME201205_eg_onlinesvcs_bib">BUSINESS INTERNET BANKING PLUS</a></li>
+                        <li><a class="dtm-anchor" target="_blank" anchor_name="UOBAM Invest" title="UOBAM Invest" href="https://secure.uobam.com.sg/login?lid=uobam-invest-login">UOBAM Invest</a></li>
+                        <li><a class="dtm-anchor" target="_blank" anchor_name="UOB COE OPEN BIDDING" title="UOB COE OPEN BIDDING" href="https://uniservices1.uobgroup.com/OCOE/corp/LogonFrameset.jsp">UOB COE OPEN BIDDING</a></li>
+                        <li><a class="dtm-anchor" target="_blank" anchor_name="UOB KAY HIAN" title="UOB KAY HIAN" href="http://www.uobkayhian.com.sg/">UOB KAY HIAN</a></li>
+                        <li><a class="dtm-anchor" target="_blank" anchor_name="UOB REWARDS" title="UOB REWARDS" href="https://pib.uob.com.sg/Rewards/">UOB REWARDS</a></li>
+                        <li><a class="dtm-anchor" target="_blank" anchor_name="RECEIVE MOBILE CASH" title="RECEIVE MOBILE CASH" href="/online_services/uob_POFL_mbk_truck_bann.html?s_cid=rmobilech_truck_banner">RECEIVE MOBILE CASH</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div data-uob-tg-mobile="hide" class="block-right"><span><a href="https://www.uob.com.sg" title="Right by you" anchor_name="Right by you" target="_blank"><img src="/web-resources/common/images/right-by-you.png" alt="Right by you"></a></span></div>
+         </div>
+      </div>
+   </div>
+</header> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectionivd6ezsq"> 
+ <div class="row iw_row iw_stretch" id="rowivd6ezsr"> 
+  <div class="iw_columns col-lg-12" id="colivd6ezss"> 
+   <div class="iw_component" id="iw_comp1478832043705">
+     <nav id="main-navbar" class="navbar-collapsed">
+   <div data-uob-tg-tablet="show" class="nav-backdrop"></div>
+   <div role="navigation">
+      <ul role="tablist" class="mainnav">
+         <li role="tab"><a href="/business/index.page" target="" anchor_name="Home" class="sublink1 dtm-link"><span data-uob-tg-mobile="show">Back to Main</span>Home</a></li>
+         <li role="tab" class="menu-level1"><a href="#" target="" class="lv1" data-uob-tg-mobile="show" title="Sub navigation"></a><a href="/business/transact/index.page" target="" anchor_name="Transact" class="sublink1 dtm-link"><span data-uob-tg-mobile="show">Back to Main</span>Transact</a><div class="submenu-level1">
+               <ul class="sub2 hasfoursub">
+                  <li class="menu-level2 open first"><a href="#" class="lv2" data-uob-tg-mobile="show" title="Sub navigation"></a><a class="sublink2"><span data-uob-tg-mobile="show">Back to Transact</span>Deposit and Cash Management</a><div class="submenu-level2">
+                        <div class="nav-content">
+                           <ul class="list-unstyled">
+                              <li><a href="/business/transact/onlineaccountopening.page" target="" anchor_name="Online Account Opening" class="dtm-link">Online Account Opening</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/transact/biztransact-account.page" target="" anchor_name="UOB BizTransact Account" class="dtm-link">UOB BizTransact Account</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/transact/ebusiness-account.page" target="" anchor_name="UOB eBusiness Account" class="dtm-link">UOB eBusiness Account</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/transact/singapore-dollar-current-account.page" target="" anchor_name="Singapore Dollar Current Account" class="dtm-link">Singapore Dollar Current Account</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/transact/bizglobal-account.page" target="" anchor_name="BizGlobal Account" class="dtm-link">BizGlobal Account</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/transact/global-currency-account.page" target="" anchor_name="Global Currency Account" class="dtm-link">Global Currency Account</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/transact/renminbi-account.page" target="" anchor_name="Renminbi Account" class="dtm-link">Renminbi Account</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="menu-level2 nosub"><a href="/business/transact/foreign-exchange.page" target="" anchor_name="Foreign Exchange" class="sublink2 dtm-link">Foreign Exchange</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/transact/fixed-deposit.page" target="" anchor_name="Fixed Deposits" class="sublink2 dtm-link">Fixed Deposits</a></li>
+                  <li class="menu-level2 nosub"><a href="https://www.uob.com.sg/corporate/commercial-solutions/business-debit-card.html" target="_blank" anchor_name="Business Debit Card" class="sublink2 dtm-link">Business Debit Card</a></li>
+                  <li class="menu-level2"><a href="#" target="" class="lv2" data-uob-tg-mobile="show" title="Sub navigation"></a><a href="/business/eservices/index.page" target="" anchor_name="eServices" class="sublink2 dtm-link">eServices</a><div class="submenu-level2">
+                        <div class="nav-content">
+                           <ul class="list-unstyled">
+                              <li><a href="/business/eservices/business-internet-banking-plus.page" target="" anchor_name="Business Internet Banking Plus" class="dtm-link">Business Internet Banking Plus</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/eservices/ealerts.page" target="" anchor_name="UOB eAlerts" class="dtm-link">UOB eAlerts</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/eservices/business-mobile-app.page" target="" anchor_name="UOB Business mobile app" class="dtm-link">UOB Business mobile app</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+               </ul>
+               <div data-uob-tg-mobile="hide" class="side-bar">
+                  <div class="block need-help">
+                     <h2>Help &amp; Support</h2>
+                     <ul class="list-unstyled">
+                        <li><a title="Business Banking Hotline: 6259 8188" href=""><span><img src="/web-resources/common/images/column-tiles/icon-phone.png"></span>Business Banking Hotline: 6259 8188</a></li>
+                        <li><a title="REQUEST A CALLBACK" href="https://uniservices1.uobgroup.com/appforms/business/UOB_Call_Back_Request.page?i_cid=top-menu"><span><img src="/web-resources/common/images/column-tiles/icon-callback.png"></span>REQUEST A CALLBACK</a></li>
+                        <li><a title="VISIT ANY UOB BRANCH" href="https://www.uob.com.sg/uob-branches-and-atms/locator.html"><span><img src="/web-resources/common/images/column-tiles/icon-branch.png"></span>VISIT ANY UOB BRANCH</a></li>
+                     </ul>
+                     <h2>Help &amp; Support</h2>
+                     <ul class="list-unstyled"></ul>
+                  </div>
+                  <div class="block quick-link">
+                     <h2>Quick Links</h2>
+                     <ul class="list-unstyled">
+                        <li><a class="dtm-link" title="UOB BIZSMART" href="https://www.uob.com.sg/business/BizSmart/index.html" anchor_name="UOB BIZSMART">UOB BIZSMART</a></li>
+                        <li><a class="dtm-link" title="UOB PAYNOW CORPORATE" href="/business/operate/paynow-corporate.page" anchor_name="UOB PAYNOW CORPORATE">UOB PAYNOW CORPORATE</a></li>
+                        <li><a class="dtm-link" target="_blank" title="WORKPLACE BANKING" href="https://www.uob.com.sg/workplacebanking/" anchor_name="WORKPLACE BANKING">WORKPLACE BANKING</a></li>
+                        <li><span style="font-size: 14px;color: #333;">FOREIGN EXCHANGE RATES</span><ul style="margin-left: 17px;color: #333;">
+                              <li style="padding-bottom: 0px;"><a class="dtm-link" style="font-size: 12px;" target="_blank" title="FOREIGN EXCHANGE AGAINST SGD" href="https://www.uobgroup.com/online-rates/foreign-exchange-rates-against-singapore-dollar.page" anchor_name="FOREIGN EXCHANGE AGAINST SGD"><span style="font-size: 14px;font-weight: bolder;">• </span>FOREIGN EXCHANGE AGAINST SGD</a></li>
+                              <li style="padding-bottom: 0px;"><a class="dtm-link" style="font-size: 12px;" target="_blank" title="FOREIGN EXCHANGE AGAINST USD" href="https://www.uobgroup.com/online-rates/foreign-exchange-rates-against-us-dollar.page" anchor_name="FOREIGN EXCHANGE AGAINST USD"><span style="font-size: 14px;font-weight: bolder;">• </span>FOREIGN EXCHANGE AGAINST USD</a></li>
+                           </ul>
+                        </li>
+                        <li><a class="dtm-link" title="BusinessConnect" href="https://www.uob.com.sg/business/businessprivileges.page" anchor_name="BusinessConnect">BusinessConnect</a></li>
+                     </ul>
+                  </div>
+                  <div class="thumb"><a class="dtm-link" href="" title="" anchor_name=""><img src="" alt=""></a></div>
+               </div>
+            </div>
+         </li>
+         <li role="tab" class="menu-level1"><a href="#" target="" class="lv1" data-uob-tg-mobile="show" title="Sub navigation"></a><a href="/business/operate/index.page" target="" anchor_name="Operate" class="sublink1 dtm-link"><span data-uob-tg-mobile="show">Back to Main</span>Operate</a><div class="submenu-level1">
+               <ul class="sub2 hasfoursub">
+                  <li class="menu-level2 open first"><a href="#" target="_blank" class="lv2" data-uob-tg-mobile="show" title="Sub navigation"></a><a href="http://www.uob.com.sg/business/BizSmart/index.html" target="_blank" anchor_name="BizSmart" class="sublink2 dtm-link">BizSmart</a><div class="submenu-level2">
+                        <div class="nav-content">
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/business/BizSmart/retail.html?i_cid=bb_menu" target="_blank" anchor_name="For Retail" class="dtm-link">For Retail</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/business/BizSmart/food-and-beverage.html?i_cid=bb_menu" target="_blank" anchor_name="For F&amp;B" class="dtm-link">For F&amp;B</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/business/BizSmart/logistics.html?i_cid=bb_menu" target="_blank" anchor_name="For Logistics" class="dtm-link">For Logistics</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/business/BizSmart/features.html?i_cid=bb_menu" target="_blank" anchor_name="Features" class="dtm-link">Features</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/business/BizSmart/pricing.html?i_cid=bb_menu" target="_blank" anchor_name="Pricing" class="dtm-link">Pricing</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/business/BizSmart/customer-stories.html?i_cid=bb_menu" target="_blank" anchor_name="Customer Stories" class="dtm-link">Customer Stories</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/business/BizSmart/partners.html?i_cid=bb_menu" target="_blank" anchor_name="Our Partners" class="dtm-link">Our Partners</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/business/BizSmart/digital-clinic.html?i_cid=bb_menu" target="_blank" anchor_name="Digital Clinic" class="dtm-link">Digital Clinic</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="menu-level2"><a href="#" target="" class="lv2" data-uob-tg-mobile="show" title="Sub navigation"></a><a href="/business/start-digital/index.page" target="" anchor_name="Start Digital" class="sublink2 dtm-link">Start Digital</a><div class="submenu-level2">
+                        <div class="nav-content">
+                           <ul class="list-unstyled">
+                              <li><a href="/business/start-digital/accounting.page" target="" anchor_name="Accounting" class="dtm-link">Accounting</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/start-digital/payroll-human-resource-management.page" target="" anchor_name="Payroll/Human Resource Management" class="dtm-link">Payroll/Human Resource Management</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/start-digital/digital-transactions.page" target="" anchor_name="Digital Transactions" class="dtm-link">Digital Transactions</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/start-digital/digital-marketing.page" target="" anchor_name="Digital Marketing" class="dtm-link">Digital Marketing</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/start-digital/cybersecurity.page" target="" anchor_name="Cybersecurity" class="dtm-link">Cybersecurity</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="menu-level2 nosub"><a href="/business/operate/paynow-corporate.page" target="" anchor_name="PayNow Corporate" class="sublink2 dtm-link">PayNow Corporate</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/operate/payment-and-collection-services.page" target="" anchor_name="Payment and Collection Services" class="sublink2 dtm-link">Payment and Collection Services</a></li>
+                  <li class="menu-level2 nosub"><a href="http://www.uob.com.sg/business/operate/payroll/index.html" target="_blank" anchor_name="Payroll Services" class="sublink2 dtm-link">Payroll Services</a></li>
+               </ul>
+               <div data-uob-tg-mobile="hide" class="side-bar">
+                  <div class="block need-help">
+                     <h2>Help &amp; Support</h2>
+                     <ul class="list-unstyled">
+                        <li><a title="Business Banking Hotline: 6259 8188" href=""><span><img src="/web-resources/common/images/column-tiles/icon-phone.png"></span>Business Banking Hotline: 6259 8188</a></li>
+                        <li><a title="REQUEST A CALLBACK" href="https://uniservices1.uobgroup.com/appforms/business/UOB_Call_Back_Request.page?i_cid=top-menu"><span><img src="/web-resources/common/images/column-tiles/icon-callback.png"></span>REQUEST A CALLBACK</a></li>
+                        <li><a title="VISIT ANY UOB BRANCH" href="https://www.uob.com.sg/uob-branches-and-atms/locator.html"><span><img src="/web-resources/common/images/column-tiles/icon-branch.png"></span>VISIT ANY UOB BRANCH</a></li>
+                     </ul>
+                  </div>
+                  <div class="block quick-link">
+                     <h2>Quick Links</h2>
+                     <ul class="list-unstyled">
+                        <li><a class="dtm-link" title="UOB EALERTS!" href="/business/access/ealerts.page" anchor_name="UOB EALERTS!">UOB EALERTS!</a></li>
+                        <li><a class="dtm-link" title="UOB CARD ACTIVATION" href="/personal/cards/credit/card_activation.html" anchor_name="UOB CARD ACTIVATION">UOB CARD ACTIVATION</a></li>
+                        <li><a class="dtm-link" target="_blank" title="WORKPLACE BANKING" href="https://www.uob.com.sg/workplacebanking/" anchor_name="WORKPLACE BANKING">WORKPLACE BANKING</a></li>
+                        <li><span style="font-size: 14px;color: #333;">FOREIGN EXCHANGE RATES</span><ul style="margin-left: 17px;color: #333;">
+                              <li style="padding-bottom: 0px;"><a class="dtm-link" style="font-size: 12px;" target="_blank" title="FOREIGN EXCHANGE AGAINST SGD" href="https://www.uobgroup.com/online-rates/foreign-exchange-rates-against-singapore-dollar.page" anchor_name="FOREIGN EXCHANGE AGAINST SGD"><span style="font-size: 14px;font-weight: bolder;">• </span>FOREIGN EXCHANGE AGAINST SGD</a></li>
+                              <li style="padding-bottom: 0px;"><a class="dtm-link" style="font-size: 12px;" target="_blank" title="FOREIGN EXCHANGE AGAINST USD" href="https://www.uobgroup.com/online-rates/foreign-exchange-rates-against-us-dollar.page" anchor_name="FOREIGN EXCHANGE AGAINST USD"><span style="font-size: 14px;font-weight: bolder;">• </span>FOREIGN EXCHANGE AGAINST USD</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="thumb"><a class="dtm-link" href="" title="" anchor_name=""><img src="" alt=""></a></div>
+               </div>
+            </div>
+         </li>
+         <li role="tab" class="menu-level1"><a href="#" target="" class="lv1" data-uob-tg-mobile="show" title="Sub navigation"></a><a href="/business/finance/index.page" target="" anchor_name="Finance" class="sublink1 dtm-link"><span data-uob-tg-mobile="show">Back to Main</span>Finance</a><div class="submenu-level1">
+               <ul class="sub2 hasfoursub">
+                  <li class="menu-level2 open first"><a href="#" class="lv2" data-uob-tg-mobile="show" title="Sub navigation"></a><a class="sublink2"><span data-uob-tg-mobile="show">Back to Finance</span>Credit Card and Unsecured Loans</a><div class="submenu-level2">
+                        <div class="nav-content">
+                           <ul class="list-unstyled">
+                              <li><a href="/business/finance/business-bundle-loan.page" target="" anchor_name="UOB Business Loan" class="dtm-link">UOB Business Loan</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/finance/bizmoney-business-loan.page" target="" anchor_name="UOB BizMoney" class="dtm-link">UOB BizMoney</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/finance/sme-micro-loan.page" target="" anchor_name="UOB SME Loan" class="dtm-link">UOB SME Loan</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="/business/finance/overdraft.page" target="" anchor_name="UOB Overdraft" class="dtm-link">UOB Overdraft</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/corporate/commercial-solutions/uob-business-plus.html" target="_blank" anchor_name="UOB Business Plus Card" class="dtm-link">UOB Business Plus Card</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="https://www.uob.com.sg/corporate/commercial-solutions/uob-platinum-business-card.html" target="_blank" anchor_name="UOB Platinum Business Card" class="dtm-link">UOB Platinum Business Card</a></li>
+                           </ul>
+                           <ul class="list-unstyled">
+                              <li><a href="http://www.uob.com.sg/corporatecardstnc" target="" anchor_name="UOB Corporate Cardmember Agreement" class="dtm-link">UOB Corporate Cardmember Agreement</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </li>
+                  <li class="menu-level2 nosub"><a href="/business/finance/business-commercial-property-loan.page" target="" anchor_name="Business Property and Equity Loan" class="sublink2 dtm-link">Business Property and Equity Loan</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/finance/commercial-vehicle-machinery-loan-financing.page" target="" anchor_name="Vehicle and Machinery Financing" class="sublink2 dtm-link">Vehicle and Machinery Financing</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/finance/government-assistance-scheme.page" target="" anchor_name="Government Assistance Scheme" class="sublink2 dtm-link">Government Assistance Scheme</a></li>
+                  <li class="menu-level2 nosub"><a href="https://www.uobgroup.com/uobgroup/covid-sme-relief-assistance.page" target="" anchor_name="Covid-19  Support Measures" class="sublink2 dtm-link">Covid-19  Support Measures</a></li>
+               </ul>
+               <div data-uob-tg-mobile="hide" class="side-bar">
+                  <div class="block need-help">
+                     <h2>Help &amp; Support</h2>
+                     <ul class="list-unstyled">
+                        <li><a title="Business Banking Hotline: 6259 8188" href=""><span><img src="/web-resources/common/images/column-tiles/icon-phone.png"></span>Business Banking Hotline: 6259 8188</a></li>
+                        <li><a title="REQUEST A CALLBACK" href="https://uniservices1.uobgroup.com/appforms/business/UOB_Call_Back_Request.page?i_cid=top-menu"><span><img src="/web-resources/common/images/column-tiles/icon-callback.png"></span>REQUEST A CALLBACK</a></li>
+                        <li><a title="VISIT ANY UOB BRANCH" href="https://www.uob.com.sg/uob-branches-and-atms/locator.html"><span><img src="/web-resources/common/images/column-tiles/icon-branch.png"></span>VISIT ANY UOB BRANCH</a></li>
+                     </ul>
+                  </div>
+                  <div class="block quick-link">
+                     <h2>Quick Links</h2>
+                     <ul class="list-unstyled">
+                        <li><a class="dtm-link" title="UOB EALERTS!" href="/business/access/ealerts.page" anchor_name="UOB EALERTS!">UOB EALERTS!</a></li>
+                        <li><a class="dtm-link" title="UOB CARD ACTIVATION" href="/personal/cards/credit/card_activation.html" anchor_name="UOB CARD ACTIVATION">UOB CARD ACTIVATION</a></li>
+                        <li><a class="dtm-link" target="_blank" title="WORKPLACE BANKING" href="https://www.uob.com.sg/workplacebanking/" anchor_name="WORKPLACE BANKING">WORKPLACE BANKING</a></li>
+                        <li><span style="font-size: 14px;color: #333;">FOREIGN EXCHANGE RATES</span><ul style="margin-left: 17px;color: #333;">
+                              <li style="padding-bottom: 0px;"><a class="dtm-link" style="font-size: 12px;" target="_blank" title="FOREIGN EXCHANGE AGAINST SGD" href="https://www.uobgroup.com/online-rates/foreign-exchange-rates-against-singapore-dollar.page" anchor_name="FOREIGN EXCHANGE AGAINST SGD"><span style="font-size: 14px;font-weight: bolder;">• </span>FOREIGN EXCHANGE AGAINST SGD</a></li>
+                              <li style="padding-bottom: 0px;"><a class="dtm-link" style="font-size: 12px;" target="_blank" title="FOREIGN EXCHANGE AGAINST USD" href="https://www.uobgroup.com/online-rates/foreign-exchange-rates-against-us-dollar.page" anchor_name="FOREIGN EXCHANGE AGAINST USD"><span style="font-size: 14px;font-weight: bolder;">• </span>FOREIGN EXCHANGE AGAINST USD</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="thumb"><a class="dtm-link" href="" title="" anchor_name=""><img src="" alt=""></a></div>
+               </div>
+            </div>
+         </li>
+         <li role="tab" class="menu-level1"><a href="#" target="" class="lv1" data-uob-tg-mobile="show" title="Sub navigation"></a><a href="/business/trade/index.page" target="" anchor_name="Trade" class="sublink1 dtm-link"><span data-uob-tg-mobile="show">Back to Main</span>Trade</a><div class="submenu-level1">
+               <ul class="sub2 hasfoursub">
+                  <li class="menu-level2 nosub"><a href="/business/trade/import-services.page" target="" anchor_name="Import Services" class="sublink2 dtm-link">Import Services</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/trade/export-services.page" target="" anchor_name="Export Services" class="sublink2 dtm-link">Export Services</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/trade/uob-bb-express-bankers-guarantee.page" target="" anchor_name="UOB Express Banker's Guarantee" class="sublink2 dtm-link">UOB Express Banker's Guarantee</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/trade/export-services/transferable-letter-of-credit.page" target="" anchor_name="Transferable Letter of Credit" class="sublink2 dtm-link">Transferable Letter of Credit</a></li>
+                  <li class="menu-level2 nosub"><a href="https://www.uobgroup.com/uobgroup/covid-sme-relief-assistance.page" target="" anchor_name="Covid-19  Support Measures" class="sublink2 dtm-link">Covid-19  Support Measures</a></li>
+               </ul>
+               <div data-uob-tg-mobile="hide" class="side-bar">
+                  <div class="block need-help"></div>
+               </div>
+            </div>
+         </li>
+         <li role="tab" class="menu-level1"><a href="#" target="" class="lv1" data-uob-tg-mobile="show" title="Sub navigation"></a><a href="/business/insure/index.page" target="" anchor_name="Insure" class="sublink1 dtm-link"><span data-uob-tg-mobile="show">Back to Main</span>Insure</a><div class="submenu-level1">
+               <ul class="sub2 hasfoursub">
+                  <li class="menu-level2 nosub"><a href="/business/insure/bizcare.page" target="" anchor_name="BizCare" class="sublink2 dtm-link">BizCare</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/insure/bizdrive.page" target="" anchor_name="BizDrive" class="sublink2 dtm-link">BizDrive</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/insure/machinery-all-risks-insurance.page" target="" anchor_name="Machinery All Risks Insurance" class="sublink2 dtm-link">Machinery All Risks Insurance</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/insure/life-insurance.page" target="" anchor_name="Life Insurance" class="sublink2 dtm-link">Life Insurance</a></li>
+                  <li class="menu-level2 nosub"><a href="/business/insure/employee-benefits.page" target="" anchor_name="Employee Benefits" class="sublink2 dtm-link">Employee Benefits</a></li>
+               </ul>
+               <div data-uob-tg-mobile="hide" class="side-bar">
+                  <div class="block need-help">
+                     <h2>Help &amp; Support</h2>
+                     <ul class="list-unstyled">
+                        <li><a title="Business Banking Hotline: 6259 8188" href=""><span><img src="/web-resources/common/images/column-tiles/icon-phone.png"></span>Business Banking Hotline: 6259 8188</a></li>
+                        <li><a title="REQUEST A CALLBACK" href="https://uniservices1.uobgroup.com/appforms/business/UOB_Call_Back_Request.page?i_cid=top-menu"><span><img src="/web-resources/common/images/column-tiles/icon-callback.png"></span>REQUEST A CALLBACK</a></li>
+                        <li><a title="VISIT ANY UOB BRANCH" href="https://www.uob.com.sg/uob-branches-and-atms/locator.html"><span><img src="/web-resources/common/images/column-tiles/icon-branch.png"></span>VISIT ANY UOB BRANCH</a></li>
+                     </ul>
+                  </div>
+                  <div class="block quick-link">
+                     <h2>Quick Links</h2>
+                     <ul class="list-unstyled">
+                        <li><a class="dtm-link" title="UOB EALERTS!" href="/business/access/ealerts.page" anchor_name="UOB EALERTS!">UOB EALERTS!</a></li>
+                        <li><a class="dtm-link" target="_blank" title="WORKPLACE BANKING" href="https://www.uob.com.sg/workplacebanking/" anchor_name="WORKPLACE BANKING">WORKPLACE BANKING</a></li>
+                        <li><span style="font-size: 14px;color: #333;">FOREIGN EXCHANGE RATES</span><ul style="margin-left: 17px;color: #333;">
+                              <li style="padding-bottom: 0px;"><a class="dtm-link" style="font-size: 12px;" target="_blank" title="FOREIGN EXCHANGE AGAINST SGD" href="https://www.uobgroup.com/online-rates/foreign-exchange-rates-against-singapore-dollar.page" anchor_name="FOREIGN EXCHANGE AGAINST SGD"><span style="font-size: 14px;font-weight: bolder;">• </span>FOREIGN EXCHANGE AGAINST SGD</a></li>
+                              <li style="padding-bottom: 0px;"><a class="dtm-link" style="font-size: 12px;" target="_blank" title="FOREIGN EXCHANGE AGAINST USD" href="https://www.uobgroup.com/online-rates/foreign-exchange-rates-against-us-dollar.page" anchor_name="FOREIGN EXCHANGE AGAINST USD"><span style="font-size: 14px;font-weight: bolder;">• </span>FOREIGN EXCHANGE AGAINST USD</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="thumb"><a class="dtm-link" href="" title="" anchor_name=""><img src="" alt=""></a></div>
+               </div>
+            </div>
+         </li>
+         <li role="tab"><a href="/business/invest/index.page" target="" anchor_name="Invest" class="sublink1 dtm-link"><span data-uob-tg-mobile="show">Back to Main</span>Invest</a></li>
+         <li role="tab"><a href="/business/insights/index.page" target="" anchor_name="Insights" class="sublink1 dtm-link"><span data-uob-tg-mobile="show">Back to Main</span>Insights</a></li>
+      </ul>
+      <div data-uob-tg-mobile="show" class="block-dropdowns">
+         <div class="block-personal"><button id="dropdown-personal-mobile" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-focus"><span data-uob-tg-mobile="hide">You are in  </span><span class="text-bold"></span><span class="caret"></span></button><div aria-labelledby="dropdown-personal-mobile" class="dropdown-menu">
+               <ul class="list-unstyled">
+                  <li class="dropdown-item-heading">FOR INDIVIDUALS</li>
+                  <li><a class="dtm-link" title="PERSONAL BANKING" anchor_name="PERSONAL BANKING" href="/personal/index.page">PERSONAL BANKING</a></li>
+                  <li><a class="dtm-link" title="WEALTH BANKING" anchor_name="WEALTH BANKING" href="/wealthbanking/index.page">WEALTH BANKING</a></li>
+                  <li><a class="dtm-link" title="PRIVILEGE BANKING" anchor_name="PRIVILEGE BANKING" href="/privilegebanking/index.page">PRIVILEGE BANKING</a></li>
+                  <li><a class="dtm-link" title="PRIVILEGE RESERVE" anchor_name="PRIVILEGE RESERVE" href="/privilegereserve/index_pvr.html">PRIVILEGE RESERVE</a></li>
+                  <li><a class="dtm-link" title="PRIVATE BANKING" anchor_name="PRIVATE BANKING" href="/private/index.page">PRIVATE BANKING</a></li>
+                  <li class="dropdown-item-heading">FOR COMPANIES</li>
+                  <li><a class="dtm-link" title="BUSINESS BANKING" anchor_name="BUSINESS BANKING" href="/business/index.page">BUSINESS BANKING</a></li>
+                  <li><a class="dtm-link" title="COMMERCIAL BANKING" anchor_name="COMMERCIAL BANKING" href="/corporate/commercial-banking/index.page">COMMERCIAL BANKING</a></li>
+                  <li><a class="dtm-link" title="CORPORATE AND INSTITUTIONAL BANKING" anchor_name="CORPORATE AND INSTITUTIONAL BANKING" href="/corporate/index.page">CORPORATE AND INSTITUTIONAL BANKING</a></li>
+                  <li><a class="dtm-link" title="FOREIGN DIRECT INVESTMENT" anchor_name="FOREIGN DIRECT INVESTMENT" href="https://www.uobgroup.com/foreign-direct-investment/index.page">FOREIGN DIRECT INVESTMENT</a></li>
+                  <li><a class="dtm-link" title="INDUSTRY INSIGHTS" anchor_name="INDUSTRY INSIGHTS" href="https://www.uobgroup.com/industry-insights/index.page">INDUSTRY INSIGHTS</a></li>
+                  <li class="dropdown-item-heading">About UOB</li>
+                  <li><a class="dtm-link" title="UOB GROUP" anchor_name="UOB GROUP" href="https://www.uobgroup.com/">UOB GROUP</a></li>
+                  <li><a class="dtm-link" target="_blank" title="UOB Tech Start-up Ecosystem" anchor_name="UOB Tech Start-up Ecosystem" href="https://www.uobgroup.com/techecosystem">UOB Tech Start-up Ecosystem</a></li>
+                  <li class="dropdown-item-heading">UOB GROUP SUBSIDIARIES</li>
+                  <li><a class="dtm-link" target="_blank" title="UOB ASSET MANAGEMENT" anchor_name="UOB ASSET MANAGEMENT" href="https://www.uobam.com.sg/">UOB ASSET MANAGEMENT</a></li>
+                  <li><a class="dtm-link" target="_blank" title="UOB ALTERNATIVE INVESTMENT MANAGEMENT" anchor_name="UOB ALTERNATIVE INVESTMENT MANAGEMENT" href="https://www.uobaim.com.sg/">UOB ALTERNATIVE INVESTMENT MANAGEMENT</a></li>
+                  <li><a class="dtm-link" target="_blank" title="UNITED OVERSEAS INSURANCE" anchor_name="UNITED OVERSEAS INSURANCE" href="https://www.uoi.com.sg/">UNITED OVERSEAS INSURANCE</a></li>
+                  <li><a class="dtm-link" target="_blank" title="UOB TRAVEL PLANNERS" anchor_name="UOB TRAVEL PLANNERS" href="https://www.uobtravel.com/">UOB TRAVEL PLANNERS</a></li>
+                  <li><a class="dtm-link" target="_blank" title="UOB VENTURE MANAGEMENT" anchor_name="UOB VENTURE MANAGEMENT" href="https://www.uobvm.com.sg/">UOB VENTURE MANAGEMENT</a></li>
+                  <li><a class="dtm-link" target="_blank" title="UOB GLOBAL CAPITAL" anchor_name="UOB GLOBAL CAPITAL" href="https://www.uobglobal.com/">UOB GLOBAL CAPITAL</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="block-languages"><button id="dropdown-languages-mobile" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-focus"><span data-uob-tg-mobile="show">UOB </span><span></span><span class="caret"></span></button><div aria-labelledby="dropdown-languages-mobile" class="dropdown-menu">
+               <ul class="list-unstyled">
+                  <li><a class="dtm-link" title="GROUP" anchor_name="GROUP" href="https://www.uobgroup.com">GROUP</a></li>
+                  <li><a class="dtm-link" title="SINGAPORE" anchor_name="SINGAPORE" href="https://www.uob.com.sg/personal/index.page">SINGAPORE</a></li>
+                  <li><a class="dtm-link" title="CHINA" anchor_name="CHINA" href="https://www.uobchina.com.cn">CHINA</a></li>
+                  <li><a class="dtm-link" title="HONG KONG" anchor_name="HONG KONG" href="http://www.uob.com.hk">HONG KONG</a></li>
+                  <li><a class="dtm-link" title="INDONESIA" anchor_name="INDONESIA" href="http://www.uob.co.id">INDONESIA</a></li>
+                  <li><a class="dtm-link" title="MALAYSIA" anchor_name="MALAYSIA" href="https://www.uob.com.my">MALAYSIA</a></li>
+                  <li><a class="dtm-link" title="MUMBAI" anchor_name="MUMBAI" href="https://www.uobgroup.com/in/">MUMBAI</a></li>
+                  <li><a class="dtm-link" title="PHILIPPINES" anchor_name="PHILIPPINES" href="https://www.uob.com.ph">PHILIPPINES</a></li>
+                  <li><a class="dtm-link" title="TAIPEI" anchor_name="TAIPEI" href="https://www.uob.com.tw/zh/landing.html">TAIPEI</a></li>
+                  <li><a class="dtm-link" title="THAILAND" anchor_name="THAILAND" href="https://www.uob.co.th">THAILAND</a></li>
+                  <li><a class="dtm-link" title="TOKYO" anchor_name="TOKYO" href="https://www.uob.co.jp">TOKYO</a></li>
+                  <li><a class="dtm-link" title="VIETNAM" anchor_name="VIETNAM" href="https://www.uob.com.vn">VIETNAM</a></li>
+                  <li><a class="dtm-link" title="YANGON" anchor_name="YANGON" href="https://www.uobgroup.com/myanmar/">YANGON</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</nav>
+<div id="skip"></div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectionivd6ezsi"> 
+ <div class="row iw_row iw_stretch" id="rowivd6ezsj"> 
+  <div class="iw_columns col-lg-12" id="colivd6ezsk"> 
+   <div class="iw_component" id="iw_comp1478832043697">
+     <div class="container">
+   <div class="row sticky-wrapper">
+      <ol   class="breadcrumb"></ol>
+   </div>
+</div>
+<div id="main" class="container">
+   <div class="row sticky-wrapper">
+      <h1 class="heading1">UOB Business</h1>
+   </div>
+</div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectioniyc9zv51"> 
+ <div class="row iw_row iw_stretch" id="rowiyc9zv52"> 
+  <div class="iw_columns col-lg-12" id="coliyc9zv53"> 
+   <div class="iw_component" id="iw_comp1485307937124">
+     <div class="container">
+   <div class="row sticky-wrapper">
+      <div class="main-banner">
+         <ul class="list-unstyled">
+            <li><img data-uob-tg-desktop="show" src="/web-resources/business/images/carousel/business/access/business-mobile-app/product_page_banner_1180x332.gif" alt="uobbusiness" class="img-responsive"><img data-uob-tg-mobile="show" src="/web-resources/business/images/carousel/business/access/business-mobile-app/product_page_banner_472x332.gif" alt="uobbusiness" class="img-responsive"><div class="description"><p><span style="font-size: 18pt;"><strong>Master multiple roles with the UOB Business app</strong></span></p>
+<p>A single app for your business and banking needs</p><a class="btn-1 dtm-banner btn-red" href="http://www.uob.com.sg/business/access/business-mobile-app.page#downloaduobbusiness" title="Find out more" banner_name="uobbusiness">Find out more</a></div>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectioniyc9zv5d"> 
+ <div class="row iw_row iw_stretch" id="rowiyc9zv5e"> 
+  <div class="iw_columns col-lg-12" id="coliyc9zv5f"> 
+   <div class="iw_component" id="iw_comp1485307937136">
+     <!--ls:begin[component-1485307937136]--><div>
+   <div xmlns:xs="http://www.w3.org/2001/XMLSchema" id="sticky-navibar" class="container">
+      <div class="row sticky-wrapper">
+         <div class="sticky-nav no-mask scrolltabs-container affix-top col-3" id="li_name_list">
+            <ul class="nav-heading nav nav-tabs nav-justified scrolltabs">
+               <li class="active"><a href="#features" title="Features">Features</a></li>
+               <li class=""><a href="#uobsmeexchangepromotions" title="UOB SME Exchange (Promotions)">UOB SME Exchange (Promotions)</a></li>
+               <li class=""><a href="#downloaduobbusiness" title="Download UOB Business">Download UOB Business</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div xmlns:xs="http://www.w3.org/2001/XMLSchema" class="container" data-scroll-space="data-scroll-space">
+      <div class="row sticky-wrapper">
+         <div class="section-title" id="features">
+            <h2 class="heading2 subtitle">Features</h2><span>Built for business</span></div>
+         <div class="section-content">
+            <div class="content-block">
+               <div class="calculator-block"><p>Introducing the new UOB Business app, aimed at providing SMEs with a single access to all business and banking needs. With multiple useful features consolidated into one app, it&rsquo;s a business app so practical, it&rsquo;s like you built it yourself.</p></div>
+            </div>
+         </div>
+         <div class="divider"></div>
+         <div class="section-content">
+            <div class="image-items-wrap image-items-wrap-custom">
+               <div class="image-item-wrap"><a href="javascript:void(0);" title="Business Tools">
+                     <div class="img-wrapper"><img class="img-responsive" src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/real-time-alerts-472x332.png" alt="Business Tools"></div>
+                     <div class="content-text"><span>Business Tools</span><p>Real time alerts on FX rates that are most important to you</p>
+                     </div></a></div>
+               <div class="image-item-wrap"><a href="javascript:void(0);" title="Business News &amp; Insights">
+                     <div class="img-wrapper"><img class="img-responsive" src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/stay-ahead-472x332.png" alt="Business News &amp; Insights"></div>
+                     <div class="content-text"><span>Business News &amp; Insights</span><p>Stay ahead of the curve with business information all in one place</p>
+                     </div></a></div>
+               <div class="image-item-wrap"><a href="javascript:void(0);" title="Business Banking Access">
+                     <div class="img-wrapper"><img class="img-responsive" src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/business-internet-banking-472x332.png" alt="Business Banking Access"></div>
+                     <div class="content-text"><span>Business Banking Access</span><p>24/7 business internet banking access at your convenience</p>
+                     </div></a></div>
+            </div>
+         </div>
+         <div class="divider"></div>
+         <div class="session-content ">
+            <div class="grid-items">
+               <div class="grid-thumbnail"><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/quick-glance-472x266.png" alt=""></div>
+               <div class="grid-desc">
+                  <h3 class="heading3">Quick Glance</h3><p><strong>Quick access to updates:</strong></p>
+<ul>
+<li>Set and view FX rate alerts of your 5 preferred currencies</li>
+<li>View the latest market insights and trends</li>
+<li>View latest promotions for your business needs</li>
+</ul>
+<p><strong>Quick access to key features:</strong></p>
+<ul>
+<li>Business Internet Banking (BIBPlus Mobile)</li>
+<li>Personal Internet Banking via UOB Mighty</li>
+<li>News</li>
+<li>Products &amp; Solutions</li>
+</ul>
+               </div>
+            </div>
+         </div>
+         <div class="session-content ">
+            <div class="grid-items">
+               <div class="grid-thumbnail"><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/businessapp-fx-472x266.png" alt="24/7 Forex (FX) Alerts"></div>
+               <div class="grid-desc">
+                  <h3 class="heading3">24/7 Forex (FX) Alerts</h3><p>Get real-time alerts to manage currency fluctuations:</p>
+<ul>
+<li>Set and view FX rate alerts of your 5 preferred currencies</li>
+<li>Calculate FX rates with the in-built currency converter</li>
+<li>Enjoy preferential Forex rates^</li>
+</ul>
+<p>^A preferential Foreign Exchange rate is applicable for Foreign Exchange contracts amounts equivalent to S$20,000 and above, and may be enquired via our FX hotline (6709 8808).</p>
+               </div>
+            </div>
+         </div>
+         <div class="session-content ">
+            <div class="grid-items">
+               <div class="grid-thumbnail"><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/businessapp-bibplus-472x266.png" alt="BIBPlus Mobile"></div>
+               <div class="grid-desc">
+                  <h3 class="heading3">BIBPlus Mobile</h3><p>Bank on the go with BIBPlus Mobile. Handy and intuitive to use, you can now:</p>
+<ul>
+<li>Access banking services while on the go;</li>
+<li>Get quick access to your account information;</li>
+<li>Perform and approve transactions anywhere at your convenience; and</li>
+<li>Enjoy ease of checking transaction status at a glance</li>
+</ul>
+<p><a href="/corporate/transaction_banking/bibplus_highlights.html?s_cid=BIBPlus_BBApp">Find out more</a></p>
+               </div>
+            </div>
+         </div>
+         <div class="session-content ">
+            <div class="grid-items">
+               <div class="grid-thumbnail"><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/businessapp-newsinsights-427x266.png" alt="News &amp; Insights"></div>
+               <div class="grid-desc">
+                  <h3 class="heading3">News &amp; Insights</h3><p>Stay up to date &amp; access:</p>
+<ul>
+<li>Latest economic &amp; currency trends reports from the UOB Economic Treasury Research team</li>
+<li>Latest news feed from Straits Times (Sections: Singapore, Asia, World, Business, Sport, Technology), Bangkok Post, and TheEdge Malaysia.</li>
+</ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div xmlns:xs="http://www.w3.org/2001/XMLSchema" class="container">
+      <div class="row sticky-wrapper">
+         <div class="section-title" id="uobsmeexchangepromotions">
+            <h2 class="heading2">UOB SME Exchange (Promotions)</h2>
+         </div>
+         <div class="session-content ">
+            <div class="grid-items">
+               <div class="grid-thumbnail"><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/sme-exchange-feature-472x266.png" alt="UOB SME Exchange (Promotions)"></div>
+               <div class="grid-desc">
+                  <h3 class="heading3"></h3><p>UOB SME Exchange is accessible only via the new UOB Business app (Promotions).</p>
+<p>It takes time and effort to find the right offer for business essentials, UOB SME Exchange brings together exclusive business offers from partners to help SMEs reduce operating costs, and deliver value back to SMEs.</p>
+<!--<p>Featured partners include:</p>
+<table style="height: 178px;" width="310">
+<tbody>
+<tr>
+<td><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/starhub_logo.png" alt="" width="80" height="65" /></td>
+<td><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/spc-logo.jpg" alt="" height="65" /></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;" colspan="2"><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/fuji_xerox_logo.png" alt="" width="200" height="39" /></td>
+</tr>
+<tr>
+<td><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/grab_logo.png" alt="" height="45" /></td>
+<td><img src="/web-resources/business/images/image-tiles/business/access/business-mobile-app/hubspot_logo.png" alt="" height="45" /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>-->
+<p>The UOB SME Exchange offers are exclusive only to applicable Customers (as defined in the prevailing terms and conditions of the UOB SME Exchange, available at <a href="/web-resources/business/pdf/business/access/business-mobile-app/sme_exchange_tcs_uob_business.pdf" target="_blank">uob.com.sg/smeexchange_tncs</a>) of United Overseas Bank Limited who has complied with all the terms and conditions of the UOB SME Exchange and the terms and conditions of the SME Exchange offer. <br /><br /> Please click <a href="/web-resources/business/pdf/business/access/business-mobile-app/sme_exchange_tcs_uob_business.pdf" target="_blank">here</a> for full set of relevant terms and conditions which apply to the UOB SME Exchange promotion and the full set of relevant terms and conditions which apply to respective merchants/providers participating in UOB SME Exchange and their respective SME Exchange offer. <br /><br /> UOB Business is only compatible with iOS mobile phones running iOS7.0 or higher, and Android mobile phones running 4.4.4 (Kit Kat) or higher. Please click <a href="/web-resources/business/pdf/business/access/business-mobile-app/uob_business_app_tcs.pdf" target="_blank">here</a> for terms and conditions governing the UOB Business app.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div xmlns:xs="http://www.w3.org/2001/XMLSchema" class="container">
+      <div class="row sticky-wrapper">
+         <div class="section-title" id="downloaduobbusiness">
+            <h2 class="heading2">Download UOB Business</h2>
+         </div>
+         <div class="section-content">
+            <div class="content-block">
+               <div class="free-text"><table style="height: 21px;" width="400" cellpadding="5">
+<tbody>
+<tr>
+<td><a href="https://itunes.apple.com/us/app/uob-business/id1053381559?ls=1&amp;mt=8" target="_blank"><img src="/web-resources/business/images/free-form/business/access/business-mobile-app/AppStore_icon.png" alt="" width="137" height="44" /></a></td>
+<td><a href="https://play.google.com/store/apps/details?id=com.uobbiz.mobile&amp;h1=en" target="_blank"><img src="/web-resources/business/images/free-form/business/access/business-mobile-app/GooglePlay_icon.png" alt="" width="137" height="44" /></a></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p></p></div>
+            </div>
+         </div>
+         <div class="divider"></div>
+         <div class="section-content">
+            <div class="content-block">
+               <div class="free-text"><div class="main-banner"><img class="img-responsive" src="/web-resources/business/images/1-column-image-text/business/ebusiness-account/SME_1180x226.jpg" alt="uob-fuelpower" data-uob-tg-desktop="show" /><img class="img-responsive" src="/web-resources/business/images/1-column-image-text/business/ebusiness-account/SME_472x332.jpg" alt="uob-fuelpower" data-uob-tg-mobile="show" />
+<div class="description"><!--<p>So Hot It's Cool</p><p style="font-size: 15px;">Redeem an Oasis thermal bottle* with UOB Cards. While stocks last.</p>--></div>
+</div></div>
+            </div>
+         </div>
+         <div class="divider"></div>
+      </div>
+   </div>
+</div><!--ls:end[component-1485307937136]--> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectioniz68or2f"> 
+ <div class="row iw_row iw_stretch" id="rowiz68or2g"> 
+  <div class="iw_columns col-lg-12" id="coliz68or2h"> 
+   <div class="iw_component" id="iw_comp1487119724294">
+     <div class="container">
+   <div class="row sticky-wrapper">
+      <div class="section-title">
+         <h2 class="heading2">Products you may also like</h2>
+      </div>
+      <div class="section-content">
+         <div class="image-items-wrap image-items-wrap-custom">
+            <div class="image-item-wrap"><a target="_blank" title="UOB Business Internet Banking Plus" href="/corporate/bib.page">
+                  <div class="img-wrapper"><img class="img-responsive" src="/web-resources/business/images/image-tiles/business/finance/product-1.jpg" alt="UOB Business Internet Banking Plus"></div>
+                  <div class="content-text"><span>UOB Business Internet Banking Plus</span></div></a></div>
+            <div class="image-item-wrap"><a target="_blank" title="UOB Business App" href="/business/access/business-mobile-app.page">
+                  <div class="img-wrapper"><img class="img-responsive" src="/web-resources/business/images/image-tiles/business/finance/product-2.jpg" alt="Business app"></div>
+                  <div class="content-text"><span>UOB Business App</span></div></a></div>
+            <div class="image-item-wrap" data-uob-tg-mobile="hide"><a title="" href=""></a></div>
+         </div>
+      </div>
+   </div>
+</div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectionixpfbuig"> 
+ <div class="row iw_row iw_stretch" id="rowixpfbuih"> 
+  <div class="iw_columns col-lg-12" id="colixpfbuii"> 
+   <div class="iw_component" id="iw_comp1483926172215">
+     <div class="container">
+   <div class="row sticky-wrapper"></div>
+</div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectioniy5kc69j"> 
+ <div class="row iw_row iw_stretch" id="rowiy5kc69k"> 
+  <div class="iw_columns col-lg-12" id="coliy5kc69l"> 
+   <div class="iw_component" id="iw_comp1484902044339">
+     <div class="container">
+   <div class="row sticky-wrapper"></div>
+</div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectioniy5kc69n"> 
+ <div class="row iw_row iw_stretch" id="rowiy5kc69o"> 
+  <div class="iw_columns col-lg-12" id="coliy5kc69p"> 
+   <div class="iw_component" id="iw_comp1484902044346">
+     <div class="container">
+   <div class="row sticky-wrapper"></div>
+</div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectioniwet6kfh"> 
+ <div class="row iw_row iw_stretch" id="rowiwet6kfi"> 
+  <div class="iw_columns col-lg-12" id="coliwet6kfj"> 
+   <div class="iw_component" id="iw_comp1481107530220">
+     <div xmlns:xs="http://www.w3.org/2001/XMLSchema" class="container">
+   <div class="row sticky-wrapper" style="padding-bottom: 20px;"></div>
+</div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid iw_section" id="sectionivd6ezsy"> 
+ <div class="row iw_row iw_stretch" id="rowivd6ezsz"> 
+  <div class="iw_columns col-lg-12" id="colivd6ezt0"> 
+   <div class="iw_component" id="iw_comp1478832043713">
+     <footer id="footer"><span class="divider hidden-xs" style="margin-top: 0px; margin-bottom: 10px;"></span><div role="contentinfo" class="container">
+      <div class="pull-left">
+         <div class="nav">
+            <ul class="list-unstyled"><span>
+                  <li><a class="dtm-anchor" title="About Us" href="https://www.uobgroup.com/uobgroup/about/index.page" anchor_name="About Us">About Us</a></li>
+                  <li><a class="dtm-anchor" title="Investor Relations" href="https://www.uobgroup.com/investor-relations/index.html" anchor_name="Investor Relations">Investor Relations</a></li>
+                  <li><a class="dtm-anchor" title="Careers" href="https://www.uobgroup.com/careers/index.page" anchor_name="Careers">Careers</a></li>
+                  <li><a class="dtm-anchor" title="Contact Us" href="https://www.uobgroup.com/uobgroup/contact-us/index.page#CorporateInstitutionalBanking" anchor_name="Contact Us">Contact Us</a></li>
+                  <li><a class="dtm-anchor" title="Sitemap" href="/business/sitemap.page" anchor_name="Sitemap">Sitemap</a></li>
+                  <li class="last"><a class="dtm-anchor" title="Other UOB Sites" href="https://www.uobgroup.com/uobgroup/other-uob-sites/index.page" anchor_name="Other UOB Sites">Other UOB Sites</a></li></span></ul>
+         </div>
+         <div class="block-term"><p class="float-l">Copyright &copy; 2020 United Overseas Bank Limited Co.</p>
+<p class="float-l">Reg. No. 193500026Z. All Rights Reserved.</p></div>
+      </div>
+      <div class="pull-right">
+         <div class="block-socials">
+            <ul class="list-unstyled">
+               <li><a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/" class="ico-p-facebook dtm-anchor" anchor_name="Facebook"><img src="/web-resources/common/images/icon-social-fb.jpg" alt="Facebook">Facebook</a></li>
+               <li><a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup" class="ico-p-instagram dtm-anchor" anchor_name="Instagram"><img src="/web-resources/common/images/icon-social-instagram.jpg" alt="Instagram">Instagram</a></li>
+               <li><a title="Linkedin" target="_blank" href="https://www.linkedin.com/company/uob" class="ico-p-linkedin dtm-anchor" anchor_name="Linkedin"><img src="/web-resources/common/images/icon-social-linked.jpg" alt="Linkedin">Linkedin</a></li>
+               <li><a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1" class="ico-p-youtube dtm-anchor" anchor_name="Youtube"><img src="/web-resources/common/images/icon-social-youtube.jpg" alt="Youtube">Youtube</a></li>
+            </ul>
+         </div>
+         <div class="block-term">
+            <ul class="list-unstyled">
+               <li><a class="dtm-anchor" title="Terms of Use" href="http://www.uobgroup.com/uobgroup/termsofuse/index.page" anchor_name="Social Media Terms of Use">Social Media Terms of Use</a></li>
+               <li><a class="dtm-anchor" title="Legal Notices" href="http://www.uobgroup.com/uobgroup/important/index.page" anchor_name="Legal Notices">Legal Notices</a></li>
+               <li><a class="dtm-anchor" title="Privacy &amp; Security" href="http://www.uobgroup.com/uobgroup/privacy/index.page" anchor_name="Privacy &amp; Security">Privacy &amp; Security</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</footer> 
+   </div> 
+  </div> 
+ </div> 
+</div><script type="text/javascript">_satellite.pageBottom();</script>
+<script type="text/javascript" src="/iwov-resources/js/page-complete.js" ></script>
+<!--ls:end[body]--><!--ls:begin[page_track]--><!--ls:end[page_track]--></body>
+</html>
+<!-- SN1024 2.5.2 1.4.51-->
