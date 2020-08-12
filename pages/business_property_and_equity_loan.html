@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../styles/navigation-styles.css">
     <link rel="stylesheet" href="../styles/c-styles.css">
     <link rel="stylesheet" href="../styles/footer-styles.css">
+    <link rel="stylesheet" href="../styles/loancalc-styles.css">
 
 </head>
 
@@ -765,11 +766,20 @@
         </div>
     </header> <!-- end of navigation-->
 
-    <h1 class="text-left py-3 ml-4">UOB Business & Commercial Property Loan
+    <div class="justify-content-left d-none d-md-block ">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white pl-4 ">
+                <li class="breadcrumb-item"><a href="./homepage.html">Business</a></li>
+                <li class="breadcrumb-item"><a href="./grow.html">Grow</a></li>
+                <li class="breadcrumb-item"><a class="text-decoration-none">Boost Your Cashflow And Assets</a></li>
+                <li class="breadcrumb-item active" aria-current="page">UOB Business & Commercial Property Loan
+                </li>
+            </ol>
 
-
-
-    </h1>
+            <h1 class="text-left pl-4 pb-4">UOB Business & Commercial Property Loan
+            </h1>
+        </nav>
+    </div>
 
 
     <!-- Image Banner Section -->
@@ -929,14 +939,485 @@
             </a>
 
             <hr>
-            <p><b>Buy vs Rent Calculator</b><br><br>
+
+            <h2 class="text-center font-weight-bold">Buy vs Rent Calculator</h2>
+
+            <p>
 
 
                 Is it better to buy or rent your commercial property? Calculate to find our which option provides you
                 with greater savings over time.</p>
 
 
+
+
             <!-- insert calculators here -->
+
+            <div class="BRcalcDiv">
+                <div class="calcRow row pt-2 pt-lg-4">
+                    <div class="input-left input-left col-lg-6 pb-4 pb-lg-0 mx-2 mx-lg-0">
+
+                        <form class="inputForm" name="formBRcalculator">
+                            <!-- section for first part of buy vs rent calculator -->
+                            <h5>Rental Information</h5>
+                            <div class="form-group pb-0 mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRmonthlyRentInput" class="inline">Monthly Rent</label>
+                                    <span class="inline">$<input type="text" id="BRmonthlyRentInput"
+                                            class="inline numericOnly clearInput clickEvent allCalcInput"
+                                            name="BRmonthlyRentInput" value="5,000"></span>
+                                </div>
+                                <p id="BRerrorMsg1" class="allErrorMsg mt-0 mb-3"></p>
+
+                            </div>
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRperiodStayInput" class="inline">Intended Period of Stay</label>
+                                    <span class="inline"><input type="text" id="BRperiodStayInput"
+                                            class="inline numericOnly clickEvent allCalcInput">year(s)
+                                    </span>
+                                </div>
+                                <div class="slider-container">
+                                    <span class="bar periodStay-bar"><span class="fill"></span></span>
+                                    <input type="range" min="1" max="99" step="1" class="slider" id="BRperiodStayRange"
+                                        value="50">
+                                </div>
+                                <p id="BRerrorMsg2" class="allErrorMsg"></p>
+
+                            </div>
+                            <!-- section for second part of buy vs rent calculator -->
+
+                            <h5>Property Loan Information</h5>
+                            <div class="form-group pb-0 mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRpurchasePriceInput" class="inline">Purchase Price</label>
+                                    <span class="inline">$<input type="text" id="BRpurchasePriceInput"
+                                            class="inline numericOnly clickEvent allCalcInput name="
+                                            BRpurchasePriceInput" value="800,000"></span>
+                                </div>
+                                <p id="BRerrorMsg3" class="allErrorMsg mt-0 mb-3"></p>
+                            </div>
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRinterestRateInput" class="inline">Interest Rate</label><span
+                                        class="inline">
+                                        <input type="text" id="BRinterestRateInput" name="BRinterestRateInput"
+                                            class="inline numericDecOnly clickEvent allCalcInput">%</span>
+                                </div>
+                                <div class="slider-container">
+                                    <span class="bar brinterest-bar"><span class="fill"></span></span>
+                                    <input type="range" min="0" max="5" step="0.01" class="slider"
+                                        id="BRinterestRateRange" value="2.5">
+                                </div>
+                                <p id="BRerrorMsg4" class="allErrorMsg"></p>
+
+                            </div>
+
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRloanTenureInput" class="inline">Loan Tenure</label>
+                                    <span class="inline"><input type="text" name="BRloanTenureInput"
+                                            id="BRloanTenureInput"
+                                            class="inline numericOnly clickEvent allCalcInput">year(s)
+                                    </span>
+                                </div>
+
+                                <div class="slider-container">
+                                    <span class="bar brtenure-bar"><span class="fill"></span></span>
+                                    <input type="range" min="1" max="30" step="1" class="slider" id="BRloanTenureRange"
+                                        value="15.5">
+                                </div>
+                                <p id="BRerrorMsg5" class="allErrorMsg"></p>
+
+                            </div>
+
+
+                        </form>
+                        <button onclick="BRcalculateFunction()" id="BRcalculateBtn"
+                            class="btn btn-calculate buttonStyle mx-auto d-block" type="button">Calculate</button>
+                    </div>
+
+                    <div class=" h-auto align-self-center result-right col-lg-6 text-center mt-4 mt-lg-0">
+                        <h1 id="amount" class="result BRbeforeCalculate">Savings Summary</h1>
+                        <p class="BRbeforeCalculate font-italic">Please enter your Rental and Property Loan information
+                            to
+                            continue.</p>
+                        <div class="result BRafterCalculate" id="BRresult">
+                            <h1 id="BRbuyorrent"></h1>
+                            <h1 id="BRdescription"></h1>
+                            <p class="font-italic">To find out how you can finance your property,
+
+                                <a
+                                    href="https://uniservices1.uobgroup.com/appforms/business/UOB_Business_Property_Loan_Customer_Online_Promotion.page">request
+                                    for callback from us now.</a></p>
+                            <table class="table table-bordered text-left overflow-hidden" id="BRtable">
+                                <thead>
+                                    <tr class="table-blue">
+                                        <th>Cost After 15 Years</th>
+                                        <th class="text-center">Rent</th>
+                                        <th class="text-center">Buy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="BRtbody">
+                                    <!-- " <div class=''>
+                                        <tr>
+                                            <th>Set Up Costs</th>
+                                            <th>$20,000</th>
+                                            <th>$" +addCommas(BsetUpCost)+ "+</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Downpayment/Deposit</td>
+                                            <td>$10,000</td>
+                                            <td>$" + addCommas(parseInt(0.553*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agent Fees</td>
+                                            <td>$10,000</td>
+                                            <td>$" + addCommas(parseInt(0.004*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Fees</td>
+                                            <td>-</td>
+                                            <td>$" +addCommas( parseInt(0.009*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mortgage Duty</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.003*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Buyer Stamp Duty</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.064*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GST</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.193*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Initial Renovation</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.174*BsetUpCost))+ "</td>
+                                        </tr>
+    
+                                    </div>
+    
+                                    <div class=''>
+                                        <tr>
+                                            <th>Running Costs</th>
+                                            <th>$" + addCommas(RrunningCost) + "</th>
+                                            <th>$" + addCommas(BrunningCost) + "</th>
+    
+                                        </tr>
+                                        <tr>
+                                            <td>Rent Payments</td>
+                                            <td>$" + addCommas(RrunningCost) + "</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mortgage Payments</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.848*BrunningCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Property Tax</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.087*BrunningCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Maintenance Costs</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.012*BrunningCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Facilities Fees</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.0053*BrunningCost))+ "</td>
+                                        </tr>
+                                    </div>
+    
+                                    <div class=''>
+                                        <tr>
+                                            <th>Opportunity Costs</th>
+                                            <th>$" + addCommas(RopportunityCost) + "</th>
+                                            <th>$" + addCommas(BopportunityCost)+ "</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Set Up</td>
+                                            <td>$" + addCommas(parseInt(0.044*RopportunityCost))+ "</td>
+                                            <td>$" + addCommas(parseInt(0.254*BopportunityCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Running Costs</td>
+                                            <td>$" + addCommas(parseInt(0.956*RopportunityCost))+ "</td>
+                                            <td>$" + addCommas(parseInt(0.746*BopportunityCost))+ "</td>
+                                        </tr>
+                                    </div>
+    
+                                    <div class=''>
+    
+                                        <tr>
+                                            <th>Net Proceeeds</th>
+                                            <th>$(" + addCommas((0.675*BOverallNumber)-2500-(0.002*propertyLoan))+ ")</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>Proceeds from sale</td>
+                                            <td>$10,000</td>
+                                            <td>$(" + addCommas(parseInt(0.675*BOverallNumber))+ ")</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Seller Stamp Duty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agent Fees</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.002*c))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Fees</td>
+                                            <td>-</td>
+                                            <td>$2,500</td>
+                                        </tr>
+                                    </div>
+                                    <th>
+                                        <tr>Total Cost</tr>
+                                        <tr>$" + addCommas(propertyLoan)+ "</tr>
+                                        <tr>$" + addCommas(totalRent)+ "</tr>
+                                    </th>" -->
+                                </tbody>
+                                <!-- <tbody id="BRtbody">
+                                    <div class="">
+                                        <tr>
+                                            <th>Set Up Costs</th>
+                                            <th>$20,000</th>
+                                            <th>$288,000</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Downpayment/Deposit</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agent Fees</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Fees</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mortgage Duty</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Buyer Stamp Duty</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GST</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Initial Renovation</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+    
+                                    </div>
+    
+                                    <div class="">
+                                        <tr>
+                                            <th>Running Costs</th>
+                                            <th>$20,000</th>
+                                            <th>$288,000</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Rent Payments</td>
+                                            <td>$10,000</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mortgage Payments</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Property Tax</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Maintenance Costs</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Facilities Fees</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                    </div>
+    
+                                    <div class="">
+                                        <tr>
+                                            <th>Opportunity Costs</th>
+                                            <th>$20,000</th>
+                                            <th>$288,000</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Set Up</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Running Costs</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                    </div>
+    
+                                    <div class="">
+    
+                                        <tr>
+                                            <th>Net Proceeeds</th>
+                                            <th>$20,000</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>Proceeds from sale</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Seller Stamp Duty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agent Fees</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Fees</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                    </div>
+                                </tbody> -->
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="text-left mt-5"> To help you make your decision if you should buy or rent a property, <a
+                    href="https://www.uob.com.sg/business/inbusiness/article.html?id=10-things-investors-should-look-out-for-when-buying-or-renting-commercial-property">click
+                    here</a> to find out more.</p>
+
+
+
+            <hr>
+
+            <h2 class="text-center font-weight-bold">Commercial Property Affordability Calculator</h2>
+
+            <div class="CPAcalcDiv ">
+
+                <div class="calcRow row pt-2 pt-lg-4">
+                    <div class="input-left col-lg-6 pb-4 pb-lg-0 mx-2 mx-lg-0">
+                        <form class="inputForm" name="formCPAcalcDiv">
+                            <!-- section for first part of buy vs rent calculator -->
+                            <div class="form-group pb-0 mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="CPApropertyValInput" class="inline">Property Value</label>
+                                    <span class="inline">$<input type="text" id="CPApropertyValInput"
+                                            class="inline numericOnly clickEvent allCalcInput"
+                                            name="CPApropertyValInput" value="1,000,000"></span>
+                                </div>
+                                <p id="CPAerrorMsg1" class="allErrorMsg mt-0 mb-3"></p>
+
+                            </div>
+                            <div class="form-group pb-0 mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="CPAloanAmountInput" class="inline">Loan Amount</label>
+                                    <span class="inline">$<input type="text" id="CPAloanAmountInput"
+                                            class="inline numericOnly clickEvent allCalcInput name=" CPAloanAmountInput"
+                                            value="900,000"></span>
+                                </div>
+                                <p id="CPAerrorMsg2" class="allErrorMsg mt-0 mb-3"></p>
+
+                            </div>
+
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="CPAloanTenureInput" class="inline">Loan Tenure</label>
+                                    <span class="inline"><input type="text" name="CPAloanTenureInput"
+                                            id="CPAloanTenureInput"
+                                            class="inline numericOnly clickEvent allCalcInput">year(s)
+                                    </span>
+                                </div>
+                                <div class="slider-container">
+                                    <span class="bar cpatenure-bar"><span class="fill"></span></span>
+                                    <input type="range" min="1" max="30" step="1" class="slider" id="CPAloanTenureRange"
+                                        value="15">
+                                </div>
+                                <p id="CPAerrorMsg3" class="allErrorMsg"></p>
+
+                            </div>
+
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="CPAinterestRateInput" class="inline">Interest Rate</label><span
+                                        class="inline">
+                                        <input type="text" id="CPAinterestRateInput" name="CPAinterestRateInput"
+                                            class="inline numericDecOnly clickEvent allCalcInput">%</span>
+                                </div>
+
+                                <div class="slider-container">
+                                    <span class="bar cpainterest-bar"><span class="fill"></span></span>
+                                    <input type="range" min="0" max="5" step="0.01" class="slider"
+                                        id="CPAinterestRateRange">
+                                </div>
+                                <p id="CPAerrorMsg4" class="allErrorMsg"></p>
+
+                            </div>
+
+                        </form>
+                        <button onclick="CPAcalculateFunction()" id="CPAcalculateBtn"
+                            class="btn btn-calculate buttonStyle mx-auto d-block" type="button">Calculate</button>
+
+                    </div>
+
+
+                    <div class="h-auto align-self-center result-right col-lg-6 text-center mt-4 mt-lg-0">
+                        <h1 id="amount" class="result CPAbeforeCalculate">Repayment Summary</h1>
+                        <p class="CPAbeforeCalculate font-italic">Please enter the mortgage information to continue.</p>
+                        <div class="result CPAafterCalculate" id="CPAresult">
+                            <h1 id="CPAdescription"></h1>
+                            <p class="font-italic">Based on your input, plan ahead by getting a loan repayment schedule
+                                done
+                                up for you.
+                                To find out more about above, simply have us call you at your convenience. <a
+                                    href="https://uniservices1.uobgroup.com/appforms/business/UOB_Business_Property_Loan_Customer_Online_Promotion.page">Request
+                                    a callback from us.</a></p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <hr>
@@ -1658,7 +2139,554 @@
         }
     });
 
-  // end of script for multi item carousel
+    // end of script for multi item carousel
+
+    // loan calculator script
+
+    $(document).ready(function () {
+        displayOutput()
+
+        //prevents user from entering anything other than . and numbers
+        $(".numericOnly").keypress(function (e) {
+
+            if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
+        });
+
+        $(".numericDecOnly").keypress(function (e) {
+
+            // if (String.fromCharCode(e.keyCode).match(/[0-9]+(\.[0-9][0-9]?)?/g)) return true;
+            if (String.fromCharCode(e.keyCode).match(/[^0-9.]/g)) return false;
+
+            var character = String.fromCharCode(e.keyCode)
+            var newValue = this.value + character;
+
+            if (isNaN(newValue) || hasDecimalPlace(newValue, 3)) {
+                return false;
+            }
+
+        });
+
+
+        //to clear input upon clicking the input box and put default if user leave input blank
+        var default_val = '';
+        $('input.clickEvent:text').focus(function () {
+            if ($(this).val() == $(this).data('default_val') || !$(this).data('default_val')) {
+                $(this).data('default_val', $(this).val());
+                $(this).val('');
+            }
+            BRvalidateFunction()
+            CPAvalidateFunction()
+        });
+
+        $('input.clickEvent:text').blur(function () {
+            if ($(this).val() == '') $(this).val($(this).data('default_val'));
+            BRvalidateFunction()
+            CPAvalidateFunction()
+        });
+
+        //event to bind function that validate input and disables button if invalid
+        $("input.clickEvent:text").on("change paste keyup", function () {
+            BRvalidateFunction()
+            CPAvalidateFunction()
+            setbar();
+        });
+
+
+
+    });
+
+
+    // call function to display the indicator for the slider
+    // document.getElementById("BRmonthlyRentRange").oninput = function () {
+    //     displayOutput()
+    //     BRvalidateFunction()
+    // }
+
+    document.getElementById("BRperiodStayRange").oninput = function () {
+        var BRval2 = document.getElementById("BRperiodStayRange").value
+        document.getElementById("BRperiodStayInput").value = BRval2
+
+        BRvalidateFunction()
+    }
+
+    document.getElementById("BRinterestRateRange").oninput = function () {
+        var BRval4 = document.getElementById("BRinterestRateRange").value //gets the oninput value
+        document.getElementById("BRinterestRateInput").value = BRval4//displays this value to the html page   
+
+        BRvalidateFunction()
+    }
+
+    document.getElementById("BRloanTenureRange").oninput = function () {
+        var BRval5 = document.getElementById("BRloanTenureRange").value //gets the oninput value
+        document.getElementById("BRloanTenureInput").value = BRval5//displays this value to the html page    
+
+        BRvalidateFunction()
+    }
+
+    //CPA
+    document.getElementById("CPAloanTenureRange").oninput = function () {
+        var CPAval3 = document.getElementById("CPAloanTenureRange").value
+        document.getElementById("CPAloanTenureInput").value = CPAval3
+
+        CPAvalidateFunction()
+    }
+
+    document.getElementById("CPAinterestRateRange").oninput = function () {
+
+        var CPAval4 = document.getElementById("CPAinterestRateRange").value
+        document.getElementById("CPAinterestRateInput").value = CPAval4
+
+        CPAvalidateFunction()
+    }
+
+
+    //function to display the indicator in the input box for the slider when the website launches
+    function displayOutput() {
+
+        //BR
+        // var BRval1 = document.getElementById("BRmonthlyRentRange").value
+        // document.getElementById("BRmonthlyRentInput").value = addCommas(parseInt(BRval1))
+
+        var BRval2 = document.getElementById("BRperiodStayRange").value
+        document.getElementById("BRperiodStayInput").value = BRval2
+
+        // var BRval3 = document.getElementById("BRpurchasePriceRange").value
+        // document.getElementById("BRpurchasePriceInput").value = addCommas(parseInt(BRval3)) 
+
+        var BRval4 = document.getElementById("BRinterestRateRange").value //gets the oninput value
+        document.getElementById("BRinterestRateInput").value = BRval4//displays this value to the html page   
+
+        var BRval5 = document.getElementById("BRloanTenureRange").value //gets the oninput value
+        document.getElementById("BRloanTenureInput").value = BRval5//displays this value to the html page    
+
+        //CPA
+
+        // var CPAval1 = document.getElementById("CPApropertyValInput").value
+        // document.getElementById("CPApropertyValInput").value = addCommas(parseInt(CPAval1))
+
+        // var CPAval2 = document.getElementById("CPAloanAmountInput").value
+        // document.getElementById("CPAloanAmountInput").value = addCommas(parseInt(CPAval2))
+
+        var CPAval3 = document.getElementById("CPAloanTenureRange").value
+        document.getElementById("CPAloanTenureInput").value = CPAval3
+
+        var CPAval4 = document.getElementById("CPAinterestRateRange").value
+        document.getElementById("CPAinterestRateInput").value = CPAval4
+
+
+    }
+
+    // validate input fpr br
+    function BRvalidateFunction() {
+        // var regexp = /^\d+\.\d{0,2}$/;
+        //variables to retrieve value from all variables in buy vs rent calculator
+        var a = parseInt(removeCommas(document.getElementById("BRmonthlyRentInput").value))
+        var b = parseInt(document.getElementById("BRperiodStayInput").value)
+        var c = parseInt(removeCommas(document.getElementById("BRpurchasePriceInput").value))
+        var d = parseFloat(document.getElementById("BRinterestRateInput").value)
+        var e = parseInt(document.getElementById("BRloanTenureInput").value)
+
+        console.log("offf")
+
+        var array = [
+            {
+                name: "monthlyRent",
+                value: a
+            },
+            {
+                name: "periodStay",
+                value: b
+            }, {
+                name: "purchasePrice",
+                value: c
+            }, {
+                name: "interestRate",
+                value: d
+            }, {
+                name: "loanTenure",
+                value: e
+            }]
+
+        var trueFalseArr = []
+        //validating input according to each condition
+
+        $.each(array, function (index, element) {
+            if (array[index].name == "monthlyRent") {
+                if (isNaN(array[index].value)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg1").text("Value is not a number")
+                }
+                else if (array[index].value > 100000000) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg1").text("Value cannot be more than 100million")
+                }
+
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg1").text("Value cannot be less than or equal to 0")
+                }
+                else {
+                    console.log("valid1")
+                    $("#BRerrorMsg1").text("")
+                    trueFalseArr.push("true")
+                }
+            }
+            else if (array[index].name == "periodStay") {
+                if (isNaN(array[index].value)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg2").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg2").text("Value cannot be less than 1")
+                }
+                else if (array[index].value > 99) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg2").text("Value cannot be more than 99")
+                }
+                else {
+                    console.log("valid2")
+                    $("#BRerrorMsg2").text("")
+                    $("#BRperiodStayRange").val(b)
+                    trueFalseArr.push("true")
+
+                }
+
+            }
+            else if (array[index].name == "purchasePrice") {
+                if (isNaN(array[index].value)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg3").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg3").text("Value cannot be less than or equal to 0")
+                }
+                else if (array[index].value > 100000000) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg3").text("Value cannot be more than 100million")
+                }
+                else {
+                    console.log("valid2")
+                    $("#BRerrorMsg3").text("")
+                    trueFalseArr.push("true")
+                }
+
+            }
+            else if (array[index].name == "interestRate") {
+                if (isNaN(d)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg4").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg4").text("Value cannot be less than or equal to 0")
+                }
+                else if (array[index].value > 5) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg4").text("Value cannot be more than 5")
+                }
+                else {
+                    console.log("valid2")
+                    $("#BRerrorMsg4").text("")
+                    $("#BRinterestRateRange").val(d)
+                    trueFalseArr.push("true")
+                }
+
+            }
+            else if (array[index].name == "loanTenure") {
+                if (isNaN(array[index].value)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg5").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg5").text("Value cannot be less than 1")
+                }
+                else if (array[index].value > 30) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg5").text("Value cannot be more than 30")
+                }
+                else {
+                    console.log("valid2")
+                    $("#BRerrorMsg5").text("")
+                    trueFalseArr.push("true")
+                    $("#BRloanTenureRange").val(e)
+
+                }
+
+            }
+        })
+
+        //if all 5 inputs are valid
+        if (trueFalseArr.length == 5) {
+            $("#BRcalculateBtn").attr("disabled", false);
+
+            // $("#BRperiodStayRange").val(b)
+            // $("#BRinterestRateRange").val(d)
+            // $("#BRloanTenureRange").val(e)
+        }
+    }
+
+
+    //to calculate the buy amount vs rent amount
+    function BRcalculateFunction() {
+        $(".BRbeforeCalculate").hide()
+        $(".BRafterCalculate").show()
+
+        //Rental Information
+        var a = parseInt(removeCommas(document.getElementById("BRmonthlyRentInput").value))
+        var b = parseInt(document.getElementById("BRperiodStayInput").value)
+        var c = parseInt(removeCommas(document.getElementById("BRpurchasePriceInput").value))
+        var d = parseFloat(document.getElementById("BRinterestRateInput").value)
+        var e = parseInt(document.getElementById("BRloanTenureInput").value)
+
+        //Total Rent
+        var totalRent = a * (b * 12)
+        console.log("total rent = " + totalRent)
+
+        //Property Loan Information
+
+        var propertyLoan = c + (c * ((d / 100) + (e * 0.002)))
+        console.log("property loan = " + propertyLoan)
+        // var className = document.getElementsByClassName("savings-buy-text")[0].className
+        // console.log(className)
+        //compare both sum and calculate differences
+        var difference = 0
+        if (totalRent > propertyLoan) {
+            difference = Math.round(totalRent - propertyLoan)
+
+            document.getElementById("BRbuyorrent").innerHTML = '<span class="calcResult"> Buying </span> is the better option.'
+
+            document.getElementById("BRdescription").innerHTML = 'There would be savings of <span class="calcResult"> $' + addCommas(difference) + "</span> over " + e + " years if you buy a property."
+        }
+
+        else if (totalRent < propertyLoan) {
+            difference = Math.round(propertyLoan - totalRent)
+
+            document.getElementById("BRbuyorrent").innerHTML = '<span class="calcResult ">Renting</span> is the better option'
+
+            document.getElementById("BRdescription").innerHTML = 'There would be savings of <br> <span class="calcResult"> $' + addCommas(difference) + " </span><br>over " + e + " years if you rent a property."
+        }
+
+        //table code
+        var BOverallNumber = 3.077 * propertyLoan
+        var ROverallNumber = totalRent + 10000
+
+
+        //var for each section
+        var BsetUpCost = parseInt(0.218 * BOverallNumber)
+        var BrunningCost = parseInt(0.772 * BOverallNumber)
+        var BopportunityCost = parseInt(0.007 * BOverallNumber)
+
+        var RrunningCost = parseInt(0.986 * totalRent)
+        var RopportunityCost = parseInt(0.004 * totalRent)
+
+
+
+
+
+
+
+
+
+
+
+        //generate table to show details
+        //     document.getElementById("BRtbody").innerHTML = " <div class=''> <tr> <th>Set Up Costs</th> <th>$20,000</th> <th>$" + addCommas(BsetUpCost) + "</th> </tr> <tr> <td>Downpayment/Deposit</td> <td>$10,000</td> <td>$" + addCommas(parseInt(0.553 * BsetUpCost)) + "</td> </tr> <tr> <td>Agent Fees</td> <td>$10,000</td> <td>$" + addCommas(parseInt(0.004 * BsetUpCost)) + "</td> </tr> <tr> <td>Legal Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.009 * BsetUpCost)) + "</td> </tr> <tr> <td>Mortgage Duty</td> <td>-</td> <td>$" + addCommas(parseInt(0.003 * BsetUpCost)) + "</td> </tr> <tr> <td>Buyer Stamp Duty</td> <td>-</td> <td>$" + addCommas(parseInt(0.064 * BsetUpCost)) + "</td> </tr> <tr> <td>GST</td> <td>-</td> <td>$" + addCommas(parseInt(0.193 * BsetUpCost)) + "</td> </tr> <tr> <td>Initial Renovation</td> <td>-</td> <td>$" + addCommas(parseInt(0.174 * BsetUpCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Running Costs</th> <th>$" + addCommas(RrunningCost) + "</th> <th>$" + addCommas(BrunningCost) + "</th> </tr> <tr> <td>Rent Payments</td> <td>$" + addCommas(RrunningCost) + "</td> <td>-</td> </tr> <tr> <td>Mortgage Payments</td> <td>-</td> <td>$" + addCommas(parseInt(0.848 * BrunningCost)) + "</td> </tr> <tr> <td>Property Tax</td> <td>-</td> <td>$" + addCommas(parseInt(0.087 * BrunningCost)) + "</td> </tr> <tr> <td>Maintenance Costs</td> <td>-</td> <td>$" + addCommas(parseInt(0.012 * BrunningCost)) + "</td> </tr> <tr> <td>Facilities Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.0053 * BrunningCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Opportunity Costs</th> <th>$" + addCommas(RopportunityCost) + "</th> <th>$" + addCommas(BopportunityCost) + "</th> </tr> <tr> <td>Set Up</td> <td>$" + addCommas(parseInt(0.044 * RopportunityCost)) + "</td> <td>$" + addCommas(parseInt(0.254 * BopportunityCost)) + "</td> </tr> <tr> <td>Running Costs</td> <td>$" + addCommas(parseInt(0.956 * RopportunityCost)) + "</td> <td>$" + addCommas(parseInt(0.746 * BopportunityCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Net Proceeeds</th> <th>$(" + addCommas((0.675 * BOverallNumber) - 2500 - (0.002 * propertyLoan)) + ")</th> <th></th> </tr> <tr> <td>Proceeds from sale</td> <td>$10,000</td> <td>$(" + addCommas(parseInt(0.675 * BOverallNumber)) + ")</td> </tr> <tr> <td>Seller Stamp Duty</td> <td>-</td> <td>-</td> </tr> <tr> <td>Agent Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.002 * c)) + "</td> </tr> <tr> <td>Legal Fees</td> <td>-</td> <td>$2,500</td> </tr> </div> <tr> <th>Total Cost</th> <td>$" + addCommas(propertyLoan) + "</td> <td>$" + addCommas(totalRent) + "</td> </tr>"
+        // }
+
+        document.getElementById("BRtbody").innerHTML = '<tr data-toggle="collapse" data-target="#collapse1" data-parent="#BRtable"> <th> Set Up Costs <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 9l6 6 6-6" /></svg></th> <th class="text-center">$20,000</th> <th class="text-center">$' + addCommas(BsetUpCost) + '</th> </tr> <tr id="collapse1" class="collapse"> <td>Downpayment/Deposit <br> Agent Fees <br> Legal Fees <br> Mortgage Duty <br> Buyer Stamp Duty <br> GST <br> Initial Renovation </td> <td class="text-center"> $10,000 <br> $10,000 <br> - <br> - <br> - <br> - <br> - </td> <td class="text-center"> $' + addCommas(parseInt(0.553 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.004 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.009 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.003 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.064 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.193 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.174 * BsetUpCost)) + ' </td> </tr> <tr data-toggle="collapse" data-target="#collapse2" data-parent="#BRtable"> <th> Running Costs <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 9l6 6 6-6" /></svg></th> <th class="text-center">$' + addCommas(RrunningCost) + '</th> <th class="text-center">$' + addCommas(BrunningCost) + '</th> </tr> <tr id="collapse2" class="collapse"> <td> Rent Payments <br> Mortgage Payments <br> Property Tax <br> Maintenance Costs <br> Facilities Fees </td> <td class="text-center"> $' + addCommas(RrunningCost) + '<br> - <br> - <br> - <br> - <br> </td> <td class="text-center"> - <br> $ ' + addCommas(parseInt(0.848 * BrunningCost)) + ' <br> $ ' + addCommas(parseInt(0.087 * BrunningCost)) + ' <br> $ ' + addCommas(parseInt(0.012 * BrunningCost)) + ' <br> $ ' + addCommas(parseInt(0.0053 * BrunningCost)) + ' </td> </tr> <tr data-toggle="collapse" data-target="#collapse3" data-parent="#BRtable"> <th> Opportunity Costs <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 9l6 6 6-6" /></svg></th> <th class="text-center">$ ' + addCommas(RopportunityCost) + ' </th> <th class="text-center">$ ' + addCommas(BopportunityCost) + ' </th> </tr> <tr id="collapse3" class="collapse"> <td>Set Up <br> Running Costs <br> </td> <td class="text-center"> $ ' + addCommas(parseInt(0.044 * RopportunityCost)) + ' <br> $ ' + addCommas(parseInt(0.956 * RopportunityCost)) + ' </td> <td class="text-center"> $ ' + addCommas(parseInt(0.254 * BopportunityCost)) + ' <br> $ ' + addCommas(parseInt(0.746 * BopportunityCost)) + ' </td> </tr> <tr data-toggle="collapse" data-target="#collapse4" data-parent="#BRtable"> <th> Net Proceeds <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 9l6 6 6-6" /></svg></th> <th class="text-center">$(' + addCommas(Math.round((0.675 * BOverallNumber) - 2500 - (0.002 * propertyLoan))) + ')</th> <th class="text-center"> </th> </tr> <tr id="collapse4" class="collapse"> <td> Proceeds from sale<br> Seller Stamp Duty <br> Agent Fees <br> Legal Fees <br> </td> <td class="text-center"> $10,000 <br> - <br> - <br> - <br> </td> <td class="text-center"> $(' + addCommas(parseInt(0.675 * BOverallNumber)) + ') <br> - <br> $' + addCommas(parseInt(0.002 * c)) + ' <br> $2,500 </td> </tr> <tr class="table-grey"> <th>Total Cost</th> <th class="text-center">$' + addCommas(propertyLoan) + '</th> <th class="text-center">$' + addCommas(totalRent) + '</th> </tr>'
+
+    }
+
+    //validate input for cpa
+    function CPAvalidateFunction() {
+        var a = parseInt(removeCommas(document.getElementById("CPApropertyValInput").value))
+        var b = parseInt(removeCommas(document.getElementById("CPAloanAmountInput").value))
+        var c = parseInt(document.getElementById("CPAloanTenureInput").value)
+        var d = parseFloat(document.getElementById("CPAinterestRateInput").value)
+
+        var array = [
+            {
+                name: "propertyVal",
+                value: a
+            },
+            {
+                name: "loanAmount",
+                value: b
+            }, {
+                name: "loanTenure",
+                value: c
+            }
+            , {
+                name: "interestRate",
+                value: d
+            }
+        ]
+        var trueFalseArr = []
+
+        $.each(array, function (index, element) {
+            if (array[index].name == "propertyVal") {
+                if (isNaN(array[index].value)) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg1").text("Value is not a number")
+                }
+                else if (array[index].value > 999999999) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg1").text("Value cannot be more than 999,999,999")
+                }
+
+                else if (array[index].value < 100000) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg1").text("Value cannot be less than or equal to 100,000")
+                }
+                else {
+                    $("#CPAerrorMsg1").text("")
+                    trueFalseArr.push("true")
+                }
+
+            }
+            else if (array[index].name == "loanAmount") {
+                if (isNaN(array[index].value)) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg2").text("Value is not a number")
+                }
+                else if (array[index].value < 80000) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg2").text("Value cannot be less than 80,000")
+                }
+                else if (array[index].value > 99999999) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg2").text("Value cannot be more than 99,999,999")
+                }
+                else {
+                    $("#CPAerrorMsg2").text("")
+                    trueFalseArr.push("true")
+                }
+            }
+            else if (array[index].name == "loanTenure") {
+                if (isNaN(array[index].value)) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg3").text("Value is not a number")
+                }
+                else if (array[index].value < 1) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg3").text("Value cannot be less than 1")
+                }
+                else if (array[index].value > 30) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg3").text("Value cannot be more than 30")
+                }
+                else {
+                    $("#CPAerrorMsg3").text("")
+                    trueFalseArr.push("true")
+                    $("#CPAloanTenureRange").val(c)
+
+                }
+            }
+            else if (array[index].name == "interestRate") {
+                if (isNaN(array[index].value)) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg4").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg4").text("Value cannot be less than 0")
+                }
+                else if (array[index].value > 5) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg4").text("Value cannot be more than 5")
+                }
+                else {
+                    $("#CPAerrorMsg4").text("")
+                    trueFalseArr.push("true")
+                    $("#CPAinterestRateRange").val(d)
+
+                }
+            }
+
+        })
+
+        if (trueFalseArr.length == 4) {
+            $("#CPAcalculateBtn").attr("disabled", false);
+
+
+            // $("#CPAloanTenureRange").val(c)
+            // $("#CPAinterestRateRange").val(d)
+
+
+        }
+    }
+
+    //to calcualte commercial property affordability 
+    function CPAcalculateFunction() {
+
+        $(".CPAbeforeCalculate").hide()
+        $(".CPAafterCalculate").show()
+
+        var a = parseInt(removeCommas(document.getElementById("CPApropertyValInput").value))
+        var b = parseInt(removeCommas(document.getElementById("CPAloanAmountInput").value))
+        var c = parseInt(document.getElementById("CPAloanTenureInput").value)
+        var d = parseFloat(document.getElementById("CPAinterestRateInput").value)
+
+        var r = d / 100
+        var n = c * 12
+
+        var monthlyPayment = b * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
+
+        document.getElementById("CPAdescription").innerHTML = 'The estimated repayment amount would be <span class="calcResult"> $' + addCommas(Math.round(monthlyPayment)) + " </span>/month."
+
+
+    }
+
+    // add commas after every 3 digit from the decimal place
+    function addCommas(x) {
+        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    //remove commas so that it can be inserted into the calculate function
+    function removeCommas(str) {
+        while (str.search(",") >= 0) {
+            str = (str + "").replace(',', '');
+        }
+        return str;
+    };
+
+    //ensures that interest rate does not exceed two decimal place
+    function hasDecimalPlace(value, x) {
+        var pointIndex = value.indexOf('.');
+        return pointIndex >= 0 && pointIndex < value.length - x;
+    }
+
+
+    var slider = $(".slider");
+    var brinterestSlider = $("#BRinterestRateRange");
+    var brtenureSlider = $("#BRloanTenureRange");
+    var periodStaySlider = $("#BRperiodStayRange");
+    var cpatenureSlider = $("#CPAloanTenureRange");
+    var cpainterestSlider = $("#CPAinterestRateRange");
+
+    var brinterestProgressBar = $(".bar.brinterest-bar .fill");
+    var brtenureProgressBar = $(".bar.brtenure-bar .fill");
+    var periodStayProgressBar = $(".bar.periodStay-bar .fill");
+    var cpatenureProgressBar = $(".bar.cpatenure-bar .fill");
+    var cpainterestProgressBar = $(".bar.cpainterest-bar .fill");
+
+    function setbar() {
+        // progressBar.css('width', slider.val() + "%");
+        periodStayProgressBar.css('width', periodStaySlider.val() + "%");
+        brinterestProgressBar.css('width', brinterestSlider.val() * 20 + "%");
+        brtenureProgressBar.css('width', brtenureSlider.val() * 3.23 + "%");
+        cpatenureProgressBar.css('width', cpatenureSlider.val() * 3.23 + "%");
+        cpainterestProgressBar.css('width', cpainterestSlider.val() * 20 + "%");
+
+    }
+
+    slider.on("input", setbar);
+    setbar();
+
+
 </script>
 
 
