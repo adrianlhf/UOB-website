@@ -17,7 +17,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../styles/search-results.css">
   <link rel="stylesheet" href="../styles/navigation-styles.css">
-  <link rel="stylesheet" href="../styles/c-styles.css">
+ 
   <link rel="stylesheet" href="../styles/footer-styles.css">
 </head>
 <body >
@@ -803,7 +803,7 @@
     <div class="row justify-content-between">
       <div class="col-lg-9">
         <button type="button" class="btn col col-md-3 text-left" data-toggle="modal" data-target="#filteroverlay"
-          onclick="openNav()">☰ Filters</button>
+          onclick="openNavsr()">☰ Filters</button>
       </div>
       <div class="col col-lg-3">
         <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -1424,7 +1424,7 @@
   var globalTabID = "all";
 
   //sidebar 
-  function openNav() {
+  function openNavsr() {
     var e = document.getElementById("mySidebar");
     var width = screen.width
 
