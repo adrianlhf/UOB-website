@@ -2,18 +2,25 @@
 <html lang="en">
 
 <head>
-  <!-- <link rel="stylesheet" href="styles.css"> -->
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+  <!-- Carousel scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <!-- <script src="jquery.mobile-1.4.5.js"></script> -->
+
+  <title>UOB Business Loan Finder</title>
+  <link rel="stylesheet" href="../styles/navigation-styles.css">
+  <link rel="stylesheet" href="../styles/c-styles.css">
+  <link rel="stylesheet" href="../styles/footer-styles.css">
+  <!-- <link rel="stylesheet" href="../styles/.css"> -->
 
 </head>
 
@@ -181,6 +188,7 @@
 </style>
 
 <body>
+
   <div class="container">
     <h1> Find the perfect loan for your business </h1>
 
@@ -256,9 +264,10 @@
 
       <div class="loan-result">
         <h4 id="loan">Select Your Answers To Get A Recommended Loan</h4>
-        <p id="description">Loans can help you with... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-          turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec
-          pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.
+        <p id="description">At UOB, we provide you the best loans for you with the lowest interest rates. Be it for
+          trade, property investments or working capital, we have loans suitable for you. With loans, you will be able
+          to finance various operations and grow your business even further. Apart from that, you would be able to
+          easily
         </p>
         <div id="divFindOutMore">
           <a href="https://www.google.com/" target="_blank" class="btn btn-primary btn-block btnFindOutMore">Click Here
@@ -321,36 +330,189 @@
 
       <!-- </div> -->
     </div>
+    <hr>
+    <!-- You may be interested section -->
+    <div class="interestedsection section" id="interestedsection">
+      <h1 class=" pb-2"> You May Be Interested In</h1>
+      <div class="row mx-auto my-auto">
+        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+          <div class="carousel-inner w-100" role="listbox">
+            <div class="carousel-item active">
+              <div class="col-md-4">
+                <div class="card">
+                  <img class="img-fluid card-img-top" src="../images/image1.jpg" alt="CyberSecurity">
+                  <div class="card-body"> CyberSecurity </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <img class="img-fluid card-img-top" src="../images/image2.jpg" alt="E-transactions">
+                  <div class="card-body"> E-transactions </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <img class="img-fluid card-img-top" src="../images/image3.jpg" alt="Payroll">
+                  <div class="card-body"> Payroll Services </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <img class="img-fluid card-img-top" src="../images/image4.jpg" alt="Accounting">
+                  <div class="card-body"> Accounting </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev w-auto carousel-a" href="#recipeCarousel" role="button" data-slide="prev">
+            <div class="c-icon rounded-circle">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </div>
+          </a>
+          <a class="carousel-control-next w-auto carousel-a" href="#recipeCarousel" role="button" data-slide="next">
+            <div class="c-icon rounded-circle">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="border-top pb-2">
+    <div class="container">
+      <footer class="footer-content row pb-5">
+        <!-- div for words links -->
+        <div class=" left col-md-7 col-sm-12 col-xs-12">
+          <!-- list for links -->
+          <ul class="links list-unstyled ">
+            <li>
+              <a href="" target="_blank">About Us</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="" target="_blank">Investor Relations</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="" target="_blank">Careers</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="" target="_blank">Customer Service</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="" target="_blank">Contact Us</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="" target="_blank">Other UOB Sites</a>
+            </li>
+          </ul>
+          <div class="regno">
+            <!-- ul class for reg.no -->
+            <ul class="registration list-unstyled ">
+              <li>
+                <a>
+                  Copyright © 2020 United Overseas Bank Limited Co.
+                </a>
+              </li>
+              <li>
+                <a>
+                  Reg. No. 193500026Z. All Rights Reserved.
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- div for social media -->
+        <div class="right col-md-5 col-sm-12 col-xs-12">
+          <!-- div for social media picture -->
+          <div class="socialmediapictures list-unstyled ">
+            <li>
+              <a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/" class="facebookicon col 3">
+                <img src="../images/footer/facebook.png" alt="facebook">
+              </a>
+            </li>
+            <li>
+              <a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
+                class="instagramicon col 3">
+                <img src="../images/footer/instagram.png" alt="instagram">
+              </a>
+            </li>
+            <li>
+              <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
+                class="linkedinicon col 3">
+                <img src="../images/footer/linkedin.png" alt="LinkedIn">
+              </a>
+            </li>
+            <li>
+              <a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
+                class="youtubeicon col 3">
+                <img src="../images/footer/youtube.png" alt="Youtube">
+              </a>
+            </li>
+          </div>
+
+          <!-- for temrs of use under social media -->
+          <div class="terms list-unstyled">
+            <ul class="socialmedialinks list-unstyled ">
+              <li>
+                <a href="" target="_blank">Social Media Terms of Use</a>
+                <span> | </span>
+              </li>
+              <li>
+                <a href="" target="_blank">Legal Notices</a>
+                <span> | </span>
+              </li>
+              <li>
+                <a href="" target="_blank">Privacy & Security</a>
+              </li>
+          </div>
+        </div>
+      </footer>
+    </div>
   </div>
 </body>
 
 <script>
 
-// var loan = [
-//         { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle.  ", url: "./vehicle_and _machinery-financing.html", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "Low interest rates", img: "../images/allloans/equipment-vehicle-loan.jpg" },
+  // var loan = [
+  //         { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle.  ", url: "./vehicle_and _machinery-financing.html", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "Low interest rates", img: "../images/allloans/equipment-vehicle-loan.jpg" },
 
-//         { loanID: 1, name: "SME Equipment Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "./government_assistant_scheme.html", amount: "Financing of up to 90% of the market valuation or purchase price of your new equipment", tenure: "Up to 8 years", category: "Equipment & Vehicle", interestRate: "- Minimum interest of 4.25% for loan tenure of 4 years and below <br>- Minimum interest of 4.75% for loan tenure of more than 4 years", img: "../images/allloans/sme-equipment-loan.jpg" },
+  //         { loanID: 1, name: "SME Equipment Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "./government_assistant_scheme.html", amount: "Financing of up to 90% of the market valuation or purchase price of your new equipment", tenure: "Up to 8 years", category: "Equipment & Vehicle", interestRate: "- Minimum interest of 4.25% for loan tenure of 4 years and below <br>- Minimum interest of 4.75% for loan tenure of more than 4 years", img: "../images/allloans/sme-equipment-loan.jpg" },
 
-//         { loanID: 2, name: "Temporary Bridging Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time", url: "./government_assistant_scheme.html", amount: "Up to S$1 million", tenure: "Up to 5 years", category: "Relief Assistance", interestRate: "Low Interest Rates", img: "../images/allloans/temporary-bridging-loan.jpg" },
+  //         { loanID: 2, name: "Temporary Bridging Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time", url: "./government_assistant_scheme.html", amount: "Up to S$1 million", tenure: "Up to 5 years", category: "Relief Assistance", interestRate: "Low Interest Rates", img: "../images/allloans/temporary-bridging-loan.jpg" },
 
-//         { loanID: 3, name: "Business Property Loan", description: "Low Interest Rates on your new Business Property Loan, or when you refinance with us. Higher loan quantum to help you get the most out of your property.", url: "./business_property_and_equity_loan.html", amount: "- Get up to 100% of your business property value that can be used to cash out as an extended loan when you refinance with us <br>- Get up to 90% of your property value or purchase price for your mortgage for new industrial / commercial property purchase", tenure: "Up to 20 years", category: "Property", interestRate: "Low Interest Rates", img: "../images/allloans/business-property-loan.jpg" },
+  //         { loanID: 3, name: "Business Property Loan", description: "Low Interest Rates on your new Business Property Loan, or when you refinance with us. Higher loan quantum to help you get the most out of your property.", url: "./business_property_and_equity_loan.html", amount: "- Get up to 100% of your business property value that can be used to cash out as an extended loan when you refinance with us <br>- Get up to 90% of your property value or purchase price for your mortgage for new industrial / commercial property purchase", tenure: "Up to 20 years", category: "Property", interestRate: "Low Interest Rates", img: "../images/allloans/business-property-loan.jpg" },
 
-//         { loanID: 4, name: "Loan Insurance Scheme", description: "Short-term trade loans with an added benefit of a reduced trade risks and risk is co-shared with 75% risk borne by insurers.", url: "./government_assistant_scheme.html", amount: "Depends on case to case basis", tenure: "Up to 5 years", category: "Trade", interestRate: "Minimum of 3% Interest Rate", img: "../images/allloans/loan-insurance-scheme.jpg" },
+  //         { loanID: 4, name: "Loan Insurance Scheme", description: "Short-term trade loans with an added benefit of a reduced trade risks and risk is co-shared with 75% risk borne by insurers.", url: "./government_assistant_scheme.html", amount: "Depends on case to case basis", tenure: "Up to 5 years", category: "Trade", interestRate: "Minimum of 3% Interest Rate", img: "../images/allloans/loan-insurance-scheme.jpg" },
 
-//         { loanID: 5, name: "Bizmoney Loan", description: "Up to S$350,000 of financing, fixed monthly repayment of up to 4 years and no property or monetary deposit collateral required", url: "./uob_bizmoney.html", amount: "Up to $350,000", tenure: "Up to 5 years", category: "Working Capital", interestRate: "Up to 5% per month", img: "../images/allloans/bizmoney-loan.jpg" },
+  //         { loanID: 5, name: "Bizmoney Loan", description: "Up to S$350,000 of financing, fixed monthly repayment of up to 4 years and no property or monetary deposit collateral required", url: "./uob_bizmoney.html", amount: "Up to $350,000", tenure: "Up to 5 years", category: "Working Capital", interestRate: "Up to 5% per month", img: "../images/allloans/bizmoney-loan.jpg" },
 
-//         { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "./government_assistant_scheme.html", amount: "Up to $1million", tenure: "Fixed monthly repayment period of up to 5 years", category: "Working Capital", interestRate: "Low Interest Rates", img: "../images/allloans/sme-enhanced-loan.jpg" }
-//     ]
+  //         { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "./government_assistant_scheme.html", amount: "Up to $1million", tenure: "Fixed monthly repayment period of up to 5 years", category: "Working Capital", interestRate: "Low Interest Rates", img: "../images/allloans/sme-enhanced-loan.jpg" }
+  //     ]
+
 
   // array to store information of loan (id, name, description, link)
   var loan = [
-    { loanID: 0, name: "Equipment Vehicle Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "https://www.google.com/" },
-    { loanID: 1, name: "SME Equipment Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper. ", url: "" },
-    { loanID: 2, name: "Temporary Bridging Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" },
-    { loanID: 3, name: "Business Property Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" },
-    { loanID: 4, name: "Loan Insurance Scheme", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" },
-    { loanID: 5, name: "Bizmoney Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" },
-    { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis augue, blandit sed interdum in, laoreet eu ipsum. Fusce venenatis consectetur tempus. Sed nec pellentesque quam, non finibus augue. Cras sollicitudin justo in neque consequat, non fringilla augue semper.", url: "" }
+    { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle. Facility installment of up to 7 years and Hire Purchase financing available for commercial vehicle and commercial vehicle with renewed COE. Obtain ownership of the asset upon fulfilling payment of loan installment", url: "./vehicle_and _machinery-financing.html" },
+    { loanID: 1, name: "SME Equipment Loan", description: " Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "./government_assistant_scheme.html" },
+    { loanID: 2, name: "Temporary Bridging Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time", url: "./government_assistant_scheme.html" },
+    { loanID: 3, name: "Business Property Loan", description: "Low Interest Rates on your new Business Property Loan, or when you refinance with us and higher loan quantum to help you get the most out of your property.", url: "./business_property_and_equity_loan.html" },
+    { loanID: 4, name: "Loan Insurance Scheme", description: "Short-term trade loans with an added benefit of a reduced trade risks and risk is co-shared with 75% risk borne by insurers. 50% of the premium will be supported by SPRING Singapore and IE Singapore. Available for both domestic and overseas trade facilities", url: "./government_assistant_scheme.html" },
+    { loanID: 5, name: "Bizmoney Loan", description: "Up to S$350,000 of financing, fixed monthly repayment of up to 4 years and no property or monetary deposit collateral required", url: "./uob_bizmoney.html" },
+    { loanID: 6, name: "SME Enhanced Working Capital Loan", description: "Funding to meet your working capital needs, finance up to S$300,000 and a fixed monthly repayment period of up to 5 years", url: "./government_assistant_scheme.html" }
   ]
 
   $("input[name='radioPurpose'],input[name='radioAmount'],input[name='radioTerm']").click(function () {
@@ -495,6 +657,31 @@
     // })
 
     document.getElementById("otherLoans").innerHTML = '<br><h1 class="text-left">Other Loans You Might Be Interested In</h1><br><div class="row card-deck">' + suggestedLoans + '</div>';
+
+    // Script for multi item carousel
+    $('#recipeCarousel').carousel({
+      interval: 4000
+    })
+
+    $('.carousel .carousel-item').each(function () {
+      var minPerSlide = 3;
+      var next = $(this).next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+
+      for (var i = 0; i < minPerSlide; i++) {
+        next = next.next();
+        if (!next.length) {
+          next = $(this).siblings(':first');
+        }
+
+        next.children(':first-child').clone().appendTo($(this));
+      }
+    });
+
+    // end of script for multi item carousel
 
   }
 </script>
