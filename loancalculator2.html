@@ -112,7 +112,7 @@
                     <p class="BRbeforeCalculate font-italic">Please enter your Rental and Property Loan information to
                         continue.</p>
                     <div class="result BRafterCalculate" id="BRresult">
-                        <h1 id="BRbuyorrent"></h1>
+                        <h1 id="BRbuyorrent" class="pb-2"></h1>
                         <h1 id="BRdescription"></h1>
                         <p class="font-italic">To find out how you can finance your property,
 
@@ -789,17 +789,17 @@
         if (totalRent > propertyLoan) {
             difference = Math.round(totalRent - propertyLoan)
 
-            document.getElementById("BRbuyorrent").innerHTML = '<span class="calcResult"> Buying </span> is the better option.'
+            document.getElementById("BRbuyorrent").innerHTML = '<span class="calcResult "> Buying </span> is the better option.'
 
-            document.getElementById("BRdescription").innerHTML = 'There would be savings of <span class="calcResult"> $' + addCommas(difference) + "</span> over " + e + " years if you buy a property."
+            document.getElementById("BRdescription").innerHTML = 'There would be savings of <br> <span class="calcResult"> $' + addCommas(difference) + "</span><br> over " + e + " years if you buy a property."
         }
 
         else if (totalRent < propertyLoan) {
             difference = Math.round(propertyLoan - totalRent)
 
-            document.getElementById("BRbuyorrent").innerHTML = "Renting is the better option"
+            document.getElementById("BRbuyorrent").innerHTML = '<span class="calcResult ">Renting</span> is the better option'
 
-            document.getElementById("BRdescription").innerHTML = "There would be savings of $" + addCommas(difference) + " over " + e + " years if you rent a property."
+            document.getElementById("BRdescription").innerHTML = 'There would be savings of <br> <span class="calcResult"> $' + addCommas(difference) + " </span><br>over " + e + " years if you rent a property."
         }
 
         //table code
