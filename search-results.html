@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-  <link rel="stylesheet" href="search-results.css">
-  <link rel="stylesheet" href="footer-styles.css">
-  <link rel="stylesheet" href="navigation-styles.css">
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Employee Benefits</title> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</head>
+  <link rel="stylesheet" href="./navigation-styles.css">
+  <link rel="stylesheet" href="./footer-styles.css">
+  <link rel="stylesheet" href="./search-results.css">
 
+</head>
 <body >
   <!-- making the search bar -->
   <!-- search bar -->
@@ -747,6 +750,8 @@
 
     </div>
   </header> <!-- end of navigation-->
+
+
   <div class="justify-content-left d-none d-md-block ">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb bg-white pl-4 ">
@@ -2061,6 +2066,76 @@
     shuffleArraySuggested(suggestedSearch);
 
   })
+
+
+      //Script for sticky navigation bar (web)
+      if ($(window).width() > 992) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 38) {
+                $('#nav-bg').addClass("fixed-top");
+                // add padding top to show content behind navbar
+                $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+            } else {
+                $('#nav-bg').removeClass("fixed-top");
+                // remove padding top from body
+                $('body').css('padding-top', '0');
+            }
+        });
+    } // end if
+
+    //Script to hide sticky navigation bar
+    if ($(window).width() > 992) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 400.73) {
+                $('#nav-bg').removeClass("fixed-top");
+
+                // add padding top to show content behind navbar
+                $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+            } else {
+                $('#nav-bg').remmoveClass("fixed-top");
+                // remove padding top from body
+                $('body').css('padding-top', '0');
+            }
+        });
+    }
+
+    //Script for sticky navigation bar (mobile)
+
+
+
+    // script for side navigation
+    /* Show the side nav */
+    function openNav() {
+        if ($(window).width() < 576) {
+            document.getElementById("sidenav").style.width = "70%";
+            document.getElementById("body-overlay").style.width = "100%";
+            document.getElementById("sidenav").css('z-index', '100000');
+        } else {
+            document.getElementById("sidenav").style.width = "40%";
+            document.getElementById("body-overlay").style.width = "100%"
+        }
+    }
+
+    /* Close the side nav */
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+        document.getElementById("body-overlay").style.width = "0%"
+    }
+
+    // dropdown display
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
 </script>
 
 
