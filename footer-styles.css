@@ -1,0 +1,67 @@
+/* style for footer */
+  .right{
+    margin-top:auto;
+  }
+  .left{
+    margin-top:auto;
+  }
+ 
+  .footer-content  {
+    font-size:13px;
+    text-align:center
+  }
+
+ .footer-content  span{
+      margin: 6px;
+      
+      
+  }
+  .footer-content a {
+  margin-left: 3px;
+  color:#333;
+    
+       
+  }
+  .footer-content ul   {
+    margin: 15px;
+    
+  }
+  
+  .footer-content li{
+    display:inline-block;
+
+  }
+  
+/* social media images */
+  .footer-content img{
+    display: inline-block;
+    max-width: 100%;
+    width: 30px;
+    height: 30px;
+   
+
+  }
+/* making the registration 2 lines */
+.registration li{
+  display:block;
+}
+
+
+
+
+  
+
+   /* Medium devices (tablets, 768px and up) */
+   @media (min-width: 768px) {  
+   .footer-content ul  {
+        text-align: left;
+        
+      }
+   .socialmediapictures{
+      text-align:right;
+    }
+  .socialmedialinks {
+    text-align:right !important;
+  }
+   }
+   
