@@ -29,7 +29,7 @@ input[type=search]:focus, button[type="button"]:focus {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.scrollable-tab .s-tabs .nav-linksr{
+.scrollable-tab .s-tabs .nav-link {
  white-space: nowrap;
 }
 
@@ -38,12 +38,12 @@ input[type=search]:focus, button[type="button"]:focus {
   display: none;
 }
 
-.nav-linksr {
+.scrollable-tab .nav-link {
   color: #818181;
   font-weight: bold;
 }
 
-.nav-linksr:hover, .nav-linksr.active , .nav-linksr:active {
+.scrollable-tab .nav-link:hover, .scrollable-tab .nav-link.active , .scrollable-tab .nav-link:active {
   border-bottom: 2px #002469 solid;
   color: #002469;
 }
