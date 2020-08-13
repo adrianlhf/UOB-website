@@ -58,12 +58,12 @@
     } */
 
     .btnFindOutMore {
-    
+
         width: 90%;
     }
 
     /* card styles */
-    .card > .list-group {
+    .card>.list-group {
         border: none;
     }
 
@@ -984,7 +984,7 @@
 
     <h1 class="text-left py-3 ml-4">UOB Business Loan Comparison</h1>
 
-    <div class="container">
+    <div class="container top-container">
         <!-- before compare -->
         <div class="beforeCompare text-center">
             <h1><b>Business Loans We Offer</b></h1>
@@ -1321,6 +1321,8 @@
                 this.checked = false;
             }
         });
+        $("#btnCompare").click(function () { $(window).scrollTop(0); }); 
+        $("#btnReselect").click(function () { $(window).scrollTop(0); });
     });
 
 
@@ -1337,18 +1339,15 @@
         }
         $("#selectLoans").html(string);
 
+
     }
 
     //change to compare table content
     //change button to reselect
     function compareFunction() {
-        //hide select loans thing
-        // $("#selectLoans").hide()
-        // $("#btnCompare").hide()
-        // $("#btnReselect").show()
-        // $("#compareTable").show();
+
         $(".beforeCompare").hide()
-        $(".afterCompare").show()
+        $(".afterCompare").fadeIn("2500")
 
 
         compareArray = []
@@ -1381,7 +1380,6 @@
         })
         compareStr += "</table>"
         $("#compareTable").html(compareStr);
-
         // <tr class="tablehead justify-content-around">
         //             <th>Spec 1</th>
         //         </tr>
@@ -1404,14 +1402,20 @@
         // $("#btnCompare").show()
         // $("#selectLoans").show()
 
-        $("#btnCompare").attr("disabled", true)
+        // $("input[name='select']:checkbox").prop('checked', false);
         $(".afterCompare").hide()
-        $(".beforeCompare").show()
-        $("input[name='select']:checkbox").prop('checked', false);
-        $("#qtyIndicator").html("Select Loans")
+        $(".beforeCompare").fadeIn("2500")
 
 
     }
+
+    //function to scroll to top
+
+    function scrollTop() {
+        var top = document.getElementById("top-container")
+        top.scrollTop = top.scrollHeight(0)
+    }
+    //end of script scroll to top
 
     // Script for multi item carousel
     $('#recipeCarousel').carousel({
