@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Employee Benefits</title> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../styles/search-results.css">
+  <link rel="stylesheet" href="../styles/navigation-styles.css">
+ 
+  <link rel="stylesheet" href="../styles/footer-styles.css">
+</head>
+<body >
+  <!-- making the search bar -->
+  <!-- search bar -->
+  <header class="navbar-expand-lg">
+    <!-- level 1 -->
+    <div id="level1" class="navbar navbar-dark " style="background-color: #002469;">
+      <button class="btn d-lg-none" onclick="openNav()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-brand d-lg-none">
+        <a href="#" title="UOB" class="logo">
+          <img src="../images/homepage/uob-logo-mobile1.png" alt="UOB">
+
+        </a>
+      </div>
+      <div class="navbar-right d-lg-none">
+        <a href="./search-results.html">
+          <button type="button" class="btn">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#ffffff"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+            <path fill-rule="evenodd"
+              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+          </svg>
+          </button>
+        </a>
+
+      </div>
+
+      <!--first nav row-->
+      <div class="container d-none d-lg-block" id="firstrow">
+        <div class="row">
+          <!-- For the type of uob site -->
+          <div class="btn-group">
+            <button id="dropdown-personal" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span>YOU ARE IN</span>
+              <span class="font-weight-bold">BUSINESS BANKING</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu banking-group" role="menu">
+              <li class="dropdown-item-heading">FOR INDIVIDUALS</li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/personal/index.page">PERSONAL BANKING</a></li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/wealthbanking/index.page">WEALTH BANKING</a>
+              </li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/privilegebanking/index.page">PRIVILEGE
+                  BANKING</a></li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/privilegereserve/index_pvr.html">PRIVILEGE
+                  RESERVE</a></li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/private/index.page">PRIVATE BANKING</a></li>
+              <li class="dropdown-item-heading">FOR COMPANIES</li>
+              <li><a class="dropdown-item"
+                  href="https://www.uob.com.sg/corporate/commercial-banking/index.page">COMMERCIAL BANKING</a></li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/corporate/index.page">CORPORATE AND
+                  INSTITUTIONAL BANKING</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobgroup.com/foreign-direct-investment/index.page?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">FOREIGN
+                  DIRECT INVESTMENT</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobgroup.com/industry-insights/index.page?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">INDUSTRY
+                  INSIGHTS</a></li>
+              <li class="dropdown-item-heading">ABOUT UOB</li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobgroup.com/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOB
+                  GROUP</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobgroup.com/techecosystem?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOBTECH
+                  START-UP ECOSYSTEM</a>
+              </li>
+              <li class="dropdown-item-heading">UOB GROUP SUBSIDIARIES</li>
+              <li><a class="dropdown-item" href="https://www.uobam.com.sg/">UOB ASSET MANAGEMENT</a></li>
+              <li><a class="dropdown-item" href="https://www.uobaim.com.sg/">UOB ALTERNATIVE INVESTMENT MANAGEMENT</a>
+              </li>
+              <li><a class="dropdown-item"
+                  href="https://www.uoi.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UNITED
+                  OVERSEAS INSURANCE</a></li>
+              <li><a class="dropdown-item" href="https://www.uobtravel.com/">UOB TRAVEL PLANNERS</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobvm.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472https://www.uobvm.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOB
+                  VENTURE MANAGEMENT</a></li>
+              <li><a class="dropdown-item" href="https://www.uobglobal.com/">UOB GLOBAL CAPITAL</a></li>
+            </ul>
+          </div> <!-- end of country-->
+
+          <!-- For diff country -->
+          <div class="btn-group">
+            <button id="dropdown-Language" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span class="font-weight-bold">SINGAPORE</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">UOB CHINA</a>
+              <a class="dropdown-item" href="#">UOB VIETNAM</a>
+              <a class="dropdown-item" href="#">UOB MALAYSIA</a>
+            </div>
+          </div> <!-- end of country-->
+
+          <!-- For help & support -->
+          <div class="btn-group">
+            <button id="dropdown-Language" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span class="font-weight-bold">HELP & SUPPORT</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a>
+              <a class="dropdown-item" href="#">REQUEST A CALL BACK</a>
+              <a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a>
+            </div>
+          </div> <!-- end of help & support -->
+
+          <!-- For login-->
+          <div class="btn-group ml-auto login">
+            <button type="button" class="btn btn-focus" href="#">
+              <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span class="font-weight-bold m-auto">LOGIN</span>
+            </button>
+          </div> <!-- end of login -->
+        </div>
+      </div> <!-- End of container for first row-->
+    </div>
+
+    <!-- level 2 -->
+    <div id="nav-bg">
+
+      <!-- mobile -->
+      <div id="body-overlay">
+        <div id="sidenav" class="sidenav d-lg-none">
+          <a href="#" title="UOB" class="logo mr-auto">
+            <img src="../images/homepage/right-by-you.png" alt="UOB">
+
+          </a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <!--Start nav Dropdown-->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="./start.html">Start</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <div class="dropdown-container">
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./digitalise.html">Digitalize your Business</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./accounting.html">Accounting</a>
+                  <a href="./cybersecurity.html">Cybersecurity</a>
+                  <a href="./digital_transaction.html">Digital Transaction</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./apply_for_cards.html">Apply for Business Debit Card</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="https://www.uob.com.sg/corporate/commercial-solutions/uob-platinum-business-card.html">UOB
+                    Platinum Business Card</a>
+                  <a href="https://www.uob.com.sg/corporate/commercial-solutions/uob-business-plus.html">UOB Business
+                    Plus Card</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Open a business banking account</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./online_account_opening.html">Online Account Opening</a>
+                  <a href="./uob_biztransact_account.html">UOB BizTransact Account</a>
+                  <a href="./uob_e-business_account.html">UOB E-Business Account</a>
+                  <a href="./singapore_dollar_current_account.html">Singapore Dollar Current Account</a>
+                  <a href="./bizglobal_account.html">BizGlobal Account</a>
+                  <a href="./global_currency_account.html">Global Currency Account</a>
+                  <a href="./renminbi_account.html">Renminbi Account</a>
+                </div>
+                <!-- end of dropdown -->
+              </div>
+            </li>
+            <!--Run nav Dropdown-->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="./run.html">Run</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <div class="dropdown-container">
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Make Informed Decisions</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="https://www.uob.com.sg/business/BizSmart/index.html">BizSmart</a>
+                  <a href="./uob_ealerts.html">UOB eAlerts</a>
+                  <a href="./uob_business_mobile_app.html">UOB Business Mobile App</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Insure your Business</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./bizcare.html">BizCare</a>
+                  <a href="./bizdrive.html">BizDrive</a>
+                  <a href="./machinery_insurance.html">Machinery All Risk Insurance</a>
+                  <a href="./life_insurance.html">Life Insurance</a>
+                  <a href="./employee_benefits.html">Employee Benefits</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Manage Cashflow</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./payment_and_collection_services.html">Payment and Collection Services</a>
+                  <a href="./paynow_corporate.html">PayNow Corporate</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Manage Employees</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="https://www.uob.com.sg/business/operate/payroll/index.html">Payroll Services</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./trade_solutions.html">Trade Solutions <br> (Import/Export Services)</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./import_services.html">Import Services</a>
+                  <a href="./export_services.html">Export Services</a>
+                </div>
+                <!-- end of dropdown -->
+              </div>
+            </li>
+            <!--Grow nav Dropdown-->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="grow.html">Grow</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <div class="dropdown-container">
+                <a href="fixed_deposits.html">Fixed Deposit</a>
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./boost_cashflow.html">Boost your cashflow and assets</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./uob_business_loan.html">UOB Business Loan</a>
+                  <a href="./uob_bizmoney.html">UOB BizMoney</a>
+                  <a href="./uob_sme_loan.html">UOB SME Loan</a>
+                  <a href="./uob_overdraft.html">UOB Overdraft</a>
+                  <a href="./business_property_and_equity_loan.html">Business Property and Equity Loan</a>
+                  <a href="./government_assistant_scheme.html">Government Assistant Scheme</a>
+                  <a href="./vehicle_and_machinery-financing.html">Vehicle and Machinery Financing</a>
+                </div>
+                <!-- end of dropdown -->
+              </div>
+            </li>
+            <!--Tools nav Dropdown-->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a>Tools</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <div class="dropdown-container">
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./uob_business_loan.html">Loans</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./loan_finder.html">Loans finder</a>
+                  <a href="./loan_comparison.html">Loans Comparison</a>
+                </div>
+                <!-- end of dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Calculators</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./business_property_and_equity_loan.html">Buy vs Rent Calculator</a>
+                  <a href="./business_property_and_equity_loan.html">Commercial Property Affordability Calculator</a>
+                  <a href="./vehicle_and_machinery-financing.html">Commercial Vehicle/Hire Purchase Loan Calculator</a>
+                  <a href="./uob_business_loan.html">Loans Installment Calculator</a>
+                </div>
+                <!-- end of dropdown -->
+
+              </div>
+            </li>
+            <li><a href="./insights.html">Insights</a></li>
+            <hr class="sidenavLine">
+            <!-- Level 1 side nav dropdown -->
+            <!-- mobile nav Dropdown -->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a>YOU ARE IN <span class="font-weight-bold"><br>BUSINESS BANKING</span></a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <ul class="dropdown-container">
+                <li><a>FOR INDIVIDUALS</a></li>
+                <li><a href="">PERSONAL BANKING</a></li>
+                <li><a href="">WEALTH BANKING</a></li>
+                <li><a href="">PRIVILEGE BANKING</a></li>
+                <li><a href="">PRIVILEGE RESERVE</a></li>
+                <li><a href="">PRIVATE BANKING</a></li>
+              </ul>
+            </li>
+            <!-- country nav dropdown -->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="#"><span class="font-weight-bold">SINGAPORE</span></a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <ul class="dropdown-container">
+                <li><a href="">UOB CHINA</a></li>
+                <li><a href="">UOB VIETNAM</a></li>
+                <li><a href="">UOB MALAYSIA</a></li>
+              </ul>
+            </li>
+            <!-- Help nav dropdown -->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="#"><span class="font-weight-bold">HELP & SUPPORT</span></a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <ul class="dropdown-container">
+                <li><a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a></li>
+                <li><a class="dropdown-item" href="#">REQUEST A CALL BACK</a></li>
+                <li><a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a></li>
+              </ul>
+            </li>
+            <button type="button" class="sideNavBtn btn btn-focus" href="#">
+              <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 22 22"
+                fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span class="font-weight-bold m-auto">LOGIN</span>
+            </button>
+          </ul>
+        </div>
+      </div>
+
+      <!-- web -->
+      <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar">
+        <!-- Logo -->
+        <div class="navbar-brand d-none d-lg-block ">
+          <!--UOB logo-->
+          <a href="./index.html" title="UOB" class="logo mr-auto">
+            <img src="../images/homepage/uob-logo.jpg" alt="UOB">
+
+          </a>
+        </div>
+        <!-- tabs -->
+        <ul role="tablist" class="mainnav navbar-nav justify-content-center col-12 col-lg-auto">
+          <li role="tab" class="nav-item"><a href="./index.html" class="text-dark nav-link ">Home</a></li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="./start.html" class="text-dark nav-link dropdown-toggle">Start</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="digitalise.html">Digitalize your Business</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./accounting.html">Accounting</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./cybersecurity.html">Cybersecurity</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./digital_transaction.html">Digital Transaction</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="./apply_for_cards.html">Apply for Business Debit Card</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item"
+                      href="https://www.uob.com.sg/corporate/commercial-solutions/uob-platinum-business-card.html">UOB
+                      Platinium Business Card</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item"
+                      href="https://www.uob.com.sg/corporate/commercial-solutions/uob-business-plus.html">UOB Business
+                      Plus Card</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Open a Business Banking Account</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./online_account_opening.html">Online Account Opening</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_biztransact_account.html">UOB BizTransact Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_e-business_account.html">UOB E-Business Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./singapore_dollar_current_account.html">Singapore Dollar Current
+                      Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./bizglobal_account.html">BizGlobal Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./global_currency_account.html">Global Currency Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./renminbi_account.html">Reminbi Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="./run.html" class="text-dark nav-link dropdown-toggle">Run</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Make Informed Decisions</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="https://www.uob.com.sg/business/BizSmart/index.html">BizSmart</a>
+                  </li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_ealerts.html">UOB eAlerts</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_business_mobile_app.html">UOB Business Mobile App</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Insure your Business</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./bizcare.html">BizCare</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./bizdrive.html">BizDrive</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./machinery_insurance.html">Machinery All Risk Insurance</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./life_insurance.html">Life Insurance</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./employee_benefits.html">Employee Benefits</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Manage Cashflow</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./payment_and_collection_services.html">Payment and Collection
+                      Services</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./paynow_corporate.html">PayNow corporate</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Manage Employees</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="https://www.uob.com.sg/business/operate/payroll/index.html">Payroll
+                      Services</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="./trade_solutions.html">Trade Solutions (import/export services)</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./import_services.html">Import Services</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./export_services.html">Export Services</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown ">
+            <a href="./grow.html" class="text-dark nav-link dropdown-toggle">Grow</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <a class="dropdown-item" href="./fixed_deposits.html">Fixed Deposits</a>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="./boost_cashflow.html">Boost your Cashflow and Assets</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./uob_business_loan.html">UOB Business Loan</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_bizmoney.html">UOB BizMoney</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_sme_loan.html">UOB SME Loan</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_overdraft.html">UOB OverDraft</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./business_property_and_equity_loan.html">Business Property and
+                      Equity Loan</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./government_assistant_scheme.html">Government Assistant Scheme</a>
+                  </li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./vehicle_and_machinery-financing.html">Vehicle and Machinery
+                      Financing</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a class="text-dark nav-link dropdown-toggle">Tools</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="./uob_business_loan.html">Loans</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./loan_finder.html">Loans Finder</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./loan_comparison.html">Loans Comparison</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Calculators</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./business_property_and_equity_loan.html">Buy vs Rent
+                      Calculator</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./business_property_and_equity_loan.html">Commercial Property
+                      Affordablity Calculator</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./vehicle_and_machinery-financing.html">Commercial Vehicle/Hire
+                      Purchase Loan Calculator</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_business_loan.html">Loan Installment Calculator</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="./insights.html" class="text-dark nav-link">Insights</a>
+          </li>
+        </ul>
+
+        <div id="searchbutton">
+          <a href="./search-results.html">
+            <button type="button" class="btn button">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#000000"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                <path fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+              </svg>
+            </button>
+          </a>
+
+        </div>
+        <!-- Logo -->
+        <div class=" d-none d-lg-block ">
+          <!--UOB logo-->
+          <a href="./index.html" title="UOB" class="logo">
+            <img src="../images/homepage/right-by-you.png" alt="Right by you">
+
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header> <!-- end of navigation-->
+
+
+  <div class="container">
+
+  <div class="row mt-4">
+
+    <h6 class="d-none d-md-block col-md2 align-self-center">UOB Search</h6>
+    <form class="search-bar col-md-6">
+      <div class="input-group mb-4 border rounded-pill p-1">
+        <input type="search" placeholder="Search" class="form-control bg-none border-0" id="input-search">
+        <div class="input-group-append border-0">
+          <button type="button" class="btn btn-link" onclick="search()"><svg width="1.3em" height="1.3em"
+              viewBox="0 0 16 16" class="bi bi-search" fill="#002469" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+              <path fill-rule="evenodd"
+                d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+            </svg></button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <nav class="scrollable-tab" id="scroll-tab">
+    <div class="nav s-tabs" id="nav-tab" role="tablist">
+      <a onclick="filter1()" class="nav-item nav-link active" data-toggle="tab" href="#all" id="tab-all">All</a>
+      <a onclick="filter2()" class="nav-item nav-link" data-toggle="tab" href="#products" id="tab-products">Our
+        Products</a>
+      <a onclick="filter3()" class="nav-item nav-link" data-toggle="tab" href="#insights" id="tab-insights">Insights</a>
+      <a onclick="filter4()" class="nav-item nav-link" data-toggle="tab" href="#updates" id="tab-updates">Updates</a>
+      <a onclick="filter5()" class="nav-item nav-link" data-toggle="tab" href="#support" id="tab-support">Support</a>
+    </div>
+  </nav>
+
+  <!-- divison line -->
+  <hr>
+  <!-- division line -->
+  <!-- filter and sort bars -->
+  <div class="container filter-sort">
+    <div class="row justify-content-between">
+      <div class="col-lg-9">
+        <button type="button" class="btn col col-md-3 text-left" data-toggle="modal" data-target="#filteroverlay"
+          onclick="openNavsr()">☰ Filters</button>
+      </div>
+      <div class="col col-lg-3">
+        <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" id="testbutton">
+          Sort By: <span id="selected" class="font-weight-bold">Relevancy</span>
+        </button>
+        <div class="dropdown-menu text-center" id="test">
+          <button class="dropdown-item" type="button">Relevancy</button>
+          <button class="dropdown-item" type="button">Popularity</button>
+          <button class="dropdown-item" type="button">Newest</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- divison line -->
+  <hr>
+  <!-- division line -->
+
+
+  <!-- sidebar bar / filterbar  -->
+
+
+
+  <!-- filter overlay/modal for mobile (Our Products)-->
+  <div class="modal fade hidden-sm-up " id="filteroverlay" tabindex="-1" role="dialog"
+    aria-labelledby="overlayfilterLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" " role=" document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="filteroverlay">Filters</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+
+          <!-- Accordion collapsible for filter content -->
+          <div id="accordion" role="tablist" class="accordion">
+
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-loan">
+                <h5 class="mb-0">
+                  <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-loan"
+                    aria-expanded="false" aria-controls="collapse-loan">
+                    Loan
+                  </a>
+                </h5>
+              </div>
+
+              <div id="collapse-loan" class="collapse test" role="tabpanel" aria-labelledby="heading-loan"
+                data-parent="#accordion">
+                <div class="card-body">
+                  <a class="dropdown-item" href="#!">Commercial Loan </a>
+                  <a class="dropdown-item" href="#!">Property Loan</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-cards">
+                <h5 class="mb-0">
+                  <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-cards"
+                    aria-expanded="false" aria-controls="collapse-cards">
+                    Cards
+                  </a>
+                </h5>
+              </div>
+
+              <div id="collapse-cards" class="collapse" role="tabpanel" aria-labelledby="heading-cards"
+                data-parent="#accordion">
+                <div class="card-body">
+                  <a class="dropdown-item" href="#!">Corporate Cards</a>
+                  <a class="dropdown-item" href="#!">Debit Cards</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-articles">
+                <h5 class="mb-0">
+                  <a class="text-decoration-none" data-toggle="collapse" href="#collapse-articles" aria-expanded="false"
+                    aria-controls="collapse-cards">
+                    Trending Articles
+                  </a>
+                </h5>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-business">
+                <h5 class="mb-0">
+                  <a class="text-decoration-none" data-toggle="collapse" href="#collapse-business" aria-expanded="false"
+                    aria-controls="collapse-cards">
+                    Growing Your Business
+                  </a>
+                </h5>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-market">
+                <h5 class="mb-0">
+                  <a class="text-decoration-none" data-toggle="collapse" href="#collapse-market" aria-expanded="false"
+                    aria-controls="collapse-cards">
+                    Market Trends
+                  </a>
+                </h5>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-faq">
+                <h5 class="mb-0">
+                  <a class="text-decoration-none" data-toggle="collapse" href="#collapse-faq" aria-expanded="false"
+                    aria-controls="collapse-cards">
+                    FAQ
+                  </a>
+                </h5>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-hotline">
+                <h5 class="mb-0">
+                  <a class="text-decoration-none" data-toggle="collapse" href="#collapse-hotline" aria-expanded="false"
+                    aria-controls="collapse-cards">
+                    Hotline
+                  </a>
+                </h5>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-2018">
+                <h5 class="mb-0">
+                  <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2018"
+                    aria-expanded="false" aria-controls="collapse-loan">
+                    Year 2018
+                  </a>
+                </h5>
+              </div>
+
+              <div id="collapse-2018" class="collapse test" role="tabpanel" aria-labelledby="heading-2018"
+                data-parent="#accordion">
+                <div class="card-body">
+                  <a class="dropdown-item" href="#!">First Quarter </a>
+                  <a class="dropdown-item" href="#!">Second Quarter</a>
+                  <a class="dropdown-item" href="#!">Third Quarter</a>
+                  <a class="dropdown-item" href="#!">Fourth Quarter</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-2019">
+                <h5 class="mb-0">
+                  <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2019"
+                    aria-expanded="false" aria-controls="collapse-loan">
+                    Year 2019
+                  </a>
+                </h5>
+              </div>
+
+              <div id="collapse-2019" class="collapse test" role="tabpanel" aria-labelledby="heading-2019"
+                data-parent="#accordion">
+                <div class="card-body">
+                  <a class="dropdown-item" href="#!">First Quarter </a>
+                  <a class="dropdown-item" href="#!">Second Quarter</a>
+                  <a class="dropdown-item" href="#!">Third Quarter</a>
+                  <a class="dropdown-item" href="#!">Fourth Quarter</a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" role="tab" id="heading-2020">
+                <h5 class="mb-0">
+                  <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2020"
+                    aria-expanded="false" aria-controls="collapse-loan">
+                    Year 2020
+                  </a>
+                </h5>
+              </div>
+
+              <div id="collapse-2020" class="collapse test" role="tabpanel" aria-labelledby="heading-2020"
+                data-parent="#accordion">
+                <div class="card-body">
+                  <a class="dropdown-item" href="#!">First Quarter </a>
+                  <a class="dropdown-item" href="#!">Second Quarter</a>
+                  <a class="dropdown-item" href="#!">Third Quarter</a>
+                  <a class="dropdown-item" href="#!">Fourth Quarter</a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mySidebar" class="sidebar ">
+
+    <div id="accordion" role="tablist" class="accordion">
+
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-loan">
+          <h5 class="mb-0">
+            <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-loan"
+              aria-expanded="false" aria-controls="collapse-loan">
+              Loan
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse-loan" class="collapse test" role="tabpanel" aria-labelledby="heading-loan"
+          data-parent="#accordion">
+          <div class="card-body">
+            <a class="dropdown-item" href="#!">Commercial Loan </a>
+            <a class="dropdown-item" href="#!">Property Loan</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-cards">
+          <h5 class="mb-0">
+            <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-cards"
+              aria-expanded="false" aria-controls="collapse-cards">
+              Cards
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse-cards" class="collapse" role="tabpanel" aria-labelledby="heading-cards"
+          data-parent="#accordion">
+          <div class="card-body">
+            <a class="dropdown-item" href="#!">Corporate Cards</a>
+            <a class="dropdown-item" href="#!">Debit Cards</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-articles">
+          <h5 class="mb-0">
+            <a class="text-decoration-none" data-toggle="collapse" href="#collapse-articles" aria-expanded="false"
+              aria-controls="collapse-cards">
+              Trending Articles
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-business">
+          <h5 class="mb-0">
+            <a class="text-decoration-none" data-toggle="collapse" href="#collapse-business" aria-expanded="false"
+              aria-controls="collapse-cards">
+              Growing Your Business
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-market">
+          <h5 class="mb-0">
+            <a class="text-decoration-none" data-toggle="collapse" href="#collapse-market" aria-expanded="false"
+              aria-controls="collapse-cards">
+              Market Trends
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-faq">
+          <h5 class="mb-0">
+            <a class="text-decoration-none" data-toggle="collapse" href="#collapse-faq" aria-expanded="false"
+              aria-controls="collapse-cards">
+              FAQ
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-hotline">
+          <h5 class="mb-0">
+            <a class="text-decoration-none" data-toggle="collapse" href="#collapse-hotline" aria-expanded="false"
+              aria-controls="collapse-cards">
+              Hotline
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-2018">
+          <h5 class="mb-0">
+            <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2018"
+              aria-expanded="false" aria-controls="collapse-loan">
+              Year 2018
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse-2018" class="collapse test" role="tabpanel" aria-labelledby="heading-2018"
+          data-parent="#accordion">
+          <div class="card-body">
+            <a class="dropdown-item" href="#!">First Quarter </a>
+            <a class="dropdown-item" href="#!">Second Quarter</a>
+            <a class="dropdown-item" href="#!">Third Quarter</a>
+            <a class="dropdown-item" href="#!">Fourth Quarter</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-2019">
+          <h5 class="mb-0">
+            <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2019"
+              aria-expanded="false" aria-controls="collapse-loan">
+              Year 2019
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse-2019" class="collapse test" role="tabpanel" aria-labelledby="heading-2019"
+          data-parent="#accordion">
+          <div class="card-body">
+            <a class="dropdown-item" href="#!">First Quarter </a>
+            <a class="dropdown-item" href="#!">Second Quarter</a>
+            <a class="dropdown-item" href="#!">Third Quarter</a>
+            <a class="dropdown-item" href="#!">Fourth Quarter</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="heading-2020">
+          <h5 class="mb-0">
+            <a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2020"
+              aria-expanded="false" aria-controls="collapse-loan">
+              Year 2020
+            </a>
+          </h5>
+        </div>
+
+        <div id="collapse-2020" class="collapse test" role="tabpanel" aria-labelledby="heading-2020"
+          data-parent="#accordion">
+          <div class="card-body">
+            <a class="dropdown-item" href="#!">First Quarter </a>
+            <a class="dropdown-item" href="#!">Second Quarter</a>
+            <a class="dropdown-item" href="#!">Third Quarter</a>
+            <a class="dropdown-item" href="#!">Fourth Quarter</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <div class="tab-content">
+    <!-- result page -->
+    <!-- All Result Page -->
+    <div id="all" class="container tab-pane active result-page">
+      <div class="row">
+        <div class="col-lg-9">
+          <ul id="main" class="tab-styles">
+          </ul>
+        </div>
+
+        <!-- suggested search -->
+        <div class="col-lg-3 suggestedsearch">
+
+          <h4 class="suggested-header">
+            Related Search Results
+          </h4>
+
+          <!-- breadcrumb for each result -->
+          <div id="related-search"></div>
+
+          <!-- each suggested search result -->
+          <!-- <p class="suggested-result">
+            <a href="index.html" class="suggested-description">
+              <span class="magnifiying-glass">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#002469"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                  <path fill-rule="evenodd"
+                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                </svg>
+              </span>
+              UOB Business <b>Loans</b>
+            </a>
+
+          </p>
+
+          <p class="suggested-result">
+            <a href="index.html" class="suggested-description">
+              <span class="magnifiying-glass">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#002469"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                  <path fill-rule="evenodd"
+                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                </svg>
+              </span>
+              UOB Business <b>Loans</b>
+            </a>
+          </p>
+  
+          <p class="suggested-result">
+            <a href="index.html" class="suggested-description">
+              <span class="magnifiying-glass">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#002469"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                  <path fill-rule="evenodd"
+                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                </svg>
+              </span>
+              UOB Business <b>Loans</b>
+            </a>
+
+          </p> -->
+        </div>
+      </div>
+
+      <!-- pagination -->
+      <ul class="pagination mx-auto">
+        <li class="page-item disabled">
+          <a class="page-link" href="#!" tabindex="-1">
+            < </a> </li> <li class="page-item active"><a class="page-link" href="#!">1</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#!">2 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#!">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#!">></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Product result page -->
+    <div id="products" class="container tab-pane result-page">
+      <div class="row">
+        <div class="col-lg-9">
+          <ul id="main2" class="tab-styles"></ul>
+        </div>
+        <div class="col-lg-3 suggestedsearch">
+          <!-- breadcrumb for each result -->
+          <h4 class="suggested-header">
+            Related Search Results
+          </h4>
+          <div id="related-search2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Insights result page -->
+    <div id="insights" class="container tab-pane result-page">
+      <div class="row">
+        <div class="col-lg-9">
+          <ul id="main3" class="tab-styles"></ul>
+        </div>
+        <div class="col-lg-3 suggestedsearch">
+          <!-- breadcrumb for each result -->
+          <h4 class="suggested-header">
+            Related Search Results
+          </h4>
+          <div id="related-search3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- updates result page -->
+    <div id="updates" class="container tab-pane result-page">
+      <div class="row">
+        <div class="col-lg-9">
+          <ul id="main4" class="tab-styles"></ul>
+        </div>
+        <div class="col-lg-3 suggestedsearch">
+          <!-- breadcrumb for each result -->
+          <h4 class="suggested-header">
+            Related Search Results
+          </h4>
+          <div id="related-search4"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- support result page -->
+    <div id="support" class="container tab-pane result-page">
+      <div class="row">
+        <div class="col-lg-9">
+          <ul id="main5" class="tab-styles"></ul>
+        </div>
+        <div class="col-lg-3 suggestedsearch">
+          <!-- breadcrumb for each result -->
+          <h4 class="suggested-header">
+            Related Search Results
+          </h4>
+          <div id="related-search5"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <!-- <button onclick="test()">test</button> -->
+
+
+  <!-- Footer -->
+  <div class="border-top">
+    <div class="container">
+        <footer class="footer-content row pb-5">
+            <!-- div for words links -->
+            <div class=" left col-md-7 col-sm-12 col-xs-12">
+                <!-- list for links -->
+                <ul class="links list-unstyled ">
+                    <li>
+                        <a href="./about_us.html" target="_blank">About Us</a>
+                        <span> | </span>
+                    </li>
+
+                    <li>
+                        <a href="./investor_relations.html" target="_blank">Investor Relations</a>
+                        <span> | </span>
+                    </li>
+                    <li>
+                        <a href="./careers.html" target="_blank">Careers</a>
+                        <span> | </span>
+                    </li>
+                    <li>
+                        <a href="./customer_service.html" target="_blank">Customer Service</a>
+                        <span> | </span>
+                    </li>
+                    <li>
+                        <a href="./contactus.html" target="_blank">Contact Us</a>
+                        <span> | </span>
+                    </li>
+                    <li>
+                        <a href="./other_uob_sites.html" target="_blank">Other UOB Sites</a>
+                    </li>
+                </ul>
+                <div class="regno">
+                    <!-- ul class for reg.no -->
+                    <ul class="registration list-unstyled ">
+                        <li>
+                            <a>
+                                Copyright © 2020 United Overseas Bank Limited Co.
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Reg. No. 193500026Z. All Rights Reserved.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- div for social media -->
+            <div class="right col-md-5 col-sm-12 col-xs-12">
+                <!-- div for social media picture -->
+                <div class="socialmediapictures list-unstyled ">
+                    <li>
+                        <a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/"
+                            class="facebookicon col 3">
+                            <img src="../images/footer/facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
+                            class="instagramicon col 3">
+                            <img src="../images/footer/instagram.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
+                            class="linkedinicon col 3">
+                            <img src="../images/footer/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
+                            class="youtubeicon col 3">
+                            <img src="../images/footer/youtube.png" alt="Youtube">
+                        </a>
+                    </li>
+                </div>
+
+                <!-- for temrs of use under social media -->
+                <div class="terms list-unstyled">
+                    <ul class="socialmedialinks list-unstyled ">
+                        <li>
+                            <a href="./social_media_terms_of_use.html" target="_blank">Social Media Terms of Use</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./legal_notices.html" target="_blank">Legal Notices</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./privary_and_security.html" target="_blank">Privacy & Security</a>
+                        </li>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+</div>
+</div>
+</body>
+
+
+<script>
+  var globalTabID = "all";
+
+  //sidebar 
+  function openNavsr() {
+    var e = document.getElementById("mySidebar");
+    var width = screen.width
+
+    if (width >= 768) {
+
+      if (e.style.width == '180px') {
+        e.style.width = '0px';
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("mySidebar").style.borderRight = "0";
+        document.getElementById("mySidebar").style.borderRight = "0px #bdbdbd solid";
+        document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("main2").style.marginLeft = "0";
+        document.getElementById("main3").style.marginLeft = "0";
+        document.getElementById("main4").style.marginLeft = "0";
+        document.getElementById("main5").style.marginLeft = "0";
+
+      } else {
+        e.style.width = '180px';
+        document.getElementById("mySidebar").style.height = "70em";
+        document.getElementById("mySidebar").style.borderRight = "0.5px #bdbdbd solid";
+        document.getElementById("main").style.marginLeft = "180px";
+        document.getElementById("main2").style.marginLeft = "180px";
+        document.getElementById("main3").style.marginLeft = "180px";
+        document.getElementById("main4").style.marginLeft = "180px";
+        document.getElementById("main5").style.marginLeft = "180px";
+      }
+    }
+  }
+
+  //filter content
+  function filter1() {
+    globalTabID = "all";
+    document.getElementById("mySidebar").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-loan"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-loan"aria-expanded="false" aria-controls="collapse-loan"> Loan</a></h5></div><div id="collapse-loan" class="collapse test" role="tabpanel" aria-labelledby="heading-loan" data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">Commercial Loan </a><a class="dropdown-item" href="#!">Property Loan</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-cards"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-cards"aria-expanded="false" aria-controls="collapse-cards">Cards</a></h5></div><div id="collapse-cards" class="collapse" role="tabpanel" aria-labelledby="heading-cards"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">Corporate Cards</a><a class="dropdown-item" href="#!">Debit Cards</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-articles"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-articles"aria-expanded="false" aria-controls="collapse-cards">Trending Articles</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-business"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-business"aria-expanded="false" aria-controls="collapse-cards">Growing Your Business</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-market"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-market" aria-expanded="false" aria-controls="collapse-cards">Market Trends </a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-faq"> <h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-faq"aria-expanded="false" aria-controls="collapse-cards"> FAQ </a></h5> </div></div><div class="card"><div class="card-header" role="tab" id="heading-hotline"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-hotline"aria-expanded="false" aria-controls="collapse-cards">Hotline</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-2018"> <h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2018" aria-expanded="false" aria-controls="collapse-loan">Year 2018</a></h5></div><div id="collapse-2018" class="collapse test" role="tabpanel" aria-labelledby="heading-2018"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-2019"> <h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2019"aria-expanded="false" aria-controls="collapse-loan">Year 2019</a></h5> </div><div id="collapse-2019" class="collapse test" role="tabpanel" aria-labelledby="heading-2019"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-2020"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2020"aria-expanded="false" aria-controls="collapse-loan">Year 2020</a></h5></div><div id="collapse-2020" class="collapse test" role="tabpanel" aria-labelledby="heading-2020"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div></div>';
+
+    document.getElementById("modal-body").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-loan"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-loan"aria-expanded="false" aria-controls="collapse-loan"> Loan</a></h5></div><div id="collapse-loan" class="collapse test" role="tabpanel" aria-labelledby="heading-loan" data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">Commercial Loan </a><a class="dropdown-item" href="#!">Property Loan</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-cards"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-cards"aria-expanded="false" aria-controls="collapse-cards">Cards</a></h5></div><div id="collapse-cards" class="collapse" role="tabpanel" aria-labelledby="heading-cards"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">Corporate Cards</a><a class="dropdown-item" href="#!">Debit Cards</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-articles"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-articles"aria-expanded="false" aria-controls="collapse-cards">Trending Articles</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-business"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-business"aria-expanded="false" aria-controls="collapse-cards">Growing Your Business</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-market"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-market" aria-expanded="false" aria-controls="collapse-cards">Market Trends </a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-faq"> <h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-faq"aria-expanded="false" aria-controls="collapse-cards"> FAQ </a></h5> </div></div><div class="card"><div class="card-header" role="tab" id="heading-hotline"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-hotline"aria-expanded="false" aria-controls="collapse-cards">Hotline</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-2018"> <h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2018" aria-expanded="false" aria-controls="collapse-loan">Year 2018</a></h5></div><div id="collapse-2018" class="collapse test" role="tabpanel" aria-labelledby="heading-2018"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-2019"> <h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2019"aria-expanded="false" aria-controls="collapse-loan">Year 2019</a></h5> </div><div id="collapse-2019" class="collapse test" role="tabpanel" aria-labelledby="heading-2019"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-2020"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2020"aria-expanded="false" aria-controls="collapse-loan">Year 2020</a></h5></div><div id="collapse-2020" class="collapse test" role="tabpanel" aria-labelledby="heading-2020"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div></div>';
+    // Related Search Results
+    shuffleArraySuggested(suggestedSearch);
+  }
+
+  function filter2() {
+    globalTabID = "products"
+    document.getElementById("mySidebar").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-loan"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-loan"aria-expanded="false" aria-controls="collapse-loan"> Loan</a></h5></div><div id="collapse-loan" class="collapse test" role="tabpanel" aria-labelledby="heading-loan" data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">Commercial Loan </a><a class="dropdown-item" href="#!">Property Loan</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-cards"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-cards"aria-expanded="false" aria-controls="collapse-cards">Cards</a></h5></div><div id="collapse-cards" class="collapse" role="tabpanel" aria-labelledby="heading-cards"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">Corporate Cards</a><a class="dropdown-item" href="#!">Debit Cards</a></div></div></div>';
+    document.getElementById("modal-body").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-loan"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-loan"aria-expanded="false" aria-controls="collapse-loan"> Loan</a></h5></div><div id="collapse-loan" class="collapse test" role="tabpanel" aria-labelledby="heading-loan" data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">Commercial Loan </a><a class="dropdown-item" href="#!">Property Loan</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-cards"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-cards"aria-expanded="false" aria-controls="collapse-cards">Cards</a></h5></div><div id="collapse-cards" class="collapse" role="tabpanel" aria-labelledby="heading-cards"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">Corporate Cards</a><a class="dropdown-item" href="#!">Debit Cards</a></div></div></div>';
+    // Related Search Results
+    shuffleArraySuggested(suggestedSearch);
+  }
+
+  function filter3() {
+    globalTabID = "insights"
+
+    document.getElementById("mySidebar").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-articles"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-articles"aria-expanded="false" aria-controls="collapse-cards">Trending Articles</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-business"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-business"aria-expanded="false" aria-controls="collapse-cards">Growing Your Business</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-market"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-market" aria-expanded="false" aria-controls="collapse-cards">Market Trends </a></h5></div></div></div>';
+    document.getElementById("modal-body").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-articles"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-articles"aria-expanded="false" aria-controls="collapse-cards">Trending Articles</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-business"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-business"aria-expanded="false" aria-controls="collapse-cards">Growing Your Business</a></h5></div></div><div class="card"><div class="card-header" role="tab" id="heading-market"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-market" aria-expanded="false" aria-controls="collapse-cards">Market Trends </a></h5></div></div></div>';
+    // Related Search Results
+    shuffleArraySuggested(suggestedSearch);
+  }
+
+  function filter4() {
+    globalTabID = "updates"
+    document.getElementById("mySidebar").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-faq"> <h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-faq"aria-expanded="false" aria-controls="collapse-cards"> FAQ </a></h5> </div></div><div class="card"><div class="card-header" role="tab" id="heading-hotline"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-hotline"aria-expanded="false" aria-controls="collapse-cards">Hotline</a></h5></div></div></div>';
+    document.getElementById("modal-body").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-faq"> <h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-faq"aria-expanded="false" aria-controls="collapse-cards"> FAQ </a></h5> </div></div><div class="card"><div class="card-header" role="tab" id="heading-hotline"><h5 class="mb-0"><a class="text-decoration-none" data-toggle="collapse" href="#collapse-hotline"aria-expanded="false" aria-controls="collapse-cards">Hotline</a></h5></div></div></div>';
+    // Related Search Results
+    shuffleArraySuggested(suggestedSearch);
+  }
+
+  function filter5() {
+    globalTabID = "support";
+    document.getElementById("mySidebar").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-2018"> <h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2018" aria-expanded="false" aria-controls="collapse-loan">Year 2018</a></h5></div><div id="collapse-2018" class="collapse test" role="tabpanel" aria-labelledby="heading-2018"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-2019"> <h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2019"aria-expanded="false" aria-controls="collapse-loan">Year 2019</a></h5> </div><div id="collapse-2019" class="collapse test" role="tabpanel" aria-labelledby="heading-2019"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-2020"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2020"aria-expanded="false" aria-controls="collapse-loan">Year 2020</a></h5></div><div id="collapse-2020" class="collapse test" role="tabpanel" aria-labelledby="heading-2020"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div></div>';
+    document.getElementById("modal-body").innerHTML =
+      '<div id="accordion" role="tablist" class="accordion"><div class="card"><div class="card-header" role="tab" id="heading-2018"> <h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2018" aria-expanded="false" aria-controls="collapse-loan">Year 2018</a></h5></div><div id="collapse-2018" class="collapse test" role="tabpanel" aria-labelledby="heading-2018"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-2019"> <h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2019"aria-expanded="false" aria-controls="collapse-loan">Year 2019</a></h5> </div><div id="collapse-2019" class="collapse test" role="tabpanel" aria-labelledby="heading-2019"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div><div class="card"><div class="card-header" role="tab" id="heading-2020"><h5 class="mb-0"><a class="opened collapsed text-decoration-none" data-toggle="collapse" href="#collapse-2020"aria-expanded="false" aria-controls="collapse-loan">Year 2020</a></h5></div><div id="collapse-2020" class="collapse test" role="tabpanel" aria-labelledby="heading-2020"data-parent="#accordion"><div class="card-body"><a class="dropdown-item" href="#!">First Quarter </a><a class="dropdown-item" href="#!">Second Quarter</a><a class="dropdown-item" href="#!">Third Quarter</a><a class="dropdown-item" href="#!">Fourth Quarter</a></div></div></div></div>';
+    // Related Search Results
+    shuffleArraySuggested(suggestedSearch);
+  }
+
+
+  $('#filteroverlay').on('show.bs.modal', function (size) {
+    if (screen.width >= 768) {
+      return size.preventDefault();
+    }
+  })
+
+  var searchResults = [
+
+    // All Results
+    {
+      tab: "products",
+      category: "card",
+      header: "Online Account Opening",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Start", "Open A Business Banking Account", "Online Account Opening"],
+      description: " Setup your business account instantly when you apply online with MyInfo Business. With pre-filled fields, you can now submit your application anytime, anywhere.",
+      date: "19 March 2020"
+    },
+    {
+      tab: "products",
+      category: "card",
+      header: "UOB eBusiness Account",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Start", "Open A Business Banking Account", "UOB eBusiness Account"],
+      description: " Boost your cash bonus with a UOB Business Account. Earn cash bonus when you top up and maintain fresh funds of at least S$30,000.",
+      date: "1 January 2019"
+    },
+    {
+      tab: "products",
+      category: "card",
+      header: "Renminbi Account",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Start", "Open A Business Banking Account", "Renminbi Account"],
+      description: "  Manage your RMB cash flow efficiently. Skip the queue and book an appointment with us online.",
+      date: "14 May 2019"
+    },
+
+    // Product Results
+    {
+      tab: "products",
+      category: "loan",
+      header: "UOB Business Property and Equity Loans",
+      breadcrumb: ["Business", "Grow", "Boost Your Cashflow and Assets", "Business Property and Equity Loan"],
+      href: ["#", "#", "#", "#"],
+      description: " UOB Business Property Loan provides financing option for SMEs looking to purchase industry/commercial property or refinancing their existing industry/commercial property loans with other banks.",
+      date: "19 April 2018"
+    },
+    {
+      tab: "products",
+      category: "loan",
+      header: "What UOB Business Loan Provides You with",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Grow", "Boost Your Cashflow and Assets", "UOB Business Loan"],
+      description: "We are committed to supporting you and your business during these tough times. Improve your cash flow with these loan schemes announced at the Resilience and Solidarity Budget 2020.",
+      date: "23 June 2018"
+    },
+    {
+      tab: "products",
+      category: "card",
+      header: "UOB Platinum Business Card",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Grow", "Apply For Business Debit Card", "UOB Platinum Business Card"],
+      description: "Optimise your cashflow and minimise business essential expenses for maximum savings. With UOB Platinum Business Card, you can now enjoy greater financial flexibility to grow your business the way you want.",
+      date: "30 August 2020"
+    },
+    {
+      tab: "products",
+      category: "card",
+      header: "UOB Business Plus Card",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Grow", "Apply For Business Debit Card", "UOB Business Plus Card"],
+      description: "The first of its kind in Singapore, the UOB Business Plus Card empowers you and your business to seize every opportunity effortlessly. Now, discover how you can stay ahead of the curve and beyond with your new immediate cashflow solution.",
+      date: "7 February 2019"
+    },
+
+    // insights Results
+    {
+      tab: "insights",
+      category: "",
+      header: "Are you ready to turn today's challenges into opportunities?",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Insights", "Stay Ahead of Tech and Market Trends",
+        "Are you ready to turn today's challenges into opportunities?"
+      ],
+      description: "ASEAN SME Transformation Study 2020: 1,000 SMEs in the region share how they are responding to COVID-19 and becoming future-ready",
+      date: "23 July 2020"
+    },
+    {
+      tab: "insights",
+      category: "",
+      header: "The importance of networks and communities for SMEs",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Insights", "Learn from Industry Peers and Experts",
+        "The importance of networks and communities for SMEs"
+      ],
+      description: "Drawing from his experience as a mentor at the Finlab, Mr. Loh shares his thoughts on the importance of peer learning and the power of networking and communities.",
+      date: "20 July 2020"
+    },
+    {
+      tab: "insights",
+      category: "",
+      header: "Why taking on a business loan can be a good strategic tool during the Covid-19 crisis",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Insights", "Learn from Industry Peers and Experts",
+        "Business Loan Is A Strategic Tool"
+      ],
+      description: "Business loans can be pivotal in helping SMEs sustain their businesses and ensure readiness to capture new opportunities in the future. Find out how. ",
+      date: "15 July 2020"
+    },
+    {
+      tab: "insights",
+      category: "",
+      header: "7 ways to improve employee well-being & company productivity",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Insights", "Invest in Your People",
+        "7 ways to improve employee well-being & company productivity"
+      ],
+      description: "SMEs are becoming more aware of how happier employees can benefit their business. As such, wellness programmes, simple ways to encourage employees to develop and adopt healthy habits, are a great way to start.",
+      date: "10 December 2019"
+    },
+    {
+      tab: "insights",
+      category: "",
+      header: "Digitalisation on a plate | Damien Low, Passion For Food",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Insights", "Invest in Your People", "Digitalisation on a plate"],
+      description: "Damien Low and his uncle William opened a simple gelato parlour, blending Italian ice-cream with Singapore flavours. Bak kwa, salted egg yolk and mao shan wang gelato are some of the tantalising treats served at Ice Edge café along Kovan Road.",
+      date: "13 June 2018"
+    },
+    {
+      tab: "insights",
+      category: "",
+      header: "Embracing change, revolutionising traditional businesses | Alan Tan, Shashlik Restaurant",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Insights", "Building The Network",
+        "Embracing change, revolutionising traditional businesses"
+      ],
+      description: "With technological trends such as automation and humanized big data on the horizon, there is an impetus for SMEs to determine how they can leverage on such technological trends to create impactful, productive changes to business operations.",
+      date: "10 April 2017"
+    },
+    {
+      tab: "insights",
+      category: "",
+      header: "Looking to invest in a commercial property? Save more when you buy through your company",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Insights", "Manage Your Business", "Save more when you buy through your company"],
+      description: "It is only in one specific aspect – the recent commercial property tax rebates – that the benefits of owning commercial properties through a company or as an individual are equal. In most other respects, buying them through a company offers clear advantages",
+      date: "11 May 2020"
+    },
+
+    // Update Results
+    {
+      tab: "updates",
+      category: "",
+      header: "Coronavirus: More bank branches, post offices reopening with safety checks",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Home", "Updates", "Covid19"],
+      description: "The reopened branches were selected based on their proximity to areas with a higher concentration of businesses and to existing branches that have experienced high customer footfall during the circuit breaker, UOB said in a statement yesterday.",
+      date: "7 June 2020"
+    },
+    {
+      tab: "updates",
+      category: "",
+      header: "COVID-19: Updates",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Home", "Updates", "Covid19"],
+      description: "As the COVID-19 pandemic continues to impact individuals, companies and society, we would like to reassure you that our full range of banking services remains available during this period.",
+      date: "27 June 2020"
+    },
+    {
+      tab: "updates",
+      category: "",
+      header: "Delay in International Mail Delivery",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Home", "Updates", "Covid19"],
+      description: "Accordingly, you may experience a delay in the delivery of your paper-based statements, confirmations and advices to certain countries until the restrictions are lifted. As an alternative to paper-based updates, you can access your account information by logging in to UOB Personal Internet Banking or your UOB Mighty app.",
+      date: "30 June 2020"
+    },
+    {
+      tab: "updates",
+      category: "",
+      header: "Solidarity Payment Cheques",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Home", "Updates", "Covid19"],
+      description: "After receiving your cheque, we strongly encourage you to drop it off at the Cheque Deposit Box at the bank with which you have an account. Alternatively, you may encash the cheque at UOB branches which are located conveniently across the island.",
+      date: "13 July 2020"
+    },
+    {
+      tab: "updates",
+      category: "",
+      header: "Cash Services For When You Need Them",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Home", "Updates", "Covid19"],
+      description: "Our self-service banking (SSB) machines and the shared automated teller machine (ATM) network with OCBC remain fully operational and accessible. Customers can make cash withdrawals at more than 1,200 ATMs and approximately 600 Cash Out points located islandwide. Aligned with the Government’s social distancing measures, markers have been placed at all SSB machines and ATMs to help guide you.",
+      date: "10 June 2020"
+    },
+    {
+      tab: "updates",
+      category: "",
+      header: "Digital Services and Solutions to Help You",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Home", "Updates", "Covid19"],
+      description: "As you stay home and stay safe, we encourage you to use our digital services and solutions, including UOB Mighty and UOB Business Internet Banking Plus, for your personal banking and business needs.",
+      date: "10 June 2020"
+    },
+
+    // Support Results
+    {
+      tab: "support",
+      category: "",
+      header: "UOB Express Banker's Guarantee",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Help And Support", "UOB Express Banker's Guarantee", ""],
+      description: "Fast, simple and convenient, UOB Express Banker’s Guarantee, our electronic Banker’s Guarantee (BG) application platform allows you to apply for a BG online, against 100% cash margin.",
+      date: "15 September 2019"
+    },
+    {
+      tab: "support",
+      category: "",
+      header: "UOB Express Banker's Guarantee",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Help And Support", "UOB Express Banker's Guarantee", ""],
+      description: "Fast, simple and convenient, UOB Express Banker’s Guarantee, our electronic Banker’s Guarantee (BG) application platform allows you to apply for a BG online, against 100% cash margin.",
+      date: "11 May 2020"
+    },
+    {
+      tab: "support",
+      category: "",
+      header: "Frequently Asked Questions (FAQ)",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Help And Support", "Frequently Asked Questions", ""],
+      description: "Frequently asked questions. Transactional Saving Needs, Growth and Expansion Needs, Banking With Ease, Payment and Collection.",
+      date: "24 July 2018"
+    },
+    {
+      tab: "support",
+      category: "",
+      header: "What Types of Account Does UOB offer",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Help And Support", "Frequently Asked Questions", ""],
+      description: "SGD Current account and Global Currency account, e-Business account (SGD), BizTransact account (SGD), Reminbi account, Fixed deposit account (SGD and foreign currencies)",
+      date: "21 April 2019"
+    },
+    {
+      tab: "support",
+      category: "",
+      header: "Request a Call Back",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Help And Support", "Request a Call Back", ""],
+      description: "Cannot find what you are looking for? We are here to help your business. Call us at 6259 8188 (Monday - Saturday, 8am to 8pm, excluding public holidays) or click here to request for a call back.",
+      date: "24 July 2018"
+    },
+    {
+      tab: "support",
+      category: "",
+      header: "UOB Branch and ATM locator",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Help And Support", "UOB Branch and ATM locator", ""],
+      description: "We are taking careful and gradual steps to reopen our branches. Please visit our branches only for essential banking services that cannot be done through our digital services, phone banking or self-service banking machines.",
+      date: "3 November 2019"
+    },
+    {
+      tab: "support",
+      category: "",
+      header: "UOB Branch and ATM locator",
+      href: ["#", "#", "#", "#"],
+      breadcrumb: ["Business", "Help And Support", "Payment and Collection Services", ""],
+      description: "SMEs need to evaluate the various collection and payment modes available.",
+      date: "3 November 2019"
+    },
+
+
+  ]
+  var suggestedSearch = ["UOB Business Loans", "Online Account Opening", "Covid19 Updates", "UOB Business Plus Card",
+    "Cash Services"
+  ];
+
+  // search function 
+  function search() {
+
+    $('#tab-all').trigger('click');
+
+    // When search, search result will always shuffle
+    searchSpecific(shuffleArray(searchResults))
+  }
+
+  // search for specific words
+  function searchSpecific() {
+    // Any Related Search will appear 
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("input-search");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("main");
+    // li = ul.getElementsByTagName("li"); 
+    li = ul.getElementsByClassName('search-li')
+
+    for (i = 0; i < li.length; i++) {
+      a = li[i];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+
+  // randomise search results
+  function shuffleArray(array) {
+    var tempArray = array.slice(0);
+    var searchlist = "";
+
+    for (var i = tempArray.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      [tempArray[i], tempArray[j]] = [tempArray[j], tempArray[i]];
+    }
+
+    console.log(tempArray)
+
+    for (var i = 0; i < tempArray.length; i++) {
+      searchlist = searchlist + '<li class="search-li list-unstyled pb-3"><h2><b>' + tempArray[i].header +
+        '</b></h2><nav aria-label="breadcrumb"><ol class="breadcrumb d-none d-md-flex"> <li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[0] + '">' + tempArray[i].breadcrumb[0] + '</a></li><li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[1] + '">' + tempArray[i].breadcrumb[1] + '</a></li><li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[2] + '">' + tempArray[i].breadcrumb[2] + '</a></li><li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[3] + '">' + tempArray[i].breadcrumb[3] + '</a></li></ol></nav><p class="mb-0">' + tempArray[i]
+        .description + '</p><p class="font-weight-lighter">' + tempArray[i].date + '</p></li>'
+    }
+    if (globalTabID == "all") {
+      document.getElementById("main").innerHTML = searchlist;
+    } else if (globalTabID == "products") {
+      document.getElementById("main2").innerHTML = searchlist;
+    } else if (globalTabID == "insights") {
+      document.getElementById("main3").innerHTML = searchlist;
+    } else if (globalTabID == "updates") {
+      document.getElementById("main4").innerHTML = searchlist;
+    } else if (globalTabID == "support") {
+      document.getElementById("main5").innerHTML = searchlist;
+    }
+  }
+
+  //sort date by latest
+  function sortDate(array) {
+    var tempArray = array.slice(0);
+    var searchlist = "";
+    console.log(tempArray)
+
+    tempArray.sort(function (a, b) {
+      return new Date(b.date) - new Date(a.date);
+    });
+
+    for (var i = 0; i < tempArray.length; i++) {
+      searchlist = searchlist + '<li class="search-li list-unstyled pb-3"><h2><b>' + tempArray[i].header +
+        '</b></h2><nav aria-label="breadcrumb"><ol class="breadcrumb d-none d-md-flex"> <li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[0] + '">' + tempArray[i].breadcrumb[0] + '</a></li><li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[1] + '">' + tempArray[i].breadcrumb[1] + '</a></li><li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[2] + '">' + tempArray[i].breadcrumb[2] + '</a></li><li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[3] + '">' + tempArray[i].breadcrumb[3] + '</a></li></ol></nav><p class="mb-0">' + tempArray[i]
+        .description + '</p><p class="font-weight-lighter">' + tempArray[i].date + '</p></li>'
+    }
+    if (globalTabID == "all") {
+      document.getElementById("main").innerHTML = searchlist;
+    } else if (globalTabID == "products") {
+      document.getElementById("main2").innerHTML = searchlist;
+    } else if (globalTabID == "insights") {
+      document.getElementById("main3").innerHTML = searchlist;
+    } else if (globalTabID == "updates") {
+      document.getElementById("main4").innerHTML = searchlist;
+    } else if (globalTabID == "support") {
+      document.getElementById("main5").innerHTML = searchlist;
+    }
+  }
+
+  function shuffleArraySuggested(array) {
+    var tempArray = array.slice(0);
+    var searchlist = "";
+
+    for (var i = tempArray.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      [tempArray[i], tempArray[j]] = [tempArray[j], tempArray[i]];
+    }
+
+    console.log(tempArray)
+
+    for (var i = 0; i < 3; i++) {
+      searchlist = searchlist +
+        '<p class="suggested-result"><a href="index.html" class="suggested-description"><span class="magnifiying-glass"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#002469" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" /> <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/></svg></span> ' +
+        tempArray[i] + '</a></p>'
+    }
+
+    if (globalTabID == "all") {
+      document.getElementById("related-search").innerHTML = searchlist;
+    } else if (globalTabID == "products") {
+      document.getElementById("related-search2").innerHTML = searchlist;
+    } else if (globalTabID == "insights") {
+      document.getElementById("related-search3").innerHTML = searchlist;
+    } else if (globalTabID == "updates") {
+      document.getElementById("related-search4").innerHTML = searchlist;
+    } else if (globalTabID == "support") {
+      document.getElementById("related-search5").innerHTML = searchlist;
+    }
+  }
+
+
+  $(document).ready(function () {
+    var tempArray = searchResults.slice(0);
+    console.log("testing", tempArray)
+    var productArray = [];
+    var insightsArray = [];
+    var updatesArray = [];
+    var supportArray = [];
+    var searchall = "";
+    var searchli = "";
+    var searchli2 = "";
+    var searchli3 = "";
+    var searchli4 = "";
+
+    // Display all search results in their respective tabs
+
+    for (var i = 0; i < tempArray.length; i++) {
+
+      //display all tab
+      searchall += '<li class="search-li list-unstyled pb-3"><h2><b>' + tempArray[i].header +
+        '</b></h2><nav aria-label="breadcrumb"><ol class="breadcrumb d-none d-md-flex"> <li class="breadcrumb-item"><a href="' +
+        tempArray[i].href[0] + '">' + tempArray[i].breadcrumb[0] +
+        '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[1] + '">' + tempArray[i].breadcrumb[
+          1] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[2] + '">' + tempArray[i]
+        .breadcrumb[2] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[3] + '">' + tempArray[
+          i].breadcrumb[3] + '</a></li></ol></nab><p class="mb-0">' + tempArray[i].description +
+        '</p><p class="font-weight-lighter">' + tempArray[i].date + '</p></li>';
+
+      document.getElementById('main').innerHTML = searchall;
+
+      if (tempArray[i].tab == "products") {
+
+        //display product tab 
+        searchli += '<li class="search-li list-unstyled pb-3"><h2><b>' + tempArray[i].header +
+          '</b></h2><nav aria-label="breadcrumb"><ol class="breadcrumb d-none d-md-flex"> <li class="breadcrumb-item"><a href="' +
+          tempArray[i].href[0] + '">' + tempArray[i].breadcrumb[0] +
+          '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[1] + '">' + tempArray[i].breadcrumb[
+            1] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[2] + '">' + tempArray[i]
+          .breadcrumb[2] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[3] + '">' +
+          tempArray[i].breadcrumb[3] + '</a></li></ol></nab><p class="mb-0">' + tempArray[i].description +
+          '</p><p class="font-weight-lighter">' + tempArray[i].date + '</p></li>';
+
+        document.getElementById('main2').innerHTML = searchli;
+
+        //array for product tab 
+        productArray.push(tempArray[i]);
+
+      } else if (tempArray[i].tab == "insights") {
+        searchli2 += '<li class="search-li list-unstyled pb-3"><h2><b>' + tempArray[i].header +
+          '</b></h2><nav aria-label="breadcrumb"><ol class="breadcrumb d-none d-md-flex"> <li class="breadcrumb-item"><a href="' +
+          tempArray[i].href[0] + '">' + tempArray[i].breadcrumb[0] +
+          '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[1] + '">' + tempArray[i].breadcrumb[
+            1] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[2] + '">' + tempArray[i]
+          .breadcrumb[2] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[3] + '">' +
+          tempArray[i].breadcrumb[3] + '</a></li></ol></nab><p class="mb-0">' + tempArray[i].description +
+          '</p><p class="font-weight-lighter">' + tempArray[i].date + '</p></li>';
+
+        document.getElementById('main3').innerHTML = searchli2;
+
+        //array for insights tab 
+        insightsArray.push(tempArray[i]);
+      } else if (tempArray[i].tab == "updates") {
+        searchli3 += '<li class="search-li list-unstyled pb-3"><h2><b>' + tempArray[i].header +
+          '</b></h2><nav aria-label="breadcrumb"><ol class="breadcrumb d-none d-md-flex"> <li class="breadcrumb-item"><a href="' +
+          tempArray[i].href[0] + '">' + tempArray[i].breadcrumb[0] +
+          '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[1] + '">' + tempArray[i].breadcrumb[
+            1] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[2] + '">' + tempArray[i]
+          .breadcrumb[2] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[3] + '">' +
+          tempArray[i].breadcrumb[3] + '</a></li></ol></nab><p class="mb-0">' + tempArray[i].description +
+          '</p><p class="font-weight-lighter">' + tempArray[i].date + '</p></li>';
+
+        document.getElementById('main4').innerHTML = searchli3;
+
+        //array for updates tab 
+        updatesArray.push(tempArray[i]);
+      } else if (tempArray[i].tab == "support") {
+        searchli4 += '<li class="search-li list-unstyled pb-3"><h2><b>' + tempArray[i].header +
+          '</b></h2><nav aria-label="breadcrumb"><ol class="breadcrumb d-none d-md-flex"> <li class="breadcrumb-item"><a href="' +
+          tempArray[i].href[0] + '">' + tempArray[i].breadcrumb[0] +
+          '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[1] + '">' + tempArray[i].breadcrumb[
+            1] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[2] + '">' + tempArray[i]
+          .breadcrumb[2] + '</a></li><li class="breadcrumb-item"><a href="' + tempArray[i].href[3] + '">' +
+          tempArray[i].breadcrumb[3] + '</a></li></ol></nab><p class="mb-0">' + tempArray[i].description +
+          '</p><p class="font-weight-lighter">' + tempArray[i].date + '</p></li>';
+
+        document.getElementById('main5').innerHTML = searchli4;
+
+        //array for support tab 
+        supportArray.push(tempArray[i]);
+      }
+    }
+
+    // Display according to their respective 'sort by' value
+    $('.dropdown-menu button').click(function () {
+
+      $("#selected").text($(this).text());
+
+      if ($("#selected").text() == "Relevancy" || $("#selected").text() == "Popularity") {
+
+        if (globalTabID == "all") {
+          shuffleArray(tempArray);
+        } else if (globalTabID == "products") {
+          shuffleArray(productArray);
+        } else if (globalTabID == "insights") {
+          shuffleArray(insightsArray);
+        } else if (globalTabID == "updates") {
+          shuffleArray(updatesArray);
+        } else if (globalTabID == "support") {
+          shuffleArray(supportArray);
+        }
+      } else if ($("#selected").text() == "Newest") {
+
+        if (globalTabID == "all") {
+          sortDate(tempArray);
+        } else if (globalTabID == "products") {
+          sortDate(productArray);
+        } else if (globalTabID == "insights") {
+          sortDate(insightsArray);
+        } else if (globalTabID == "updates") {
+          sortDate(updatesArray);
+        } else if (globalTabID == "support") {
+          sortDate(supportArray);
+        }
+
+      }
+
+    });
+
+    // Related Search Results
+    shuffleArraySuggested(suggestedSearch);
+
+  })
+
+
+      //Script for sticky navigation bar (web)
+      if ($(window).width() > 992) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 38) {
+                $('#nav-bg').addClass("fixed-top");
+                // add padding top to show content behind navbar
+                $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+            } else {
+                $('#nav-bg').removeClass("fixed-top");
+                // remove padding top from body
+                $('body').css('padding-top', '0');
+            }
+        });
+    } // end if
+
+    //Script to hide sticky navigation bar
+    if ($(window).width() > 992) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 400.73) {
+                $('#nav-bg').removeClass("fixed-top");
+
+                // add padding top to show content behind navbar
+                $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+            } else {
+                $('#nav-bg').remmoveClass("fixed-top");
+                // remove padding top from body
+                $('body').css('padding-top', '0');
+            }
+        });
+    }
+
+    //Script for sticky navigation bar (mobile)
+
+
+
+    // script for side navigation
+    /* Show the side nav */
+    function openNav() {
+        if ($(window).width() < 576) {
+            document.getElementById("sidenav").style.width = "70%";
+            document.getElementById("body-overlay").style.width = "100%";
+            document.getElementById("sidenav").css('z-index', '100000');
+        } else {
+            document.getElementById("sidenav").style.width = "40%";
+            document.getElementById("body-overlay").style.width = "100%"
+        }
+    }
+
+    /* Close the side nav */
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+        document.getElementById("body-overlay").style.width = "0%"
+    }
+
+    // dropdown display
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
+
+
+</html>
