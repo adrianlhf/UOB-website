@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- Carousel scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Start</title>
+  <link rel="stylesheet" href="../styles/navigation-styles.css">
+  <link rel="stylesheet" href="../styles/c-styles.css">
+  <link rel="stylesheet" href="../styles/footer-styles.css">
+
+</head>
+
+<style>
+  /*  hover pseudo element*/
+
+  .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .box::after {
+    content: "";
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+
+
+  }
+
+  .box:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.05, 1.05);
+    z-index: 1;
+
+  }
+
+  .box:hover::after {
+    opacity: 1;
+
+  }
+
+  /* category section */
+
+
+  .category-text {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 17% 30%;
+  }
+
+  .learn-more-text {
+    color: #002469;
+  }
+
+  .overlay-text {
+    margin-top: 5%;
+    width: auto;
+    text-align: center;
+  }
+
+  .categoryall {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+
+  }
+
+  .category1 {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  .category2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+  }
+
+  .category3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+  }
+
+  .category4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+  }
+
+  /* styling of category 'learn more text' */
+  .learn-more-text {
+    color: #0000FF;
+    font-size: 12px;
+  }
+
+  /* category overlay styles */
+
+
+  .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.644);
+    width: auto;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    left: 0;
+    margin: 0 15px;
+
+  }
+
+  /* Overlay link styles */
+  .overlay:hover,
+  .overlay:visited {
+    text-decoration: none;
+    color: white;
+  }
+
+  .category1:hover .overlay,
+  .category2:hover .overlay,
+  .category3:hover .overlay,
+  .category4:hover .overlay {
+    opacity: 3;
+  }
+
+  .category1:hover .category-text,
+  .category2:hover .category-text,
+  .category3:hover .category-text,
+  .category4:hover .category-text {
+    display: none;
+  }
+
+
+  /* styles for card section */
+  .card-deck {
+    display: block;
+    padding: 4px;
+  }
+
+  .card-deck .card {
+    margin-bottom: 15px;
+  }
+
+  .card-body {
+    height: 150px;
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .overlay-text {
+      margin-top: 16%;
+      width: auto;
+      text-align: center;
+    }
+
+    .card-deck {
+      display: flex;
+    }
+
+    .card-deck .card {
+      margin-bottom: 0px;
+
+    }
+
+
+    .topheadline {
+      font-size: 42px;
+
+    }
+
+
+  }
+</style>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="50">
+
+  <!-- Navigation bar  -->
+
+  <header class="navbar-expand-lg">
+    <!-- level 1 -->
+    <div id="level1" class="navbar navbar-dark " style="background-color: #002469;">
+      <button class="btn d-lg-none" onclick="openNav()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-brand d-lg-none">
+        <a href="#" title="UOB" class="logo">
+          <img src="../images/homepage/uob-logo-mobile1.png" alt="UOB">
+
+        </a>
+      </div>
+      <div class="navbar-right d-lg-none">
+        <button type="button" class="btn">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#ffffff"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+            <path fill-rule="evenodd"
+              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+          </svg>
+        </button>
+      </div>
+
+      <!--first nav row-->
+      <div class="container d-none d-lg-block" id="firstrow">
+        <div class="row">
+          <!-- For the type of uob site -->
+          <div class="btn-group">
+            <button id="dropdown-personal" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span>YOU ARE IN</span>
+              <span class="font-weight-bold">BUSINESS BANKING</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu banking-group" role="menu">
+              <li class="dropdown-item-heading">FOR INDIVIDUALS</li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/personal/index.page">PERSONAL BANKING</a></li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/wealthbanking/index.page">WEALTH BANKING</a>
+              </li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/privilegebanking/index.page">PRIVILEGE
+                  BANKING</a></li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/privilegereserve/index_pvr.html">PRIVILEGE
+                  RESERVE</a></li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/private/index.page">PRIVATE BANKING</a></li>
+              <li class="dropdown-item-heading">FOR COMPANIES</li>
+              <li><a class="dropdown-item"
+                  href="https://www.uob.com.sg/corporate/commercial-banking/index.page">COMMERCIAL BANKING</a></li>
+              <li><a class="dropdown-item" href="https://www.uob.com.sg/corporate/index.page">CORPORATE AND
+                  INSTITUTIONAL BANKING</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobgroup.com/foreign-direct-investment/index.page?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">FOREIGN
+                  DIRECT INVESTMENT</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobgroup.com/industry-insights/index.page?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">INDUSTRY
+                  INSIGHTS</a></li>
+              <li class="dropdown-item-heading">ABOUT UOB</li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobgroup.com/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOB
+                  GROUP</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobgroup.com/techecosystem?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOBTECH
+                  START-UP ECOSYSTEM</a>
+              </li>
+              <li class="dropdown-item-heading">UOB GROUP SUBSIDIARIES</li>
+              <li><a class="dropdown-item" href="https://www.uobam.com.sg/">UOB ASSET MANAGEMENT</a></li>
+              <li><a class="dropdown-item" href="https://www.uobaim.com.sg/">UOB ALTERNATIVE INVESTMENT MANAGEMENT</a>
+              </li>
+              <li><a class="dropdown-item"
+                  href="https://www.uoi.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UNITED
+                  OVERSEAS INSURANCE</a></li>
+              <li><a class="dropdown-item" href="https://www.uobtravel.com/">UOB TRAVEL PLANNERS</a></li>
+              <li><a class="dropdown-item"
+                  href="https://www.uobvm.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472https://www.uobvm.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOB
+                  VENTURE MANAGEMENT</a></li>
+              <li><a class="dropdown-item" href="https://www.uobglobal.com/">UOB GLOBAL CAPITAL</a></li>
+            </ul>
+          </div> <!-- end of country-->
+
+          <!-- For diff country -->
+          <div class="btn-group">
+            <button id="dropdown-Language" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span class="font-weight-bold">SINGAPORE</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">UOB CHINA</a>
+              <a class="dropdown-item" href="#">UOB VIETNAM</a>
+              <a class="dropdown-item" href="#">UOB MALAYSIA</a>
+            </div>
+          </div> <!-- end of country-->
+
+          <!-- For help & support -->
+          <div class="btn-group">
+            <button id="dropdown-Language" type="button" data-toggle="dropdown" class="btn dropdown-toggle btn-focus">
+              <span class="font-weight-bold">HELP & SUPPORT</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a>
+              <a class="dropdown-item" href="#">REQUEST A CALL BACK</a>
+              <a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a>
+            </div>
+          </div> <!-- end of help & support -->
+
+          <!-- For login-->
+          <div class="btn-group ml-auto login">
+            <button type="button" class="btn btn-focus" href="#">
+              <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span class="font-weight-bold m-auto">LOGIN</span>
+            </button>
+          </div> <!-- end of login -->
+        </div>
+      </div> <!-- End of container for first row-->
+    </div>
+
+    <!-- level 2 -->
+    <div id="nav-bg">
+
+      <!-- mobile -->
+      <div id="body-overlay">
+        <div id="sidenav" class="sidenav d-lg-none">
+          <a href="#" title="UOB" class="logo mr-auto">
+            <img src="../images/homepage/right-by-you.png" alt="UOB">
+
+          </a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <!--Start nav Dropdown-->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="./start.html">Start</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <div class="dropdown-container">
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./digitalise.html">Digitalize your Business</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./accounting.html">Accounting</a>
+                  <a href="./cybermarketing.html">CyberMarketing</a>
+                  <a href="./digital_transaction.html">Digital Transaction</a>
+                  <a href="./digital_marketing.html">Digital Marketing</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./apply_for_cards.html">Apply for Business Debit Card</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./uob_platinum_buiness_card">UOB Platinum Business Card</a>
+                  <a href="./uob_business_plus_card">UOB Business Plus Card</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Open a business banking account</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./online_account_opening.html">Online Account Opening</a>
+                  <a href="./uob_biztransact_account.html">UOB BizTransact Account</a>
+                  <a href="./uob_e-business_account.html">UOB E-Business Account</a>
+                  <a href="./singapore_dollar_current_account.html">Singapore Dollar Current Account</a>
+                  <a href="./bizglobal_account.html">BizGlobal Account</a>
+                  <a href="./global_currency_account.html">Global Currency Account</a>
+                  <a href="./renminbi_account.html">Renminbi Account</a>
+                </div>
+                <!-- end of dropdown -->
+              </div>
+            </li>
+            <!--Run nav Dropdown-->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="./run.html">Run</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <div class="dropdown-container">
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Make Informed Decisions</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./bizsmart.html">BizSmart</a>
+                  <a href="./uob_ealerts.html">UOB eAlerts</a>
+                  <a href="./uob_business_mobile_app.html">UOB Business Mobile App</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Insure your Business</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./bizcare.html">BizCare</a>
+                  <a href="./bizdrive.html">BizDrive</a>
+                  <a href="./machinery_insurance.html">Machinery All Risk Insurance</a>
+                  <a href="./life_insurance.html">Life Insurance</a>
+                  <a href="./employee_benefits.html">Employee Benefits</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Manage Cashflow</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./payment_and _collection_services.html">Payment and Collection Services</a>
+                  <a href="./paynow_corporate.html">PayNow Corporate</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a>Manage Employees</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./payroll_services.html">Payroll Services</a>
+                </div>
+                <!-- end of dropdown -->
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./trade_solutions.html">Trade Solutions <br> (Import/Export Services)</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./import_services.html">Import Services</a>
+                  <a href="./export_services.html">Export Services</a>
+                </div>
+                <!-- end of dropdown -->
+              </div>
+            </li>
+            <!--Grow nav Dropdown-->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="grow.html">Grow</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <div class="dropdown-container">
+                <a href="fixed_deposits.html">Fixed Deposit</a>
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./boost_cashflow.html">Boost your cashflow and assets</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./uob_business_loan.html">UOB Business Loan</a>
+                  <a href="./uob_bizmoney.html">UOB BizMoney</a>
+                  <a href="./uob_sme_loan.html">UOB SME Loan</a>
+                  <a href="./uob_overdraft.html">UOB Overdraft</a>
+                  <a href="./business_property_and_equity_loan.html">Business Property and Equity Loan</a>
+                  <a href="./government_assistant_scheme.html">Government Assistant Scheme</a>
+                  <a href="./vehicle_and _machinery-financing.html">Vehicle and Machinery Financing</a>
+                </div>
+                <!-- end of dropdown -->
+              </div>
+            </li>
+            <!--Tools nav Dropdown-->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="./tools.html">Tools</a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <div class="dropdown-container">
+                <!-- start dropdown -->
+                <div class="d-flex dropdown-btn">
+                  <a href="./loans.html">Loans</a>
+                  <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 9l6 6 6-6" /></svg>
+                </div>
+                <!--end of dropdown button-->
+                <div class="dropdown-container sub-container">
+                  <a href="./loan_finder.html">Loans finder</a>
+                  <a href="./loan_comparison.html">Loans Comparison</a>
+                </div>
+                <!-- end of dropdown -->
+                <a href="./instalment_calculator.html">Installment Calculator</a>
+              </div>
+            </li>
+            <li><a href="./insights.html">Insights</a></li>
+            <hr class="sidenavLine">
+            <!-- Level 1 side nav dropdown -->
+            <!-- mobile nav Dropdown -->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a>YOU ARE IN <span class="font-weight-bold"><br>BUSINESS BANKING</span></a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <ul class="dropdown-container">
+                <li><a>FOR INDIVIDUALS</a></li>
+                <li><a href="">PERSONAL BANKING</a></li>
+                <li><a href="">WEALTH BANKING</a></li>
+                <li><a href="">PRIVILEGE BANKING</a></li>
+                <li><a href="">PRIVILEGE RESERVE</a></li>
+                <li><a href="">PRIVATE BANKING</a></li>
+              </ul>
+            </li>
+            <!-- country nav dropdown -->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="#"><span class="font-weight-bold">SINGAPORE</span></a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <ul class="dropdown-container">
+                <li><a href="">UOB CHINA</a></li>
+                <li><a href="">UOB VIETNAM</a></li>
+                <li><a href="">UOB MALAYSIA</a></li>
+              </ul>
+            </li>
+            <!-- Help nav dropdown -->
+            <li>
+              <div class="d-flex dropdown-btn">
+                <a href="#"><span class="font-weight-bold">HELP & SUPPORT</span></a>
+                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" /></svg>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                </svg>
+              </div>
+              <ul class="dropdown-container">
+                <li><a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a></li>
+                <li><a class="dropdown-item" href="#">REQUEST A CALL BACK</a></li>
+                <li><a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a></li>
+              </ul>
+            </li>
+            <button type="button" class="sideNavBtn btn btn-focus" href="#">
+              <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 22 22"
+                fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span class="font-weight-bold m-auto">LOGIN</span>
+            </button>
+          </ul>
+        </div>
+      </div>
+
+      <!-- web -->
+      <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar">
+        <!-- Logo -->
+        <div class="navbar-brand d-none d-lg-block ">
+          <!--UOB logo-->
+          <a href="./index.html" title="UOB" class="logo mr-auto">
+            <img src="../images/homepage/uob-logo.jpg" alt="UOB">
+
+          </a>
+        </div>
+        <!-- tabs -->
+        <ul role="tablist" class="mainnav navbar-nav justify-content-center col-12 col-lg-auto">
+          <li role="tab" class="nav-item"><a href="./index.html" class="text-dark nav-link ">Home</a></li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="./start.html" class="text-dark nav-link dropdown-toggle active">Start</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="digitalise.html">Digitalize your Business</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./accounting.html">Accounting</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./cybermarketing.html">Cyber Marketing</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./digital_transaction.html">Digital Transaction</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./digital_marketing.html">Digital Marketing</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="./apply_for_cards.html">Apply for Business Debit Card</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./uob_platinum_buiness_card">UOB Platinium Business Card</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_business_plus_card">UOB Business Plus Card</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Open a Business Banking Account</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./online_account_opening.html">Online Account Opening</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_biztransact_account.html">UOB BizTransact Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_e-business_account.html">UOB E-Business Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./singapore_dollar_current_account.html">Singapore Dollar Current
+                      Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./bizglobal_account.html">BizGlobal Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./global_currency_account.html">Global Currency Account</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./renminbi_account.html">Reminbi Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="./run.html" class="text-dark nav-link dropdown-toggle ">Run</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Make Informed Decisions</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./bizsmart.html">BizSmart</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_ealerts.html">UOB eAlerts</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_business_mobile_app.html">UOB Business Mobile App</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Insure your Business</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./bizcare.html">BizCare</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./bizdrive.html">BizDrive</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./machinery_insurance.html">Machinery All Risk Inusurance</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./life_insurance.html">Life Inusurance</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./employee_benefits.html">Employee Benefits</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Manage Cashflow</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./payment_and _collection_services.html">Payment and Collection
+                      Services</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./paynow_corporate.html">PayNow corporate</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item">Manage Employees</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./payroll_services.html">Payroll Services</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="./trade_solutions.html">Trade Solutions (import/export services)</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./import_services.html">Import Services</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./export_services.html">Export Services</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown ">
+            <a href="./grow.html" class="text-dark nav-link dropdown-toggle">Grow</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <a class="dropdown-item" href="./fixed_deposits.html">Fixed Deposits</a>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="./boost_cashflow.html">Boost your Cashflow and Assets</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./uob_business_loan.html">UOB Business Loan</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_bizmoney.html">UOB BizMoney</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_sme_loan.html">UOB SME Loan</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./uob_overdraft.html">UOB OverDraft</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./business_property_and_equity_loan.html">Business Property and
+                      Equity Loan</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./government_assistant_scheme.html">Government Assistant Scheme</a>
+                  </li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./vehicle_and _machinery-financing.html">Vehicle and Machinery
+                      Financing</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="./tools.html" class="text-dark nav-link dropdown-toggle">Tools</a>
+            <ul class="dropdown-menu dropdown-menu-right first-menu">
+              <li>
+                <div class="d-flex">
+                  <a class="dropdown-item" href="./loans.html">Loans</a>
+                  <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                    width="20">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                  </svg>
+                </div>
+
+                <ul class="submenu submenu-left dropdown-menu">
+                  <li><a class="dropdown-item" href="./loan_finder.html">Loans Finder</a></li>
+                  <hr class="navigationdrop-line">
+                  <li><a class="dropdown-item" href="./loan_comparison.html">Loans Comparison</a></li>
+                </ul>
+              </li>
+              <hr class="navigationdrop-line">
+              <li>
+                <a class="dropdown-item" href="./instalment_calculator.html">Installment calculator</a>
+              </li>
+            </ul>
+          </li>
+          <li role="tab" class="nav-item dropdown">
+            <a href="./insights.html" class="text-dark nav-link">Insights</a>
+          </li>
+        </ul>
+
+        <div id="searchbutton">
+          <button type="button" class="btn button">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#000000"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+              <path fill-rule="evenodd"
+                d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+            </svg>
+          </button></div>
+        <!-- Logo -->
+        <div class=" d-none d-lg-block ">
+          <!--UOB logo-->
+          <a href="./index.html" title="UOB" class="logo">
+            <img src="../images/homepage/right-by-you.png" alt="Right by you">
+
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header> <!-- end of navigation-->
+
+  <div class="justify-content-left d-none d-md-block ">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-white pl-4 ">
+        <li class="breadcrumb-item"><a href="./index.html">Business</a></li>
+        <li class="breadcrumb-item active"><a href="./run.html">Start</a></li>
+
+      </ol>
+
+      <h1 class="text-left pl-4 pb-4">Start your Business</h1>
+    </nav>
+  </div>
+
+  <!-- Image Banner Section -->
+  <div class="main-banner">
+    <div class="position-relative">
+      <img src="../images/blue-banner.png" alt="banner" class="banner img-fluid w-100 d-block d-md-none">
+      <img src="../images/startpage/toparticlemobile.jpg" class="img-fluid w-100 d-block d-md-none" id="mobileimage"
+        alt="responsive image">
+      <div class="description d-block d-md-none w-100 d-flex justify-content-center">
+        <h1 class="font-weight-bold text-white text-left w-50">Start your business with UOB</h1>
+        <a class="btn-1 dtm-banner btn" href="#section1" title="Apply now" banner_name="overdraft">Find Out
+          More</a>
+
+
+      </div>
+    </div>
+
+    <div class="position-relative">
+      <img src="../images/startpage/toparticle.gif" class="img-fluid w-100 d-none d-md-block" id="desktopimage"
+        alt="responsive image">
+      <div class="description d-none d-md-block text-left">
+        <h2 class=" font-weight-bold pt-5 mt-5 text-white">Run Your Business with UOB</h2>
+        <a class="btn-1 dtm-banner btn" href="#section1" title="Apply now" banner_name="overdraft">Find Out
+          More</a>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <nav class="sticky-top content-nav" id="myScrollspy" style="z-index: 3;">
+
+    <ul class="nav-heading navbar-nav navbar-expand nav justify-content-center ">
+      <li class="nav-item col-6 ">
+        <a class="nav-link active" href="#section1" title="header1">Overview</a>
+      </li>
+
+      <li class="nav-item col-6">
+        <a class="nav-link" href="#section2" title="header2">Starting your Business </a>
+      </li>
+
+
+
+    </ul>
+
+  </nav>
+
+  <div class="container">
+
+    <!-- processes -->
+
+    <div class="section1 section" id="section1">
+      <h1 class="pb-2">Overview </h1>
+      <p class="text-center">
+        Starting a business in Singapore but not sure where or how to start? Here are some key points start-ups & 1st
+        time boss must know to start the entrepreneurial journey.
+      </p>
+
+
+
+
+    </div>
+
+    <hr>
+
+
+    <div class="section2 section pt-2 mt-5" id="section2">
+      <h1 class="pb-3"> Starting your Business </h1>
+
+
+
+      <div class="card-deck text-center">
+        <div class="card rounded-0 box mx-auto ">
+          <a href="../pages/employee_benefits.html">
+            <img class="img-fluid w-100  " src="../images/startpage/access-mobile-472x332.gif"
+              alt="UOB_Business_property">
+          </a>
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold layout2-title">Opening a Business Account</h4>
+            <p class="card-text layout2-p">
+              Real time alerts on FX rates that are most important to you
+            </p>
+          </div>
+        </div>
+
+        <div class="card rounded-0  box mx-auto ">
+          <a href="../pages/employee_benefits.html">
+            <img class="img-fluid w-100" src="../images/startpage/casa-q3-472x332.jpg" alt="UOB_bizsmart">
+          </a>
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold layout2-title">Open other accounts</h4>
+            <p class="card-text layout2-p">
+              Stay ahead of the curve with business information all in one place
+            </p>
+          </div>
+        </div>
+        <div class="card rounded-0  box mx-auto ">
+          <a href="../pages/employee_benefits.html">
+            <img class="img-fluid w-100" src="../images/startpage/UOB-Business-Debit-Card-Masthead-mob.gif"
+              alt="UOB_business">
+          </a>
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold layout2-title">Get UOB business cards</h4>
+            <p class="card-text layout2-p">
+              24/7 business internet banking access at your convenience
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="card-deck text-center">
+        <div class="card rounded-0 box mx-auto ">
+          <a href="../pages/employee_benefits.html">
+            <img class="img-fluid w-100  " src="../images/startpage/homepage-mobile-472x332.jpg"
+              alt="UOB_Business_property">
+          </a>
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold layout2-title">Go Digital</h4>
+            <p class="card-text layout2-p">
+              Real time alerts on FX rates that are most important to you
+            </p>
+          </div>
+        </div>
+
+        <div class="card rounded-0  box mx-auto ">
+          <a href="../pages/employee_benefits.html">
+            <img class="img-fluid w-100" src="../images/startpage/business-loan-mobile-472x332.jpg" alt="UOB_bizsmart">
+          </a>
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold layout2-title">Secure your online business</h4>
+            <p class="card-text layout2-p">
+              Stay ahead of the curve with business information all in one place
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <!--second bottom part-->
+    <hr>
+    <div class="section3 mt-5">
+      <h1>What you can do next</h1>
+
+        <p class="text-center">
+          Starting a business in Singapore but not sure where or how to start? Here are some key points start-ups & 1st
+          time boss must know to start the entrepreneurial journey.
+        </p>
+  
+  
+  
+  
+      <br>
+      <!-- Category Images -->
+      <div class="row justify-content-around ">
+
+        <!-- Category 1 Manage Your Business -->
+        <div class="category1 categoryall position-relative col-md-6">
+          <p class="position-absolute category-text">
+            How to continue after setting up your business?
+            <br>
+            <span class="learn-more-text">See More</span>
+          </p>
+
+
+
+          <img src="../images/startpage/image1.jpg" class="img-fluid category1">
+          <a href="run.html" class=" overlay text-center ">
+
+            <p class="overlay-text"> Running your business
+
+            </p>
+            <p class="font-weight-bold">
+              Run your business better with many of our helpful services such as payroll services, paynow corporate and
+              many more.
+            </p>
+          </a>
+        </div>
+
+        <!-- Category 2 Stay ahaed of tech and market trends -->
+        <div class="category2 categoryall position-relative col-md-6">
+          <p class="position-absolute category-text">
+            See how you can expand your business and increase your cashflow.
+            <br>
+            <span class="learn-more-text"> See More </span>
+          </p>
+
+          <img src="../images/startpage/image2.jpg" class="img-fluid category1">
+
+          <a href="https://www.uob.com.sg/business/insights/market-trends.page" class=" overlay text-center ">
+
+            <p class="overlay-text"> Growing your business
+
+            </p>
+            <p class=" font-weight-bold">
+              Understand the different loans you can take with UOB and see how they can help finance your business
+            </p>
+          </a>
+        </div>
+
+        <!-- Category 3 Learn from Industry Peers and Experts -->
+        <div class="category3 categoryall position-relative col-md-6">
+          <p class="position-absolute category-text">
+            Stuck in a dilemma? Dont know what to do? Call our hotline for help now!
+            <br>
+            <span class="learn-more-text">See More</span>
+          </p>
+
+
+          <img src="../images/startpage/image3.jpg" class="img-fluid category1">
+          <a href="https://www.uob.com.sg/business/insights/building-your-network.page" class=" overlay text-center ">
+
+            <p class="overlay-text"> Call our Hotline
+
+            </p>
+            <p class=" font-weight-bold">
+              Our business banking number: 6259 8188 for any enquiries. We are here to help with your every needs.
+            </p>
+          </a>
+        </div>
+
+        <!-- Category 4 Invest in Your People -->
+        <div class="category4 categoryall position-relative col-md-6">
+          <p class="position-absolute category-text ">
+            Visit our insights page to enlighten yourself with new discoveries.
+            <br>
+            <span class="learn-more-text">See More</span>
+          </p>
+
+
+          <img src="../images/startpage/image4.jpg" class="img-fluid category1">
+          <a href="https://www.uob.com.sg/business/insights/investing-in-people.page" class=" overlay text-center ">
+
+            <p class="overlay-text"> Gaining new insights
+
+            </p>
+            <p class="font-weight-bold">
+              Discover ways to keep your employees engaged and increase staff productivity
+
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- You may be interested section -->
+    <div class="interestedsection section pb-4" id="interestedsection">
+      <h1 class="pb-2"> You May Be Interested In</h1>
+      <div class="row mx-auto my-auto">
+        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+          <div class="carousel-inner w-100" role="listbox">
+            <div class="carousel-item active">
+              <div class="col-md-4">
+                <div class="card">
+                  <a href="./bizdrive.html"><img class="img-fluid card-img-top"
+                      src="../images/accounting/interested1.jpg" alt="CyberSecurity"></a>
+                  <div class="card-body"> BizDrive Commercial Vehicle Insurance </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <a href="./vehicle_and _machinery-financing.html/"> <img class="img-fluid card-img-top"
+                      src="../images/accounting/interested2.jpg" alt="E-transactions"></a>
+                  <div class="card-body"> Commercial Vehicle Loan</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <a href="./employee_benefits.html"><img class="img-fluid card-img-top"
+                      src="../images/accounting/interested3.jpg" alt="Payroll"></a>
+                  <div class="card-body"> Employee Benefits </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-md-4">
+                <div class="card">
+                  <a href="./bizcare.html"> <img class="img-fluid card-img-top"
+                      src="../images/accounting/interested4.jpg" alt="UOB Business App"></a>
+                  <div class="card-body"> Bizcare General Insurance </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev w-auto carousel-a" href="#recipeCarousel" role="button" data-slide="prev">
+            <div class="c-icon rounded-circle">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </div>
+          </a>
+          <a class="carousel-control-next w-auto carousel-a" href="#recipeCarousel" role="button" data-slide="next">
+            <div class="c-icon rounded-circle">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div> <!-- end of container-->
+
+
+
+
+  <!-- Footer -->
+  <div class="border-top">
+    <div class="container">
+      <footer class="footer-content row pb-5">
+        <!-- div for words links -->
+        <div class=" left col-md-7 col-sm-12 col-xs-12">
+          <!-- list for links -->
+          <ul class="links list-unstyled ">
+            <li>
+              <a href="./about_us.html" target="_blank">About Us</a>
+              <span> | </span>
+            </li>
+
+            <li>
+              <a href="./investor_relations.html" target="_blank">Investor Relations</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="./careers.html" target="_blank">Careers</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="./customer_service.html" target="_blank">Customer Service</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="./contactus.html" target="_blank">Contact Us</a>
+              <span> | </span>
+            </li>
+            <li>
+              <a href="./other_uob_sites.html" target="_blank">Other UOB Sites</a>
+            </li>
+          </ul>
+          <div class="regno">
+            <!-- ul class for reg.no -->
+            <ul class="registration list-unstyled ">
+              <li>
+                <a>
+                  Copyright © 2020 United Overseas Bank Limited Co.
+                </a>
+              </li>
+              <li>
+                <a>
+                  Reg. No. 193500026Z. All Rights Reserved.
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- div for social media -->
+        <div class="right col-md-5 col-sm-12 col-xs-12">
+          <!-- div for social media picture -->
+          <div class="socialmediapictures list-unstyled ">
+            <li>
+              <a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/" class="facebookicon col 3">
+                <img src="../images/footer/facebook.png" alt="facebook">
+              </a>
+            </li>
+            <li>
+              <a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
+                class="instagramicon col 3">
+                <img src="../images/footer/instagram.png" alt="instagram">
+              </a>
+            </li>
+            <li>
+              <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
+                class="linkedinicon col 3">
+                <img src="../images/footer/linkedin.png" alt="LinkedIn">
+              </a>
+            </li>
+            <li>
+              <a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
+                class="youtubeicon col 3">
+                <img src="../images/footer/youtube.png" alt="Youtube">
+              </a>
+            </li>
+          </div>
+
+          <!-- for temrs of use under social media -->
+          <div class="terms list-unstyled">
+            <ul class="socialmedialinks list-unstyled ">
+              <li>
+                <a href="./social_media_terms_of_use.html" target="_blank">Social Media Terms of Use</a>
+                <span> | </span>
+              </li>
+              <li>
+                <a href="./legal_notices.html" target="_blank">Legal Notices</a>
+                <span> | </span>
+              </li>
+              <li>
+                <a href="./privary_and_security.html" target="_blank">Privacy & Security</a>
+              </li>
+          </div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+
+</body>
+
+<script>
+  //Script for sticky navigation bar (web)
+  if ($(window).width() > 992) {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 38) {
+        $('#nav-bg').addClass("fixed-top");
+        // add padding top to show content behind navbar
+        $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+      } else {
+        $('#nav-bg').removeClass("fixed-top");
+        // remove padding top from body
+        $('body').css('padding-top', '0');
+      }
+    });
+  } // end if
+
+  //Script to hide sticky navigation bar
+  if ($(window).width() > 992) {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 400.73) {
+        $('#nav-bg').removeClass("fixed-top");
+
+        // add padding top to show content behind navbar
+        $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+      } else {
+        
+      }
+    });
+  }
+
+  //Script for sticky navigation bar (mobile)
+
+
+
+  // script for side navigation
+  /* Show the side nav */
+  function openNav() {
+    if ($(window).width() < 576) {
+      document.getElementById("sidenav").style.width = "70%";
+      document.getElementById("body-overlay").style.width = "100%";
+      document.getElementById("sidenav").css('z-index', '100000');
+    } else {
+      document.getElementById("sidenav").style.width = "40%";
+      document.getElementById("body-overlay").style.width = "100%"
+    }
+  }
+
+  /* Close the side nav */
+  function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+    document.getElementById("body-overlay").style.width = "0%"
+  }
+
+  // dropdown display
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+
+
+
+
+  //end of script for navigation bar
+
+
+  // Script for multi item carousel
+  $('#recipeCarousel').carousel({
+    interval: 4000
+  })
+
+  $('.carousel .carousel-item').each(function () {
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+      next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    for (var i = 0; i < minPerSlide; i++) {
+      next = next.next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+
+      next.children(':first-child').clone().appendTo($(this));
+    }
+  });
+
+    // end of script for multi item carousel
+</script>
+
+
+
+</html>

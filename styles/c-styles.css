@@ -1,6 +1,11 @@
-#whyapplynowsection {
+#whyapplynowsection{
+
     background-color: #002469;
     color: white;
+}
+h5{
+    font-weight: bold;
+
 }
 
 h5 {
@@ -94,6 +99,9 @@ h1 {
 /* end of banner styles */
 
 /*Content Navigation Bar Styles */
+.nav-heading{
+    width:auto;
+}
 
 .nav-heading a {
     font-size: 12px;
@@ -117,6 +125,7 @@ h1 {
 #myScrollspy .active {
     border-bottom: 5px solid #002469;
 }
+
 
 #myScrollspy .col-3 {
     padding-left: 0;
@@ -170,23 +179,32 @@ h1 {
     font-size: 13px;
 }
 
+    
+    .layout2.card-deck, .layout3.card-deck, .layout4.card-deck, .layout5.card-deck{
+        display: block;
+    }
+
+    .layout2.card-deck .card, .layout3.card-deck .card, .layout4.card-deck .card, .layout5.card-deck .card {
+        margin-bottom: 15px;
+    }
+
+
+      /* styles for table */
+      .table-blue {
+        background-color: #002469;
+        color: white;
+    }
+    .table-grey {
+        background-color: #eeeeee;
+        color: rgb(33,37,41);
+    }
 /* end of layout 2 and slider 1 styles */
 
-.layout2.card-deck, .layout3.card-deck, .layout4.card-deck, .layout5.card-deck {
-    display: block;
-}
 
-.layout2.card-deck .card, .layout3.card-deck .card, .layout4.card-deck .card, .layout5.card-deck .card {
-    margin-bottom: 15px;
-}
 
-/* styles for table */
-
-.table-blue {
-    background-color: #002469;
-    color: white;
-}
-
+    .breadcrumb a {
+        color:#002469
+    }
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 375px) {
@@ -229,7 +247,9 @@ h1 {
         right: 1%;
         width: 55%;
         top: 5%;
+       
     }
+
     /* Multi item carousel styles */
     /* to display 3 */
     .carousel-inner .carousel-item-right.active, .carousel-inner .carousel-item-next {
@@ -245,6 +265,7 @@ h1 {
 @media (min-width: 992px) {
     .main-banner .description {
         top: 10%;
+       
     }
     #webapplynowbutton {
         position: absolute;
@@ -252,10 +273,13 @@ h1 {
         left: 6%;
         font-size: 16px;
     }
+
     .layout2.card-deck, .layout3.card-deck, .layout4.card-deck, .layout5.card-deck {
         display: flex;
     }
-    .layout2.card-deck .card, .layout3.card-deck .card, .layout4.card-deck .card, .layout5.card-deck .card {
+
+    .layout2.card-deck .card, .layout3.card-deck .card, .layout4.card-deck .card, .layout5.card-deck .card{
+
         margin-bottom: 0px;
     }
     .layout3 {
