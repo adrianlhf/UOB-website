@@ -58,6 +58,7 @@
     opacity: 0;
     position: fixed;
     width: 0;
+    
   }
 
   .qn1 label,
@@ -70,6 +71,8 @@
     font-size: 13px;
     border: 0.5px solid #444;
     border-radius: 28px;
+    cursor: pointer;
+
   }
 
   .qn1 label:hover,
@@ -227,10 +230,10 @@
           <label for="radio2_1"> &#60; $100,000</label>
 
           <input type="radio" id="radio2_2" name="radioAmount" value="amount2">
-          <label for="radio2_2">$100,000 to $500,000</label>
+          <label for="radio2_2">$100,000 to $200,000</label>
 
           <input type="radio" id="radio2_3" name="radioAmount" value="amount3">
-          <label for="radio2_3">$500,000 to $1,000,000</label>
+          <label for="radio2_3">$200,000 to $1,000,000</label>
         </div>
 
         <!-- Third group of radio buttons -->
@@ -416,7 +419,7 @@
               </li>
               <li>
                 <a>
-                  Reg. No. 193500026Z. All Rights Reserved.
+                  Reg. No. 193200026Z. All Rights Reserved.
                 </a>
               </li>
             </ul>
@@ -539,7 +542,8 @@
     }
     // ensure that none of the values is empty
     if (qn1 != "" && qn2 != "" && qn3 != "") {
-      console.log(loan)
+          $(".loan-result").hide()
+
       formulaFunction(qn1, qn2, qn3);
       console.log("lolo");
       shuffleArray(loan, formulaFunction(qn1, qn2, qn3))
@@ -552,6 +556,7 @@
 
   // function to deduce the best loan for user
   function formulaFunction(a, b, c) {
+    // $(".loan-result").hide()
 
     // console.log(a, b, c)
 
@@ -565,6 +570,7 @@
       document.getElementById("loan").innerHTML = loan[0].name;
       document.getElementById("description").innerHTML = loan[0].description;
       document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-block btnFindOutMore" href="' + loan[0].url + '" role="button">Click to Find Out More</a>';
+      $(".loan-result").fadeIn("200")
       return 0;
     }
     // SME Equipment Loan
@@ -572,6 +578,8 @@
       document.getElementById("loan").innerHTML = loan[1].name;
       document.getElementById("description").innerHTML = loan[1].description;
       document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-block btnFindOutMore" href="' + loan[1].url + '" role="button">Click to Find Out More</a>';
+      $(".loan-result").fadeIn("200")
+
       return 1;
     }
     // Temporary Bridging Loan
@@ -579,6 +587,8 @@
       document.getElementById("loan").innerHTML = loan[2].name;
       document.getElementById("description").innerHTML = loan[2].description;
       document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-block btnFindOutMore" href="' + loan[2].url + '" role="button">Click to Find Out More</a>';
+      $(".loan-result").fadeIn("200")
+
       return 2;
 
     }
@@ -587,6 +597,8 @@
       document.getElementById("loan").innerHTML = loan[3].name;
       document.getElementById("description").innerHTML = loan[3].description;
       document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-block btnFindOutMore" href="' + loan[3].url + '" role="button">Click to Find Out More</a>';
+      $(".loan-result").fadeIn("200")
+
       return 3;
 
     }
@@ -595,6 +607,8 @@
       document.getElementById("loan").innerHTML = loan[4].name;
       document.getElementById("description").innerHTML = loan[4].description;
       document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-block btnFindOutMore" href="' + loan[4].url + '" role="button">Click to Find Out More</a>';
+      $(".loan-result").fadeIn("200")
+
       return 4;
 
     }
@@ -603,6 +617,8 @@
       document.getElementById("loan").innerHTML = loan[5].name;
       document.getElementById("description").innerHTML = loan[5].description;
       document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-block btnFindOutMore" href="' + loan[5].url + '" role="button">Click to Find Out More</a>';
+      $(".loan-result").fadeIn("200")
+
       return 5;
 
     }
@@ -611,9 +627,12 @@
       document.getElementById("loan").innerHTML = loan[6].name;
       document.getElementById("description").innerHTML = loan[6].description;
       document.getElementById("divFindOutMore").innerHTML = '<a class="btn btn-block btnFindOutMore" href="' + loan[6].url + '" role="button">Click to Find Out More</a>';
+      $(".loan-result").fadeIn("200")
+
       return 6;
 
     }
+
 
   }
 
