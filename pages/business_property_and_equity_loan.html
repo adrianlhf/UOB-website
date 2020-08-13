@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Carousel scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>UOB Commercial Property Loan | Business Property Loan</title>
+    <link rel="stylesheet" href="../styles/navigation-styles.css">
+    <link rel="stylesheet" href="../styles/c-styles.css">
+    <link rel="stylesheet" href="../styles/footer-styles.css">
+    <link rel="stylesheet" href="../styles/loancalc-styles.css">
+
+</head>
+
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="50">
+
+    <!-- Navigation bar  -->
+
+    <header class="navbar-expand-lg">
+        <!-- level 1 -->
+        <div id="level1" class="navbar navbar-dark " style="background-color: #002469;">
+            <button class="btn d-lg-none" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-brand d-lg-none">
+                <a href="#" title="UOB" class="logo">
+                    <img src="../images/homepage/uob-logo-mobile1.png" alt="UOB">
+
+                </a>
+            </div>
+            <div class="navbar-right d-lg-none">
+                <button type="button" class="btn">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#ffffff"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!--first nav row-->
+            <div class="container d-none d-lg-block" id="firstrow">
+                <div class="row">
+                    <!-- For the type of uob site -->
+                    <div class="btn-group">
+                        <button id="dropdown-personal" type="button" data-toggle="dropdown"
+                            class="btn dropdown-toggle btn-focus">
+                            <span>YOU ARE IN</span>
+                            <span class="font-weight-bold">BUSINESS BANKING</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu banking-group" role="menu">
+                            <li class="dropdown-item-heading">FOR INDIVIDUALS</li>
+                            <li><a class="dropdown-item" href="https://www.uob.com.sg/personal/index.page">PERSONAL
+                                    BANKING</a></li>
+                            <li><a class="dropdown-item" href="https://www.uob.com.sg/wealthbanking/index.page">WEALTH
+                                    BANKING</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uob.com.sg/privilegebanking/index.page">PRIVILEGE
+                                    BANKING</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uob.com.sg/privilegereserve/index_pvr.html">PRIVILEGE
+                                    RESERVE</a></li>
+                            <li><a class="dropdown-item" href="https://www.uob.com.sg/private/index.page">PRIVATE
+                                    BANKING</a></li>
+                            <li class="dropdown-item-heading">FOR COMPANIES</li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uob.com.sg/corporate/commercial-banking/index.page">COMMERCIAL
+                                    BANKING</a></li>
+                            <li><a class="dropdown-item" href="https://www.uob.com.sg/corporate/index.page">CORPORATE
+                                    AND
+                                    INSTITUTIONAL BANKING</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uobgroup.com/foreign-direct-investment/index.page?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">FOREIGN
+                                    DIRECT INVESTMENT</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uobgroup.com/industry-insights/index.page?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">INDUSTRY
+                                    INSIGHTS</a></li>
+                            <li class="dropdown-item-heading">ABOUT UOB</li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uobgroup.com/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOB
+                                    GROUP</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uobgroup.com/techecosystem?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOBTECH
+                                    START-UP ECOSYSTEM</a>
+                            </li>
+                            <li class="dropdown-item-heading">UOB GROUP SUBSIDIARIES</li>
+                            <li><a class="dropdown-item" href="https://www.uobam.com.sg/">UOB ASSET MANAGEMENT</a></li>
+                            <li><a class="dropdown-item" href="https://www.uobaim.com.sg/">UOB ALTERNATIVE INVESTMENT
+                                    MANAGEMENT</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uoi.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UNITED
+                                    OVERSEAS INSURANCE</a></li>
+                            <li><a class="dropdown-item" href="https://www.uobtravel.com/">UOB TRAVEL PLANNERS</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uobvm.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472https://www.uobvm.com.sg/?adobe_mc=MCMID%3D64690853889223296052161709269668244341%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1596234472">UOB
+                                    VENTURE MANAGEMENT</a></li>
+                            <li><a class="dropdown-item" href="https://www.uobglobal.com/">UOB GLOBAL CAPITAL</a></li>
+                        </ul>
+                    </div> <!-- end of country-->
+
+                    <!-- For diff country -->
+                    <div class="btn-group">
+                        <button id="dropdown-Language" type="button" data-toggle="dropdown"
+                            class="btn dropdown-toggle btn-focus">
+                            <span class="font-weight-bold">SINGAPORE</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">UOB CHINA</a>
+                            <a class="dropdown-item" href="#">UOB VIETNAM</a>
+                            <a class="dropdown-item" href="#">UOB MALAYSIA</a>
+                        </div>
+                    </div> <!-- end of country-->
+
+                    <!-- For help & support -->
+                    <div class="btn-group">
+                        <button id="dropdown-Language" type="button" data-toggle="dropdown"
+                            class="btn dropdown-toggle btn-focus">
+                            <span class="font-weight-bold">HELP & SUPPORT</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a>
+                            <a class="dropdown-item" href="#">REQUEST A CALL BACK</a>
+                            <a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a>
+                        </div>
+                    </div> <!-- end of help & support -->
+
+                    <!-- For login-->
+                    <div class="btn-group ml-auto login">
+                        <button type="button" class="btn btn-focus" href="#">
+                            <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span class="font-weight-bold m-auto">LOGIN</span>
+                        </button>
+                    </div> <!-- end of login -->
+                </div>
+            </div> <!-- End of container for first row-->
+        </div>
+
+        <!-- level 2 -->
+        <div id="nav-bg">
+
+            <!-- mobile -->
+            <div id="body-overlay">
+                <div id="sidenav" class="sidenav d-lg-none">
+                    <a href="#" title="UOB" class="logo mr-auto">
+                        <img src="../images/homepage/right-by-you.png" alt="UOB">
+
+                    </a>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <!--Start nav Dropdown-->
+                        <li>
+                            <div class="d-flex dropdown-btn">
+                                <a href="./start.html">Start</a>
+                                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" /></svg>
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                    fill="#818181" />
+                                </svg>
+                            </div>
+                            <div class="dropdown-container">
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a href="./digitalise.html">Digitalize your Business</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./accounting.html">Accounting</a>
+                                    <a href="./cybermarketing.html">CyberMarketing</a>
+                                    <a href="./digital_transaction.html">Digital Transaction</a>
+                                    <a href="./digital_marketing.html">Digital Marketing</a>
+                                </div>
+                                <!-- end of dropdown -->
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a href="./apply_for_cards.html">Apply for Business Debit Card</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./uob_platinum_buiness_card">UOB Platinum Business Card</a>
+                                    <a href="./uob_business_plus_card">UOB Business Plus Card</a>
+                                </div>
+                                <!-- end of dropdown -->
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a>Open a business banking account</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./online_account_opening.html">Online Account Opening</a>
+                                    <a href="./uob_biztransact_account.html">UOB BizTransact Account</a>
+                                    <a href="./uob_e-business_account.html">UOB E-Business Account</a>
+                                    <a href="./singapore_dollar_current_account.html">Singapore Dollar Current
+                                        Account</a>
+                                    <a href="./bizglobal_account.html">BizGlobal Account</a>
+                                    <a href="./global_currency_account.html">Global Currency Account</a>
+                                    <a href="./renminbi_account.html">Renminbi Account</a>
+                                </div>
+                                <!-- end of dropdown -->
+                            </div>
+                        </li>
+                        <!--Run nav Dropdown-->
+                        <li>
+                            <div class="d-flex dropdown-btn">
+                                <a href="./run.html">Run</a>
+                                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" /></svg>
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                    fill="#818181" />
+                                </svg>
+                            </div>
+                            <div class="dropdown-container">
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a>Make Informed Decisions</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./bizsmart.html">BizSmart</a>
+                                    <a href="./uob_ealerts.html">UOB eAlerts</a>
+                                    <a href="./uob_business_mobile_app.html">UOB Business Mobile App</a>
+                                </div>
+                                <!-- end of dropdown -->
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a>Insure your Business</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./bizcare.html">BizCare</a>
+                                    <a href="./bizdrive.html">BizDrive</a>
+                                    <a href="./machinery_insurance.html">Machinery All Risk Insurance</a>
+                                    <a href="./life_insurance.html">Life Insurance</a>
+                                    <a href="./employee_benefits.html">Employee Benefits</a>
+                                </div>
+                                <!-- end of dropdown -->
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a>Manage Cashflow</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./payment_and _collection_services.html">Payment and Collection
+                                        Services</a>
+                                    <a href="./paynow_corporate.html">PayNow Corporate</a>
+                                </div>
+                                <!-- end of dropdown -->
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a>Manage Employees</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./payroll_services.html">Payroll Services</a>
+                                </div>
+                                <!-- end of dropdown -->
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a href="./trade_solutions.html">Trade Solutions <br> (Import/Export Services)</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./import_services.html">Import Services</a>
+                                    <a href="./export_services.html">Export Services</a>
+                                </div>
+                                <!-- end of dropdown -->
+                            </div>
+                        </li>
+                        <!--Grow nav Dropdown-->
+                        <li>
+                            <div class="d-flex dropdown-btn">
+                                <a href="grow.html">Grow</a>
+                                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" /></svg>
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                    fill="#818181" />
+                                </svg>
+                            </div>
+                            <div class="dropdown-container">
+                                <a href="fixed_deposits.html">Fixed Deposit</a>
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a href="./boost_cashflow.html">Boost your cashflow and assets</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./uob_business_loan.html">UOB Business Loan</a>
+                                    <a href="./uob_bizmoney.html">UOB BizMoney</a>
+                                    <a href="./uob_sme_loan.html">UOB SME Loan</a>
+                                    <a href="./uob_overdraft.html">UOB Overdraft</a>
+                                    <a href="./business_property_and_equity_loan.html">Business Property and Equity
+                                        Loan</a>
+                                    <a href="./government_assistant_scheme.html">Government Assistant Scheme</a>
+                                    <a href="./vehicle_and _machinery-financing.html">Vehicle and Machinery
+                                        Financing</a>
+                                </div>
+                                <!-- end of dropdown -->
+                            </div>
+                        </li>
+                        <!--Tools nav Dropdown-->
+                        <li>
+                            <div class="d-flex dropdown-btn">
+                                <a href="./tools.html">Tools</a>
+                                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" /></svg>
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                    fill="#818181" />
+                                </svg>
+                            </div>
+                            <div class="dropdown-container">
+                                <!-- start dropdown -->
+                                <div class="d-flex dropdown-btn">
+                                    <a href="./loans.html">Loans</a>
+                                    <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#818181"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 9l6 6 6-6" /></svg>
+                                </div>
+                                <!--end of dropdown button-->
+                                <div class="dropdown-container sub-container">
+                                    <a href="./loan_finder.html">Loans finder</a>
+                                    <a href="./loan_comparison.html">Loans Comparison</a>
+                                </div>
+                                <!-- end of dropdown -->
+                                <a href="./instalment_calculator.html">Installment Calculator</a>
+                            </div>
+                        </li>
+                        <li><a href="./insights.html">Insights</a></li>
+                        <hr class="sidenavLine">
+                        <!-- Level 1 side nav dropdown -->
+                        <!-- mobile nav Dropdown -->
+                        <li>
+                            <div class="d-flex dropdown-btn">
+                                <a>YOU ARE IN <span class="font-weight-bold"><br>BUSINESS BANKING</span></a>
+                                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" /></svg>
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                    fill="#818181" />
+                                </svg>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li><a>FOR INDIVIDUALS</a></li>
+                                <li><a href="">PERSONAL BANKING</a></li>
+                                <li><a href="">WEALTH BANKING</a></li>
+                                <li><a href="">PRIVILEGE BANKING</a></li>
+                                <li><a href="">PRIVILEGE RESERVE</a></li>
+                                <li><a href="">PRIVATE BANKING</a></li>
+                            </ul>
+                        </li>
+                        <!-- country nav dropdown -->
+                        <li>
+                            <div class="d-flex dropdown-btn">
+                                <a href="#"><span class="font-weight-bold">SINGAPORE</span></a>
+                                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" /></svg>
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                    fill="#818181" />
+                                </svg>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li><a href="">UOB CHINA</a></li>
+                                <li><a href="">UOB VIETNAM</a></li>
+                                <li><a href="">UOB MALAYSIA</a></li>
+                            </ul>
+                        </li>
+                        <!-- Help nav dropdown -->
+                        <li>
+                            <div class="d-flex dropdown-btn">
+                                <a href="#"><span class="font-weight-bold">HELP & SUPPORT</span></a>
+                                <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9l6 6 6-6" /></svg>
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                    fill="#818181" />
+                                </svg>
+                            </div>
+                            <ul class="dropdown-container">
+                                <li><a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a></li>
+                                <li><a class="dropdown-item" href="#">REQUEST A CALL BACK</a></li>
+                                <li><a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a></li>
+                            </ul>
+                        </li>
+                        <button type="button" class="sideNavBtn btn btn-focus" href="#">
+                            <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="21" height="21"
+                                viewBox="0 0 22 22" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span class="font-weight-bold m-auto">LOGIN</span>
+                        </button>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- web -->
+            <div id="main-navbar" class="container mx-auto collapse navbar-collapse navbar">
+                <!-- Logo -->
+                <div class="navbar-brand d-none d-lg-block ">
+                    <!--UOB logo-->
+                    <a href="./index.html" title="UOB" class="logo mr-auto">
+                        <img src="../images/homepage/uob-logo.jpg" alt="UOB">
+
+                    </a>
+                </div>
+                <!-- tabs -->
+                <ul role="tablist" class="mainnav navbar-nav justify-content-center col-lg-auto">
+                    <li role="tab" class="nav-item"><a href="./index.html" class="text-dark nav-link ">Home</a></li>
+                    <li role="tab" class="nav-item dropdown">
+                        <a href="./start.html" class="text-dark nav-link dropdown-toggle">Start</a>
+                        <ul class="dropdown-menu dropdown-menu-right first-menu">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="digitalise.html">Digitalize your Business</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./accounting.html">Accounting</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./cybermarketing.html">Cyber Marketing</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./digital_transaction.html">Digital
+                                            Transaction</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./digital_marketing.html">Digital Marketing</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <hr class="navigationdrop-line">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="./apply_for_cards.html">Apply for Business Debit
+                                        Card</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./uob_platinum_buiness_card">UOB Platinium
+                                            Business Card</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./uob_business_plus_card">UOB Business Plus
+                                            Card</a></li>
+                                </ul>
+                            </li>
+                            <hr class="navigationdrop-line">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item">Open a Business Banking Account</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./online_account_opening.html">Online Account
+                                            Opening</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./uob_biztransact_account.html">UOB BizTransact
+                                            Account</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./uob_e-business_account.html">UOB E-Business
+                                            Account</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item"
+                                            href="./singapore_dollar_current_account.html">Singapore Dollar Current
+                                            Account</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./bizglobal_account.html">BizGlobal Account</a>
+                                    </li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./global_currency_account.html">Global Currency
+                                            Account</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./renminbi_account.html">Reminbi Account</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="tab" class="nav-item dropdown">
+                        <a href="./run.html" class="text-dark nav-link dropdown-toggle">Run</a>
+                        <ul class="dropdown-menu dropdown-menu-right first-menu">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item">Make Informed Decisions</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./bizsmart.html">BizSmart</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./uob_ealerts.html">UOB eAlerts</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./uob_business_mobile_app.html">UOB Business
+                                            Mobile App</a></li>
+                                </ul>
+                            </li>
+                            <hr class="navigationdrop-line">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item">Insure your Business</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./bizcare.html">BizCare</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./bizdrive.html">BizDrive</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./machinery_insurance.html">Machinery All Risk
+                                            Inusurance</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./life_insurance.html">Life Inusurance</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./employee_benefits.html">Employee Benefits</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <hr class="navigationdrop-line">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item">Manage Cashflow</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./payment_and _collection_services.html">Payment
+                                            and Collection
+                                            Services</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./paynow_corporate.html">PayNow corporate</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <hr class="navigationdrop-line">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item">Manage Employees</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./payroll_services.html">Payroll Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <hr class="navigationdrop-line">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="./trade_solutions.html">Trade Solutions
+                                        (import/export services)</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./import_services.html">Import Services</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./export_services.html">Export Services</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="tab" class="nav-item dropdown ">
+                        <a href="./grow.html" class="text-dark nav-link dropdown-toggle active">Grow</a>
+                        <ul class="dropdown-menu dropdown-menu-right first-menu">
+                            <li>
+                                <a class="dropdown-item" href="./fixed_deposits.html">Fixed Deposits</a>
+                            </li>
+                            <hr class="navigationdrop-line">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="./boost_cashflow.html">Boost your Cashflow and
+                                        Assets</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./uob_business_loan.html">UOB Business Loan</a>
+                                    </li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./uob_bizmoney.html">UOB BizMoney</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./uob_sme_loan.html">UOB SME Loan</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./uob_overdraft.html">UOB OverDraft</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item"
+                                            href="./business_property_and_equity_loan.html">Business Property and
+                                            Equity Loan</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./government_assistant_scheme.html">Government
+                                            Assistant Scheme</a>
+                                    </li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./vehicle_and _machinery-financing.html">Vehicle
+                                            and Machinery
+                                            Financing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="tab" class="nav-item dropdown">
+                        <a href="./tools.html" class="text-dark nav-link dropdown-toggle">Tools</a>
+                        <ul class="dropdown-menu dropdown-menu-right first-menu">
+                            <li>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="./loans.html">Loans</a>
+                                    <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20"
+                                        viewBox="0 0 24 24" width="20">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"
+                                            fill="#818181" />
+                                    </svg>
+                                </div>
+
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a class="dropdown-item" href="./loan_finder.html">Loans Finder</a></li>
+                                    <hr class="navigationdrop-line">
+                                    <li><a class="dropdown-item" href="./loan_comparison.html">Loans Comparison</a></li>
+                                </ul>
+                            </li>
+                            <hr class="navigationdrop-line">
+                            <li>
+                                <a class="dropdown-item" href="./instalment_calculator.html">Installment calculator</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li role="tab" class="nav-item dropdown">
+                        <a href="./insights.html" class="text-dark nav-link">Insights</a>
+                    </li>
+                </ul>
+
+                <div id="searchbutton">
+                    <button type="button" class="btn button">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#000000"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                            <path fill-rule="evenodd"
+                                d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        </svg>
+                    </button></div>
+                <!-- Logo -->
+                <div class=" d-none d-lg-block ">
+                    <!--UOB logo-->
+                    <a href="./index.html" title="UOB" class="logo">
+                        <img src="../images/homepage/right-by-you.png" alt="Right by you">
+
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </header> <!-- end of navigation-->
+
+    <div class="justify-content-left d-none d-md-block ">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white pl-4 ">
+                <li class="breadcrumb-item"><a href="./index.html">Business</a></li>
+                <li class="breadcrumb-item"><a href="./grow.html">Grow</a></li>
+                <li class="breadcrumb-item"><a class="text-decoration-none">Boost Your Cashflow And Assets</a></li>
+                <li class="breadcrumb-item active" aria-current="page">UOB Business & Commercial Property Loan
+                </li>
+            </ol>
+
+            <h1 class="text-left pl-4 pb-4">UOB Business & Commercial Property Loan
+            </h1>
+        </nav>
+    </div>
+
+
+    <!-- Image Banner Section -->
+    <div class="main-banner">
+        <div class="position-relative">
+            <img src="../images/blue-banner.png" alt="banner" class="banner img-fluid w-100 d-block d-md-none">
+            <img src="../images/businessproperty/mobilebanner.jpg" class="img-fluid w-100 d-block d-md-none"
+                id="mobileimage" alt="responsive image">
+            <div class="description d-block d-md-none w-100 d-flex justify-content-center">
+                <h1 class="font-weight-bold text-white text-left w-50">Get the most out of your business property loan
+                    with us
+
+
+
+                </h1>
+                <a class="btn-banner btn align-self-center mx-2" target="_blank"
+                    href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-BPL&adobe_mc=MCMID%3D27676592596256406443627151245858313944%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597317174"
+                    title="Apply now" banner_name="overdraft">Apply now</a>
+            </div>
+        </div>
+
+        <div class="position-relative">
+            <img src="../images/businessproperty/webbanner.jpg" class="img-fluid w-100 d-none d-md-block"
+                id="desktopimage" alt="responsive image">
+            <div class="description d-none d-md-block text-left pt-4 p3-5">
+                <h1 class="font-weight-bold text-black text-left">Get the most out of your business property loan with
+                    us
+
+
+
+                </h1>
+                <p class="text-black text-left">
+                <ul>
+                    <li>Refinance for better rates</li>
+                    <li> Gear up to get cash
+                    </li>
+                    <li> One-day response time</li>
+                </ul>
+
+                </p>
+                <a class="btn-banner dtm-banner btn btn-1" target="_blank"
+                    href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-BPL&adobe_mc=MCMID%3D27676592596256406443627151245858313944%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597317174"
+                    title="Apply now" banner_name="overdraft">Apply
+                    now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content navbar -->
+    <nav class="sticky-top content-nav" id="myScrollspy" style="z-index: 3;">
+
+        <ul class="nav-heading navbar-nav navbar-expand nav justify-content-center">
+            <li class="nav-item col">
+                <a class="nav-link active" href="#section1" title="header1">Benefits</a>
+            </li>
+
+            <li class="nav-item col">
+                <a class="nav-link" href="#section2" title="header2">Covid-19 Resources</a>
+            </li>
+
+            <li class="nav-item col">
+                <a class="nav-link" href="#section3" title="header3">Faster Application Online</a>
+            </li>
+
+            <li class="nav-item col">
+                <a class="nav-link" href="#section4" title="header3">Eligiblity & FAQs</a>
+            </li>
+
+            <li class="nav-item col">
+                <a class="nav-link" href="#section5" title="header3">Real Commercial app</a>
+            </li>
+
+
+
+
+
+        </ul>
+
+    </nav>
+
+    <div class="container">
+
+        <!-- first section -->
+        <!-- uob business loans -->
+        <div class="section1 section" id="section1">
+            <h1 class="pb-2"> Benefits </h1>
+
+
+            <div class="card-deck text-center mx-auto layout4">
+                <div class="card rounded-0">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="../images/businessproperty/icon1.png" alt="icon1">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold layout2-title">Low Interest Rates
+                        </h4>
+                        <p class="card-text text-center">
+                            on your new Business Property Loan, or when you refinance with us.
+
+
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-white border-0"><a
+                            href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-BPL&adobe_mc=MCMID%3D27676592596256406443627151245858313944%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597317174"
+                            target="_blank" class="btn btn-1">Apply Now</a></div>
+                </div>
+                <div class="card rounded-0">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="../images/businessproperty/icon2.png" alt="icon2">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold layout2-title">Higher Loan Quantum
+                        </h4>
+                        <p class="card-text text-center">
+                            to help you get the most out of your property. <br><br>
+
+
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-white border-0"><a
+                            href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-BPL&adobe_mc=MCMID%3D27676592596256406443627151245858313944%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597317174"
+                            target="_blank" class="btn btn-1">Apply Now</a></div>
+                </div>
+                <div class="card rounded-0">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="../images/businessproperty/icon3.png" alt="icon2">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold layout2-title">Low Fees & Charges
+                        </h4>
+                        <p class="card-text text-center">
+                            with legal and valuation fee subsidies
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-white border-0"><a
+                            href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-BPL&adobe_mc=MCMID%3D27676592596256406443627151245858313944%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597317174"
+                            target="_blank" class="btn btn-1">Apply Now</a></div>
+                </div>
+                <div class="card rounded-0">
+                    <img class="img-fluid mx-auto pt-4 w-25" src="../images/businessproperty/icon4.png" alt="icon2">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold layout2-title">1-Day^ Approval Rate
+                        </h4>
+                        <p class="card-text text-center">
+                            with an SMS update on the status of your loan applications.
+                            <br><br>
+
+
+                            Terms and conditions apply.
+
+                        </p>
+                    </div>
+                    <div class="card-footer bg-white border-0"><a
+                            href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-BPL&adobe_mc=MCMID%3D27676592596256406443627151245858313944%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597317174"
+                            target="_blank" class="btn btn-1">Apply Now</a></div>
+                </div>
+            </div>
+
+
+
+            <a target="_blank" href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-OD">
+                <p class="text-center pt-5">
+
+                    <img class="img-fluid mx-auto" src="../images/bizmoney/apply123.png" alt="icon3"><b>
+                        Refinance or apply for a UOB Business Property Loan online
+                        via MyInfo Business, and get a response in 24 hours^.
+                    </b>
+
+                </p>
+            </a>
+
+            <hr>
+
+            <h2 class="text-center font-weight-bold">Buy vs Rent Calculator</h2>
+
+            <p>
+
+
+                Is it better to buy or rent your commercial property? Calculate to find our which option provides you
+                with greater savings over time.</p>
+
+
+
+
+            <!-- insert calculators here -->
+
+            <div class="BRcalcDiv">
+                <div class="calcRow row pt-2 pt-lg-4">
+                    <div class="input-left input-left col-lg-6 pb-4 pb-lg-0 mx-2 mx-lg-0">
+
+                        <form class="inputForm" name="formBRcalculator">
+                            <!-- section for first part of buy vs rent calculator -->
+                            <h5>Rental Information</h5>
+                            <div class="form-group pb-0 mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRmonthlyRentInput" class="inline">Monthly Rent</label>
+                                    <span class="inline">$<input type="text" id="BRmonthlyRentInput"
+                                            class="inline numericOnly clearInput clickEvent allCalcInput"
+                                            name="BRmonthlyRentInput" value="5,000"></span>
+                                </div>
+                                <p id="BRerrorMsg1" class="allErrorMsg mt-0 mb-3"></p>
+
+                            </div>
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRperiodStayInput" class="inline">Intended Period of Stay</label>
+                                    <span class="inline"><input type="text" id="BRperiodStayInput"
+                                            class="inline numericOnly clickEvent allCalcInput">year(s)
+                                    </span>
+                                </div>
+                                <div class="slider-container">
+                                    <span class="bar periodStay-bar"><span class="fill"></span></span>
+                                    <input type="range" min="1" max="99" step="1" class="slider" id="BRperiodStayRange"
+                                        value="50">
+                                </div>
+                                <p id="BRerrorMsg2" class="allErrorMsg"></p>
+
+                            </div>
+                            <!-- section for second part of buy vs rent calculator -->
+
+                            <h5>Property Loan Information</h5>
+                            <div class="form-group pb-0 mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRpurchasePriceInput" class="inline">Purchase Price</label>
+                                    <span class="inline">$<input type="text" id="BRpurchasePriceInput"
+                                            class="inline numericOnly clickEvent allCalcInput name="
+                                            BRpurchasePriceInput" value="800,000"></span>
+                                </div>
+                                <p id="BRerrorMsg3" class="allErrorMsg mt-0 mb-3"></p>
+                            </div>
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRinterestRateInput" class="inline">Interest Rate</label><span
+                                        class="inline">
+                                        <input type="text" id="BRinterestRateInput" name="BRinterestRateInput"
+                                            class="inline numericDecOnly clickEvent allCalcInput">%</span>
+                                </div>
+                                <div class="slider-container">
+                                    <span class="bar brinterest-bar"><span class="fill"></span></span>
+                                    <input type="range" min="0" max="5" step="0.01" class="slider"
+                                        id="BRinterestRateRange" value="2.5">
+                                </div>
+                                <p id="BRerrorMsg4" class="allErrorMsg"></p>
+
+                            </div>
+
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="BRloanTenureInput" class="inline">Loan Tenure</label>
+                                    <span class="inline"><input type="text" name="BRloanTenureInput"
+                                            id="BRloanTenureInput"
+                                            class="inline numericOnly clickEvent allCalcInput">year(s)
+                                    </span>
+                                </div>
+
+                                <div class="slider-container">
+                                    <span class="bar brtenure-bar"><span class="fill"></span></span>
+                                    <input type="range" min="1" max="30" step="1" class="slider" id="BRloanTenureRange"
+                                        value="15.5">
+                                </div>
+                                <p id="BRerrorMsg5" class="allErrorMsg"></p>
+
+                            </div>
+
+
+                        </form>
+                        <button onclick="BRcalculateFunction()" id="BRcalculateBtn"
+                            class="btn btn-calculate buttonStyle mx-auto d-block" type="button">Calculate</button>
+                    </div>
+
+                    <div class=" h-auto align-self-center result-right col-lg-6 text-center mt-4 mt-lg-0">
+                        <h1 id="amount" class="result BRbeforeCalculate">Savings Summary</h1>
+                        <p class="BRbeforeCalculate font-italic">Please enter your Rental and Property Loan information
+                            to
+                            continue.</p>
+                        <div class="result BRafterCalculate" id="BRresult">
+                            <h1 id="BRbuyorrent"></h1>
+                            <h1 id="BRdescription"></h1>
+                            <p class="font-italic">To find out how you can finance your property,
+
+                                <a
+                                    href="https://uniservices1.uobgroup.com/appforms/business/UOB_Business_Property_Loan_Customer_Online_Promotion.page">request
+                                    for callback from us now.</a></p>
+                            <table class="table table-bordered text-left overflow-hidden" id="BRtable">
+                                <thead>
+                                    <tr class="table-blue">
+                                        <th>Cost After 15 Years</th>
+                                        <th class="text-center">Rent</th>
+                                        <th class="text-center">Buy</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="BRtbody">
+                                    <!-- " <div class=''>
+                                        <tr>
+                                            <th>Set Up Costs</th>
+                                            <th>$20,000</th>
+                                            <th>$" +addCommas(BsetUpCost)+ "+</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Downpayment/Deposit</td>
+                                            <td>$10,000</td>
+                                            <td>$" + addCommas(parseInt(0.553*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agent Fees</td>
+                                            <td>$10,000</td>
+                                            <td>$" + addCommas(parseInt(0.004*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Fees</td>
+                                            <td>-</td>
+                                            <td>$" +addCommas( parseInt(0.009*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mortgage Duty</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.003*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Buyer Stamp Duty</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.064*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GST</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.193*BsetUpCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Initial Renovation</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.174*BsetUpCost))+ "</td>
+                                        </tr>
+    
+                                    </div>
+    
+                                    <div class=''>
+                                        <tr>
+                                            <th>Running Costs</th>
+                                            <th>$" + addCommas(RrunningCost) + "</th>
+                                            <th>$" + addCommas(BrunningCost) + "</th>
+    
+                                        </tr>
+                                        <tr>
+                                            <td>Rent Payments</td>
+                                            <td>$" + addCommas(RrunningCost) + "</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mortgage Payments</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.848*BrunningCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Property Tax</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.087*BrunningCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Maintenance Costs</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.012*BrunningCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Facilities Fees</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.0053*BrunningCost))+ "</td>
+                                        </tr>
+                                    </div>
+    
+                                    <div class=''>
+                                        <tr>
+                                            <th>Opportunity Costs</th>
+                                            <th>$" + addCommas(RopportunityCost) + "</th>
+                                            <th>$" + addCommas(BopportunityCost)+ "</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Set Up</td>
+                                            <td>$" + addCommas(parseInt(0.044*RopportunityCost))+ "</td>
+                                            <td>$" + addCommas(parseInt(0.254*BopportunityCost))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Running Costs</td>
+                                            <td>$" + addCommas(parseInt(0.956*RopportunityCost))+ "</td>
+                                            <td>$" + addCommas(parseInt(0.746*BopportunityCost))+ "</td>
+                                        </tr>
+                                    </div>
+    
+                                    <div class=''>
+    
+                                        <tr>
+                                            <th>Net Proceeeds</th>
+                                            <th>$(" + addCommas((0.675*BOverallNumber)-2500-(0.002*propertyLoan))+ ")</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>Proceeds from sale</td>
+                                            <td>$10,000</td>
+                                            <td>$(" + addCommas(parseInt(0.675*BOverallNumber))+ ")</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Seller Stamp Duty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agent Fees</td>
+                                            <td>-</td>
+                                            <td>$" + addCommas(parseInt(0.002*c))+ "</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Fees</td>
+                                            <td>-</td>
+                                            <td>$2,500</td>
+                                        </tr>
+                                    </div>
+                                    <th>
+                                        <tr>Total Cost</tr>
+                                        <tr>$" + addCommas(propertyLoan)+ "</tr>
+                                        <tr>$" + addCommas(totalRent)+ "</tr>
+                                    </th>" -->
+                                </tbody>
+                                <!-- <tbody id="BRtbody">
+                                    <div class="">
+                                        <tr>
+                                            <th>Set Up Costs</th>
+                                            <th>$20,000</th>
+                                            <th>$288,000</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Downpayment/Deposit</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agent Fees</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Fees</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mortgage Duty</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Buyer Stamp Duty</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GST</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Initial Renovation</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+    
+                                    </div>
+    
+                                    <div class="">
+                                        <tr>
+                                            <th>Running Costs</th>
+                                            <th>$20,000</th>
+                                            <th>$288,000</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Rent Payments</td>
+                                            <td>$10,000</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mortgage Payments</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Property Tax</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Maintenance Costs</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Facilities Fees</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                    </div>
+    
+                                    <div class="">
+                                        <tr>
+                                            <th>Opportunity Costs</th>
+                                            <th>$20,000</th>
+                                            <th>$288,000</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Set Up</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Running Costs</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                    </div>
+    
+                                    <div class="">
+    
+                                        <tr>
+                                            <th>Net Proceeeds</th>
+                                            <th>$20,000</th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>Proceeds from sale</td>
+                                            <td>$10,000</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Seller Stamp Duty</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Agent Fees</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Legal Fees</td>
+                                            <td>-</td>
+                                            <td>$160,000</td>
+                                        </tr>
+                                    </div>
+                                </tbody> -->
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <p class="text-left mt-5"> To help you make your decision if you should buy or rent a property, <a
+                    href="https://www.uob.com.sg/business/inbusiness/article.html?id=10-things-investors-should-look-out-for-when-buying-or-renting-commercial-property">click
+                    here</a> to find out more.</p>
+
+
+
+            <hr>
+
+            <h2 class="text-center font-weight-bold">Commercial Property Affordability Calculator</h2>
+
+            <div class="CPAcalcDiv ">
+
+                <div class="calcRow row pt-2 pt-lg-4">
+                    <div class="input-left col-lg-6 pb-4 pb-lg-0 mx-2 mx-lg-0">
+                        <form class="inputForm" name="formCPAcalcDiv">
+                            <!-- section for first part of buy vs rent calculator -->
+                            <div class="form-group pb-0 mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="CPApropertyValInput" class="inline">Property Value</label>
+                                    <span class="inline">$<input type="text" id="CPApropertyValInput"
+                                            class="inline numericOnly clickEvent allCalcInput"
+                                            name="CPApropertyValInput" value="1,000,000"></span>
+                                </div>
+                                <p id="CPAerrorMsg1" class="allErrorMsg mt-0 mb-3"></p>
+
+                            </div>
+                            <div class="form-group pb-0 mb-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="CPAloanAmountInput" class="inline">Loan Amount</label>
+                                    <span class="inline">$<input type="text" id="CPAloanAmountInput"
+                                            class="inline numericOnly clickEvent allCalcInput name=" CPAloanAmountInput"
+                                            value="900,000"></span>
+                                </div>
+                                <p id="CPAerrorMsg2" class="allErrorMsg mt-0 mb-3"></p>
+
+                            </div>
+
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="CPAloanTenureInput" class="inline">Loan Tenure</label>
+                                    <span class="inline"><input type="text" name="CPAloanTenureInput"
+                                            id="CPAloanTenureInput"
+                                            class="inline numericOnly clickEvent allCalcInput">year(s)
+                                    </span>
+                                </div>
+                                <div class="slider-container">
+                                    <span class="bar cpatenure-bar"><span class="fill"></span></span>
+                                    <input type="range" min="1" max="30" step="1" class="slider" id="CPAloanTenureRange"
+                                        value="15">
+                                </div>
+                                <p id="CPAerrorMsg3" class="allErrorMsg"></p>
+
+                            </div>
+
+                            <div class="form-group py-0">
+                                <div class="d-flex justify-content-between">
+                                    <label for="CPAinterestRateInput" class="inline">Interest Rate</label><span
+                                        class="inline">
+                                        <input type="text" id="CPAinterestRateInput" name="CPAinterestRateInput"
+                                            class="inline numericDecOnly clickEvent allCalcInput">%</span>
+                                </div>
+
+                                <div class="slider-container">
+                                    <span class="bar cpainterest-bar"><span class="fill"></span></span>
+                                    <input type="range" min="0" max="5" step="0.01" class="slider"
+                                        id="CPAinterestRateRange">
+                                </div>
+                                <p id="CPAerrorMsg4" class="allErrorMsg"></p>
+
+                            </div>
+
+                        </form>
+                        <button onclick="CPAcalculateFunction()" id="CPAcalculateBtn"
+                            class="btn btn-calculate buttonStyle mx-auto d-block" type="button">Calculate</button>
+
+                    </div>
+
+
+                    <div class="h-auto align-self-center result-right col-lg-6 text-center mt-4 mt-lg-0">
+                        <h1 id="amount" class="result CPAbeforeCalculate">Repayment Summary</h1>
+                        <p class="CPAbeforeCalculate font-italic">Please enter the mortgage information to continue.</p>
+                        <div class="result CPAafterCalculate" id="CPAresult">
+                            <h1 id="CPAdescription"></h1>
+                            <p class="font-italic">Based on your input, plan ahead by getting a loan repayment schedule
+                                done
+                                up for you.
+                                To find out more about above, simply have us call you at your convenience. <a
+                                    href="https://uniservices1.uobgroup.com/appforms/business/UOB_Business_Property_Loan_Customer_Online_Promotion.page">Request
+                                    a callback from us.</a></p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- end of first section -->
+
+
+        <!--  second section -->
+        <div class="section2 section" id="section2">
+
+            <h1 class="pb-2">Covid-19 Resources</h1>
+            <br>
+            <p>Our online application process has been enhanced to be fast, simple and secure with MyInfo Business.
+                Enjoy less hassle as the form gets pre-filled and there are less documents to submit.
+
+            </p>
+
+            <div class=" row">
+                <!-- Category 1 -->
+                <div class="covid-box position-relative col-sm-12 col-md-6 col-lg-4 pt-4">
+                    <a href="https://www.uob.com.sg/business/insights/resilience.page?path=data/bb/43&cr=segment">
+                        <div class="dark-img">
+                            <img src="../images/businessproperty/covid1.jpg">
+                        </div>
+                        <div class="covid-text position-absolute">
+                            3 ways your business property can get additional cash flow
+                        </div>
+                    </a>
+                </div>
+                <!-- category 2 -->
+                <div class="covid-box position-relative col-sm-12 col-md-6 col-lg-4 pt-4">
+                    <a
+                        href="https://www.uob.com.sg/business/insights/digital-solutions.page?path=data/bb/46&cr=segment">
+                        <div class="dark-img">
+                            <img src="../images/businessproperty/covid2.jpg">
+                        </div>
+                        <div class="covid-text position-absolute justify-content-center">
+                            <span>Digital solutions to help SMEs tide through COVID-19</span>
+                        </div>
+                    </a>
+                </div>
+                <!-- category 3 -->
+                <div class="covid-box position-relative col-sm-12 col-md-6 col-lg-4 pt-4">
+                    <a
+                        href="https://www.uobgroup.com/uobgroup/covid-sme-relief-assistance.page?adobe_mc=MCMID%3D75247851824324029183616147717691353340%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597137842">
+                        <div class="dark-img">
+                            <img src="../images/businessproperty/covid3.jpg">
+                        </div>
+                        <div class="covid-text position-absolute justify-content-center">
+                            <span>Relief measures and digital solutions for SMEs</span>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
+            <hr>
+
+
+
+            <div class="section3 section" id="section3">
+                <h1 class="pb-2">Faster Application Online</h1>
+                <br>
+                <p>Our online application process has been enhanced to be fast, simple and secure with MyInfo Business.
+                    Enjoy less hassle as the form gets pre-filled and there are less documents to submit.
+
+                </p>
+
+
+                <div class="card-deck text-center layout2">
+
+
+                    <div class="card rounded-0">
+                        <img class="img-fluid mx-auto pt-4" src="../images/bizmoney/savetime.png" alt="icon2">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Saves time
+                            </h4>
+                            <p class="card-text layout2-p">
+                                Fast application in just 5 minutes, less documents to submit
+
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-0">
+                        <img class="img-fluid mx-auto pt-4" src="../images/bizmoney/secure.png" alt="icon1">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Secure and Simple
+                            </h4>
+                            <p class="card-text layout2-p">
+                                Online form gets pre-filled by retrieving your details via MyInfo Business
+
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-0">
+                        <img class="img-fluid mx-auto pt-4" src="../images/bizmoney/fastloan.png" alt="icon3">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Fast Loan Disbursal
+                            </h4>
+                            <p class="card-text layout2-p">
+                                Upon full documents submitted and application is approved, sign the loan agreement and
+                                funds
+                                will be disbursed to your account
+
+
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a class="btn-banner btn btn-1 align-self-center mx-2 mt-5"
+                        href="https://forms.uob.com.sg/business/loans/apply?productCode=BB-BPL&adobe_mc=MCMID%3D27676592596256406443627151245858313944%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597317174"
+                        target="_blank" title="Apply now" banner_name="overdraft">Apply now</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="section4 section" id="section4">
+
+                <h1 class="pb-2">Eligiblity & FAQs</h1>
+
+                <h1 class="pb-2 text-left">Eligiblity</h1>
+
+                <ul>
+                    <li>Singapore registered entities (sole proprietor, partnership or private limited company)
+                    </li>
+                    <li>Registered and operating in Singapore
+                    </li>
+                    <li>Minimum 3 years of business operations
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h1 class="pb-2 text-left">FAQs</h1>
+
+
+
+                <div id="accordion" role="tablist" class="accordion">
+                    <div class="card border border-top-0 border-left-0 border-right-0">
+                        <div class="card-header border-0 bg-white row" role="tab">
+                            <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                                data-toggle="collapse" href="#collapse1" aria-expanded="false">
+                            </a>
+                            <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What is UOB Business Property
+                                Loan?
+                            </h5>
+                        </div>
+
+                        <div id="collapse1" class="collapse row" role="tabpanel" data-parent="#accordion">
+                            <span class="col-2 col-lg-1"></span>
+                            <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                                <p> UOB Business Property Loan provides financing option for SMEs looking to purchase
+                                    industry/commercial property or refinancing their existing industry/commercial
+                                    property loans with other banks. <br><br>
+
+                                    The UOB Property Loan aims to help SMEs expand their business via property purchases
+                                    or improve business cash flow via providing a cash out option through the property
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border border-top-0 border-left-0 border-right-0">
+                        <div class="card-header border-0 bg-white row" role="tab">
+                            <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                                data-toggle="collapse" href="#collapse2" aria-expanded="false">
+                            </a>
+                            <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> How much will the monthly
+                                installments be?</h5>
+                        </div>
+
+                        <div id="collapse2" class="collapse row" role="tabpanel" data-parent="#accordion">
+                            <span class="col-2 col-lg-1"></span>
+                            <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                                <p> You may use our Business Property Loan Affordability Calculator to find out the
+                                    indicative monthly installment payment of your business and commercial property
+                                    loans.
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border border-top-0 border-left-0 border-right-0">
+                        <div class="card-header border-0 bg-white row" role="tab">
+                            <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                                data-toggle="collapse" href="#collapse3" aria-expanded="false">
+                            </a>
+                            <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What is buy vs rent
+                                calculator?</h5>
+                        </div>
+
+                        <div id="collapse3" class="collapse row" role="tabpanel" data-parent="#accordion">
+                            <span class="col-2 col-lg-1"></span>
+                            <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                                <p>Our UOB buy vs rent calculator aims to illustrate the potential cost involved in
+                                    buying a property, as compared to renting. The results and information provided can
+                                    be used to evaluate options available for business cost savings. The computation
+                                    above is for indicative purposes only. The Bank accepts no liability for errors or
+                                    omissions, nor for any loss arising from use of or reliance on the calculation
+                                    herein.
+
+
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- this must be the last item, add more above this -->
+                    <div class="card border-0">
+                        <div class="card-header border-0 bg-white row" role="tab">
+                            <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                                data-toggle="collapse" href="#collapselast1" aria-expanded="false">
+                            </a>
+                            <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> What are the interest rates
+                                packages available?</h5>
+                        </div>
+                        <div id="collapselast1" class="collapse row" role="tabpanel" data-parent="#accordion">
+                            <span class="col-2 col-lg-1"></span>
+                            <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                                We offer attractive SIBOR pegged packages, internal board rate packages and fixed rate
+                                packages, to suit your financing needs.
+
+                                <br><br>
+                                To understand more, please leave your contact details here, and one of our sales
+                                specialists will contact you soon.
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+            <div class="section5 section" id="section5">
+
+                <h1 class="pb-2">RealCommercial app</h1>
+                <h1 class="pb-2 text-left">What is the RealCommercial app?</h1> <br>
+
+                <div class="row">
+                    <img src="../images/businessproperty/app.jpg" alt="" class="img-fluid w-100 col-md-6 col-lg-5">
+                    <div class="text-center text-md-left pt-3 px-3 p-md-0 pl-md-3 col-md-6 col-lg-7">
+                        <p>The all-in-one commercial property app from UOB and SoReal, this app has everything you need
+                            to find your perfect commercial property space. Whether you are a first-time buyer or a
+                            seasoned one, you can now search and buy with greater clarity, convenience and confidence.
+
+
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <br><br>
+                <div class="card-deck text-center mx-auto layout4">
+                    <div class="card rounded-0">
+                        <img class="img-fluid  mx-auto pt-4 w-25" src="../images/businessproperty/instantestimate.jpg"
+                            alt="icon1">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Instant estimated loan eligibility
+                            </h4>
+                            <p class="card-text text-center">
+                                with the UOB Loan Assessment tool for budget planning
+
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card rounded-0">
+                        <img class="img-fluid  mx-auto pt-4 w-25"
+                            src="../images/businessproperty/detailedcommercial.jpg" alt="icon2">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Detailed commercial and industrial
+                                property listings
+                            </h4>
+                            <p class="card-text text-center">
+                                built for businesses so you can shortlist better and more efficiently
+
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card rounded-0">
+                        <img class="img-fluid  mx-auto pt-4 w-25" src="../images/businessproperty/crediblebank.jpg"
+                            alt="icon2">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Credible bank-backed property
+                                valuation</h4>
+                            <p class="card-text text-center">
+                                that you can get a Business Property Loan for
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card rounded-0">
+                        <img class="img-fluid  mx-auto pt-4 w-25" src="../images/businessproperty/accesstolawyer.jpg"
+                            alt="icon2">
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold layout2-title">Access to a lawyer
+                            </h4>
+                            <p class="card-text text-center">
+                                for all your conveyancing needs
+
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="d-flex justify-content-center">
+                    <h3>Download now</h3>
+                </div>
+
+                <div class="d-flex justify-content-center">
+
+                    <a href="https://apps.apple.com/app/id1469501765"><img class="img-fluid  "
+                            src="../images/businessproperty/appstore.png" alt="icon2"></a>
+                    <a
+                        href="https://play.google.com/store/apps/details?id=sorealprop.com.realcommercial&referrer=utm_source%3Dpweb%26utm_medium%3Downed%26utm_campaign%3Dsorealapp"><img
+                            class="
+                        img-fluid " src=" ../images/businessproperty/googleplay.png" alt="icon2"></a>
+                </div>
+
+                <br><br>
+                <p>1 Terms and conditions apply.<br>
+                    2 Subject to the full terms and conditions for a UOB Property Loan, and internal credit policies.
+                    <br><br>
+
+                    Disclaimers<br>
+                    Nothing in the RealCommercial app shall operate or be deemed to constitute a partnership or
+                    employment or agency or joint venture relationship or association between SoReal Prop Pte Ltd
+                    ("SoReal") and United Overseas Bank Limited ("UOB") nor constitute any party the agent or servant of
+                    the other party for any purpose, and SoReal shall have no authority to bind UOB or to act in the
+                    name of UOB or create a liability against UOB in any way or for any purpose and vice versa.</p>
+
+                <hr>
+
+                <div id="accordion" role="tablist" class="accordion pt-3">
+
+                    <div class="card border border-top-0 border-left-0 border-right-0">
+                        <div class="card-header border-0 bg-white row" role="tab">
+                            <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                                data-toggle="collapse" href="#collapse4" aria-expanded="false">
+                            </a>
+                            <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> Terms and Conditions</h5>
+                        </div>
+        
+                        <div id="collapse4" class="collapse row" role="tabpanel" data-parent="#accordion">
+                            <span class="col-2 col-lg-1"></span>
+                            <div class="card-body col-10 col-lg-11 acc-text pt-0">
+                                <p>~For enquiries that reach UOB within the Stipulated Timing, we will contact you by
+                                    the next Business Day with an indicative loan amount that you may apply for.
+                                    "Business Day" is defined as Mondays to Fridays (Singapore date and time, and
+                                    excluding Singapore public holidays). "Stipulated Timing" is defined as 8am to 8pm
+                                    from Mondays to Saturdays (Singapore date and time, and excluding Singapore public
+                                    holidays). For enquiries that reach UOB at times other than the Stipulated Timing,
+                                    we will contact you within two Business Days after UOB receives your enquiries, with
+                                    an indicative loan amount that you may apply for. Full product terms and conditions
+                                    apply. The quote of the indicative loan amount is based on the information provided
+                                    by the customer and does not constitute an offer, an invitation to offer, a
+                                    solicitation or recommendation to enter into or conclude any transaction, and the
+                                    quote of the indicative loan amount is not a contractual agreement by UOB to provide
+                                    the UOB Business Property Loan or any other products/ services to the customer.
+                                    Accordingly, the actual approval of the UOB Business Property Loan application is
+                                    subject to the submission of the required full and complete documentation as UOB may
+                                    so require at its discretion and UOB's credit assessment. UOB has the absolute right
+                                    and discretion to decide, for whatever reason and without prior notice and without
+                                    being liable to any person, whether to approve the customer's application for the
+                                    UOB Business Property Loan and whether (i) to grant (or not to grant) the customer
+                                    the amount of the UOB Business Property Loan requested for in the customer's
+                                    application form; or (ii) to grant the customer a lower amount from the amount of
+                                    the indicative loan amount quoted or from the amount of the UOB Business Property
+                                    Loan requested for in the customer's application form.
+                                    <br><br>
+                                    ^Terms and conditions governing the "Next Business Day Response" program apply.<br>
+                                    Click <a target="_blank"
+                                        href="https://www.uob.com.sg/assets/pdfs/bpl-application-status-response-time.pdf">here</a>
+                                    for full terms and conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0">
+                        <div class="card-header border-0 bg-white row" role="tab">
+                            <a class="opened collapsed text-decoration-none font-weight-bold text-dark col-2 col-lg-1"
+                                data-toggle="collapse" href="#collapselast3" aria-expanded="false">
+                            </a>
+                            <h5 class="col-10 col-lg-11 text-left align-self-center pt-2"> Documents Required </h5>
+                        </div>
+                        <div id="collapselast3" class="collapse row" role="tabpanel" data-parent="#accordion">
+                            <span class="col-2 col-lg-1"></span>
+                            <div class="card-body col-10 col-lg-11 acc-text pt-0">
+
+                                <ul>
+                                    <li> Company's last 6 months' bank statement
+                                    </li>
+                                    <li>Company's financials (in any)
+                                    </li>
+                                    <li>Photocopy of NRIC/Passport for all applicants and owners
+                                    </li>
+                                    <li>Latest tax assessment for all guarantors
+                                    </li>
+                                </ul>
+
+                                <p>~* This list is not exhaustive. The Bank may request for such further documents and
+                                    information as the Bank may so require at its discretion at any time.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- fourth section -->
+
+
+
+
+            <!-- You may be interested section -->
+            <div class="interestedsection section pb-4" id="interestedsection">
+                <h1 class="pb-2"> You May Be Interested In</h1>
+                <div class="row mx-auto my-auto">
+                    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                        <div class="carousel-inner w-100" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <a href="./trade_solutions.html"><img class="img-fluid card-img-top"
+                                                src="../images/uobebusiness/interested1.jpg" alt="CyberSecurity"></a>
+                                        <div class="card-body"> Trade Services </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <a href="https://sg.bibplus.uobgroup.com/BIB/public/"> <img
+                                                class="img-fluid card-img-top"
+                                                src="../images/uobebusiness/interested2.jpg" alt="E-transactions"></a>
+                                        <div class="card-body"> UOB Business Internet Banking Plus</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <a href="https://www.uob.com.sg/business/transact/foreign-exchange.page"><img
+                                                class="img-fluid card-img-top"
+                                                src="../images/uobebusiness/interested3.jpg" alt="Payroll"></a>
+                                        <div class="card-body"> Foreign Exchange </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <a href="https://www.uob.com.sg/business/access/business-mobile-app.page"> <img
+                                                class="img-fluid card-img-top"
+                                                src="../images/uobebusiness/interested4.jpg" alt="UOB Business App"></a>
+                                        <div class="card-body"> UOB Business App </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev w-auto carousel-a" href="#recipeCarousel" role="button"
+                            data-slide="prev">
+                            <div class="c-icon rounded-circle">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only"></span>
+                            </div>
+                        </a>
+                        <a class="carousel-control-next w-auto carousel-a" href="#recipeCarousel" role="button"
+                            data-slide="next">
+                            <div class="c-icon rounded-circle">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="border-top">
+        <div class="container">
+            <footer class="footer-content row pb-5">
+                <!-- div for words links -->
+                <div class=" left col-md-7 col-sm-12 col-xs-12">
+                    <!-- list for links -->
+                    <ul class="links list-unstyled ">
+                        <li>
+                            <a href="./about_us.html" target="_blank">About Us</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./investor_relations.html" target="_blank">Investor Relations</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./careers.html" target="_blank">Careers</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./customer_service.html" target="_blank">Customer Service</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./contactus.html" target="_blank">Contact Us</a>
+                            <span> | </span>
+                        </li>
+                        <li>
+                            <a href="./other_uob_sites.html" target="_blank">Other UOB Sites</a>
+                        </li>
+                    </ul>
+                    <div class="regno">
+                        <!-- ul class for reg.no -->
+                        <ul class="registration list-unstyled ">
+                            <li>
+                                <a>
+                                    Copyright © 2020 United Overseas Bank Limited Co.
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    Reg. No. 193500026Z. All Rights Reserved.
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- div for social media -->
+                <div class="right col-md-5 col-sm-12 col-xs-12">
+                    <!-- div for social media picture -->
+                    <div class="socialmediapictures list-unstyled ">
+                        <li>
+                            <a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/"
+                                class="facebookicon col 3">
+                                <img src="../images/footer/facebook.png" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
+                                class="instagramicon col 3">
+                                <img src="../images/footer/instagram.png" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
+                                class="linkedinicon col 3">
+                                <img src="../images/footer/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
+                                class="youtubeicon col 3">
+                                <img src="../images/footer/youtube.png" alt="Youtube">
+                            </a>
+                        </li>
+                    </div>
+
+                    <!-- for temrs of use under social media -->
+                    <div class="terms list-unstyled">
+                        <ul class="socialmedialinks list-unstyled ">
+                            <li>
+                                <a href="./social_media_terms_of_use.html" target="_blank">Social Media Terms of Use</a>
+                                <span> | </span>
+                            </li>
+                            <li>
+                                <a href="./legal_notices.html" target="_blank">Legal Notices</a>
+                                <span> | </span>
+                            </li>
+                            <li>
+                                <a href="./privary_and_security.html" target="_blank">Privacy & Security</a>
+                            </li>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+    //Script for sticky navigation bar (web)
+    if ($(window).width() > 992) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 38) {
+                $('#nav-bg').addClass("fixed-top");
+                // add padding top to show content behind navbar
+                $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+            } else {
+                $('#nav-bg').removeClass("fixed-top");
+                // remove padding top from body
+                $('body').css('padding-top', '0');
+            }
+        });
+    } // end if
+
+    //Script to hide sticky navigation bar
+    if ($(window).width() > 992) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 400.73) {
+                $('#nav-bg').removeClass("fixed-top");
+
+                // add padding top to show content behind navbar
+                $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+            } else {
+                $('#nav-bg').removeClass("fixed-top");
+                // remove padding top from body
+                $('body').css('padding-top', '0');
+            }
+        });
+    }
+
+    //Script for sticky navigation bar (mobile)
+
+
+
+    // script for side navigation
+    /* Show the side nav */
+    function openNav() {
+        if ($(window).width() < 576) {
+            document.getElementById("sidenav").style.width = "70%";
+            document.getElementById("body-overlay").style.width = "100%";
+            document.getElementById("sidenav").css('z-index', '100000');
+        } else {
+            document.getElementById("sidenav").style.width = "40%";
+            document.getElementById("body-overlay").style.width = "100%"
+        }
+    }
+
+    /* Close the side nav */
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+        document.getElementById("body-overlay").style.width = "0%"
+    }
+
+    // dropdown display
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+
+
+
+
+    //end of script for navigation bar
+
+    // Script for multi item carousel
+    $('#recipeCarousel').carousel({
+        interval: 4000
+    })
+
+    $('.carousel .carousel-item').each(function () {
+        var minPerSlide = 3;
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < minPerSlide; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    // end of script for multi item carousel
+
+    // loan calculator script
+
+    $(document).ready(function () {
+        displayOutput()
+
+        //prevents user from entering anything other than . and numbers
+        $(".numericOnly").keypress(function (e) {
+
+            if (String.fromCharCode(e.keyCode).match(/[^0-9]/g)) return false;
+        });
+
+        $(".numericDecOnly").keypress(function (e) {
+
+            // if (String.fromCharCode(e.keyCode).match(/[0-9]+(\.[0-9][0-9]?)?/g)) return true;
+            if (String.fromCharCode(e.keyCode).match(/[^0-9.]/g)) return false;
+
+            var character = String.fromCharCode(e.keyCode)
+            var newValue = this.value + character;
+
+            if (isNaN(newValue) || hasDecimalPlace(newValue, 3)) {
+                return false;
+            }
+
+        });
+
+
+        //to clear input upon clicking the input box and put default if user leave input blank
+        var default_val = '';
+        $('input.clickEvent:text').focus(function () {
+            if ($(this).val() == $(this).data('default_val') || !$(this).data('default_val')) {
+                $(this).data('default_val', $(this).val());
+                $(this).val('');
+            }
+            BRvalidateFunction()
+            CPAvalidateFunction()
+        });
+
+        $('input.clickEvent:text').blur(function () {
+            if ($(this).val() == '') $(this).val($(this).data('default_val'));
+            BRvalidateFunction()
+            CPAvalidateFunction()
+        });
+
+        //event to bind function that validate input and disables button if invalid
+        $("input.clickEvent:text").on("change paste keyup", function () {
+            BRvalidateFunction()
+            CPAvalidateFunction()
+            setbar();
+        });
+
+
+
+    });
+
+
+    // call function to display the indicator for the slider
+    // document.getElementById("BRmonthlyRentRange").oninput = function () {
+    //     displayOutput()
+    //     BRvalidateFunction()
+    // }
+
+    document.getElementById("BRperiodStayRange").oninput = function () {
+        var BRval2 = document.getElementById("BRperiodStayRange").value
+        document.getElementById("BRperiodStayInput").value = BRval2
+
+        BRvalidateFunction()
+    }
+
+    document.getElementById("BRinterestRateRange").oninput = function () {
+        var BRval4 = document.getElementById("BRinterestRateRange").value //gets the oninput value
+        document.getElementById("BRinterestRateInput").value = BRval4//displays this value to the html page   
+
+        BRvalidateFunction()
+    }
+
+    document.getElementById("BRloanTenureRange").oninput = function () {
+        var BRval5 = document.getElementById("BRloanTenureRange").value //gets the oninput value
+        document.getElementById("BRloanTenureInput").value = BRval5//displays this value to the html page    
+
+        BRvalidateFunction()
+    }
+
+    //CPA
+    document.getElementById("CPAloanTenureRange").oninput = function () {
+        var CPAval3 = document.getElementById("CPAloanTenureRange").value
+        document.getElementById("CPAloanTenureInput").value = CPAval3
+
+        CPAvalidateFunction()
+    }
+
+    document.getElementById("CPAinterestRateRange").oninput = function () {
+
+        var CPAval4 = document.getElementById("CPAinterestRateRange").value
+        document.getElementById("CPAinterestRateInput").value = CPAval4
+
+        CPAvalidateFunction()
+    }
+
+
+    //function to display the indicator in the input box for the slider when the website launches
+    function displayOutput() {
+
+        //BR
+        // var BRval1 = document.getElementById("BRmonthlyRentRange").value
+        // document.getElementById("BRmonthlyRentInput").value = addCommas(parseInt(BRval1))
+
+        var BRval2 = document.getElementById("BRperiodStayRange").value
+        document.getElementById("BRperiodStayInput").value = BRval2
+
+        // var BRval3 = document.getElementById("BRpurchasePriceRange").value
+        // document.getElementById("BRpurchasePriceInput").value = addCommas(parseInt(BRval3)) 
+
+        var BRval4 = document.getElementById("BRinterestRateRange").value //gets the oninput value
+        document.getElementById("BRinterestRateInput").value = BRval4//displays this value to the html page   
+
+        var BRval5 = document.getElementById("BRloanTenureRange").value //gets the oninput value
+        document.getElementById("BRloanTenureInput").value = BRval5//displays this value to the html page    
+
+        //CPA
+
+        // var CPAval1 = document.getElementById("CPApropertyValInput").value
+        // document.getElementById("CPApropertyValInput").value = addCommas(parseInt(CPAval1))
+
+        // var CPAval2 = document.getElementById("CPAloanAmountInput").value
+        // document.getElementById("CPAloanAmountInput").value = addCommas(parseInt(CPAval2))
+
+        var CPAval3 = document.getElementById("CPAloanTenureRange").value
+        document.getElementById("CPAloanTenureInput").value = CPAval3
+
+        var CPAval4 = document.getElementById("CPAinterestRateRange").value
+        document.getElementById("CPAinterestRateInput").value = CPAval4
+
+
+    }
+
+    // validate input fpr br
+    function BRvalidateFunction() {
+        // var regexp = /^\d+\.\d{0,2}$/;
+        //variables to retrieve value from all variables in buy vs rent calculator
+        var a = parseInt(removeCommas(document.getElementById("BRmonthlyRentInput").value))
+        var b = parseInt(document.getElementById("BRperiodStayInput").value)
+        var c = parseInt(removeCommas(document.getElementById("BRpurchasePriceInput").value))
+        var d = parseFloat(document.getElementById("BRinterestRateInput").value)
+        var e = parseInt(document.getElementById("BRloanTenureInput").value)
+
+        console.log("offf")
+
+        var array = [
+            {
+                name: "monthlyRent",
+                value: a
+            },
+            {
+                name: "periodStay",
+                value: b
+            }, {
+                name: "purchasePrice",
+                value: c
+            }, {
+                name: "interestRate",
+                value: d
+            }, {
+                name: "loanTenure",
+                value: e
+            }]
+
+        var trueFalseArr = []
+        //validating input according to each condition
+
+        $.each(array, function (index, element) {
+            if (array[index].name == "monthlyRent") {
+                if (isNaN(array[index].value)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg1").text("Value is not a number")
+                }
+                else if (array[index].value > 100000000) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg1").text("Value cannot be more than 100million")
+                }
+
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg1").text("Value cannot be less than or equal to 0")
+                }
+                else {
+                    console.log("valid1")
+                    $("#BRerrorMsg1").text("")
+                    trueFalseArr.push("true")
+                }
+            }
+            else if (array[index].name == "periodStay") {
+                if (isNaN(array[index].value)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg2").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg2").text("Value cannot be less than 1")
+                }
+                else if (array[index].value > 99) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg2").text("Value cannot be more than 99")
+                }
+                else {
+                    console.log("valid2")
+                    $("#BRerrorMsg2").text("")
+                    $("#BRperiodStayRange").val(b)
+                    trueFalseArr.push("true")
+
+                }
+
+            }
+            else if (array[index].name == "purchasePrice") {
+                if (isNaN(array[index].value)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg3").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg3").text("Value cannot be less than or equal to 0")
+                }
+                else if (array[index].value > 100000000) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg3").text("Value cannot be more than 100million")
+                }
+                else {
+                    console.log("valid2")
+                    $("#BRerrorMsg3").text("")
+                    trueFalseArr.push("true")
+                }
+
+            }
+            else if (array[index].name == "interestRate") {
+                if (isNaN(d)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg4").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg4").text("Value cannot be less than or equal to 0")
+                }
+                else if (array[index].value > 5) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg4").text("Value cannot be more than 5")
+                }
+                else {
+                    console.log("valid2")
+                    $("#BRerrorMsg4").text("")
+                    $("#BRinterestRateRange").val(d)
+                    trueFalseArr.push("true")
+                }
+
+            }
+            else if (array[index].name == "loanTenure") {
+                if (isNaN(array[index].value)) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg5").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg5").text("Value cannot be less than 1")
+                }
+                else if (array[index].value > 30) {
+                    $("#BRcalculateBtn").attr("disabled", true);
+                    $("#BRerrorMsg5").text("Value cannot be more than 30")
+                }
+                else {
+                    console.log("valid2")
+                    $("#BRerrorMsg5").text("")
+                    trueFalseArr.push("true")
+                    $("#BRloanTenureRange").val(e)
+
+                }
+
+            }
+        })
+
+        //if all 5 inputs are valid
+        if (trueFalseArr.length == 5) {
+            $("#BRcalculateBtn").attr("disabled", false);
+
+            // $("#BRperiodStayRange").val(b)
+            // $("#BRinterestRateRange").val(d)
+            // $("#BRloanTenureRange").val(e)
+        }
+    }
+
+
+    //to calculate the buy amount vs rent amount
+    function BRcalculateFunction() {
+        $(".BRbeforeCalculate").hide()
+        $(".BRafterCalculate").show()
+
+        //Rental Information
+        var a = parseInt(removeCommas(document.getElementById("BRmonthlyRentInput").value))
+        var b = parseInt(document.getElementById("BRperiodStayInput").value)
+        var c = parseInt(removeCommas(document.getElementById("BRpurchasePriceInput").value))
+        var d = parseFloat(document.getElementById("BRinterestRateInput").value)
+        var e = parseInt(document.getElementById("BRloanTenureInput").value)
+
+        //Total Rent
+        var totalRent = a * (b * 12)
+        console.log("total rent = " + totalRent)
+
+        //Property Loan Information
+
+        var propertyLoan = c + (c * ((d / 100) + (e * 0.002)))
+        console.log("property loan = " + propertyLoan)
+        // var className = document.getElementsByClassName("savings-buy-text")[0].className
+        // console.log(className)
+        //compare both sum and calculate differences
+        var difference = 0
+        if (totalRent > propertyLoan) {
+            difference = Math.round(totalRent - propertyLoan)
+
+            document.getElementById("BRbuyorrent").innerHTML = '<span class="calcResult"> Buying </span> is the better option.'
+
+            document.getElementById("BRdescription").innerHTML = 'There would be savings of <span class="calcResult"> $' + addCommas(difference) + "</span> over " + e + " years if you buy a property."
+        }
+
+        else if (totalRent < propertyLoan) {
+            difference = Math.round(propertyLoan - totalRent)
+
+            document.getElementById("BRbuyorrent").innerHTML = '<span class="calcResult ">Renting</span> is the better option'
+
+            document.getElementById("BRdescription").innerHTML = 'There would be savings of <br> <span class="calcResult"> $' + addCommas(difference) + " </span><br>over " + e + " years if you rent a property."
+        }
+
+        //table code
+        var BOverallNumber = 3.077 * propertyLoan
+        var ROverallNumber = totalRent + 10000
+
+
+        //var for each section
+        var BsetUpCost = parseInt(0.218 * BOverallNumber)
+        var BrunningCost = parseInt(0.772 * BOverallNumber)
+        var BopportunityCost = parseInt(0.007 * BOverallNumber)
+
+        var RrunningCost = parseInt(0.986 * totalRent)
+        var RopportunityCost = parseInt(0.004 * totalRent)
+
+
+
+
+
+
+
+
+
+
+
+        //generate table to show details
+        //     document.getElementById("BRtbody").innerHTML = " <div class=''> <tr> <th>Set Up Costs</th> <th>$20,000</th> <th>$" + addCommas(BsetUpCost) + "</th> </tr> <tr> <td>Downpayment/Deposit</td> <td>$10,000</td> <td>$" + addCommas(parseInt(0.553 * BsetUpCost)) + "</td> </tr> <tr> <td>Agent Fees</td> <td>$10,000</td> <td>$" + addCommas(parseInt(0.004 * BsetUpCost)) + "</td> </tr> <tr> <td>Legal Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.009 * BsetUpCost)) + "</td> </tr> <tr> <td>Mortgage Duty</td> <td>-</td> <td>$" + addCommas(parseInt(0.003 * BsetUpCost)) + "</td> </tr> <tr> <td>Buyer Stamp Duty</td> <td>-</td> <td>$" + addCommas(parseInt(0.064 * BsetUpCost)) + "</td> </tr> <tr> <td>GST</td> <td>-</td> <td>$" + addCommas(parseInt(0.193 * BsetUpCost)) + "</td> </tr> <tr> <td>Initial Renovation</td> <td>-</td> <td>$" + addCommas(parseInt(0.174 * BsetUpCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Running Costs</th> <th>$" + addCommas(RrunningCost) + "</th> <th>$" + addCommas(BrunningCost) + "</th> </tr> <tr> <td>Rent Payments</td> <td>$" + addCommas(RrunningCost) + "</td> <td>-</td> </tr> <tr> <td>Mortgage Payments</td> <td>-</td> <td>$" + addCommas(parseInt(0.848 * BrunningCost)) + "</td> </tr> <tr> <td>Property Tax</td> <td>-</td> <td>$" + addCommas(parseInt(0.087 * BrunningCost)) + "</td> </tr> <tr> <td>Maintenance Costs</td> <td>-</td> <td>$" + addCommas(parseInt(0.012 * BrunningCost)) + "</td> </tr> <tr> <td>Facilities Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.0053 * BrunningCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Opportunity Costs</th> <th>$" + addCommas(RopportunityCost) + "</th> <th>$" + addCommas(BopportunityCost) + "</th> </tr> <tr> <td>Set Up</td> <td>$" + addCommas(parseInt(0.044 * RopportunityCost)) + "</td> <td>$" + addCommas(parseInt(0.254 * BopportunityCost)) + "</td> </tr> <tr> <td>Running Costs</td> <td>$" + addCommas(parseInt(0.956 * RopportunityCost)) + "</td> <td>$" + addCommas(parseInt(0.746 * BopportunityCost)) + "</td> </tr> </div> <div class=''> <tr> <th>Net Proceeeds</th> <th>$(" + addCommas((0.675 * BOverallNumber) - 2500 - (0.002 * propertyLoan)) + ")</th> <th></th> </tr> <tr> <td>Proceeds from sale</td> <td>$10,000</td> <td>$(" + addCommas(parseInt(0.675 * BOverallNumber)) + ")</td> </tr> <tr> <td>Seller Stamp Duty</td> <td>-</td> <td>-</td> </tr> <tr> <td>Agent Fees</td> <td>-</td> <td>$" + addCommas(parseInt(0.002 * c)) + "</td> </tr> <tr> <td>Legal Fees</td> <td>-</td> <td>$2,500</td> </tr> </div> <tr> <th>Total Cost</th> <td>$" + addCommas(propertyLoan) + "</td> <td>$" + addCommas(totalRent) + "</td> </tr>"
+        // }
+
+        document.getElementById("BRtbody").innerHTML = '<tr data-toggle="collapse" data-target="#collapse1" data-parent="#BRtable"> <th> Set Up Costs <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 9l6 6 6-6" /></svg></th> <th class="text-center">$20,000</th> <th class="text-center">$' + addCommas(BsetUpCost) + '</th> </tr> <tr id="collapse1" class="collapse"> <td>Downpayment/Deposit <br> Agent Fees <br> Legal Fees <br> Mortgage Duty <br> Buyer Stamp Duty <br> GST <br> Initial Renovation </td> <td class="text-center"> $10,000 <br> $10,000 <br> - <br> - <br> - <br> - <br> - </td> <td class="text-center"> $' + addCommas(parseInt(0.553 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.004 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.009 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.003 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.064 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.193 * BsetUpCost)) + ' <br> $' + addCommas(parseInt(0.174 * BsetUpCost)) + ' </td> </tr> <tr data-toggle="collapse" data-target="#collapse2" data-parent="#BRtable"> <th> Running Costs <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 9l6 6 6-6" /></svg></th> <th class="text-center">$' + addCommas(RrunningCost) + '</th> <th class="text-center">$' + addCommas(BrunningCost) + '</th> </tr> <tr id="collapse2" class="collapse"> <td> Rent Payments <br> Mortgage Payments <br> Property Tax <br> Maintenance Costs <br> Facilities Fees </td> <td class="text-center"> $' + addCommas(RrunningCost) + '<br> - <br> - <br> - <br> - <br> </td> <td class="text-center"> - <br> $ ' + addCommas(parseInt(0.848 * BrunningCost)) + ' <br> $ ' + addCommas(parseInt(0.087 * BrunningCost)) + ' <br> $ ' + addCommas(parseInt(0.012 * BrunningCost)) + ' <br> $ ' + addCommas(parseInt(0.0053 * BrunningCost)) + ' </td> </tr> <tr data-toggle="collapse" data-target="#collapse3" data-parent="#BRtable"> <th> Opportunity Costs <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 9l6 6 6-6" /></svg></th> <th class="text-center">$ ' + addCommas(RopportunityCost) + ' </th> <th class="text-center">$ ' + addCommas(BopportunityCost) + ' </th> </tr> <tr id="collapse3" class="collapse"> <td>Set Up <br> Running Costs <br> </td> <td class="text-center"> $ ' + addCommas(parseInt(0.044 * RopportunityCost)) + ' <br> $ ' + addCommas(parseInt(0.956 * RopportunityCost)) + ' </td> <td class="text-center"> $ ' + addCommas(parseInt(0.254 * BopportunityCost)) + ' <br> $ ' + addCommas(parseInt(0.746 * BopportunityCost)) + ' </td> </tr> <tr data-toggle="collapse" data-target="#collapse4" data-parent="#BRtable"> <th> Net Proceeds <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M6 9l6 6 6-6" /></svg></th> <th class="text-center">$(' + addCommas(Math.round((0.675 * BOverallNumber) - 2500 - (0.002 * propertyLoan))) + ')</th> <th class="text-center"> </th> </tr> <tr id="collapse4" class="collapse"> <td> Proceeds from sale<br> Seller Stamp Duty <br> Agent Fees <br> Legal Fees <br> </td> <td class="text-center"> $10,000 <br> - <br> - <br> - <br> </td> <td class="text-center"> $(' + addCommas(parseInt(0.675 * BOverallNumber)) + ') <br> - <br> $' + addCommas(parseInt(0.002 * c)) + ' <br> $2,500 </td> </tr> <tr class="table-grey"> <th>Total Cost</th> <th class="text-center">$' + addCommas(propertyLoan) + '</th> <th class="text-center">$' + addCommas(totalRent) + '</th> </tr>'
+
+    }
+
+    //validate input for cpa
+    function CPAvalidateFunction() {
+        var a = parseInt(removeCommas(document.getElementById("CPApropertyValInput").value))
+        var b = parseInt(removeCommas(document.getElementById("CPAloanAmountInput").value))
+        var c = parseInt(document.getElementById("CPAloanTenureInput").value)
+        var d = parseFloat(document.getElementById("CPAinterestRateInput").value)
+
+        var array = [
+            {
+                name: "propertyVal",
+                value: a
+            },
+            {
+                name: "loanAmount",
+                value: b
+            }, {
+                name: "loanTenure",
+                value: c
+            }
+            , {
+                name: "interestRate",
+                value: d
+            }
+        ]
+        var trueFalseArr = []
+
+        $.each(array, function (index, element) {
+            if (array[index].name == "propertyVal") {
+                if (isNaN(array[index].value)) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg1").text("Value is not a number")
+                }
+                else if (array[index].value > 999999999) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg1").text("Value cannot be more than 999,999,999")
+                }
+
+                else if (array[index].value < 100000) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg1").text("Value cannot be less than or equal to 100,000")
+                }
+                else {
+                    $("#CPAerrorMsg1").text("")
+                    trueFalseArr.push("true")
+                }
+
+            }
+            else if (array[index].name == "loanAmount") {
+                if (isNaN(array[index].value)) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg2").text("Value is not a number")
+                }
+                else if (array[index].value < 80000) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg2").text("Value cannot be less than 80,000")
+                }
+                else if (array[index].value > 99999999) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg2").text("Value cannot be more than 99,999,999")
+                }
+                else {
+                    $("#CPAerrorMsg2").text("")
+                    trueFalseArr.push("true")
+                }
+            }
+            else if (array[index].name == "loanTenure") {
+                if (isNaN(array[index].value)) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg3").text("Value is not a number")
+                }
+                else if (array[index].value < 1) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg3").text("Value cannot be less than 1")
+                }
+                else if (array[index].value > 30) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg3").text("Value cannot be more than 30")
+                }
+                else {
+                    $("#CPAerrorMsg3").text("")
+                    trueFalseArr.push("true")
+                    $("#CPAloanTenureRange").val(c)
+
+                }
+            }
+            else if (array[index].name == "interestRate") {
+                if (isNaN(array[index].value)) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg4").text("Value is not a number")
+                }
+                else if (array[index].value <= 0) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg4").text("Value cannot be less than 0")
+                }
+                else if (array[index].value > 5) {
+                    $("#CPAcalculateBtn").attr("disabled", true);
+                    $("#CPAerrorMsg4").text("Value cannot be more than 5")
+                }
+                else {
+                    $("#CPAerrorMsg4").text("")
+                    trueFalseArr.push("true")
+                    $("#CPAinterestRateRange").val(d)
+
+                }
+            }
+
+        })
+
+        if (trueFalseArr.length == 4) {
+            $("#CPAcalculateBtn").attr("disabled", false);
+
+
+            // $("#CPAloanTenureRange").val(c)
+            // $("#CPAinterestRateRange").val(d)
+
+
+        }
+    }
+
+    //to calcualte commercial property affordability 
+    function CPAcalculateFunction() {
+
+        $(".CPAbeforeCalculate").hide()
+        $(".CPAafterCalculate").show()
+
+        var a = parseInt(removeCommas(document.getElementById("CPApropertyValInput").value))
+        var b = parseInt(removeCommas(document.getElementById("CPAloanAmountInput").value))
+        var c = parseInt(document.getElementById("CPAloanTenureInput").value)
+        var d = parseFloat(document.getElementById("CPAinterestRateInput").value)
+
+        var r = d / 100
+        var n = c * 12
+
+        var monthlyPayment = b * (((r / 12) * (Math.pow((1 + (r / 12)), n)) / ((Math.pow((1 + (r / 12)), n) - 1))))
+
+        document.getElementById("CPAdescription").innerHTML = 'The estimated repayment amount would be <span class="calcResult"> $' + addCommas(Math.round(monthlyPayment)) + " </span>/month."
+
+
+    }
+
+    // add commas after every 3 digit from the decimal place
+    function addCommas(x) {
+        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    //remove commas so that it can be inserted into the calculate function
+    function removeCommas(str) {
+        while (str.search(",") >= 0) {
+            str = (str + "").replace(',', '');
+        }
+        return str;
+    };
+
+    //ensures that interest rate does not exceed two decimal place
+    function hasDecimalPlace(value, x) {
+        var pointIndex = value.indexOf('.');
+        return pointIndex >= 0 && pointIndex < value.length - x;
+    }
+
+
+    var slider = $(".slider");
+    var brinterestSlider = $("#BRinterestRateRange");
+    var brtenureSlider = $("#BRloanTenureRange");
+    var periodStaySlider = $("#BRperiodStayRange");
+    var cpatenureSlider = $("#CPAloanTenureRange");
+    var cpainterestSlider = $("#CPAinterestRateRange");
+
+    var brinterestProgressBar = $(".bar.brinterest-bar .fill");
+    var brtenureProgressBar = $(".bar.brtenure-bar .fill");
+    var periodStayProgressBar = $(".bar.periodStay-bar .fill");
+    var cpatenureProgressBar = $(".bar.cpatenure-bar .fill");
+    var cpainterestProgressBar = $(".bar.cpainterest-bar .fill");
+
+    function setbar() {
+        // progressBar.css('width', slider.val() + "%");
+        periodStayProgressBar.css('width', periodStaySlider.val() + "%");
+        brinterestProgressBar.css('width', brinterestSlider.val() * 20 + "%");
+        brtenureProgressBar.css('width', brtenureSlider.val() * 3.23 + "%");
+        cpatenureProgressBar.css('width', cpatenureSlider.val() * 3.23 + "%");
+        cpainterestProgressBar.css('width', cpainterestSlider.val() * 20 + "%");
+
+    }
+
+    slider.on("input", setbar);
+    setbar();
+
+
+</script>
+
+
+</html>

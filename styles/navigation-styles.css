@@ -211,7 +211,7 @@ body {
         margin: 0;
     }
     .mainnav .first-menu li {
-        padding: 12px 20px;
+        padding: 0 20px 0 0;
     }
     .navbar-expand-lg .navbar-nav .nav-link {
         padding: 1.25rem 1rem;
@@ -275,8 +275,7 @@ body {
         margin-top: 6px;
     }
     #main-navbar .dropdown-item {
-        padding-left: 0;
-        padding-right: 10px;
+        padding: 12px 20px;
         white-space: normal;
     }
     .dropdown-item:hover {
@@ -296,5 +295,12 @@ body {
 
     #nav-bg .active{
         border-bottom: red 2px solid;
+    }
+}
+
+@media (min-width: 1200px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 1.25rem 1.75rem;
+        box-sizing: border-box;
     }
 }
