@@ -1,3 +1,6 @@
+.carousel-inner .card {
+    height:100%;
+}
 .breadcrumb a {
     color:#002469
 }
