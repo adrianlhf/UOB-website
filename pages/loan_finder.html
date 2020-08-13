@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-  <title>UOB Business Loan Finder</title>
+  <title>UOB Business Loans Finder</title>
   <link rel="stylesheet" href="../styles/navigation-styles.css">
   <link rel="stylesheet" href="../styles/c-styles.css">
   <link rel="stylesheet" href="../styles/footer-styles.css">
@@ -942,6 +942,21 @@
 
     </div>
   </header> <!-- end of navigation-->
+  <div class="justify-content-left d-none d-md-block ">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white pl-4 ">
+            <li class="breadcrumb-item"><a href="../index.html">Business</a></li>
+            <li class="breadcrumb-item"><a class="text-decoration-none">Tools</a></li>
+            <li class="breadcrumb-item"><a href="./uob_business_loan.html">Loans</a></li>
+            <li class="breadcrumb-item active" aria-current="page">UOB Business Loans Finder
+            </li>
+        </ol>
+
+        <h1 class="text-left pl-4 pb-4">UOB Business Loans Comparison
+
+        </h1>
+    </nav>
+</div>
   <div class="container">
     <h1 class="my-4"> Find the perfect loan for your business </h1>
 
@@ -1286,7 +1301,7 @@
   // array to store information of loan (id, name, description, link)
 
   var loan = [
-    { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle.  ", url: "./vehicle_and _machinery-financing.html", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "Low interest rates", img: "../images/allloans/equipment-vehicle-loan.jpg" },
+    { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle.  ", url: "./vehicle_and_machinery-financing.html", amount: "Commercial Vehicle Financing - Up to 100% of the market valuation or purchase price of new commercial vehicle <br> Machinery & Equipment Financing", tenure: "Commercial Vehicle Financing = Up to 7 years <br> Machinery & Equipment Financing - Up to 5 years ", category: "Equipment & Vehicle", interestRate: "Low interest rates", img: "../images/allloans/equipment-vehicle-loan.jpg" },
 
     { loanID: 1, name: "SME Equipment Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "./government_assistant_scheme.html", amount: "Financing of up to 90% of the market valuation or purchase price of your new equipment", tenure: "Up to 8 years", category: "Equipment & Vehicle", interestRate: "- Minimum interest of 4.25% for loan tenure of 4 years and below <br>- Minimum interest of 4.75% for loan tenure of more than 4 years", img: "../images/allloans/sme-equipment-loan.jpg" },
 
@@ -1304,7 +1319,7 @@
 
 
   // var loan = [
-  //   { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle. Facility installment of up to 7 years and Hire Purchase financing available for commercial vehicle and commercial vehicle with renewed COE. Obtain ownership of the asset upon fulfilling payment of loan installment", url: "./vehicle_and _machinery-financing.html" },
+  //   { loanID: 0, name: "Equipment Vehicle Loan", description: "Financing of up to 100% of the market valuation or purchase price of new commercial vehicle. Facility installment of up to 7 years and Hire Purchase financing available for commercial vehicle and commercial vehicle with renewed COE. Obtain ownership of the asset upon fulfilling payment of loan installment", url: "./vehicle_and_machinery-financing.html" },
   //   { loanID: 1, name: "SME Equipment Loan", description: " Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time ", url: "./government_assistant_scheme.html" },
   //   { loanID: 2, name: "Temporary Bridging Loan", description: "Enjoy preferential low interest rates, repayment period of up to 5 years and option to service interest only for a fixed period of time", url: "./government_assistant_scheme.html" },
   //   { loanID: 3, name: "Business Property Loan", description: "Low Interest Rates on your new Business Property Loan, or when you refinance with us and higher loan quantum to help you get the most out of your property.", url: "./business_property_and_equity_loan.html" },
