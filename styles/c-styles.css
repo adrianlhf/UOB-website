@@ -5,31 +5,32 @@
 }
 h5{
     font-weight: bold;
+
 }
 
+h5 {
+    font-weight: bold;
+}
 
-hr{
+hr {
     margin-top: 50px;
 }
 
-.notbold{
+.notbold {
     font-weight: normal;
-    
 }
 
-.nobulletpoint{
+.nobulletpoint {
     list-style: none;
 }
 
-
 body {
     font-family: "open sans", Arial, Helvetica, sans-serif;
-
 }
 
 h1 {
     font-size: 16px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
 }
 
@@ -46,16 +47,14 @@ h1 {
     font-size: 14px;
 }
 
-#webapplynowbutton{
+#webapplynowbutton {
     position: absolute;
     bottom: 15%;
     left: 6%;
     font-size: 12px;
-
 }
 
-.btn-1:focus,
-.btn-2:focus {
+.btn-1:focus, .btn-2:focus {
     box-shadow: none;
 }
 
@@ -78,6 +77,7 @@ h1 {
 /* end of button styles */
 
 /* Styles for all section */
+
 .section {
     padding-top: 6%;
 }
@@ -85,6 +85,7 @@ h1 {
 /* end of styles for all section */
 
 /* banner styles */
+
 .main-banner .description {
     bottom: 5%;
     position: absolute;
@@ -101,6 +102,7 @@ h1 {
 .nav-heading{
     width:auto;
 }
+
 .nav-heading a {
     font-size: 12px;
     font-weight: bold;
@@ -124,16 +126,17 @@ h1 {
     border-bottom: 5px solid #002469;
 }
 
-#myScrollspy .col-3{
+
+#myScrollspy .col-3 {
     padding-left: 0;
     padding-right: 0;
 }
 
 /* end of content navbar styles */
 
+/* Styles for FAQ */
 
-  /* Styles for FAQ */
-  .accordion .opened::before {
+.accordion .opened::before {
     content: "-";
     padding: 0px 15px;
     border: 1px solid #002469;
@@ -165,19 +168,16 @@ h1 {
 /* end of styles for FAQ */
 
 /*  Styles for the layouts */
-    
-    /* layout 2 and slider 1 styles */
-    .layout2-title,
-    .slider-title {
-        font-size: 16px;
-    }
 
-    .layout2-p,
-    .slider-p {
-        font-size: 13px;
-    }
+/* layout 2 and slider 1 styles */
 
-    /* end of layout 2 and slider 1 styles */
+.layout2-title, .slider-title {
+    font-size: 16px;
+}
+
+.layout2-p, .slider-p {
+    font-size: 13px;
+}
 
     
     .layout2.card-deck, .layout3.card-deck, .layout4.card-deck, .layout5.card-deck{
@@ -198,11 +198,15 @@ h1 {
         background-color: #eeeeee;
         color: rgb(33,37,41);
     }
+/* end of layout 2 and slider 1 styles */
+
+
 
     .breadcrumb a {
         color:#002469
     }
 /* Small devices (landscape phones, 576px and up) */
+
 @media (min-width: 375px) {
     .main-banner .description {
         bottom: 10%;
@@ -213,42 +217,31 @@ h1 {
     .main-banner .description {
         bottom: 15%;
     }
-
     .main-banner .description h1 {
         font-size: 20px;
     }
-
     .btn-banner {
-       font-size: 20px;
+        font-size: 20px;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
+
 @media (min-width: 768px) {
-
-
-   
-
     h1 {
         font-size: 26px;
     }
-
     p {
         font-size: 16px;
     }
-
     .nav-heading a {
         font-size: 16px;
     }
-
-
     /* Styles for all content section */
     .section {
         padding-top: 4%;
     }
-
     /* Styles for banner */
-
     .main-banner .description {
         position: absolute;
         right: 1%;
@@ -259,25 +252,22 @@ h1 {
 
     /* Multi item carousel styles */
     /* to display 3 */
-    .carousel-inner .carousel-item-right.active,
-    .carousel-inner .carousel-item-next {
+    .carousel-inner .carousel-item-right.active, .carousel-inner .carousel-item-next {
         transform: translateX(33.333%);
     }
-
-    .carousel-inner .carousel-item-left.active,
-    .carousel-inner .carousel-item-prev {
+    .carousel-inner .carousel-item-left.active, .carousel-inner .carousel-item-prev {
         transform: translateX(-33.333%);
     }
 }
 
 /* Large devices (desktops, 992px and up) */
+
 @media (min-width: 992px) {
     .main-banner .description {
         top: 10%;
        
     }
-
-    #webapplynowbutton{
+    #webapplynowbutton {
         position: absolute;
         bottom: 20%;
         left: 6%;
@@ -289,25 +279,24 @@ h1 {
     }
 
     .layout2.card-deck .card, .layout3.card-deck .card, .layout4.card-deck .card, .layout5.card-deck .card{
+
         margin-bottom: 0px;
     }
-
     .layout3 {
         width: 75%;
     }
-
     .layout3-card {
         width: 25%;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
+
 @media (min-width: 1200px) {
     .main-banner .description {
         top: 18%;
     }
-
-    #webapplynowbutton{
+    #webapplynowbutton {
         position: absolute;
         bottom: 22%;
         left: 6%;
@@ -316,35 +305,27 @@ h1 {
 }
 
 /* Multi item carousel styles */
+
 @media (max-width: 768px) {
     .carousel-inner .carousel-item>div {
         display: none;
-
     }
-
     .carousel-inner .carousel-item>div:first-child {
         display: block;
-
     }
-
-    
 }
 
-
 /* Multi Item Carousel */
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
+
+.carousel-inner .carousel-item.active, .carousel-inner .carousel-item-next, .carousel-inner .carousel-item-prev {
     display: flex;
 }
 
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left {
+.carousel-inner .carousel-item-right, .carousel-inner .carousel-item-left {
     transform: translateX(0);
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+.carousel-control-prev-icon, .carousel-control-next-icon {
     text-align: center;
     vertical-align: middle;
     height: 25px;
@@ -359,6 +340,7 @@ h1 {
 .carousel-a {
     z-index: 0;
 }
+
 .MultiCarousel {
     overflow: hidden;
     padding: 15px 40px;
@@ -386,8 +368,7 @@ h1 {
     padding: auto;
 }
 
-.MultiCarousel .leftLst,
-.MultiCarousel .rightLst {
+.MultiCarousel .leftLst, .MultiCarousel .rightLst {
     position: absolute;
     border-radius: 50%;
     top: calc(50% - 20px);
@@ -396,8 +377,7 @@ h1 {
     padding: 10px;
 }
 
-.MultiCarousel .leftLst:hover,
-.MultiCarousel .rightLst:hover {
+.MultiCarousel .leftLst:hover, .MultiCarousel .rightLst:hover {
     background: #00377B;
 }
 
@@ -409,20 +389,15 @@ h1 {
     right: 0;
 }
 
-.MultiCarousel .leftLst.over,
-.MultiCarousel .rightLst.over {
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
     pointer-events: none;
     background: #ccc;
 }
 
- /* Change image sizing */
- .MultiCarousel .MultiCarousel-inner .img-50 {
+/* Change image sizing */
+
+.MultiCarousel .MultiCarousel-inner .img-50 {
     width: 50%;
 }
 
 /* end of multi item carousel */
-
-
-
-
-
