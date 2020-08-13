@@ -297,6 +297,7 @@ body {
         border-bottom: red 2px solid;
     }
 }
+
 @media (min-width: 1200px){
     .navbar-expand-lg .navbar-nav .nav-link {
         padding: 1.25rem 1.75rem;

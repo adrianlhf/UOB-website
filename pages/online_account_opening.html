@@ -704,8 +704,20 @@
         </div>
       </header> <!-- end of navigation-->
 
-      <h1 class="text-left py-3 ml-4">Online Account Opening
-      </h1>
+      <div class="justify-content-left d-none d-md-block ">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-white pl-4 ">
+            <li class="breadcrumb-item"><a href="./index.html">Business</a></li>
+            <li class="breadcrumb-item"><a href="./start.html">Start</a></li>
+            <li class="breadcrumb-item ">Open a Business Banking Account</li>
+            <li class="breadcrumb-item active" aria-current="page">Online Account Opening
+            </li>
+          </ol>
+      
+          <h1 class="text-left pl-4 pb-4">Online Account Opening
+          </h1>
+        </nav>
+      </div>
   
   
     
@@ -1140,7 +1152,7 @@
 
 
                     </div>
-                    <div class="card-footer bg-white border-0"><a href="https://forms.uob.com.sg/business-banking/accounts/apply?productCode=BB-EBIZ" class="btn btn-1">Apply Now</a></div>
+                    <div class="card-footer bg-white border-0"><a target="_blank" href="https://forms.uob.com.sg/business-banking/accounts/apply?productCode=BB-EBIZ" class="btn btn-1">Apply Now</a></div>
                 </div>
 
                 <div class="card rounded-0">
@@ -1172,7 +1184,7 @@
 
 
                     </div>
-                    <div class="card-footer bg-white border-0"><a href="https://forms.uob.com.sg/business-banking/accounts/apply?productCode=BB-BIZTRANSACT" class="btn btn-1">Apply Now</a></div>
+                    <div class="card-footer bg-white border-0"><a target="_blank" href="https://forms.uob.com.sg/business-banking/accounts/apply?productCode=BB-BIZTRANSACT" class="btn btn-1">Apply Now</a></div>
                 </div>
                 <div class="card rounded-0">
                     <img class="img-fluid w-100" src="../images/onlineaccountopening/uobsgdcurrentaccout.jpg"
@@ -1200,7 +1212,7 @@
 
 
                     </div>
-                    <div class="card-footer bg-white border-0"><a href="https://forms.uob.com.sg/business-banking/accounts/apply?productCode=BB-SGD-CURRENT" class="btn btn-1">Apply Now</a></div>
+                    <div class="card-footer bg-white border-0"><a target="_blank" href="https://forms.uob.com.sg/business-banking/accounts/apply?productCode=BB-SGD-CURRENT" class="btn btn-1">Apply Now</a></div>
                 </div>
                 <div class="card rounded-0">
                     <img class="img-fluid w-100" src="../images/onlineaccountopening/uobglobalcurrencyaccount.jpg"
@@ -1227,7 +1239,7 @@
                         </p>
 
                     </div>
-                    <div class="card-footer bg-white border-0"><a href="https://forms.uob.com.sg/business-banking/accounts/apply?productCode=BB-GCA" class="btn btn-1">Apply Now</a></div>
+                    <div class="card-footer bg-white border-0"><a  target="_blank" href="https://forms.uob.com.sg/business-banking/accounts/apply?productCode=BB-GCA" class="btn btn-1">Apply Now</a></div>
                 </div>
 
             </div>
@@ -1340,62 +1352,70 @@
 
 
             <!-- You may be interested section -->
-            <div class="interestedsection section" id="interestedsection">
-                <h1 class=" pb-2"> You May Be Interested In</h1>
-                <div class="row mx-auto my-auto">
-                    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-                        <div class="carousel-inner w-100" role="listbox">
-                            <div class="carousel-item active">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid card-img-top" src="../images/image1.jpg" alt="CyberSecurity">
-                                        <div class="card-body"> CyberSecurity </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid card-img-top" src="../images/image2.jpg"
-                                            alt="E-transactions">
-                                        <div class="card-body"> E-transactions </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid card-img-top" src="../images/image3.jpg" alt="Payroll">
-                                        <div class="card-body"> Payroll Services </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <img class="img-fluid card-img-top" src="../images/image4.jpg" alt="Accounting">
-                                        <div class="card-body"> Accounting </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev w-auto carousel-a" href="#recipeCarousel" role="button"
-                            data-slide="prev">
-                            <div class="c-icon rounded-circle">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only"></span>
-                            </div>
-                        </a>
-                        <a class="carousel-control-next w-auto carousel-a" href="#recipeCarousel" role="button"
-                            data-slide="next">
-                            <div class="c-icon rounded-circle">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only"></span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div class="interestedsection section pb-4" id="interestedsection">
+              <h1 class="pb-2"> You May Be Interested In</h1>
+              <div class="row mx-auto my-auto">
+                  <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                      <div class="carousel-inner w-100" role="listbox">
+                          <div class="carousel-item active">
+                              <div class="col-md-4">
+                                  <div class="card">
+                                      <a href="./bizdrive.html"><img class="img-fluid card-img-top"
+                                              src="../images/accounting/interested1.jpg" alt="CyberSecurity"></a>
+                                      <div class="card-body"> BizDrive Commercial Vehicle Insurance </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="carousel-item">
+                              <div class="col-md-4">
+                                  <div class="card">
+                                      <a href="./vehicle_and _machinery-financing.html/"> <img
+                                              class="img-fluid card-img-top"
+                                              src="../images/accounting/interested2.jpg" alt="E-transactions"></a>
+                                      <div class="card-body"> Commercial Vehicle Loan</div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="carousel-item">
+                              <div class="col-md-4">
+                                  <div class="card">  
+                                      <a href="./employee_benefits.html"><img
+                                              class="img-fluid card-img-top"
+                                              src="../images/accounting/interested3.jpg" alt="Payroll"></a>
+                                      <div class="card-body"> Employee Benefits </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="col-md-4">
+                                  <div class="card">
+                                      <a href="./bizcare.html"> <img
+                                              class="img-fluid card-img-top"
+                                              src="../images/accounting/interested4.jpg" alt="UOB Business App"></a>
+                                      <div class="card-body"> Bizcare General Insurance </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <a class="carousel-control-prev w-auto carousel-a" href="#recipeCarousel" role="button"
+                          data-slide="prev">
+                          <div class="c-icon rounded-circle">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only"></span>
+                          </div>
+                      </a>
+                      <a class="carousel-control-next w-auto carousel-a" href="#recipeCarousel" role="button"
+                          data-slide="next">
+                          <div class="c-icon rounded-circle">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only"></span>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          </div>
 
         </div>
 
@@ -1421,105 +1441,104 @@
 
     <!-- Footer -->
     <div class="border-top">
-        <div class="container">
-            <footer class="footer-content row pb-5">
-                <!-- div for words links -->
-                <div class=" left col-md-7 col-sm-12 col-xs-12">
-                    <!-- list for links -->
-                    <ul class="links list-unstyled ">
-                        <li>
-                            <a href="./about_us.html" target="_blank">About Us</a>
-                            <span> | </span>
-                        </li>
+      <div class="container">
+          <footer class="footer-content row pb-5">
+              <!-- div for words links -->
+              <div class=" left col-md-7 col-sm-12 col-xs-12">
+                  <!-- list for links -->
+                  <ul class="links list-unstyled ">
+                      <li>
+                          <a href="./about_us.html" target="_blank">About Us</a>
+                          <span> | </span>
+                      </li>
+                      <li>
+                          <a href="./investor_relations.html" target="_blank">Investor Relations</a>
+                          <span> | </span>
+                      </li>
+                      <li>
+                          <a href="./careers.html" target="_blank">Careers</a>
+                          <span> | </span>
+                      </li>
+                      <li>
+                          <a href="./customer_service.html" target="_blank">Customer Service</a>
+                          <span> | </span>
+                      </li>
+                      <li>
+                          <a href="./contactus.html" target="_blank">Contact Us</a>
+                          <span> | </span>
+                      </li>
+                      <li>
+                          <a href="./other_uob_sites.html" target="_blank">Other UOB Sites</a>
+                      </li>
+                  </ul>
+                  <div class="regno">
+                      <!-- ul class for reg.no -->
+                      <ul class="registration list-unstyled ">
+                          <li>
+                              <a>
+                                  Copyright © 2020 United Overseas Bank Limited Co.
+                              </a>
+                          </li>
+                          <li>
+                              <a>
+                                  Reg. No. 193500026Z. All Rights Reserved.
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
 
-                        <li>
-                            <a href="./investor_relations.html" target="_blank">Investor Relations</a>
-                            <span> | </span>
-                        </li>
-                        <li>
-                            <a href="./careers.html" target="_blank">Careers</a>
-                            <span> | </span>
-                        </li>
-                        <li>
-                            <a href="./customer_service.html" target="_blank">Customer Service</a>
-                            <span> | </span>
-                        </li>
-                        <li>
-                            <a href="./contactus.html" target="_blank">Contact Us</a>
-                            <span> | </span>
-                        </li>
-                        <li>
-                            <a href="./other_uob_sites.html" target="_blank">Other UOB Sites</a>
-                        </li>
-                    </ul>
-                    <div class="regno">
-                        <!-- ul class for reg.no -->
-                        <ul class="registration list-unstyled ">
-                            <li>
-                                <a>
-                                    Copyright © 2020 United Overseas Bank Limited Co.
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    Reg. No. 193500026Z. All Rights Reserved.
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+              <!-- div for social media -->
+              <div class="right col-md-5 col-sm-12 col-xs-12">
+                  <!-- div for social media picture -->
+                  <div class="socialmediapictures list-unstyled ">
+                      <li>
+                          <a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/"
+                              class="facebookicon col 3">
+                              <img src="../images/footer/facebook.png" alt="facebook">
+                          </a>
+                      </li>
+                      <li>
+                          <a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
+                              class="instagramicon col 3">
+                              <img src="../images/footer/instagram.png" alt="instagram">
+                          </a>
+                      </li>
+                      <li>
+                          <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
+                              class="linkedinicon col 3">
+                              <img src="../images/footer/linkedin.png" alt="LinkedIn">
+                          </a>
+                      </li>
+                      <li>
+                          <a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
+                              class="youtubeicon col 3">
+                              <img src="../images/footer/youtube.png" alt="Youtube">
+                          </a>
+                      </li>
+                  </div>
 
-                <!-- div for social media -->
-                <div class="right col-md-5 col-sm-12 col-xs-12">
-                    <!-- div for social media picture -->
-                    <div class="socialmediapictures list-unstyled ">
-                        <li>
-                            <a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/"
-                                class="facebookicon col 3">
-                                <img src="../images/footer/facebook.png" alt="facebook">
-                            </a>
-                        </li>
-                        <li>
-                            <a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
-                                class="instagramicon col 3">
-                                <img src="../images/footer/instagram.png" alt="instagram">
-                            </a>
-                        </li>
-                        <li>
-                            <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
-                                class="linkedinicon col 3">
-                                <img src="../images/footer/linkedin.png" alt="LinkedIn">
-                            </a>
-                        </li>
-                        <li>
-                            <a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
-                                class="youtubeicon col 3">
-                                <img src="../images/footer/youtube.png" alt="Youtube">
-                            </a>
-                        </li>
-                    </div>
+                  <!-- for temrs of use under social media -->
+                  <div class="terms list-unstyled">
+                      <ul class="socialmedialinks list-unstyled ">
+                          <li>
+                              <a href="./social_media_terms_of_use.html" target="_blank">Social Media Terms of Use</a>
+                              <span> | </span>
+                          </li>
+                          <li>
+                              <a href="./legal_notices.html" target="_blank">Legal Notices</a>
+                              <span> | </span>
+                          </li>
+                          <li>
+                              <a href="./privary_and_security.html" target="_blank">Privacy & Security</a>
+                          </li>
+                  </div>
 
-                    <!-- for temrs of use under social media -->
-                    <div class="terms list-unstyled">
-                        <ul class="socialmedialinks list-unstyled ">
-                            <li>
-                                <a href="./social_media_terms_of_use.html" target="_blank">Social Media Terms of Use</a>
-                                <span> | </span>
-                            </li>
-                            <li>
-                                <a href="./legal_notices.html" target="_blank">Legal Notices</a>
-                                <span> | </span>
-                            </li>
-                            <li>
-                                <a href="./privary_and_security.html" target="_blank">Privacy & Security</a>
-                            </li>
-                    </div>
+              </div>
+          </footer>
 
-                </div>
-            </footer>
-
-        </div>
-    </div>
+      </div>
+  </div>
 
 
 </body>
@@ -1549,10 +1568,6 @@
 
                 // add padding top to show content behind navbar
                 $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
-            } else {
-                $('#nav-bg').remmoveClass("fixed-top");
-                // remove padding top from body
-                $('body').css('padding-top', '0');
             }
         });
     }

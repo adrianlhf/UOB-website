@@ -1,3 +1,10 @@
+.carousel-inner .card {
+    height:100%;
+}
+.breadcrumb a {
+    color:#002469
+}
+
 #whyapplynowsection{
 
     background-color: #002469;
@@ -88,6 +95,12 @@ h1 {
 
 .main-banner .description {
     bottom: 5%;
+    position: absolute;
+}
+
+.ownorrentbanner .description {
+    bottom: 5%;
+    left: 50%;
     position: absolute;
 }
 
@@ -247,7 +260,19 @@ h1 {
         right: 1%;
         width: 55%;
         top: 5%;
+
+    }
+
+    .ownorrentbanner .description {
+        top: 20%;
+        left: 50%;
+        position: absolute;
+        font-size: 14px;
+    }
+    .ownorrentbanner .h1 {
        
+        font-size: 14px;
+
     }
 
     /* Multi item carousel styles */
@@ -267,11 +292,18 @@ h1 {
         top: 10%;
        
     }
-    #webapplynowbutton {
+
+    .ownorrentbanner .description {
+        top: 20%;
+        left: 50%;
+        position: absolute;
+        font-size: 6px;
+    }
+
+    #webapplynowbutton{
         position: absolute;
         bottom: 20%;
         left: 6%;
-        font-size: 16px;
     }
 
     .layout2.card-deck, .layout3.card-deck, .layout4.card-deck, .layout5.card-deck {
@@ -288,11 +320,25 @@ h1 {
     .layout3-card {
         width: 25%;
     }
+
+    .ownorrentbanner .description {
+        font-size: 16px;
+        top: 5%;
+        left: 50%;
+        position: absolute;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
+
+    .ownorrentbanner .description {
+        top: 20%;
+        left: 50%;
+        position: absolute;
+    }
+
     .main-banner .description {
         top: 18%;
     }
@@ -401,3 +447,54 @@ h1 {
 }
 
 /* end of multi item carousel */
+
+
+
+
+/* Styles for covid19 section*/
+.covid-box {
+    width: 100%;
+}
+
+.dark-img {
+    position: relative;
+}
+
+.dark-img img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dark-img::before {
+    background-color: #000;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+.covid-text {
+    color: white;
+    font-weight: bold;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 30px;
+    left: 0;
+    text-decoration: inherit;
+}
+
+a {
+    color: #002469;
+}
+
+.table-grey {
+    background-color: #eeeeee;
+    color: rgb(33,37,41);
+}
+
