@@ -25,9 +25,8 @@
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="50">
 
-    <!-- Navigation bar  -->
-  
-    <header class="navbar-expand-lg">
+       <!-- Navigation bar  -->
+       <header class="navbar-expand-lg">
         <!-- level 1 -->
         <div id="level1" class="navbar navbar-dark " style="background-color: #002469;">
           <button class="btn d-lg-none" onclick="openNav()">
@@ -40,15 +39,18 @@
             </a>
           </div>
           <div class="navbar-right d-lg-none">
-            <button type="button" class="btn">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#ffffff"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-                <path fill-rule="evenodd"
-                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-              </svg>
-            </button>
+            <a href="./search-results.html">
+              <button type="button" class="btn">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#ffffff"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                  <path fill-rule="evenodd"
+                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                </svg>
+              </button>
+            </a>
+    
           </div>
     
           <!--first nav row-->
@@ -124,16 +126,22 @@
                 </button>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a>
-                  <a class="dropdown-item" href="#">REQUEST A CALL BACK</a>
-                  <a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a>
+                  <a class="dropdown-item"
+                    href="https://uniservices1.uobgroup.com/appforms/business/UOB_Call_Back_Request.page?i_cid=top-menu">REQUEST
+                    A CALL BACK</a>
+                  <a class="dropdown-item" href="https://www.uob.com.sg/uob-branches-and-atms/locator.html">VISIT ANY UOB
+                    BRANCH</a>
+                  <a class="dropdown-item" href="./uob_express_bankers_guarantee.html">UOB Express Banker’s Guarantee</a>
+                  <a class="dropdown-item" href="./transferable_letter_of_credit.html">Transferable Letter of Credit</a>
+    
                 </div>
               </div> <!-- end of help & support -->
     
               <!-- For login-->
               <div class="btn-group ml-auto login">
                 <button type="button" class="btn btn-focus" href="#">
-                  <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                   </svg>
@@ -150,13 +158,13 @@
           <!-- mobile -->
           <div id="body-overlay">
             <div id="sidenav" class="sidenav d-lg-none">
-              <a href="#" title="UOB" class="logo mr-auto">
+              <a href="../index.html" title="UOB" class="logo mr-auto">
                 <img src="../images/homepage/right-by-you.png" alt="UOB">
     
               </a>
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
               <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <!--Start nav Dropdown-->
                 <li>
                   <div class="d-flex dropdown-btn">
@@ -172,7 +180,7 @@
                   <div class="dropdown-container">
                     <!-- start dropdown -->
                     <div class="d-flex dropdown-btn">
-                      <a href="./digitalise.html">Digitalize your Business</a>
+                      <a>Digitalize your Business</a>
                       <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -181,14 +189,13 @@
                     <!--end of dropdown button-->
                     <div class="dropdown-container sub-container">
                       <a href="./accounting.html">Accounting</a>
-                      <a href="./cybermarketing.html">CyberMarketing</a>
+                      <a href="./cybersecurity.html">Cybersecurity</a>
                       <a href="./digital_transaction.html">Digital Transaction</a>
-                      <a href="./digital_marketing.html">Digital Marketing</a>
                     </div>
                     <!-- end of dropdown -->
                     <!-- start dropdown -->
                     <div class="d-flex dropdown-btn">
-                      <a href="./apply_for_cards.html">Apply for Business Debit Card</a>
+                      <a href="https://www.uob.com.sg/corporate/commercial-solutions/business-debit-card.html">Apply for Business Debit Card</a>
                       <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -196,8 +203,12 @@
                     </div>
                     <!--end of dropdown button-->
                     <div class="dropdown-container sub-container">
-                      <a href="./uob_platinum_buiness_card">UOB Platinum Business Card</a>
-                      <a href="./uob_business_plus_card">UOB Business Plus Card</a>
+                      <a href="https://www.uob.com.sg/corporate/commercial-solutions/uob-platinum-business-card.html"
+                        target="_blank">UOB
+                        Platinum Business Card</a>
+                      <a href="https://www.uob.com.sg/corporate/commercial-solutions/uob-business-plus.html"
+                        target="_blank">UOB Business
+                        Plus Card</a>
                     </div>
                     <!-- end of dropdown -->
                     <!-- start dropdown -->
@@ -244,7 +255,7 @@
                     </div>
                     <!--end of dropdown button-->
                     <div class="dropdown-container sub-container">
-                      <a href="./bizsmart.html">BizSmart</a>
+                      <a href="https://www.uob.com.sg/business/BizSmart/index.html" target="_blank">BizSmart</a>
                       <a href="./uob_ealerts.html">UOB eAlerts</a>
                       <a href="./uob_business_mobile_app.html">UOB Business Mobile App</a>
                     </div>
@@ -276,7 +287,7 @@
                     </div>
                     <!--end of dropdown button-->
                     <div class="dropdown-container sub-container">
-                      <a href="./payment_and _collection_services.html">Payment and Collection Services</a>
+                      <a href="./payment_and_collection_services.html">Payment and Collection Services</a>
                       <a href="./paynow_corporate.html">PayNow Corporate</a>
                     </div>
                     <!-- end of dropdown -->
@@ -290,12 +301,13 @@
                     </div>
                     <!--end of dropdown button-->
                     <div class="dropdown-container sub-container">
-                      <a href="./payroll_services.html">Payroll Services</a>
+                      <a href="https://www.uob.com.sg/business/operate/payroll/index.html" target="_blank">Payroll
+                        Services</a>
                     </div>
                     <!-- end of dropdown -->
                     <!-- start dropdown -->
                     <div class="d-flex dropdown-btn">
-                      <a href="./trade_solutions.html">Trade Solutions <br> (Import/Export Services)</a>
+                      <a>Trade Solutions <br> (Import/Export Services)</a>
                       <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -325,7 +337,7 @@
                     <a href="fixed_deposits.html">Fixed Deposit</a>
                     <!-- start dropdown -->
                     <div class="d-flex dropdown-btn">
-                      <a href="./boost_cashflow.html">Boost your cashflow and assets</a>
+                      <a>Boost your cashflow and assets</a>
                       <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -339,7 +351,7 @@
                       <a href="./uob_overdraft.html">UOB Overdraft</a>
                       <a href="./business_property_and_equity_loan.html">Business Property and Equity Loan</a>
                       <a href="./government_assistant_scheme.html">Government Assistant Scheme</a>
-                      <a href="./vehicle_and _machinery-financing.html">Vehicle and Machinery Financing</a>
+                      <a href="./vehicle_and_machinery-financing.html">Vehicle and Machinery Financing</a>
                     </div>
                     <!-- end of dropdown -->
                   </div>
@@ -347,7 +359,7 @@
                 <!--Tools nav Dropdown-->
                 <li>
                   <div class="d-flex dropdown-btn">
-                    <a href="./tools.html">Tools</a>
+                    <a>Tools</a>
                     <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                       viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round">
@@ -359,7 +371,7 @@
                   <div class="dropdown-container">
                     <!-- start dropdown -->
                     <div class="d-flex dropdown-btn">
-                      <a href="./loans.html">Loans</a>
+                      <a href="./uob_business_loan.html">Loans</a>
                       <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -371,7 +383,22 @@
                       <a href="./loan_comparison.html">Loans Comparison</a>
                     </div>
                     <!-- end of dropdown -->
-                    <a href="./instalment_calculator.html">Installment Calculator</a>
+                    <div class="d-flex dropdown-btn">
+                      <a>Calculators</a>
+                      <svg class="mobile-drop ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="#818181" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M6 9l6 6 6-6" /></svg>
+                    </div>
+                    <!--end of dropdown button-->
+                    <div class="dropdown-container sub-container">
+                      <a href="./business_property_and_equity_loan.html">Buy vs Rent Calculator</a>
+                      <a href="./business_property_and_equity_loan.html">Commercial Property Affordability Calculator</a>
+                      <a href="./vehicle_and_machinery-financing.html">Commercial Vehicle/Hire Purchase Loan Calculator</a>
+                      <a href="./uob_business_loan.html">Loans Installment Calculator</a>
+                    </div>
+                    <!-- end of dropdown -->
+    
                   </div>
                 </li>
                 <li><a href="./insights.html">Insights</a></li>
@@ -429,14 +456,18 @@
                     </svg>
                   </div>
                   <ul class="dropdown-container">
-                    <li><a class="dropdown-item" href="#">BUSINESS BANKING NUMBER: 6259 8188</a></li>
-                    <li><a class="dropdown-item" href="#">REQUEST A CALL BACK</a></li>
-                    <li><a class="dropdown-item" href="#">VISIT ANY UOB BRANCH</a></li>
+                    <li><a href="#">BUSINESS BANKING NUMBER: 6259 8188</a></li>
+                    <li><a
+                        href="https://uniservices1.uobgroup.com/appforms/business/UOB_Call_Back_Request.page?i_cid=top-menu">REQUEST
+                        A CALL BACK</a></li>
+                    <li><a href="https://www.uob.com.sg/uob-branches-and-atms/locator.html">VISIT ANY UOB BRANCH</a></li>
+                    <li><a href="./uob_express_bankers_guarantee.html">UOB Express Banker’s Guarantee</a></li>
+                    <li><a href="./transferable_letter_of_credit.html">Transferable Letter of Credit</a></li>
                   </ul>
                 </li>
                 <button type="button" class="sideNavBtn btn btn-focus" href="#">
-                  <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 22 22" fill="none"
-                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="m-auto" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 22 22"
+                    fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                   </svg>
@@ -451,20 +482,20 @@
             <!-- Logo -->
             <div class="navbar-brand d-none d-lg-block ">
               <!--UOB logo-->
-              <a href="./index.html" title="UOB" class="logo mr-auto">
+              <a href="../index.html" title="UOB" class="logo mr-auto">
                 <img src="../images/homepage/uob-logo.jpg" alt="UOB">
     
               </a>
             </div>
             <!-- tabs -->
             <ul role="tablist" class="mainnav navbar-nav justify-content-center col-12 col-lg-auto">
-              <li role="tab" class="nav-item"><a href="./index.html" class="text-dark nav-link ">Home</a></li>
+              <li role="tab" class="nav-item"><a href="../index.html" class="text-dark nav-link ">Home</a></li>
               <li role="tab" class="nav-item dropdown">
-                <a href="./start.html" class="text-dark nav-link dropdown-toggle active">Start</a>
+                <a href="./start.html" class="text-dark nav-link dropdown-toggle  active ">Start</a>
                 <ul class="dropdown-menu dropdown-menu-right first-menu">
                   <li>
                     <div class="d-flex">
-                      <a class="dropdown-item" href="digitalise.html">Digitalize your Business</a>
+                      <a class="dropdown-item">Digitalize your Business</a>
                       <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
                         width="20">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -474,17 +505,15 @@
                     <ul class="submenu submenu-left dropdown-menu">
                       <li><a class="dropdown-item" href="./accounting.html">Accounting</a></li>
                       <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./cybermarketing.html">Cyber Marketing</a></li>
+                      <li><a class="dropdown-item" href="./cybersecurity.html">Cybersecurity</a></li>
                       <hr class="navigationdrop-line">
                       <li><a class="dropdown-item" href="./digital_transaction.html">Digital Transaction</a></li>
-                      <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./digital_marketing.html">Digital Marketing</a></li>
                     </ul>
                   </li>
                   <hr class="navigationdrop-line">
                   <li>
                     <div class="d-flex">
-                      <a class="dropdown-item" href="./apply_for_cards.html">Apply for Business Debit Card</a>
+                      <a class="dropdown-item" href="https://www.uob.com.sg/corporate/commercial-solutions/business-debit-card.html">Apply for Business Debit Card</a>
                       <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
                         width="20">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -492,9 +521,37 @@
                       </svg>
                     </div>
                     <ul class="submenu submenu-left dropdown-menu">
-                      <li><a class="dropdown-item" href="./uob_platinum_buiness_card">UOB Platinium Business Card</a></li>
+                      <li>
+                        <div class="d-flex">
+                          <a class="dropdown-item"
+                            href="https://www.uob.com.sg/corporate/commercial-solutions/uob-platinum-business-card.html"
+                            target="_blank">UOB
+                            Platinum Business Card
+                          </a>
+                          <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                          </svg>
+                        </div>
+                      </li>
                       <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./uob_business_plus_card">UOB Business Plus Card</a></li>
+                      <li>
+                        <div class="d-flex">
+                          <a class="dropdown-item"
+                            href="https://www.uob.com.sg/corporate/commercial-solutions/uob-business-plus.html"
+                            target="_blank">UOB Business
+                            Plus Card
+                          </a>
+                          <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                          </svg>
+                        </div>
+                      </li>
                     </ul>
                   </li>
                   <hr class="navigationdrop-line">
@@ -527,7 +584,7 @@
                 </ul>
               </li>
               <li role="tab" class="nav-item dropdown">
-                <a href="./run.html" class="text-dark nav-link dropdown-toggle">Run</a>
+                <a href="./run.html" class="text-dark nav-link dropdown-toggle ">Run</a>
                 <ul class="dropdown-menu dropdown-menu-right first-menu">
                   <li>
                     <div class="d-flex">
@@ -539,7 +596,18 @@
                       </svg>
                     </div>
                     <ul class="submenu submenu-left dropdown-menu">
-                      <li><a class="dropdown-item" href="./bizsmart.html">BizSmart</a></li>
+                      <li>
+                        <div class="d-flex">
+                          <a class="dropdown-item" href="https://www.uob.com.sg/business/BizSmart/index.html"
+                            target="_blank">BizSmart</a>
+                          <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                          </svg>
+                        </div>
+                      </li>
                       <hr class="navigationdrop-line">
                       <li><a class="dropdown-item" href="./uob_ealerts.html">UOB eAlerts</a></li>
                       <hr class="navigationdrop-line">
@@ -561,9 +629,9 @@
                       <hr class="navigationdrop-line">
                       <li><a class="dropdown-item" href="./bizdrive.html">BizDrive</a></li>
                       <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./machinery_insurance.html">Machinery All Risk Inusurance</a></li>
+                      <li><a class="dropdown-item" href="./machinery_insurance.html">Machinery All Risk Insurance</a></li>
                       <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./life_insurance.html">Life Inusurance</a></li>
+                      <li><a class="dropdown-item" href="./life_insurance.html">Life Insurance</a></li>
                       <hr class="navigationdrop-line">
                       <li><a class="dropdown-item" href="./employee_benefits.html">Employee Benefits</a></li>
                     </ul>
@@ -579,7 +647,8 @@
                       </svg>
                     </div>
                     <ul class="submenu submenu-left dropdown-menu">
-                      <li><a class="dropdown-item" href="./payment_and _collection_services.html">Payment and Collection Services</a></li>
+                      <li><a class="dropdown-item" href="./payment_and_collection_services.html">Payment and Collection
+                          Services</a></li>
                       <hr class="navigationdrop-line">
                       <li><a class="dropdown-item" href="./paynow_corporate.html">PayNow corporate</a></li>
                     </ul>
@@ -587,7 +656,7 @@
                   <hr class="navigationdrop-line">
                   <li>
                     <div class="d-flex">
-                      <a class="dropdown-item" >Manage Employees</a>
+                      <a class="dropdown-item">Manage Employees</a>
                       <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
                         width="20">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -595,13 +664,26 @@
                       </svg>
                     </div>
                     <ul class="submenu submenu-left dropdown-menu">
-                      <li><a class="dropdown-item" href="./payroll_services.html">Payroll Services</a></li>
+                      <li>
+                        <div class="d-flex">
+                          <a class="dropdown-item" href="https://www.uob.com.sg/business/operate/payroll/index.html"
+                            target="_blank">Payroll
+                            Services
+                          </a>
+                          <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                          </svg>
+                        </div>
+                      </li>
                     </ul>
                   </li>
                   <hr class="navigationdrop-line">
                   <li>
                     <div class="d-flex">
-                      <a class="dropdown-item" href="./trade_solutions.html">Trade Solutions (import/export services)</a>
+                      <a class="dropdown-item">Trade Solutions (import/export services)</a>
                       <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
                         width="20">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -625,7 +707,7 @@
                   <hr class="navigationdrop-line">
                   <li>
                     <div class="d-flex">
-                      <a class="dropdown-item" href="./boost_cashflow.html">Boost your Cashflow and Assets</a>
+                      <a class="dropdown-item">Boost your Cashflow and Assets</a>
                       <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
                         width="20">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -642,21 +724,24 @@
                       <hr class="navigationdrop-line">
                       <li><a class="dropdown-item" href="./uob_overdraft.html">UOB OverDraft</a></li>
                       <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./business_property_and_equity_loan.html">Business Property and Equity Loan</a></li>
+                      <li><a class="dropdown-item" href="./business_property_and_equity_loan.html">Business Property and
+                          Equity Loan</a></li>
                       <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./government_assistant_scheme.html">Government Assistant Scheme</a></li>
+                      <li><a class="dropdown-item" href="./government_assistant_scheme.html">Government Assistant Scheme</a>
+                      </li>
                       <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./vehicle_and _machinery-financing.html">Vehicle and Machinery Financing</a></li>
+                      <li><a class="dropdown-item" href="./vehicle_and_machinery-financing.html">Vehicle and Machinery
+                          Financing</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li role="tab" class="nav-item dropdown">
-                <a href="./tools.html" class="text-dark nav-link dropdown-toggle">Tools</a>
+                <a class="text-dark nav-link dropdown-toggle">Tools</a>
                 <ul class="dropdown-menu dropdown-menu-right first-menu">
                   <li>
                     <div class="d-flex">
-                      <a class="dropdown-item" href="./loans.html">Loans</a>
+                      <a class="dropdown-item" href="./uob_business_loan.html">Loans</a>
                       <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
                         width="20">
                         <path d="M0 0h24v24H0z" fill="none" />
@@ -672,7 +757,27 @@
                   </li>
                   <hr class="navigationdrop-line">
                   <li>
-                    <a class="dropdown-item" href="./instalment_calculator.html">Installment calculator</a>
+                    <div class="d-flex">
+                      <a class="dropdown-item">Calculators</a>
+                      <svg class="ml-auto my-auto" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 24 24"
+                        width="20">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path class="mobile-icon" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" fill="#818181" />
+                      </svg>
+                    </div>
+    
+                    <ul class="submenu submenu-left dropdown-menu">
+                      <li><a class="dropdown-item" href="./business_property_and_equity_loan.html">Buy vs Rent
+                          Calculator</a></li>
+                      <hr class="navigationdrop-line">
+                      <li><a class="dropdown-item" href="./business_property_and_equity_loan.html">Commercial Property
+                          Affordablity Calculator</a></li>
+                      <hr class="navigationdrop-line">
+                      <li><a class="dropdown-item" href="./vehicle_and_machinery-financing.html">Commercial Vehicle/Hire
+                          Purchase Loan Calculator</a></li>
+                      <hr class="navigationdrop-line">
+                      <li><a class="dropdown-item" href="./uob_business_loan.html">Loan Installment Calculator</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -682,27 +787,31 @@
             </ul>
     
             <div id="searchbutton">
-              <button type="button" class="btn button">
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#000000"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-                  <path fill-rule="evenodd"
-                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-                </svg>
-              </button></div>
+              <a href="./search-results.html">
+                <button type="button" class="btn button">
+                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="#000000"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                    <path fill-rule="evenodd"
+                      d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                  </svg>
+                </button>
+              </a>
+    
+            </div>
             <!-- Logo -->
             <div class=" d-none d-lg-block ">
               <!--UOB logo-->
-              <a href="./index.html" title="UOB" class="logo">
+              <a href="../index.html" title="UOB" class="logo">
                 <img src="../images/homepage/right-by-you.png" alt="Right by you">
     
               </a>
             </div>
           </div>
-          
+    
         </div>
-      </header> <!-- end of navigation-->
+      </header><!-- end of navigation-->
 
       <div class="justify-content-left d-none d-md-block ">
         <nav aria-label="breadcrumb">
@@ -1352,193 +1461,209 @@
 
 
             <!-- You may be interested section -->
-            <div class="interestedsection section pb-4" id="interestedsection">
-              <h1 class="pb-2"> You May Be Interested In</h1>
-              <div class="row mx-auto my-auto">
-                  <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-                      <div class="carousel-inner w-100" role="listbox">
-                          <div class="carousel-item active">
-                              <div class="col-md-4">
-                                  <div class="card">
-                                      <a href="./bizdrive.html"><img class="img-fluid card-img-top"
-                                              src="../images/accounting/interested1.jpg" alt="CyberSecurity"></a>
-                                      <div class="card-body"> BizDrive Commercial Vehicle Insurance </div>
-                                  </div>
-                              </div>
-                          </div>
-
-                          <div class="carousel-item">
-                              <div class="col-md-4">
-                                  <div class="card">
-                                      <a href="./vehicle_and _machinery-financing.html/"> <img
-                                              class="img-fluid card-img-top"
-                                              src="../images/accounting/interested2.jpg" alt="E-transactions"></a>
-                                      <div class="card-body"> Commercial Vehicle Loan</div>
-                                  </div>
-                              </div>
-                          </div>
-
-                          <div class="carousel-item">
-                              <div class="col-md-4">
-                                  <div class="card">  
-                                      <a href="./employee_benefits.html"><img
-                                              class="img-fluid card-img-top"
-                                              src="../images/accounting/interested3.jpg" alt="Payroll"></a>
-                                      <div class="card-body"> Employee Benefits </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                              <div class="col-md-4">
-                                  <div class="card">
-                                      <a href="./bizcare.html"> <img
-                                              class="img-fluid card-img-top"
-                                              src="../images/accounting/interested4.jpg" alt="UOB Business App"></a>
-                                      <div class="card-body"> Bizcare General Insurance </div>
-                                  </div>
-                              </div>
-                          </div>
+             <!-- You may be interested section -->
+ <div class="interestedsection section pb-4" id="interestedsection">
+  <h1 class="pb-2"> You May Be Interested In</h1>
+  <div class="row mx-auto my-auto">
+      <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+          <div class="carousel-inner w-100" role="listbox">
+              <div class="carousel-item active">
+                  <div class="col-md-4">
+                      <div class="card">
+                          <a target="_blank" href="./import_services.html"><img class="img-fluid card-img-top"
+                                  src="../images/uobebusiness/interested1.jpg" alt="CyberSecurity"></a>
+                          <div class="card-body"> Import Services </div>
                       </div>
-                      <a class="carousel-control-prev w-auto carousel-a" href="#recipeCarousel" role="button"
-                          data-slide="prev">
-                          <div class="c-icon rounded-circle">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only"></span>
-                          </div>
-                      </a>
-                      <a class="carousel-control-next w-auto carousel-a" href="#recipeCarousel" role="button"
-                          data-slide="next">
-                          <div class="c-icon rounded-circle">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only"></span>
-                          </div>
-                      </a>
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                  <div class="col-md-4">
+                      <div class="card">
+                          <a  target="_blank" href="https://sg.bibplus.uobgroup.com/BIB/public/"> <img
+                                  class="img-fluid card-img-top"
+                                  src="../images/uobebusiness/interested2.jpg" alt="E-transactions"></a>
+                          <div class="card-body"> UOB Business Internet Banking Plus</div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="carousel-item">
+                  <div class="col-md-4">
+                      <div class="card">
+                          <a  target="_blank" href="https://www.uob.com.sg/business/transact/foreign-exchange.page"><img
+                                  class="img-fluid card-img-top"
+                                  src="../images/uobebusiness/interested3.jpg" alt="Payroll"></a>
+                          <div class="card-body"> Foreign Exchange </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-md-4">
+                      <div class="card">
+                          <a  target="_blank" href="https://www.uob.com.sg/business/access/business-mobile-app.page"> <img
+                                  class="img-fluid card-img-top"
+                                  src="../images/uobebusiness/interested4.jpg" alt="UOB Business App"></a>
+                          <div class="card-body"> UOB Business App </div>
+                      </div>
                   </div>
               </div>
           </div>
-
-        </div>
-
-
-
-    </div>
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-    <!-- Footer -->
-    <div class="border-top">
-      <div class="container">
-          <footer class="footer-content row pb-5">
-              <!-- div for words links -->
-              <div class=" left col-md-7 col-sm-12 col-xs-12">
-                  <!-- list for links -->
-                  <ul class="links list-unstyled ">
-                      <li>
-                          <a href="./about_us.html" target="_blank">About Us</a>
-                          <span> | </span>
-                      </li>
-                      <li>
-                          <a href="./investor_relations.html" target="_blank">Investor Relations</a>
-                          <span> | </span>
-                      </li>
-                      <li>
-                          <a href="./careers.html" target="_blank">Careers</a>
-                          <span> | </span>
-                      </li>
-                      <li>
-                          <a href="./customer_service.html" target="_blank">Customer Service</a>
-                          <span> | </span>
-                      </li>
-                      <li>
-                          <a href="./contactus.html" target="_blank">Contact Us</a>
-                          <span> | </span>
-                      </li>
-                      <li>
-                          <a href="./other_uob_sites.html" target="_blank">Other UOB Sites</a>
-                      </li>
-                  </ul>
-                  <div class="regno">
-                      <!-- ul class for reg.no -->
-                      <ul class="registration list-unstyled ">
-                          <li>
-                              <a>
-                                  Copyright © 2020 United Overseas Bank Limited Co.
-                              </a>
-                          </li>
-                          <li>
-                              <a>
-                                  Reg. No. 193500026Z. All Rights Reserved.
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
+          <a class="carousel-control-prev w-auto carousel-a" href="#recipeCarousel" role="button"
+              data-slide="prev">
+              <div class="c-icon rounded-circle">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
               </div>
-
-              <!-- div for social media -->
-              <div class="right col-md-5 col-sm-12 col-xs-12">
-                  <!-- div for social media picture -->
-                  <div class="socialmediapictures list-unstyled ">
-                      <li>
-                          <a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/"
-                              class="facebookicon col 3">
-                              <img src="../images/footer/facebook.png" alt="facebook">
-                          </a>
-                      </li>
-                      <li>
-                          <a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
-                              class="instagramicon col 3">
-                              <img src="../images/footer/instagram.png" alt="instagram">
-                          </a>
-                      </li>
-                      <li>
-                          <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
-                              class="linkedinicon col 3">
-                              <img src="../images/footer/linkedin.png" alt="LinkedIn">
-                          </a>
-                      </li>
-                      <li>
-                          <a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
-                              class="youtubeicon col 3">
-                              <img src="../images/footer/youtube.png" alt="Youtube">
-                          </a>
-                      </li>
-                  </div>
-
-                  <!-- for temrs of use under social media -->
-                  <div class="terms list-unstyled">
-                      <ul class="socialmedialinks list-unstyled ">
-                          <li>
-                              <a href="./social_media_terms_of_use.html" target="_blank">Social Media Terms of Use</a>
-                              <span> | </span>
-                          </li>
-                          <li>
-                              <a href="./legal_notices.html" target="_blank">Legal Notices</a>
-                              <span> | </span>
-                          </li>
-                          <li>
-                              <a href="./privary_and_security.html" target="_blank">Privacy & Security</a>
-                          </li>
-                  </div>
-
+          </a>
+          <a class="carousel-control-next w-auto carousel-a" href="#recipeCarousel" role="button"
+              data-slide="next">
+              <div class="c-icon rounded-circle">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
               </div>
-          </footer>
-
+          </a>
       </div>
   </div>
+</div>
+
+
+</div>
+</div>
+
+
+<!-- footer  -->
+<div class="border-top">
+<div class="container ">
+
+
+<footer class="footer-content row pb-5">
+
+
+
+<!-- div for words links -->
+<div class=" left col-md-7 col-sm-12 col-xs-12">
+<!-- list for links -->
+<ul class="links list-unstyled ">
+<li>
+<a href="https://www.uobgroup.com/uobgroup/about/index.page?adobe_mc=MCMID%3D11140141303022619280825997094401452701%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597314332"
+  target="_blank">About Us</a>
+<span> | </span>
+</li>
+<li>
+<a href="https://www.uobgroup.com/investor-relations/index.html?adobe_mc=MCMID%3D11140141303022619280825997094401452701%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597314332"
+  target="_blank">Investor Relations</a>
+<span> | </span>
+</li>
+<li>
+<a href="https://www.uobgroup.com/careers/index.page?adobe_mc=MCMID%3D11140141303022619280825997094401452701%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597314332"
+  target="_blank">Careers</a>
+<span> | </span>
+</li>
+<li>
+<a href="https://uniservices1.uobgroup.com/appforms/business/UOB_Call_Back_Request.page?i_cid=top-menu&adobe_mc=MCMID%3D11140141303022619280825997094401452701%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597314332"
+  target="_blank">Customer Service</a>
+<span> | </span>
+</li>
+<li>
+<a href="https://www.uobgroup.com/uobgroup/contact-us/index.page?adobe_mc=MCMID%3D11140141303022619280825997094401452701%7CMCORGID%3D116168F454E6DA2A0A4C98A6%2540AdobeOrg%7CTS%3D1597314332#CorporateInstitutionalBanking"
+  target="_blank">Contact Us</a>
+<span> | </span>
+</li>
+<li>
+<a href="https://www.uobgroup.com/uobgroup/index.page" target="_blank">Other UOB Sites</a>
+
+</li>
+
+</ul>
+
+<div class="regno">
+<!-- ul class for reg.no -->
+<ul class="registration list-unstyled ">
+<li>
+  <a>
+    Copyright © 2020 United Overseas Bank Limited Co.
+  </a>
+
+
+</li>
+<li>
+  <a>
+    Reg. No. 193500026Z. All Rights Reserved.
+  </a>
+</li>
+
+</ul>
+
+
+</div>
+
+</div>
+
+
+<!-- div for social media -->
+<div class="right col-md-5 col-sm-12 col-xs-12">
+
+<!-- div for social media picture -->
+
+<div class="socialmediapictures list-unstyled ">
+<li>
+<a title="Facebook" target="_blank" href="https://www.facebook.com/UOB.sg/" class="facebookicon col 3">
+  <img src="../images/footer/facebook.png" alt="facebook">
+</a>
+</li>
+<li>
+<a title="Instagram" target="_blank" href="https://www.instagram.com/uobgroup"
+  class="instagramicon col 3">
+  <img src="../images/footer/instagram.png" alt="instagram">
+</a>
+</li>
+<li>
+<a title="LinkedIn" target="_blank" href="https://www.linkedin.com/company/uob"
+  class="linkedinicon col 3">
+  <img src="../images/footer/linkedin.png" alt="LinkedIn">
+</a>
+</li>
+<li>
+<a title="Youtube" target="_blank" href="https://www.youtube.com/uob?sub_confirmation=1"
+  class="youtubeicon col 3">
+  <img src="../images/footer/youtube.png" alt="Youtube">
+</a>
+</li>
+
+</div>
+
+
+<!-- for temrs of use under social media -->
+<div class="terms list-unstyled">
+
+
+<ul class="socialmedialinks list-unstyled ">
+<li>
+  <a href="https://www.uobgroup.com/uobgroup/termsofuse/index.page" target="_blank">Social
+    Media Terms of Use</a>
+  <span> | </span>
+</li>
+<li>
+  <a href="https://www.uobgroup.com/uobgroup/important/index.page" target="_blank">Legal
+    Notices</a>
+  <span> | </span>
+</li>
+<li>
+  <a href="https://www.uobgroup.com/uobgroup/privacy/index.page" target="_blank">Privacy &
+    Security</a>
+
+</li>
+</div>
+
+</div>
+
+
+
+</footer>
+</div>
+</div>
+
 
 
 </body>
