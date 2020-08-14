@@ -58,9 +58,7 @@ body {
     display: inline-block;
     vertical-align: 0.125em;
 }
-#nav-bg{
-    border-bottom: 1px #bbbbbb solid;
-}
+
 #main-navbar{
     padding: 0 !important;
 }

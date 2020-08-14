@@ -1814,7 +1814,8 @@
     }
     // add commas after every 3 digit from the decimal place
     function addCommas(x) {
-        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        // return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        return x;
     }
     //remove commas so that it can be inserted into the calculate function
     function removeCommas(str) {
