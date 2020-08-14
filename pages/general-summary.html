@@ -32,7 +32,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="navbar-brand d-lg-none">
-            <a href="#" title="UOB" class="logo">
+            <a href="../index.html" title="UOB" class="logo">
               <img src="../images/homepage/uob-logo-mobile1.png" alt="UOB">
     
             </a>
@@ -520,7 +520,7 @@
                       <hr class="navigationdrop-line">
                       <li><a class="dropdown-item" href="./global_currency_account.html">Global Currency Account</a></li>
                       <hr class="navigationdrop-line">
-                      <li><a class="dropdown-item" href="./renminbi_account.html">Reminbi Account</a></li>
+                      <li><a class="dropdown-item" href="./renminbi_account.html">Renminbi Account</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -992,10 +992,6 @@
 
                 // add padding top to show content behind navbar
                 $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
-            } else {
-                $('#nav-bg').remmoveClass("fixed-top");
-                // remove padding top from body
-                $('body').css('padding-top', '0');
             }
         });
     }
@@ -1010,7 +1006,7 @@
         if ($(window).width() < 576) {
             document.getElementById("sidenav").style.width = "70%";
             document.getElementById("body-overlay").style.width = "100%";
-            document.getElementById("sidenav").css('z-index', '100000');
+            
         } else {
             document.getElementById("sidenav").style.width = "40%";
             document.getElementById("body-overlay").style.width = "100%"

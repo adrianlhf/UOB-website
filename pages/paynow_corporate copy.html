@@ -34,7 +34,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-brand d-lg-none">
-                <a href="#" title="UOB" class="logo">
+                <a href="../index.html" title="UOB" class="logo">
                     <img src="../images/homepage/uob-logo-mobile1.png" alt="UOB">
 
                 </a>
@@ -559,7 +559,7 @@
                                     <li><a class="dropdown-item" href="./global_currency_account.html">Global Currency
                                             Account</a></li>
                                     <hr class="navigationdrop-line">
-                                    <li><a class="dropdown-item" href="./renminbi_account.html">Reminbi Account</a></li>
+                                    <li><a class="dropdown-item" href="./renminbi_account.html">Renminbi Account</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -765,7 +765,7 @@
     <div class="justify-content-left d-none d-md-block ">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-white pl-4 ">
-            <li class="breadcrumb-item"><a href="./index.html">Business</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Business</a></li>
             <li class="breadcrumb-item"><a href="./run.html">Run</a></li>
             <li class="breadcrumb-item"><a class="text-decoration-none" >Manage CashFlow</a></li>
             <li class="breadcrumb-item active" aria-current="page">Paynow Corporate<li>
@@ -960,7 +960,7 @@
                         <div class="card-body col-10 col-lg-11 acc-text pt-0">
                             <p>Company B is an online shop that sells apparel. As they allow for customers to return the
                                 purchases within a week, they have to process refunds to customer regularly. With PayNow
-                                Corporate, they can refund the monies directly to their customers’ registered mobile
+                                Corporate, they can refund the monies directly to their customers' registered mobile
                                 number, hence shortening the refund process and providing a better customer experience.
                             </p>
                         </div>
@@ -1332,10 +1332,6 @@
 
                 // add padding top to show content behind navbar
                 $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
-            } else {
-                $('#nav-bg').remmoveClass("fixed-top");
-                // remove padding top from body
-                $('body').css('padding-top', '0');
             }
         });
     }
@@ -1350,7 +1346,7 @@
         if ($(window).width() < 576) {
             document.getElementById("sidenav").style.width = "70%";
             document.getElementById("body-overlay").style.width = "100%";
-            document.getElementById("sidenav").css('z-index', '100000');
+            
         } else {
             document.getElementById("sidenav").style.width = "40%";
             document.getElementById("body-overlay").style.width = "100%"
